@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
   44              	.LCFI0:
   45              		.cfi_def_cfa_offset 8
   46              		.cfi_offset 4, -8
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 2
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 2
 
 
   47              		.cfi_offset 14, -4
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
   96              	.LVL6:
   97              	.L4:
   18:Core/Src/OledDelayBars.c ****             ssd1306_Line(2+1,50-y,12-1,50-y,Black);
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 3
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 3
 
 
   98              		.loc 1 18 13 is_stmt 1 discriminator 3 view .LVU13
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  144              		.loc 1 23 13 is_stmt 1 discriminator 3 view .LVU26
  145              		.loc 1 23 23 is_stmt 0 discriminator 3 view .LVU27
  146 0082 18EE900A 		vmov	r0, s17
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 4
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 4
 
 
  147 0086 FFF7FEFF 		bl	__aeabi_f2d
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
   27:Core/Src/OledDelayBars.c ****     }else{
   28:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(2,10,12,50,Black);
   29:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(2,53);
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 5
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 5
 
 
   30:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("P1", Font_7x10, Black);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  238              	.LVL26:
   31:Core/Src/OledDelayBars.c ****             ssd1306_Line(2+1,50-y,12-1,50-y,Black);
  239              		.loc 1 31 9 view .LVU44
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 6
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 6
 
 
  240              	.LBB6:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  285 0158 00002042 		.word	1109393408
  286 015c 00004440 		.word	1078198272
  287 0160 00005940 		.word	1079574528
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 7
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 7
 
 
  288              		.cfi_endproc
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  340              	.LVL33:
  341              		.loc 1 40 9 view .LVU61
  342 001a FFF7FEFF 		bl	ssd1306_DrawRectangle
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 8
 
 
  343              	.LVL34:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
   45:Core/Src/OledDelayBars.c ****         }
   46:Core/Src/OledDelayBars.c ****         float fpercent = percent;
  391              		.loc 1 46 9 view .LVU73
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 9
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 9
 
 
  392              		.loc 1 46 15 is_stmt 0 view .LVU74
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  441 00bc 1B22     		movs	r2, #27
  442 00be 1320     		movs	r0, #19
  443              	.LVL48:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 10
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 10
 
 
  444              		.loc 1 50 13 discriminator 3 view .LVU88
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  483 00e4 0094     		str	r4, [sp]
  484 00e6 3223     		movs	r3, #50
  485 00e8 1C22     		movs	r2, #28
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 11
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 11
 
 
  486 00ea 0A21     		movs	r1, #10
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  529              	.LVL59:
   57:Core/Src/OledDelayBars.c ****             ssd1306_Line(18+1,50-y,28-1,50-y,Black);
  530              		.loc 1 57 35 is_stmt 1 discriminator 3 view .LVU106
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 12
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 12
 
 
  531 012e F7EE007A 		vmov.f32	s15, #1.0e+0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  583              	.LCFI13:
  584              		.cfi_def_cfa_offset 24
  585              		.cfi_offset 80, -24
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 13
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 13
 
 
  586              		.cfi_offset 81, -20
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  634 0038 DFED467A 		vldr.32	s15, .L35+8
  635 003c 77EEC87A 		vsub.f32	s15, s15, s16
  636              		.loc 1 70 13 discriminator 3 view .LVU125
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 14
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 14
 
 
  637 0040 FCEEE77A 		vcvt.u32.f32	s15, s15
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  683 008a 0022     		movs	r2, #0
  684 008c 334B     		ldr	r3, .L35+16
  685 008e FFF7FEFF 		bl	__aeabi_ddiv
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 15
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 15
 
 
  686              	.LVL75:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
   84:Core/Src/OledDelayBars.c ****             ssd1306_Line(34+1,50-y,44-1,50-y,Black);
   85:Core/Src/OledDelayBars.c ****         }
   86:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 16
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 16
 
 
   87:Core/Src/OledDelayBars.c ****     }
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  775              		.loc 1 83 13 view .LVU155
   83:Core/Src/OledDelayBars.c ****             ssd1306_Line(34+1,50-y,44-1,50-y,Black);
  776              		.loc 1 83 19 is_stmt 0 view .LVU156
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 17
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 17
 
 
  777 0106 B7EE008A 		vmov.f32	s16, #1.0e+0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  825              		.section	.rodata.Show_W2Bar.str1.4,"aMS",%progbits,1
  826              		.align	2
  827              	.LC3:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 18
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 18
 
 
  828 0000 573200   		.ascii	"W2\000"
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  878              		.loc 1 93 9 is_stmt 1 view .LVU172
  879 001e 3521     		movs	r1, #53
  880 0020 3220     		movs	r0, #50
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 19
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 19
 
 
  881 0022 FFF7FEFF 		bl	ssd1306_SetCursor
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  928 0074 B8EE679A 		vcvt.f32.u32	s18, s15
  929              	.LVL102:
   99:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 20
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 20
 
 
  930              		.loc 1 99 9 is_stmt 1 view .LVU185
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  980              	.LVL111:
  100:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
  981              		.loc 1 100 46 is_stmt 1 discriminator 3 view .LVU199
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 21
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 21
 
 
  982 00c4 F7EE007A 		vmov.f32	s15, #1.0e+0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  106:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(50,53);
  1022              		.loc 1 106 9 is_stmt 0 view .LVU205
  1023 00ec 1846     		mov	r0, r3
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 22
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 22
 
 
  1024              	.LVL116:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1067              	.LVL122:
  1068              	.L44:
  109:Core/Src/OledDelayBars.c ****             ssd1306_Line(50+1,50-y,60-1,50-y,Black);
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 23
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 23
 
 
  1069              		.loc 1 109 29 discriminator 1 view .LVU217
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1122              		.cfi_offset 83, -12
  1123 0006 84B0     		sub	sp, sp, #16
  1124              	.LCFI26:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 24
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 24
 
 
  1125              		.cfi_def_cfa_offset 40
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1173 0048 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
  1174 004c 0023     		movs	r3, #0
  1175 004e 0093     		str	r3, [sp]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 25
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 25
 
 
  1176 0050 0B46     		mov	r3, r1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1222 0092 0022     		movs	r2, #0
  1223 0094 324B     		ldr	r3, .L59+20
  1224 0096 FFF7FEFF 		bl	__aeabi_dmul
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 26
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 26
 
 
  1225              	.LVL138:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1264              		.loc 1 140 1 view .LVU258
  1265 00da 04B0     		add	sp, sp, #16
  1266              	.LCFI27:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 27
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 27
 
 
  1267              		.cfi_remember_state
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1312              		.loc 1 135 9 view .LVU267
  1313 010a 14E0     		b	.L56
  1314              	.LVL151:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 28
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 28
 
 
  1315              	.L57:
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1364              		.align	1
  1365              		.global	Show_R1Bar
  1366              		.syntax unified
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 29
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 29
 
 
  1367              		.thumb
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  146:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("R1", Font_7x10, White);
  1417              		.loc 1 146 9 view .LVU283
  1418 0026 494A     		ldr	r2, .L71
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 30
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 30
 
 
  1419 0028 2346     		mov	r3, r4
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1465              		.loc 1 152 9 view .LVU296
  1466              	.LBB29:
  1467              		.loc 1 152 13 view .LVU297
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 31
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 31
 
 
  1468              		.loc 1 152 19 is_stmt 0 view .LVU298
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1518              	.LVL174:
  1519              	.L65:
  152:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 32
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 32
 
 
  1520              		.loc 1 152 33 discriminator 1 view .LVU310
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1559              		.loc 1 158 9 view .LVU316
  1560 00ee FFF7FEFF 		bl	ssd1306_DrawRectangle
  1561              	.LVL179:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 33
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 33
 
 
  159:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("R1", Font_7x10, Black);
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1605 013a B4EEE78A 		vcmpe.f32	s16, s15
  1606 013e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  1607 0142 E3D4     		bmi	.L69
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 34
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 34
 
 
  1608              	.LBE31:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  169:Core/Src/OledDelayBars.c ****     if(state){
  1661              		.loc 1 169 5 is_stmt 1 view .LVU332
  1662              		.loc 1 169 7 is_stmt 0 view .LVU333
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 35
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 35
 
 
  1663 000a 0028     		cmp	r0, #0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1712 0054 6320     		movs	r0, #99
  1713 0056 FFF7FEFF 		bl	ssd1306_Line
  1714              	.LVL193:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 36
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 36
 
 
  173:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1761 009a FFF7FEFF 		bl	__aeabi_d2f
  1762              	.LVL201:
  1763 009e 08EE100A 		vmov	s16, r0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 37
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 37
 
 
  1764              	.LVL202:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1803              		@ sp needed
  1804 00dc BDEC048B 		vldm	sp!, {d8-d9}
  1805              	.LCFI40:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 38
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 38
 
 
  1806              		.cfi_restore 82
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1850              		.loc 1 188 13 is_stmt 1 discriminator 3 view .LVU378
  188:Core/Src/OledDelayBars.c ****         }
  1851              		.loc 1 188 33 is_stmt 0 discriminator 3 view .LVU379
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 39
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 39
 
 
  1852 010c DFED117A 		vldr.32	s15, .L83+8
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1904              	Show_R2Bar:
  1905              	.LVL217:
  1906              	.LFB327:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 40
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 40
 
 
  193:Core/Src/OledDelayBars.c **** 
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  1955 002c 4848     		ldr	r0, .L95+4
  1956 002e FFF7FEFF 		bl	ssd1306_WriteString
  1957              	.LVL222:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 41
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 41
 
 
  199:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  2004              	.LBE39:
  203:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
  2005              		.loc 1 203 15 view .LVU409
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 42
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 42
 
 
  2006 007c B0EE048A 		vmov.f32	s16, #2.5e+0
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  2056 00d0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  2057 00d4 D5D4     		bmi	.L90
  2058              	.LBE40:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 43
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 43
 
 
  207:Core/Src/OledDelayBars.c ****         }
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  2097 00f2 3521     		movs	r1, #53
  2098 00f4 7220     		movs	r0, #114
  2099 00f6 FFF7FEFF 		bl	ssd1306_SetCursor
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 44
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 44
 
 
  2100              	.LVL242:
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  2143              		.loc 1 216 9 view .LVU438
  2144 0144 FFF7FEFF 		bl	ssd1306_UpdateScreen
  2145              	.LVL247:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 45
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 45
 
 
  2146              		.loc 1 218 1 is_stmt 0 view .LVU439
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  2196 0014 2146     		mov	r1, r4
  2197 0016 0120     		movs	r0, #1
  2198 0018 FFF7FEFF 		bl	Show_P1Bar
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 46
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 46
 
 
  2199              	.LVL252:
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  2235              	.LVL260:
  231:Core/Src/OledDelayBars.c ****         Show_G1Bar(false, 0);
  2236              		.loc 1 231 9 view .LVU456
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 47
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 47
 
 
  2237 004a FFF7FEFF 		bl	Show_G1Bar
@@ -2815,45 +2815,45 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
  2282              		.file 3 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
  2283              		.file 4 "Core/Inc/ssd1306_fonts.h"
  2284              		.file 5 "Core/Inc/ssd1306.h"
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 48
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s 			page 48
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 OledDelayBars.c
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:21     .rodata.Show_P1Bar.str1.4:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:29     .text.Show_P1Bar:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:35     .text.Show_P1Bar:00000000 Show_P1Bar
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:282    .text.Show_P1Bar:0000014c $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:292    .rodata.Show_W1Bar.str1.4:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:296    .text.Show_W1Bar:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:302    .text.Show_W1Bar:00000000 Show_W1Bar
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:549    .text.Show_W1Bar:0000014c $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:559    .rodata.Show_P2Bar.str1.4:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:563    .text.Show_P2Bar:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:569    .text.Show_P2Bar:00000000 Show_P2Bar
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:816    .text.Show_P2Bar:0000014c $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:826    .rodata.Show_W2Bar.str1.4:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:830    .text.Show_W2Bar:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:836    .text.Show_W2Bar:00000000 Show_W2Bar
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1083   .text.Show_W2Bar:0000014c $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1093   .rodata.Show_G1Bar.str1.4:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1097   .text.Show_G1Bar:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1103   .text.Show_G1Bar:00000000 Show_G1Bar
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1350   .text.Show_G1Bar:0000014c $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1360   .rodata.Show_R1Bar.str1.4:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1364   .text.Show_R1Bar:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1370   .text.Show_R1Bar:00000000 Show_R1Bar
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1617   .text.Show_R1Bar:0000014c $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1627   .rodata.Show_G2Bar.str1.4:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1631   .text.Show_G2Bar:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1637   .text.Show_G2Bar:00000000 Show_G2Bar
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1884   .text.Show_G2Bar:0000014c $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1894   .rodata.Show_R2Bar.str1.4:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1898   .text.Show_R2Bar:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1904   .text.Show_R2Bar:00000000 Show_R2Bar
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:2151   .text.Show_R2Bar:0000014c $d
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:2161   .text.Show_All_DelayBars:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:2167   .text.Show_All_DelayBars:00000000 Show_All_DelayBars
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:21     .rodata.Show_P1Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:29     .text.Show_P1Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:35     .text.Show_P1Bar:00000000 Show_P1Bar
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:282    .text.Show_P1Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:292    .rodata.Show_W1Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:296    .text.Show_W1Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:302    .text.Show_W1Bar:00000000 Show_W1Bar
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:549    .text.Show_W1Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:559    .rodata.Show_P2Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:563    .text.Show_P2Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:569    .text.Show_P2Bar:00000000 Show_P2Bar
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:816    .text.Show_P2Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:826    .rodata.Show_W2Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:830    .text.Show_W2Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:836    .text.Show_W2Bar:00000000 Show_W2Bar
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1083   .text.Show_W2Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1093   .rodata.Show_G1Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1097   .text.Show_G1Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1103   .text.Show_G1Bar:00000000 Show_G1Bar
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1350   .text.Show_G1Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1360   .rodata.Show_R1Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1364   .text.Show_R1Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1370   .text.Show_R1Bar:00000000 Show_R1Bar
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1617   .text.Show_R1Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1627   .rodata.Show_G2Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1631   .text.Show_G2Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1637   .text.Show_G2Bar:00000000 Show_G2Bar
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1884   .text.Show_G2Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1894   .rodata.Show_R2Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1898   .text.Show_R2Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:1904   .text.Show_R2Bar:00000000 Show_R2Bar
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:2151   .text.Show_R2Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:2161   .text.Show_All_DelayBars:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc4uDDVT.s:2167   .text.Show_All_DelayBars:00000000 Show_All_DelayBars
 
 UNDEFINED SYMBOLS
 __aeabi_f2d

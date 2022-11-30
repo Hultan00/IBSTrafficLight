@@ -15,6 +15,9 @@
 #include "math.h"
 #include "ssd1306.h"
 
+#define togglefreq 10.0
+#define pedestriandelay 5.0
+
 typedef enum{   
     PLRed,
     PLGreen,
@@ -33,9 +36,9 @@ static crosswalk CW1, CW2;
 
 uint8_t brightness = 0;
 
-uint8_t togglefreq = 0;
+uint8_t PLBluedelay = 0;
 
-uint8_t pedestrianDelay = 0;
+uint8_t PLGreenDelay = 0;
 
 bool toggleBrightness = false;
 
@@ -81,51 +84,51 @@ void traffic_lights(){
 
         if(is_pl2()){
             CW2 = PLBlue;
-            togglefreq = 5;
+            PLBluedelay = togglefreq;
         }
 
         switch (CW2){
-        case PLGreen:
-            if(pedestrianDelay == 0){
-                bits = PL2_Green(bits, false);
-                bits = PL2_Red(bits, true);
-                bits = TL4_Green(bits, true);
-                bits = TL4_Red(bits, false);
-                bits = TL4_Yellow(bits, false);
-                CW2 = PLRed;
-            }else if(pedestrianDelay == 1){
-                bits = PL2_Green(bits, false);
-                bits = PL2_Red(bits, true);
-                bits = TL4_Green(bits, false);
-                bits = TL4_Red(bits, false);
-                bits = TL4_Yellow(bits, true);
-            }else{
-                bits = PL2_Green(bits, true);
-                bits = PL2_Red(bits, false);
-                bits = TL4_Green(bits, false);
-                bits = TL4_Red(bits, true);
-                bits = TL4_Yellow(bits, false);
-            }
-            break;
-        case PLBlue:
-            if(togglefreq == 0){
-                bits = PL2_Blue(bits, false);
-                CW2 = PLGreen;
-                pedestrianDelay = 5;
-            }else if(togglefreq == 1){
-                bits = TL4_Green(bits, false);
-                bits = TL4_Red(bits, false);
-                bits = TL4_Yellow(bits, true);
-            }else{
-                bits = PL2_Blue(bits, true);
-            }
-            break;
-        case PLRed:
-            bits = PL2_Red(bits,true);
-            bits = PL2_Green(bits,false);
-            break;
-        default:
-            break;
+            case PLGreen:
+                if(PLGreenDelay == 0){
+                    bits = PL2_Green(bits, false);
+                    bits = PL2_Red(bits, true);
+                    bits = TL4_Green(bits, true);
+                    bits = TL4_Red(bits, false);
+                    bits = TL4_Yellow(bits, false);
+                    CW2 = PLRed;
+                }else if(PLGreenDelay == 1){
+                    bits = PL2_Green(bits, false);
+                    bits = PL2_Red(bits, true);
+                    bits = TL4_Green(bits, false);
+                    bits = TL4_Red(bits, false);
+                    bits = TL4_Yellow(bits, true);
+                }else{
+                    bits = PL2_Green(bits, true);
+                    bits = PL2_Red(bits, false);
+                    bits = TL4_Green(bits, false);
+                    bits = TL4_Red(bits, true);
+                    bits = TL4_Yellow(bits, false);
+                }
+                break;
+            case PLBlue:
+                if(PLBluedelay == 0){
+                    bits = PL2_Blue(bits, false);
+                    CW2 = PLGreen;
+                    PLGreenDelay = pedestriandelay;
+                }else if(PLBluedelay == 1){
+                    bits = TL4_Green(bits, false);
+                    bits = TL4_Red(bits, false);
+                    bits = TL4_Yellow(bits, true);
+                }else{
+                    bits = PL2_Blue(bits, true);
+                }
+                break;
+            case PLRed:
+                bits = PL2_Red(bits,true);
+                bits = PL2_Green(bits,false);
+                break;
+            default:
+                break;
         }
     }
 }
@@ -134,13 +137,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
     if(htim == &htim16){
         if(msTick >= 10000){
             HAL_GPIO_TogglePin(USR_LED1_GPIO_Port, USR_LED1_Pin);
-            if(togglefreq > 0){
-                togglefreq--;
-                Show_P2Bar(true, (1 - (togglefreq/5.0))*100.0);
+            if(PLBluedelay > 0){
+                PLBluedelay--;
+                Show_P2Bar(true, (1 - (PLBluedelay/togglefreq))*100.0);
             }else{
-                if(pedestrianDelay > 0){
-                    pedestrianDelay--;
-                    Show_W2Bar(true, (1 - (pedestrianDelay/5.0))*100.0);
+                if(PLGreenDelay > 0){
+                    PLGreenDelay--;
+                    Show_W2Bar(true, (1 - (PLGreenDelay/pedestriandelay))*100.0);
                 }else{
                     Show_W2Bar(true, 0);
                 }

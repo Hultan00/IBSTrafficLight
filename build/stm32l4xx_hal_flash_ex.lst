@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****            (++) Lock and Unlock the FLASH interface using HAL_FLASH_Unlock() and
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****                 HAL_FLASH_Lock() functions
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****            (++) Erase function: Erase page, erase all sectors
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 2
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****            (++) There are two modes of erase :
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** static HAL_StatusTypeDef FLASH_OB_UserConfig(uint32_t UserType, uint32_t UserConfig);
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** static HAL_StatusTypeDef FLASH_OB_PCROPConfig(uint32_t PCROPConfig, uint32_t PCROPStartAddr, uint32
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** static void              FLASH_OB_GetWRP(uint32_t WRPArea, uint32_t * WRPStartOffset, uint32_t * WR
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 3
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 3
 
 
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** static uint32_t          FLASH_OB_GetRDP(void);
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  142:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
  143:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     /* Deactivate the cache if they are activated to avoid data misbehavior */
  144:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     if(READ_BIT(FLASH->ACR, FLASH_ACR_ICEN) != 0U)
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 4
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 4
 
 
  145:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  199:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****         /* If the erase operation is completed, disable the PER Bit */
  200:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****         CLEAR_BIT(FLASH->CR, (FLASH_CR_PER | FLASH_CR_PNB));
  201:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 5
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 5
 
 
  202:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****         if (status != HAL_OK)
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  256:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     /* Disable data cache  */
  257:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     __HAL_FLASH_DATA_CACHE_DISABLE();
  258:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     pFlash.CacheToReactivate = FLASH_CACHE_DCACHE_ENABLED;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 6
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 6
 
 
  259:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   }
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  313:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     if(FLASH_OB_WRPConfig(pOBInit->WRPArea, pOBInit->WRPStartOffset, pOBInit->WRPEndOffset) != HAL_
  314:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     {
  315:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       status = HAL_ERROR;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 7
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 7
 
 
  316:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     }
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  370:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   pOBInit->OptionType = (OPTIONBYTE_RDP | OPTIONBYTE_USER);
  371:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
  372:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** #if defined (STM32L471xx) || defined (STM32L475xx) || defined (STM32L476xx) || defined (STM32L485xx
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 8
 
 
  373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     defined (STM32L496xx) || defined (STM32L4A6xx) || \
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  427:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
  428:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** /**
  429:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   * @brief  Configuration of the LVE pin of the Flash (managed by power controller
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 9
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 9
 
 
  430:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   *         or forced to low in order to use an external SMPS)
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  484:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** #endif /* FLASH_CFGR_LVEN */
  485:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
  486:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** /**
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 10
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 10
 
 
  487:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   * @}
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
   45              		.loc 1 524 5 view .LVU5
   46              		.loc 1 524 7 is_stmt 0 view .LVU6
   47 0010 10F0020F 		tst	r0, #2
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 11
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 11
 
 
   48 0014 04D0     		beq	.L3
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  551:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** void FLASH_PageErase(uint32_t Page, uint32_t Banks)
  552:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** {
  553:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   /* Check the parameters */
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 12
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 12
 
 
  554:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   assert_param(IS_FLASH_PAGE(Page));
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  608:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   }
  609:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
  610:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   /* Flush data cache */
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 13
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 13
 
 
  611:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   if((cache == FLASH_CACHE_DCACHE_ENABLED) ||
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  665:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     /* Configure the write protected area */
  666:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     if(WRPArea == OB_WRPAREA_BANK1_AREAA)
  667:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     {
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 14
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 14
 
 
  668:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       MODIFY_REG(FLASH->WRP1AR, (FLASH_WRP1AR_WRP1A_STRT | FLASH_WRP1AR_WRP1A_END),
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  722:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   *            @arg OB_RDP_LEVEL_1: Read protection of the memory
  723:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   *            @arg OB_RDP_LEVEL_2: Full chip protection
  724:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   *
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 15
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 15
 
 
  725:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   * @retval HAL status
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  779:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
  780:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   /* Wait for last operation to be completed */
  781:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   status = FLASH_WaitForLastOperation((uint32_t)FLASH_TIMEOUT_VALUE);
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 16
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 16
 
 
  782:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  836:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     {
  837:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       /* IWDG_STOP option byte should be modified */
  838:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       assert_param(IS_OB_USER_IWDG_STOP(UserConfig & FLASH_OPTR_IWDG_STOP));
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 17
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 17
 
 
  839:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  893:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       optr_reg_val |= (UserConfig & FLASH_OPTR_DUALBANK);
  894:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       optr_reg_mask |= FLASH_OPTR_DUALBANK;
  895:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** #endif
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 18
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 18
 
 
  896:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     }
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  950:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       optr_reg_val |= (UserConfig & FLASH_OPTR_nBOOT0);
  951:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       optr_reg_mask |= FLASH_OPTR_nBOOT0;
  952:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 19
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 19
 
 
  953:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** #endif
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
 1007:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   assert_param(IS_FLASH_MAIN_MEM_ADDRESS(PCROPEndAddr));
 1008:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
 1009:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   /* Wait for last operation to be completed */
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 20
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 20
 
 
 1010:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   status = FLASH_WaitForLastOperation((uint32_t)FLASH_TIMEOUT_VALUE);
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
 1064:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****         reg_value = ((PCROPStartAddr - bank1_addr) >> 3);
 1065:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****         MODIFY_REG(FLASH->PCROP1SR, FLASH_PCROP1SR_PCROP1_STRT, reg_value);
 1066:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 21
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 21
 
 
 1067:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****         reg_value = ((PCROPEndAddr - bank1_addr) >> 3);
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
 1121:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   */
 1122:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** static void FLASH_OB_GetWRP(uint32_t WRPArea, uint32_t * WRPStartOffset, uint32_t * WRDPEndOffset)
 1123:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** {
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 22
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 22
 
 
   78              		.loc 1 1123 1 is_stmt 1 view -0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
 1133:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     *WRDPEndOffset = (READ_BIT(FLASH->WRP1BR, FLASH_WRP1BR_WRP1B_END) >> 16);
  123              		.loc 1 1133 5 is_stmt 1 view .LVU24
  124              		.loc 1 1133 23 is_stmt 0 view .LVU25
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 23
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 23
 
 
  125 0028 036B     		ldr	r3, [r0, #48]
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  165 004e C3F30743 		ubfx	r3, r3, #16, #8
  166              		.loc 1 1147 20 view .LVU43
  167 0052 1360     		str	r3, [r2]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 24
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 24
 
 
 1148:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   }
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  203              		.loc 1 1168 37 discriminator 1 view .LVU52
  204 000a CC2B     		cmp	r3, #204
  205 000c 01D0     		beq	.L17
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 25
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 25
 
 
 1169:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   {
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  236              		@ args = 0, pretend = 0, frame = 0
  237              		@ frame_needed = 0, uses_anonymous_args = 0
  238              		@ link register save eliminated.
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 26
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 26
 
 
 1192:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   uint32_t user_config = READ_REG(FLASH->OPTR);
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  272              		.loc 1 1214 1 is_stmt 0 view .LVU66
  273 0000 70B4     		push	{r4, r5, r6}
  274              	.LCFI0:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 27
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 27
 
 
  275              		.cfi_def_cfa_offset 12
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
 1234:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   else
 1235:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   {
 1236:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     bank1_addr = FLASH_BASE + FLASH_BANK_SIZE;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 28
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 28
 
 
 1237:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     bank2_addr = FLASH_BASE;
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  317              		.loc 1 1282 10 is_stmt 1 view .LVU84
  318              		.loc 1 1282 12 is_stmt 0 view .LVU85
  319 0034 022B     		cmp	r3, #2
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 29
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 29
 
 
  320 0036 2ED0     		beq	.L34
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  355 0052 4FF6FF74 		movw	r4, #65535
  356 0056 A542     		cmp	r5, r4
  357 0058 0BD0     		beq	.L31
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 30
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 30
 
 
 1236:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     bank2_addr = FLASH_BASE;
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  397              		.loc 1 1275 24 is_stmt 0 view .LVU110
  398 0088 B16A     		ldr	r1, [r6, #40]
  399              	.LVL24:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 31
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 31
 
 
 1276:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     }
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
 1288:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     }
  437              		.loc 1 1288 21 view .LVU128
  438 00ae 1360     		str	r3, [r2]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 32
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 32
 
 
  439 00b0 C2E7     		b	.L29
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  486              	.LVL31:
  663:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   {
  487              		.loc 1 663 3 is_stmt 1 view .LVU138
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 33
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 33
 
 
  663:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   {
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  531 004a 70BD     		pop	{r4, r5, r6, pc}
  532              	.LVL35:
  533              	.L43:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 34
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 34
 
 
  673:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****                  (WRPStartOffset | (WRDPEndOffset << 16)));
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  585              		.cfi_offset 4, -12
  586              		.cfi_offset 5, -8
  587              		.cfi_offset 14, -4
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 35
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 35
 
 
  588 0002 0446     		mov	r4, r0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  628              	.L54:
  629 0036 00BF     		.align	2
  630              	.L53:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 36
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 36
 
 
  631 0038 00200240 		.word	1073881088
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  785:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     {
  675              		.loc 1 785 7 is_stmt 0 view .LVU181
  676 0012 14F00103 		ands	r3, r4, #1
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 37
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 37
 
 
  677 0016 04D0     		beq	.L70
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  811:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       optr_reg_mask |= FLASH_OPTR_nRST_STDBY;
  714              		.loc 1 811 7 view .LVU199
  811:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       optr_reg_mask |= FLASH_OPTR_nRST_STDBY;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 38
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 38
 
 
  715              		.loc 1 811 35 is_stmt 0 view .LVU200
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  832:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     }
  752              		.loc 1 832 7 is_stmt 1 view .LVU218
  832:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 39
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 39
 
 
  753              		.loc 1 832 21 is_stmt 0 view .LVU219
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  855:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     {
  790              		.loc 1 855 7 is_stmt 0 view .LVU237
  791 0084 14F0400F 		tst	r4, #64
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 40
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 40
 
 
  792 0088 04D0     		beq	.L64
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  827              		.loc 1 893 35 is_stmt 0 view .LVU256
  828 00aa 05F40011 		and	r1, r5, #2097152
  893:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       optr_reg_mask |= FLASH_OPTR_DUALBANK;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 41
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 41
 
 
  829              		.loc 1 893 20 view .LVU257
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  865              		.loc 1 916 21 is_stmt 0 view .LVU275
  866 00d0 42F08072 		orr	r2, r2, #16777216
  867              	.LVL70:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 42
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 42
 
 
  868              	.L68:
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  965:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   }
  907              		.loc 1 965 5 is_stmt 1 view .LVU291
  908 0100 6369     		ldr	r3, [r4, #20]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 43
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 43
 
 
  909 0102 23F40033 		bic	r3, r3, #131072
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
 1007:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
  954              		.loc 1 1007 3 view .LVU303
 1010:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 44
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 44
 
 
  955              		.loc 1 1010 3 view .LVU304
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  993              		.loc 1 1062 23 is_stmt 0 view .LVU320
  994 003a 04F00301 		and	r1, r4, #3
 1062:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       {
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 45
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 45
 
 
  995              		.loc 1 1062 9 view .LVU321
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1036              		.loc 1 1026 7 is_stmt 1 view .LVU334
 1026:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       bank2_addr = FLASH_BASE;
  1037              		.loc 1 1026 33 is_stmt 0 view .LVU335
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 46
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 46
 
 
  1038 0070 1C4B     		ldr	r3, .L85+4
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1080 00aa 42EAD102 		orr	r2, r2, r1, lsr #3
  1081 00ae 4262     		str	r2, [r0, #36]
 1067:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****         MODIFY_REG(FLASH->PCROP1ER, FLASH_PCROP1ER_PCROP1_END, reg_value);
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 47
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 47
 
 
  1082              		.loc 1 1067 9 is_stmt 1 view .LVU348
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1127              		.cfi_endproc
  1128              	.LFE327:
  1130              		.section	.text.HAL_FLASHEx_OBProgram,"ax",%progbits
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 48
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 48
 
 
  1131              		.align	1
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  310:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   {
  1174              		.loc 1 310 5 discriminator 2 view .LVU370
  1175 0018 13F0010F 		tst	r3, #1
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 49
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 49
 
 
  1176 001c 15D1     		bne	.L100
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1214              		.loc 1 354 3 view .LVU386
  1215 0040 134B     		ldr	r3, .L104
  1216 0042 0022     		movs	r2, #0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 50
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 50
 
 
  1217 0044 1A70     		strb	r2, [r3]
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1258              	.LVL113:
  1259              	.L102:
  334:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     {
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 51
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 51
 
 
  1260              		.loc 1 334 5 is_stmt 1 view .LVU400
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1305              		.thumb
  1306              		.thumb_func
  1308              	HAL_FLASHEx_OBGetConfig:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 52
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 52
 
 
  1309              	.LVL120:
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1350              	.LVL123:
  388:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
  1351              		.loc 1 388 21 view .LVU424
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 53
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 53
 
 
  1352 0026 2061     		str	r0, [r4, #16]
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1394              		.thumb_func
  1396              	FLASH_PageErase:
  1397              	.LVL127:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 54
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 54
 
 
  1398              	.LFB322:
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1440 0036 5369     		ldr	r3, [r2, #20]
  1441 0038 43F40063 		orr	r3, r3, #2048
  1442 003c 5361     		str	r3, [r2, #20]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 55
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 55
 
 
  1443 003e E7E7     		b	.L114
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  241:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   {
  1489              		.loc 1 241 3 is_stmt 1 discriminator 2 view .LVU460
  241:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   {
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 56
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 56
 
 
  1490              		.loc 1 241 6 is_stmt 0 discriminator 2 view .LVU461
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  270:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   {
  1529              		.loc 1 270 3 is_stmt 1 discriminator 4 view .LVU477
  270:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   {
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 57
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 57
 
 
  1530              		.loc 1 270 17 is_stmt 0 discriminator 4 view .LVU478
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1569              		.loc 1 254 8 is_stmt 1 view .LVU493
  254:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   {
  1570              		.loc 1 254 11 is_stmt 0 view .LVU494
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 58
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 58
 
 
  1571 0070 0E4A     		ldr	r2, .L130+4
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1614              		.cfi_restore 14
  233:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
  1615              		.loc 1 233 3 view .LVU506
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 59
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 59
 
 
  1616 00a4 0220     		movs	r0, #2
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1662              		.loc 1 605 5 view .LVU516
  1663 0018 1168     		ldr	r1, [r2]
  1664 001a 41F40061 		orr	r1, r1, #2048
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 60
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 60
 
 
  1665 001e 1160     		str	r1, [r2]
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1705              		.loc 1 615 5 view .LVU530
  617:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****   }
  1706              		.loc 1 617 5 view .LVU531
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 61
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 61
 
 
  1707 0052 1A68     		ldr	r2, [r3]
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1756 0012 1A70     		strb	r2, [r3]
  131:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
  1757              		.loc 1 131 3 discriminator 2 view .LVU539
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 62
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 62
 
 
  134:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** 
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  150:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****       }
  1796              		.loc 1 150 34 is_stmt 0 view .LVU556
  1797 0046 294B     		ldr	r3, .L155
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 63
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 63
 
 
  1798 0048 0322     		movs	r2, #3
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1836              		.loc 1 200 9 is_stmt 1 view .LVU572
  1837 0074 1E4A     		ldr	r2, .L155+4
  1838 0076 5369     		ldr	r3, [r2, #20]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 64
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 64
 
 
  1839 0078 23F4FF63 		bic	r3, r3, #2040
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  165:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c ****     }
  1880              		.loc 1 165 32 is_stmt 0 view .LVU586
  1881 00ae 0F4B     		ldr	r3, .L155
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 65
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 65
 
 
  1882 00b0 0022     		movs	r2, #0
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  218:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_flash_ex.c **** }
  1924              		.loc 1 218 3 view .LVU599
  1925              	.LVL156:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 66
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 66
 
 
  1926              	.L140:
@@ -3926,61 +3926,61 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 1
  1947              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h"
  1948              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  1949              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h"
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s 			page 67
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s 			page 67
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_flash_ex.c
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:21     .text.FLASH_MassErase:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:26     .text.FLASH_MassErase:00000000 FLASH_MassErase
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:65     .text.FLASH_MassErase:0000002c $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:70     .text.FLASH_OB_GetWRP:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:75     .text.FLASH_OB_GetWRP:00000000 FLASH_OB_GetWRP
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:88     .text.FLASH_OB_GetWRP:00000008 $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:175    .text.FLASH_OB_GetWRP:00000058 $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:180    .text.FLASH_OB_GetRDP:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:185    .text.FLASH_OB_GetRDP:00000000 FLASH_OB_GetRDP
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:222    .text.FLASH_OB_GetRDP:0000001c $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:227    .text.FLASH_OB_GetUser:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:232    .text.FLASH_OB_GetUser:00000000 FLASH_OB_GetUser
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:254    .text.FLASH_OB_GetUser:0000000c $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:259    .text.FLASH_OB_GetPCROP:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:264    .text.FLASH_OB_GetPCROP:00000000 FLASH_OB_GetPCROP
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:443    .text.FLASH_OB_GetPCROP:000000b4 $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:453    .text.FLASH_OB_WRPConfig:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:458    .text.FLASH_OB_WRPConfig:00000000 FLASH_OB_WRPConfig
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:495    .text.FLASH_OB_WRPConfig:0000001a $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:563    .text.FLASH_OB_WRPConfig:00000084 $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:568    .text.FLASH_OB_RDPConfig:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:573    .text.FLASH_OB_RDPConfig:00000000 FLASH_OB_RDPConfig
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:631    .text.FLASH_OB_RDPConfig:00000038 $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:636    .text.FLASH_OB_UserConfig:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:641    .text.FLASH_OB_UserConfig:00000000 FLASH_OB_UserConfig
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:919    .text.FLASH_OB_UserConfig:0000010c $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:924    .text.FLASH_OB_PCROPConfig:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:929    .text.FLASH_OB_PCROPConfig:00000000 FLASH_OB_PCROPConfig
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1122   .text.FLASH_OB_PCROPConfig:000000e0 $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1131   .text.HAL_FLASHEx_OBProgram:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1137   .text.HAL_FLASHEx_OBProgram:00000000 HAL_FLASHEx_OBProgram
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1297   .text.HAL_FLASHEx_OBProgram:00000090 $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1302   .text.HAL_FLASHEx_OBGetConfig:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1308   .text.HAL_FLASHEx_OBGetConfig:00000000 HAL_FLASHEx_OBGetConfig
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1390   .text.FLASH_PageErase:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1396   .text.FLASH_PageErase:00000000 FLASH_PageErase
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1447   .text.FLASH_PageErase:00000040 $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1452   .text.HAL_FLASHEx_Erase_IT:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1458   .text.HAL_FLASHEx_Erase_IT:00000000 HAL_FLASHEx_Erase_IT
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1623   .text.HAL_FLASHEx_Erase_IT:000000a8 $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1629   .text.FLASH_FlushCaches:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1635   .text.FLASH_FlushCaches:00000000 FLASH_FlushCaches
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1714   .text.FLASH_FlushCaches:0000005c $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1720   .text.HAL_FLASHEx_Erase:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1726   .text.HAL_FLASHEx_Erase:00000000 HAL_FLASHEx_Erase
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:1938   .text.HAL_FLASHEx_Erase:000000ec $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:93     .text.FLASH_OB_GetWRP:0000000d $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:93     .text.FLASH_OB_GetWRP:0000000e $t
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:500    .text.FLASH_OB_WRPConfig:0000001f $d
-C:\Users\ehgre\AppData\Local\Temp\ccLwdRwU.s:500    .text.FLASH_OB_WRPConfig:00000020 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:21     .text.FLASH_MassErase:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:26     .text.FLASH_MassErase:00000000 FLASH_MassErase
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:65     .text.FLASH_MassErase:0000002c $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:70     .text.FLASH_OB_GetWRP:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:75     .text.FLASH_OB_GetWRP:00000000 FLASH_OB_GetWRP
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:88     .text.FLASH_OB_GetWRP:00000008 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:175    .text.FLASH_OB_GetWRP:00000058 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:180    .text.FLASH_OB_GetRDP:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:185    .text.FLASH_OB_GetRDP:00000000 FLASH_OB_GetRDP
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:222    .text.FLASH_OB_GetRDP:0000001c $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:227    .text.FLASH_OB_GetUser:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:232    .text.FLASH_OB_GetUser:00000000 FLASH_OB_GetUser
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:254    .text.FLASH_OB_GetUser:0000000c $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:259    .text.FLASH_OB_GetPCROP:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:264    .text.FLASH_OB_GetPCROP:00000000 FLASH_OB_GetPCROP
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:443    .text.FLASH_OB_GetPCROP:000000b4 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:453    .text.FLASH_OB_WRPConfig:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:458    .text.FLASH_OB_WRPConfig:00000000 FLASH_OB_WRPConfig
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:495    .text.FLASH_OB_WRPConfig:0000001a $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:563    .text.FLASH_OB_WRPConfig:00000084 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:568    .text.FLASH_OB_RDPConfig:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:573    .text.FLASH_OB_RDPConfig:00000000 FLASH_OB_RDPConfig
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:631    .text.FLASH_OB_RDPConfig:00000038 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:636    .text.FLASH_OB_UserConfig:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:641    .text.FLASH_OB_UserConfig:00000000 FLASH_OB_UserConfig
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:919    .text.FLASH_OB_UserConfig:0000010c $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:924    .text.FLASH_OB_PCROPConfig:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:929    .text.FLASH_OB_PCROPConfig:00000000 FLASH_OB_PCROPConfig
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1122   .text.FLASH_OB_PCROPConfig:000000e0 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1131   .text.HAL_FLASHEx_OBProgram:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1137   .text.HAL_FLASHEx_OBProgram:00000000 HAL_FLASHEx_OBProgram
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1297   .text.HAL_FLASHEx_OBProgram:00000090 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1302   .text.HAL_FLASHEx_OBGetConfig:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1308   .text.HAL_FLASHEx_OBGetConfig:00000000 HAL_FLASHEx_OBGetConfig
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1390   .text.FLASH_PageErase:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1396   .text.FLASH_PageErase:00000000 FLASH_PageErase
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1447   .text.FLASH_PageErase:00000040 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1452   .text.HAL_FLASHEx_Erase_IT:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1458   .text.HAL_FLASHEx_Erase_IT:00000000 HAL_FLASHEx_Erase_IT
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1623   .text.HAL_FLASHEx_Erase_IT:000000a8 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1629   .text.FLASH_FlushCaches:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1635   .text.FLASH_FlushCaches:00000000 FLASH_FlushCaches
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1714   .text.FLASH_FlushCaches:0000005c $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1720   .text.HAL_FLASHEx_Erase:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1726   .text.HAL_FLASHEx_Erase:00000000 HAL_FLASHEx_Erase
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:1938   .text.HAL_FLASHEx_Erase:000000ec $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:93     .text.FLASH_OB_GetWRP:0000000d $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:93     .text.FLASH_OB_GetWRP:0000000e $t
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:500    .text.FLASH_OB_WRPConfig:0000001f $d
+C:\Users\ehgre\AppData\Local\Temp\ccBkSbUx.s:500    .text.FLASH_OB_WRPConfig:00000020 $t
 
 UNDEFINED SYMBOLS
 FLASH_WaitForLastOperation
