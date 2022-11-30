@@ -1,0 +1,622 @@
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"interactions.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/interactions.c"
+  20              		.section	.text.is_car1,"ax",%progbits
+  21              		.align	1
+  22              		.global	is_car1
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	is_car1:
+  28              	.LFB320:
+   1:Core/Src/interactions.c **** #include <stdio.h>
+   2:Core/Src/interactions.c **** #include <stdlib.h>
+   3:Core/Src/interactions.c **** #include <stdbool.h>
+   4:Core/Src/interactions.c **** 
+   5:Core/Src/interactions.c **** #include "main.h"
+   6:Core/Src/interactions.c **** #include "stm32l4xx_it.h"
+   7:Core/Src/interactions.c **** #include "stm32l4xx_hal_conf.h"
+   8:Core/Src/interactions.c **** #include "interactions.h"
+   9:Core/Src/interactions.c **** 
+  10:Core/Src/interactions.c **** bool is_car1(){
+  29              		.loc 1 10 15 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 3, -8
+  37              		.cfi_offset 14, -4
+  11:Core/Src/interactions.c ****     if(HAL_GPIO_ReadPin(TL1_Car_GPIO_Port, TL1_Car_Pin) == GPIO_PIN_RESET){
+  38              		.loc 1 11 5 view .LVU1
+  39              		.loc 1 11 8 is_stmt 0 view .LVU2
+  40 0002 1021     		movs	r1, #16
+  41 0004 0348     		ldr	r0, .L5
+  42 0006 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+  43              	.LVL0:
+  44              		.loc 1 11 7 view .LVU3
+  45 000a 08B1     		cbz	r0, .L3
+  12:Core/Src/interactions.c ****         return true;
+  13:Core/Src/interactions.c ****     }
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s 			page 2
+
+
+  14:Core/Src/interactions.c ****     return false;
+  46              		.loc 1 14 12 view .LVU4
+  47 000c 0020     		movs	r0, #0
+  48              	.L2:
+  15:Core/Src/interactions.c **** }
+  49              		.loc 1 15 1 view .LVU5
+  50 000e 08BD     		pop	{r3, pc}
+  51              	.L3:
+  12:Core/Src/interactions.c ****         return true;
+  52              		.loc 1 12 16 view .LVU6
+  53 0010 0120     		movs	r0, #1
+  54 0012 FCE7     		b	.L2
+  55              	.L6:
+  56              		.align	2
+  57              	.L5:
+  58 0014 00080048 		.word	1207961600
+  59              		.cfi_endproc
+  60              	.LFE320:
+  62              		.section	.text.is_car2,"ax",%progbits
+  63              		.align	1
+  64              		.global	is_car2
+  65              		.syntax unified
+  66              		.thumb
+  67              		.thumb_func
+  69              	is_car2:
+  70              	.LFB321:
+  16:Core/Src/interactions.c **** 
+  17:Core/Src/interactions.c **** bool is_car2(){
+  71              		.loc 1 17 15 is_stmt 1 view -0
+  72              		.cfi_startproc
+  73              		@ args = 0, pretend = 0, frame = 0
+  74              		@ frame_needed = 0, uses_anonymous_args = 0
+  75 0000 08B5     		push	{r3, lr}
+  76              	.LCFI1:
+  77              		.cfi_def_cfa_offset 8
+  78              		.cfi_offset 3, -8
+  79              		.cfi_offset 14, -4
+  18:Core/Src/interactions.c ****     if(HAL_GPIO_ReadPin(TL2_Car_GPIO_Port, TL2_Car_Pin) == GPIO_PIN_RESET){
+  80              		.loc 1 18 5 view .LVU8
+  81              		.loc 1 18 8 is_stmt 0 view .LVU9
+  82 0002 4FF40051 		mov	r1, #8192
+  83 0006 0448     		ldr	r0, .L11
+  84 0008 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+  85              	.LVL1:
+  86              		.loc 1 18 7 view .LVU10
+  87 000c 08B1     		cbz	r0, .L9
+  19:Core/Src/interactions.c ****         return true;
+  20:Core/Src/interactions.c ****     }
+  21:Core/Src/interactions.c ****     return false;
+  88              		.loc 1 21 12 view .LVU11
+  89 000e 0020     		movs	r0, #0
+  90              	.L8:
+  22:Core/Src/interactions.c **** }
+  91              		.loc 1 22 1 view .LVU12
+  92 0010 08BD     		pop	{r3, pc}
+  93              	.L9:
+  19:Core/Src/interactions.c ****         return true;
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s 			page 3
+
+
+  94              		.loc 1 19 16 view .LVU13
+  95 0012 0120     		movs	r0, #1
+  96 0014 FCE7     		b	.L8
+  97              	.L12:
+  98 0016 00BF     		.align	2
+  99              	.L11:
+ 100 0018 00040048 		.word	1207960576
+ 101              		.cfi_endproc
+ 102              	.LFE321:
+ 104              		.section	.text.is_car3,"ax",%progbits
+ 105              		.align	1
+ 106              		.global	is_car3
+ 107              		.syntax unified
+ 108              		.thumb
+ 109              		.thumb_func
+ 111              	is_car3:
+ 112              	.LFB322:
+  23:Core/Src/interactions.c **** 
+  24:Core/Src/interactions.c **** bool is_car3(){
+ 113              		.loc 1 24 15 is_stmt 1 view -0
+ 114              		.cfi_startproc
+ 115              		@ args = 0, pretend = 0, frame = 0
+ 116              		@ frame_needed = 0, uses_anonymous_args = 0
+ 117 0000 08B5     		push	{r3, lr}
+ 118              	.LCFI2:
+ 119              		.cfi_def_cfa_offset 8
+ 120              		.cfi_offset 3, -8
+ 121              		.cfi_offset 14, -4
+  25:Core/Src/interactions.c ****     if(HAL_GPIO_ReadPin(TL3_Car_GPIO_Port, TL3_Car_Pin) == GPIO_PIN_RESET){
+ 122              		.loc 1 25 5 view .LVU15
+ 123              		.loc 1 25 8 is_stmt 0 view .LVU16
+ 124 0002 4FF48041 		mov	r1, #16384
+ 125 0006 0448     		ldr	r0, .L17
+ 126 0008 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 127              	.LVL2:
+ 128              		.loc 1 25 7 view .LVU17
+ 129 000c 08B1     		cbz	r0, .L15
+  26:Core/Src/interactions.c ****         return true;
+  27:Core/Src/interactions.c ****     }
+  28:Core/Src/interactions.c ****     return false;
+ 130              		.loc 1 28 12 view .LVU18
+ 131 000e 0020     		movs	r0, #0
+ 132              	.L14:
+  29:Core/Src/interactions.c **** }
+ 133              		.loc 1 29 1 view .LVU19
+ 134 0010 08BD     		pop	{r3, pc}
+ 135              	.L15:
+  26:Core/Src/interactions.c ****         return true;
+ 136              		.loc 1 26 16 view .LVU20
+ 137 0012 0120     		movs	r0, #1
+ 138 0014 FCE7     		b	.L14
+ 139              	.L18:
+ 140 0016 00BF     		.align	2
+ 141              	.L17:
+ 142 0018 00040048 		.word	1207960576
+ 143              		.cfi_endproc
+ 144              	.LFE322:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s 			page 4
+
+
+ 146              		.section	.text.is_car4,"ax",%progbits
+ 147              		.align	1
+ 148              		.global	is_car4
+ 149              		.syntax unified
+ 150              		.thumb
+ 151              		.thumb_func
+ 153              	is_car4:
+ 154              	.LFB323:
+  30:Core/Src/interactions.c **** 
+  31:Core/Src/interactions.c **** bool is_car4(){
+ 155              		.loc 1 31 15 is_stmt 1 view -0
+ 156              		.cfi_startproc
+ 157              		@ args = 0, pretend = 0, frame = 0
+ 158              		@ frame_needed = 0, uses_anonymous_args = 0
+ 159 0000 08B5     		push	{r3, lr}
+ 160              	.LCFI3:
+ 161              		.cfi_def_cfa_offset 8
+ 162              		.cfi_offset 3, -8
+ 163              		.cfi_offset 14, -4
+  32:Core/Src/interactions.c ****     if(HAL_GPIO_ReadPin(TL4_Car_GPIO_Port, TL4_Car_Pin) == GPIO_PIN_RESET){
+ 164              		.loc 1 32 5 view .LVU22
+ 165              		.loc 1 32 8 is_stmt 0 view .LVU23
+ 166 0002 4FF48061 		mov	r1, #1024
+ 167 0006 4FF09040 		mov	r0, #1207959552
+ 168 000a FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 169              	.LVL3:
+ 170              		.loc 1 32 7 view .LVU24
+ 171 000e 08B1     		cbz	r0, .L21
+  33:Core/Src/interactions.c ****         return true;
+  34:Core/Src/interactions.c ****     }
+  35:Core/Src/interactions.c ****     return false;
+ 172              		.loc 1 35 12 view .LVU25
+ 173 0010 0020     		movs	r0, #0
+ 174              	.L20:
+  36:Core/Src/interactions.c **** }
+ 175              		.loc 1 36 1 view .LVU26
+ 176 0012 08BD     		pop	{r3, pc}
+ 177              	.L21:
+  33:Core/Src/interactions.c ****         return true;
+ 178              		.loc 1 33 16 view .LVU27
+ 179 0014 0120     		movs	r0, #1
+ 180 0016 FCE7     		b	.L20
+ 181              		.cfi_endproc
+ 182              	.LFE323:
+ 184              		.section	.text.is_pl1,"ax",%progbits
+ 185              		.align	1
+ 186              		.global	is_pl1
+ 187              		.syntax unified
+ 188              		.thumb
+ 189              		.thumb_func
+ 191              	is_pl1:
+ 192              	.LFB324:
+  37:Core/Src/interactions.c **** 
+  38:Core/Src/interactions.c **** bool is_pl1(){
+ 193              		.loc 1 38 14 is_stmt 1 view -0
+ 194              		.cfi_startproc
+ 195              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s 			page 5
+
+
+ 196              		@ frame_needed = 0, uses_anonymous_args = 0
+ 197 0000 08B5     		push	{r3, lr}
+ 198              	.LCFI4:
+ 199              		.cfi_def_cfa_offset 8
+ 200              		.cfi_offset 3, -8
+ 201              		.cfi_offset 14, -4
+  39:Core/Src/interactions.c ****     if(HAL_GPIO_ReadPin(PL1_Switch_GPIO_Port, PL1_Switch_Pin) == GPIO_PIN_RESET){
+ 202              		.loc 1 39 5 view .LVU29
+ 203              		.loc 1 39 8 is_stmt 0 view .LVU30
+ 204 0002 4FF40041 		mov	r1, #32768
+ 205 0006 4FF09040 		mov	r0, #1207959552
+ 206 000a FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 207              	.LVL4:
+ 208              		.loc 1 39 7 view .LVU31
+ 209 000e 08B1     		cbz	r0, .L25
+  40:Core/Src/interactions.c ****         return true;
+  41:Core/Src/interactions.c ****     }
+  42:Core/Src/interactions.c ****     return false;
+ 210              		.loc 1 42 12 view .LVU32
+ 211 0010 0020     		movs	r0, #0
+ 212              	.L24:
+  43:Core/Src/interactions.c **** }
+ 213              		.loc 1 43 1 view .LVU33
+ 214 0012 08BD     		pop	{r3, pc}
+ 215              	.L25:
+  40:Core/Src/interactions.c ****         return true;
+ 216              		.loc 1 40 16 view .LVU34
+ 217 0014 0120     		movs	r0, #1
+ 218 0016 FCE7     		b	.L24
+ 219              		.cfi_endproc
+ 220              	.LFE324:
+ 222              		.section	.text.is_pl2,"ax",%progbits
+ 223              		.align	1
+ 224              		.global	is_pl2
+ 225              		.syntax unified
+ 226              		.thumb
+ 227              		.thumb_func
+ 229              	is_pl2:
+ 230              	.LFB325:
+  44:Core/Src/interactions.c **** 
+  45:Core/Src/interactions.c **** bool is_pl2(){
+ 231              		.loc 1 45 14 is_stmt 1 view -0
+ 232              		.cfi_startproc
+ 233              		@ args = 0, pretend = 0, frame = 0
+ 234              		@ frame_needed = 0, uses_anonymous_args = 0
+ 235 0000 08B5     		push	{r3, lr}
+ 236              	.LCFI5:
+ 237              		.cfi_def_cfa_offset 8
+ 238              		.cfi_offset 3, -8
+ 239              		.cfi_offset 14, -4
+  46:Core/Src/interactions.c ****     if(HAL_GPIO_ReadPin(PL2_Switch_GPIO_Port, PL2_Switch_Pin) == GPIO_PIN_RESET){
+ 240              		.loc 1 46 5 view .LVU36
+ 241              		.loc 1 46 8 is_stmt 0 view .LVU37
+ 242 0002 8021     		movs	r1, #128
+ 243 0004 0348     		ldr	r0, .L31
+ 244 0006 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 245              	.LVL5:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s 			page 6
+
+
+ 246              		.loc 1 46 7 view .LVU38
+ 247 000a 08B1     		cbz	r0, .L29
+  47:Core/Src/interactions.c ****         return true;
+  48:Core/Src/interactions.c ****     }
+  49:Core/Src/interactions.c ****     return false;
+ 248              		.loc 1 49 12 view .LVU39
+ 249 000c 0020     		movs	r0, #0
+ 250              	.L28:
+  50:Core/Src/interactions.c **** }
+ 251              		.loc 1 50 1 view .LVU40
+ 252 000e 08BD     		pop	{r3, pc}
+ 253              	.L29:
+  47:Core/Src/interactions.c ****         return true;
+ 254              		.loc 1 47 16 view .LVU41
+ 255 0010 0120     		movs	r0, #1
+ 256 0012 FCE7     		b	.L28
+ 257              	.L32:
+ 258              		.align	2
+ 259              	.L31:
+ 260 0014 00040048 		.word	1207960576
+ 261              		.cfi_endproc
+ 262              	.LFE325:
+ 264              		.section	.text.is_jcenter,"ax",%progbits
+ 265              		.align	1
+ 266              		.global	is_jcenter
+ 267              		.syntax unified
+ 268              		.thumb
+ 269              		.thumb_func
+ 271              	is_jcenter:
+ 272              	.LFB326:
+  51:Core/Src/interactions.c **** 
+  52:Core/Src/interactions.c **** bool is_jcenter(){
+ 273              		.loc 1 52 18 is_stmt 1 view -0
+ 274              		.cfi_startproc
+ 275              		@ args = 0, pretend = 0, frame = 0
+ 276              		@ frame_needed = 0, uses_anonymous_args = 0
+ 277 0000 08B5     		push	{r3, lr}
+ 278              	.LCFI6:
+ 279              		.cfi_def_cfa_offset 8
+ 280              		.cfi_offset 3, -8
+ 281              		.cfi_offset 14, -4
+  53:Core/Src/interactions.c ****     if(HAL_GPIO_ReadPin(button3_center_GPIO_Port, button3_center_Pin) == GPIO_PIN_RESET){
+ 282              		.loc 1 53 5 view .LVU43
+ 283              		.loc 1 53 8 is_stmt 0 view .LVU44
+ 284 0002 4FF48071 		mov	r1, #256
+ 285 0006 0448     		ldr	r0, .L37
+ 286 0008 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 287              	.LVL6:
+ 288              		.loc 1 53 7 view .LVU45
+ 289 000c 08B1     		cbz	r0, .L35
+  54:Core/Src/interactions.c ****         return true;
+  55:Core/Src/interactions.c ****     }
+  56:Core/Src/interactions.c ****     return false;
+ 290              		.loc 1 56 12 view .LVU46
+ 291 000e 0020     		movs	r0, #0
+ 292              	.L34:
+  57:Core/Src/interactions.c **** }
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s 			page 7
+
+
+ 293              		.loc 1 57 1 view .LVU47
+ 294 0010 08BD     		pop	{r3, pc}
+ 295              	.L35:
+  54:Core/Src/interactions.c ****         return true;
+ 296              		.loc 1 54 16 view .LVU48
+ 297 0012 0120     		movs	r0, #1
+ 298 0014 FCE7     		b	.L34
+ 299              	.L38:
+ 300 0016 00BF     		.align	2
+ 301              	.L37:
+ 302 0018 00040048 		.word	1207960576
+ 303              		.cfi_endproc
+ 304              	.LFE326:
+ 306              		.section	.text.is_jright,"ax",%progbits
+ 307              		.align	1
+ 308              		.global	is_jright
+ 309              		.syntax unified
+ 310              		.thumb
+ 311              		.thumb_func
+ 313              	is_jright:
+ 314              	.LFB327:
+  58:Core/Src/interactions.c **** 
+  59:Core/Src/interactions.c **** bool is_jright(){
+ 315              		.loc 1 59 17 is_stmt 1 view -0
+ 316              		.cfi_startproc
+ 317              		@ args = 0, pretend = 0, frame = 0
+ 318              		@ frame_needed = 0, uses_anonymous_args = 0
+ 319 0000 08B5     		push	{r3, lr}
+ 320              	.LCFI7:
+ 321              		.cfi_def_cfa_offset 8
+ 322              		.cfi_offset 3, -8
+ 323              		.cfi_offset 14, -4
+  60:Core/Src/interactions.c ****     if(HAL_GPIO_ReadPin(button3_D_GPIO_Port, button3_D_Pin) == GPIO_PIN_RESET){
+ 324              		.loc 1 60 5 view .LVU50
+ 325              		.loc 1 60 8 is_stmt 0 view .LVU51
+ 326 0002 4FF40071 		mov	r1, #512
+ 327 0006 0448     		ldr	r0, .L43
+ 328 0008 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 329              	.LVL7:
+ 330              		.loc 1 60 7 view .LVU52
+ 331 000c 08B1     		cbz	r0, .L41
+  61:Core/Src/interactions.c ****         return true;
+  62:Core/Src/interactions.c ****     }
+  63:Core/Src/interactions.c ****     return false;
+ 332              		.loc 1 63 12 view .LVU53
+ 333 000e 0020     		movs	r0, #0
+ 334              	.L40:
+  64:Core/Src/interactions.c **** }
+ 335              		.loc 1 64 1 view .LVU54
+ 336 0010 08BD     		pop	{r3, pc}
+ 337              	.L41:
+  61:Core/Src/interactions.c ****         return true;
+ 338              		.loc 1 61 16 view .LVU55
+ 339 0012 0120     		movs	r0, #1
+ 340 0014 FCE7     		b	.L40
+ 341              	.L44:
+ 342 0016 00BF     		.align	2
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s 			page 8
+
+
+ 343              	.L43:
+ 344 0018 00040048 		.word	1207960576
+ 345              		.cfi_endproc
+ 346              	.LFE327:
+ 348              		.section	.text.is_jdown,"ax",%progbits
+ 349              		.align	1
+ 350              		.global	is_jdown
+ 351              		.syntax unified
+ 352              		.thumb
+ 353              		.thumb_func
+ 355              	is_jdown:
+ 356              	.LFB328:
+  65:Core/Src/interactions.c **** 
+  66:Core/Src/interactions.c **** bool is_jdown(){
+ 357              		.loc 1 66 16 is_stmt 1 view -0
+ 358              		.cfi_startproc
+ 359              		@ args = 0, pretend = 0, frame = 0
+ 360              		@ frame_needed = 0, uses_anonymous_args = 0
+ 361 0000 08B5     		push	{r3, lr}
+ 362              	.LCFI8:
+ 363              		.cfi_def_cfa_offset 8
+ 364              		.cfi_offset 3, -8
+ 365              		.cfi_offset 14, -4
+  67:Core/Src/interactions.c ****     if(HAL_GPIO_ReadPin(button3_C_GPIO_Port, button3_C_Pin) == GPIO_PIN_RESET){
+ 366              		.loc 1 67 5 view .LVU57
+ 367              		.loc 1 67 8 is_stmt 0 view .LVU58
+ 368 0002 2021     		movs	r1, #32
+ 369 0004 0348     		ldr	r0, .L49
+ 370 0006 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 371              	.LVL8:
+ 372              		.loc 1 67 7 view .LVU59
+ 373 000a 08B1     		cbz	r0, .L47
+  68:Core/Src/interactions.c ****         return true;
+  69:Core/Src/interactions.c ****     }
+  70:Core/Src/interactions.c ****     return false;
+ 374              		.loc 1 70 12 view .LVU60
+ 375 000c 0020     		movs	r0, #0
+ 376              	.L46:
+  71:Core/Src/interactions.c **** }
+ 377              		.loc 1 71 1 view .LVU61
+ 378 000e 08BD     		pop	{r3, pc}
+ 379              	.L47:
+  68:Core/Src/interactions.c ****         return true;
+ 380              		.loc 1 68 16 view .LVU62
+ 381 0010 0120     		movs	r0, #1
+ 382 0012 FCE7     		b	.L46
+ 383              	.L50:
+ 384              		.align	2
+ 385              	.L49:
+ 386 0014 00080048 		.word	1207961600
+ 387              		.cfi_endproc
+ 388              	.LFE328:
+ 390              		.section	.text.is_jup,"ax",%progbits
+ 391              		.align	1
+ 392              		.global	is_jup
+ 393              		.syntax unified
+ 394              		.thumb
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s 			page 9
+
+
+ 395              		.thumb_func
+ 397              	is_jup:
+ 398              	.LFB329:
+  72:Core/Src/interactions.c **** 
+  73:Core/Src/interactions.c **** bool is_jup(){
+ 399              		.loc 1 73 14 is_stmt 1 view -0
+ 400              		.cfi_startproc
+ 401              		@ args = 0, pretend = 0, frame = 0
+ 402              		@ frame_needed = 0, uses_anonymous_args = 0
+ 403 0000 08B5     		push	{r3, lr}
+ 404              	.LCFI9:
+ 405              		.cfi_def_cfa_offset 8
+ 406              		.cfi_offset 3, -8
+ 407              		.cfi_offset 14, -4
+  74:Core/Src/interactions.c ****     if(HAL_GPIO_ReadPin(button3_B_GPIO_Port, button3_B_Pin) == GPIO_PIN_RESET){
+ 408              		.loc 1 74 5 view .LVU64
+ 409              		.loc 1 74 8 is_stmt 0 view .LVU65
+ 410 0002 4021     		movs	r1, #64
+ 411 0004 0348     		ldr	r0, .L55
+ 412 0006 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 413              	.LVL9:
+ 414              		.loc 1 74 7 view .LVU66
+ 415 000a 08B1     		cbz	r0, .L53
+  75:Core/Src/interactions.c ****         return true;
+  76:Core/Src/interactions.c ****     }
+  77:Core/Src/interactions.c ****     return false;
+ 416              		.loc 1 77 12 view .LVU67
+ 417 000c 0020     		movs	r0, #0
+ 418              	.L52:
+  78:Core/Src/interactions.c **** }
+ 419              		.loc 1 78 1 view .LVU68
+ 420 000e 08BD     		pop	{r3, pc}
+ 421              	.L53:
+  75:Core/Src/interactions.c ****         return true;
+ 422              		.loc 1 75 16 view .LVU69
+ 423 0010 0120     		movs	r0, #1
+ 424 0012 FCE7     		b	.L52
+ 425              	.L56:
+ 426              		.align	2
+ 427              	.L55:
+ 428 0014 00080048 		.word	1207961600
+ 429              		.cfi_endproc
+ 430              	.LFE329:
+ 432              		.section	.text.is_jleft,"ax",%progbits
+ 433              		.align	1
+ 434              		.global	is_jleft
+ 435              		.syntax unified
+ 436              		.thumb
+ 437              		.thumb_func
+ 439              	is_jleft:
+ 440              	.LFB330:
+  79:Core/Src/interactions.c **** 
+  80:Core/Src/interactions.c **** bool is_jleft(){
+ 441              		.loc 1 80 16 is_stmt 1 view -0
+ 442              		.cfi_startproc
+ 443              		@ args = 0, pretend = 0, frame = 0
+ 444              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s 			page 10
+
+
+ 445 0000 08B5     		push	{r3, lr}
+ 446              	.LCFI10:
+ 447              		.cfi_def_cfa_offset 8
+ 448              		.cfi_offset 3, -8
+ 449              		.cfi_offset 14, -4
+  81:Core/Src/interactions.c ****     if(HAL_GPIO_ReadPin(button3_A_GPIO_Port, button3_A_Pin) == GPIO_PIN_RESET){
+ 450              		.loc 1 81 5 view .LVU71
+ 451              		.loc 1 81 8 is_stmt 0 view .LVU72
+ 452 0002 4FF48071 		mov	r1, #256
+ 453 0006 0448     		ldr	r0, .L61
+ 454 0008 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 455              	.LVL10:
+ 456              		.loc 1 81 7 view .LVU73
+ 457 000c 08B1     		cbz	r0, .L59
+  82:Core/Src/interactions.c ****         return true;
+  83:Core/Src/interactions.c ****     }
+  84:Core/Src/interactions.c ****     return false;
+ 458              		.loc 1 84 12 view .LVU74
+ 459 000e 0020     		movs	r0, #0
+ 460              	.L58:
+  85:Core/Src/interactions.c **** }...
+ 461              		.loc 1 85 1 view .LVU75
+ 462 0010 08BD     		pop	{r3, pc}
+ 463              	.L59:
+  82:Core/Src/interactions.c ****         return true;
+ 464              		.loc 1 82 16 view .LVU76
+ 465 0012 0120     		movs	r0, #1
+ 466 0014 FCE7     		b	.L58
+ 467              	.L62:
+ 468 0016 00BF     		.align	2
+ 469              	.L61:
+ 470 0018 00080048 		.word	1207961600
+ 471              		.cfi_endproc
+ 472              	.LFE330:
+ 474              		.text
+ 475              	.Letext0:
+ 476              		.file 2 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
+ 477              		.file 3 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
+ 478              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h"
+ 479              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 interactions.c
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:21     .text.is_car1:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:27     .text.is_car1:00000000 is_car1
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:58     .text.is_car1:00000014 $d
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:63     .text.is_car2:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:69     .text.is_car2:00000000 is_car2
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:100    .text.is_car2:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:105    .text.is_car3:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:111    .text.is_car3:00000000 is_car3
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:142    .text.is_car3:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:147    .text.is_car4:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:153    .text.is_car4:00000000 is_car4
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:185    .text.is_pl1:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:191    .text.is_pl1:00000000 is_pl1
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:223    .text.is_pl2:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:229    .text.is_pl2:00000000 is_pl2
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:260    .text.is_pl2:00000014 $d
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:265    .text.is_jcenter:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:271    .text.is_jcenter:00000000 is_jcenter
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:302    .text.is_jcenter:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:307    .text.is_jright:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:313    .text.is_jright:00000000 is_jright
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:344    .text.is_jright:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:349    .text.is_jdown:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:355    .text.is_jdown:00000000 is_jdown
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:386    .text.is_jdown:00000014 $d
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:391    .text.is_jup:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:397    .text.is_jup:00000000 is_jup
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:428    .text.is_jup:00000014 $d
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:433    .text.is_jleft:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:439    .text.is_jleft:00000000 is_jleft
+C:\Users\ehgre\AppData\Local\Temp\cc8XTVcH.s:470    .text.is_jleft:00000018 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_ReadPin

@@ -1,0 +1,2376 @@
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"light_logic.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/light_logic.c"
+  20              		.section	.text.PL1_Green,"ax",%progbits
+  21              		.align	1
+  22              		.global	PL1_Green
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	PL1_Green:
+  28              	.LVL0:
+  29              	.LFB320:
+   1:Core/Src/light_logic.c **** #include <stdio.h>
+   2:Core/Src/light_logic.c **** #include <stdlib.h>
+   3:Core/Src/light_logic.c **** #include <stdbool.h>
+   4:Core/Src/light_logic.c **** 
+   5:Core/Src/light_logic.c **** #include "main.h"
+   6:Core/Src/light_logic.c **** #include "stm32l4xx_it.h"
+   7:Core/Src/light_logic.c **** #include "stm32l4xx_hal_conf.h"
+   8:Core/Src/light_logic.c **** #include "shift_register.h"
+   9:Core/Src/light_logic.c **** #include "spi.h"
+  10:Core/Src/light_logic.c **** #include "light_logic.h"
+  11:Core/Src/light_logic.c **** 
+  12:Core/Src/light_logic.c **** uint32_t PL1_Green(uint32_t bits, bool activated){
+  30              		.loc 1 12 50 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 12 50 is_stmt 0 view .LVU1
+  35 0000 08B5     		push	{r3, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 3, -8
+  39              		.cfi_offset 14, -4
+  13:Core/Src/light_logic.c ****     if(activated){
+  40              		.loc 1 13 5 is_stmt 1 view .LVU2
+  41              		.loc 1 13 7 is_stmt 0 view .LVU3
+  42 0002 29B1     		cbz	r1, .L2
+  14:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED1516, LED1516);
+  43              		.loc 1 14 9 is_stmt 1 view .LVU4
+  44              		.loc 1 14 16 is_stmt 0 view .LVU5
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 2
+
+
+  45 0004 4FF48012 		mov	r2, #1048576
+  46 0008 1146     		mov	r1, r2
+  47              	.LVL1:
+  48              		.loc 1 14 16 view .LVU6
+  49 000a FFF7FEFF 		bl	SR_bitadj
+  50              	.LVL2:
+  51              	.L1:
+  15:Core/Src/light_logic.c ****     }else{
+  16:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED1516);
+  17:Core/Src/light_logic.c ****     }
+  18:Core/Src/light_logic.c ****     return bits;
+  19:Core/Src/light_logic.c **** }
+  52              		.loc 1 19 1 view .LVU7
+  53 000e 08BD     		pop	{r3, pc}
+  54              	.LVL3:
+  55              	.L2:
+  16:Core/Src/light_logic.c ****     }
+  56              		.loc 1 16 9 is_stmt 1 view .LVU8
+  16:Core/Src/light_logic.c ****     }
+  57              		.loc 1 16 16 is_stmt 0 view .LVU9
+  58 0010 4FF48012 		mov	r2, #1048576
+  59 0014 0021     		movs	r1, #0
+  60              	.LVL4:
+  16:Core/Src/light_logic.c ****     }
+  61              		.loc 1 16 16 view .LVU10
+  62 0016 FFF7FEFF 		bl	SR_bitadj
+  63              	.LVL5:
+  18:Core/Src/light_logic.c **** }
+  64              		.loc 1 18 5 is_stmt 1 view .LVU11
+  18:Core/Src/light_logic.c **** }
+  65              		.loc 1 18 12 is_stmt 0 view .LVU12
+  66 001a F8E7     		b	.L1
+  67              		.cfi_endproc
+  68              	.LFE320:
+  70              		.section	.text.PL1_Red,"ax",%progbits
+  71              		.align	1
+  72              		.global	PL1_Red
+  73              		.syntax unified
+  74              		.thumb
+  75              		.thumb_func
+  77              	PL1_Red:
+  78              	.LVL6:
+  79              	.LFB321:
+  20:Core/Src/light_logic.c **** 
+  21:Core/Src/light_logic.c **** uint32_t PL1_Red(uint32_t bits, bool activated){
+  80              		.loc 1 21 48 is_stmt 1 view -0
+  81              		.cfi_startproc
+  82              		@ args = 0, pretend = 0, frame = 0
+  83              		@ frame_needed = 0, uses_anonymous_args = 0
+  84              		.loc 1 21 48 is_stmt 0 view .LVU14
+  85 0000 08B5     		push	{r3, lr}
+  86              	.LCFI1:
+  87              		.cfi_def_cfa_offset 8
+  88              		.cfi_offset 3, -8
+  89              		.cfi_offset 14, -4
+  22:Core/Src/light_logic.c ****     if(activated){
+  90              		.loc 1 22 5 is_stmt 1 view .LVU15
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 3
+
+
+  91              		.loc 1 22 7 is_stmt 0 view .LVU16
+  92 0002 29B1     		cbz	r1, .L6
+  23:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED1314, LED1314);
+  93              		.loc 1 23 9 is_stmt 1 view .LVU17
+  94              		.loc 1 23 16 is_stmt 0 view .LVU18
+  95 0004 4FF40022 		mov	r2, #524288
+  96 0008 1146     		mov	r1, r2
+  97              	.LVL7:
+  98              		.loc 1 23 16 view .LVU19
+  99 000a FFF7FEFF 		bl	SR_bitadj
+ 100              	.LVL8:
+ 101              	.L5:
+  24:Core/Src/light_logic.c ****     }else{
+  25:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED1314);
+  26:Core/Src/light_logic.c ****     }
+  27:Core/Src/light_logic.c ****     return bits;
+  28:Core/Src/light_logic.c **** }
+ 102              		.loc 1 28 1 view .LVU20
+ 103 000e 08BD     		pop	{r3, pc}
+ 104              	.LVL9:
+ 105              	.L6:
+  25:Core/Src/light_logic.c ****     }
+ 106              		.loc 1 25 9 is_stmt 1 view .LVU21
+  25:Core/Src/light_logic.c ****     }
+ 107              		.loc 1 25 16 is_stmt 0 view .LVU22
+ 108 0010 4FF40022 		mov	r2, #524288
+ 109 0014 0021     		movs	r1, #0
+ 110              	.LVL10:
+  25:Core/Src/light_logic.c ****     }
+ 111              		.loc 1 25 16 view .LVU23
+ 112 0016 FFF7FEFF 		bl	SR_bitadj
+ 113              	.LVL11:
+  27:Core/Src/light_logic.c **** }
+ 114              		.loc 1 27 5 is_stmt 1 view .LVU24
+  27:Core/Src/light_logic.c **** }
+ 115              		.loc 1 27 12 is_stmt 0 view .LVU25
+ 116 001a F8E7     		b	.L5
+ 117              		.cfi_endproc
+ 118              	.LFE321:
+ 120              		.section	.text.PL1_Blue,"ax",%progbits
+ 121              		.align	1
+ 122              		.global	PL1_Blue
+ 123              		.syntax unified
+ 124              		.thumb
+ 125              		.thumb_func
+ 127              	PL1_Blue:
+ 128              	.LVL12:
+ 129              	.LFB322:
+  29:Core/Src/light_logic.c **** 
+  30:Core/Src/light_logic.c **** uint32_t PL1_Blue(uint32_t bits, bool activated){
+ 130              		.loc 1 30 49 is_stmt 1 view -0
+ 131              		.cfi_startproc
+ 132              		@ args = 0, pretend = 0, frame = 0
+ 133              		@ frame_needed = 0, uses_anonymous_args = 0
+ 134              		.loc 1 30 49 is_stmt 0 view .LVU27
+ 135 0000 08B5     		push	{r3, lr}
+ 136              	.LCFI2:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 4
+
+
+ 137              		.cfi_def_cfa_offset 8
+ 138              		.cfi_offset 3, -8
+ 139              		.cfi_offset 14, -4
+  31:Core/Src/light_logic.c ****     if(activated){
+ 140              		.loc 1 31 5 is_stmt 1 view .LVU28
+ 141              		.loc 1 31 7 is_stmt 0 view .LVU29
+ 142 0002 29B1     		cbz	r1, .L10
+  32:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED1718, LED1718);
+ 143              		.loc 1 32 9 is_stmt 1 view .LVU30
+ 144              		.loc 1 32 16 is_stmt 0 view .LVU31
+ 145 0004 4FF40012 		mov	r2, #2097152
+ 146 0008 1146     		mov	r1, r2
+ 147              	.LVL13:
+ 148              		.loc 1 32 16 view .LVU32
+ 149 000a FFF7FEFF 		bl	SR_bitadj
+ 150              	.LVL14:
+ 151              	.L9:
+  33:Core/Src/light_logic.c ****     }else{
+  34:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED1718);
+  35:Core/Src/light_logic.c ****     }
+  36:Core/Src/light_logic.c ****     return bits;
+  37:Core/Src/light_logic.c **** }
+ 152              		.loc 1 37 1 view .LVU33
+ 153 000e 08BD     		pop	{r3, pc}
+ 154              	.LVL15:
+ 155              	.L10:
+  34:Core/Src/light_logic.c ****     }
+ 156              		.loc 1 34 9 is_stmt 1 view .LVU34
+  34:Core/Src/light_logic.c ****     }
+ 157              		.loc 1 34 16 is_stmt 0 view .LVU35
+ 158 0010 4FF40012 		mov	r2, #2097152
+ 159 0014 0021     		movs	r1, #0
+ 160              	.LVL16:
+  34:Core/Src/light_logic.c ****     }
+ 161              		.loc 1 34 16 view .LVU36
+ 162 0016 FFF7FEFF 		bl	SR_bitadj
+ 163              	.LVL17:
+  36:Core/Src/light_logic.c **** }
+ 164              		.loc 1 36 5 is_stmt 1 view .LVU37
+  36:Core/Src/light_logic.c **** }
+ 165              		.loc 1 36 12 is_stmt 0 view .LVU38
+ 166 001a F8E7     		b	.L9
+ 167              		.cfi_endproc
+ 168              	.LFE322:
+ 170              		.section	.text.PL1_Blue_Toggle,"ax",%progbits
+ 171              		.align	1
+ 172              		.global	PL1_Blue_Toggle
+ 173              		.syntax unified
+ 174              		.thumb
+ 175              		.thumb_func
+ 177              	PL1_Blue_Toggle:
+ 178              	.LVL18:
+ 179              	.LFB323:
+  38:Core/Src/light_logic.c **** 
+  39:Core/Src/light_logic.c **** uint32_t PL1_Blue_Toggle(uint32_t bits){
+ 180              		.loc 1 39 40 is_stmt 1 view -0
+ 181              		.cfi_startproc
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 5
+
+
+ 182              		@ args = 0, pretend = 0, frame = 0
+ 183              		@ frame_needed = 0, uses_anonymous_args = 0
+ 184              		.loc 1 39 40 is_stmt 0 view .LVU40
+ 185 0000 08B5     		push	{r3, lr}
+ 186              	.LCFI3:
+ 187              		.cfi_def_cfa_offset 8
+ 188              		.cfi_offset 3, -8
+ 189              		.cfi_offset 14, -4
+  40:Core/Src/light_logic.c ****     if((bits&LED1718) == 0){
+ 190              		.loc 1 40 5 is_stmt 1 view .LVU41
+ 191              		.loc 1 40 7 is_stmt 0 view .LVU42
+ 192 0002 10F4001F 		tst	r0, #2097152
+ 193 0006 05D1     		bne	.L14
+  41:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED1718, LED1718);
+ 194              		.loc 1 41 9 is_stmt 1 view .LVU43
+ 195              		.loc 1 41 16 is_stmt 0 view .LVU44
+ 196 0008 4FF40012 		mov	r2, #2097152
+ 197 000c 1146     		mov	r1, r2
+ 198 000e FFF7FEFF 		bl	SR_bitadj
+ 199              	.LVL19:
+ 200              	.L13:
+  42:Core/Src/light_logic.c ****     }else{
+  43:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED1718);
+  44:Core/Src/light_logic.c ****     }
+  45:Core/Src/light_logic.c ****     return bits;
+  46:Core/Src/light_logic.c **** }
+ 201              		.loc 1 46 1 view .LVU45
+ 202 0012 08BD     		pop	{r3, pc}
+ 203              	.L14:
+  43:Core/Src/light_logic.c ****     }
+ 204              		.loc 1 43 9 is_stmt 1 view .LVU46
+  43:Core/Src/light_logic.c ****     }
+ 205              		.loc 1 43 16 is_stmt 0 view .LVU47
+ 206 0014 4FF40012 		mov	r2, #2097152
+ 207 0018 0021     		movs	r1, #0
+ 208 001a FFF7FEFF 		bl	SR_bitadj
+ 209              	.LVL20:
+  45:Core/Src/light_logic.c **** }
+ 210              		.loc 1 45 5 is_stmt 1 view .LVU48
+  45:Core/Src/light_logic.c **** }
+ 211              		.loc 1 45 12 is_stmt 0 view .LVU49
+ 212 001e F8E7     		b	.L13
+ 213              		.cfi_endproc
+ 214              	.LFE323:
+ 216              		.section	.text.PL2_Green,"ax",%progbits
+ 217              		.align	1
+ 218              		.global	PL2_Green
+ 219              		.syntax unified
+ 220              		.thumb
+ 221              		.thumb_func
+ 223              	PL2_Green:
+ 224              	.LVL21:
+ 225              	.LFB324:
+  47:Core/Src/light_logic.c **** 
+  48:Core/Src/light_logic.c **** uint32_t PL2_Green(uint32_t bits, bool activated){ 
+ 226              		.loc 1 48 50 is_stmt 1 view -0
+ 227              		.cfi_startproc
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 6
+
+
+ 228              		@ args = 0, pretend = 0, frame = 0
+ 229              		@ frame_needed = 0, uses_anonymous_args = 0
+ 230              		.loc 1 48 50 is_stmt 0 view .LVU51
+ 231 0000 08B5     		push	{r3, lr}
+ 232              	.LCFI4:
+ 233              		.cfi_def_cfa_offset 8
+ 234              		.cfi_offset 3, -8
+ 235              		.cfi_offset 14, -4
+  49:Core/Src/light_logic.c ****     if(activated){
+ 236              		.loc 1 49 5 is_stmt 1 view .LVU52
+ 237              		.loc 1 49 7 is_stmt 0 view .LVU53
+ 238 0002 29B1     		cbz	r1, .L18
+  50:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED2122, LED2122);
+ 239              		.loc 1 50 9 is_stmt 1 view .LVU54
+ 240              		.loc 1 50 16 is_stmt 0 view .LVU55
+ 241 0004 4FF48052 		mov	r2, #4096
+ 242 0008 1146     		mov	r1, r2
+ 243              	.LVL22:
+ 244              		.loc 1 50 16 view .LVU56
+ 245 000a FFF7FEFF 		bl	SR_bitadj
+ 246              	.LVL23:
+ 247              	.L17:
+  51:Core/Src/light_logic.c ****     }else{
+  52:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED2122);
+  53:Core/Src/light_logic.c ****     }
+  54:Core/Src/light_logic.c ****     return bits;
+  55:Core/Src/light_logic.c **** }
+ 248              		.loc 1 55 1 view .LVU57
+ 249 000e 08BD     		pop	{r3, pc}
+ 250              	.LVL24:
+ 251              	.L18:
+  52:Core/Src/light_logic.c ****     }
+ 252              		.loc 1 52 9 is_stmt 1 view .LVU58
+  52:Core/Src/light_logic.c ****     }
+ 253              		.loc 1 52 16 is_stmt 0 view .LVU59
+ 254 0010 4FF48052 		mov	r2, #4096
+ 255 0014 0021     		movs	r1, #0
+ 256              	.LVL25:
+  52:Core/Src/light_logic.c ****     }
+ 257              		.loc 1 52 16 view .LVU60
+ 258 0016 FFF7FEFF 		bl	SR_bitadj
+ 259              	.LVL26:
+  54:Core/Src/light_logic.c **** }
+ 260              		.loc 1 54 5 is_stmt 1 view .LVU61
+  54:Core/Src/light_logic.c **** }
+ 261              		.loc 1 54 12 is_stmt 0 view .LVU62
+ 262 001a F8E7     		b	.L17
+ 263              		.cfi_endproc
+ 264              	.LFE324:
+ 266              		.section	.text.PL2_Red,"ax",%progbits
+ 267              		.align	1
+ 268              		.global	PL2_Red
+ 269              		.syntax unified
+ 270              		.thumb
+ 271              		.thumb_func
+ 273              	PL2_Red:
+ 274              	.LVL27:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 7
+
+
+ 275              	.LFB325:
+  56:Core/Src/light_logic.c **** 
+  57:Core/Src/light_logic.c **** uint32_t PL2_Red(uint32_t bits, bool activated){ 
+ 276              		.loc 1 57 48 is_stmt 1 view -0
+ 277              		.cfi_startproc
+ 278              		@ args = 0, pretend = 0, frame = 0
+ 279              		@ frame_needed = 0, uses_anonymous_args = 0
+ 280              		.loc 1 57 48 is_stmt 0 view .LVU64
+ 281 0000 08B5     		push	{r3, lr}
+ 282              	.LCFI5:
+ 283              		.cfi_def_cfa_offset 8
+ 284              		.cfi_offset 3, -8
+ 285              		.cfi_offset 14, -4
+  58:Core/Src/light_logic.c ****     if(activated){
+ 286              		.loc 1 58 5 is_stmt 1 view .LVU65
+ 287              		.loc 1 58 7 is_stmt 0 view .LVU66
+ 288 0002 29B1     		cbz	r1, .L22
+  59:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED1920, LED1920);
+ 289              		.loc 1 59 9 is_stmt 1 view .LVU67
+ 290              		.loc 1 59 16 is_stmt 0 view .LVU68
+ 291 0004 4FF40062 		mov	r2, #2048
+ 292 0008 1146     		mov	r1, r2
+ 293              	.LVL28:
+ 294              		.loc 1 59 16 view .LVU69
+ 295 000a FFF7FEFF 		bl	SR_bitadj
+ 296              	.LVL29:
+ 297              	.L21:
+  60:Core/Src/light_logic.c ****     }else{
+  61:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED1920);
+  62:Core/Src/light_logic.c ****     }
+  63:Core/Src/light_logic.c ****     return bits;
+  64:Core/Src/light_logic.c **** }
+ 298              		.loc 1 64 1 view .LVU70
+ 299 000e 08BD     		pop	{r3, pc}
+ 300              	.LVL30:
+ 301              	.L22:
+  61:Core/Src/light_logic.c ****     }
+ 302              		.loc 1 61 9 is_stmt 1 view .LVU71
+  61:Core/Src/light_logic.c ****     }
+ 303              		.loc 1 61 16 is_stmt 0 view .LVU72
+ 304 0010 4FF40062 		mov	r2, #2048
+ 305 0014 0021     		movs	r1, #0
+ 306              	.LVL31:
+  61:Core/Src/light_logic.c ****     }
+ 307              		.loc 1 61 16 view .LVU73
+ 308 0016 FFF7FEFF 		bl	SR_bitadj
+ 309              	.LVL32:
+  63:Core/Src/light_logic.c **** }
+ 310              		.loc 1 63 5 is_stmt 1 view .LVU74
+  63:Core/Src/light_logic.c **** }
+ 311              		.loc 1 63 12 is_stmt 0 view .LVU75
+ 312 001a F8E7     		b	.L21
+ 313              		.cfi_endproc
+ 314              	.LFE325:
+ 316              		.section	.text.PL2_Blue,"ax",%progbits
+ 317              		.align	1
+ 318              		.global	PL2_Blue
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 8
+
+
+ 319              		.syntax unified
+ 320              		.thumb
+ 321              		.thumb_func
+ 323              	PL2_Blue:
+ 324              	.LVL33:
+ 325              	.LFB326:
+  65:Core/Src/light_logic.c **** 
+  66:Core/Src/light_logic.c **** uint32_t PL2_Blue(uint32_t bits, bool activated){
+ 326              		.loc 1 66 49 is_stmt 1 view -0
+ 327              		.cfi_startproc
+ 328              		@ args = 0, pretend = 0, frame = 0
+ 329              		@ frame_needed = 0, uses_anonymous_args = 0
+ 330              		.loc 1 66 49 is_stmt 0 view .LVU77
+ 331 0000 08B5     		push	{r3, lr}
+ 332              	.LCFI6:
+ 333              		.cfi_def_cfa_offset 8
+ 334              		.cfi_offset 3, -8
+ 335              		.cfi_offset 14, -4
+  67:Core/Src/light_logic.c ****     if(activated){
+ 336              		.loc 1 67 5 is_stmt 1 view .LVU78
+ 337              		.loc 1 67 7 is_stmt 0 view .LVU79
+ 338 0002 29B1     		cbz	r1, .L26
+  68:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED2324, LED2324);
+ 339              		.loc 1 68 9 is_stmt 1 view .LVU80
+ 340              		.loc 1 68 16 is_stmt 0 view .LVU81
+ 341 0004 4FF40052 		mov	r2, #8192
+ 342 0008 1146     		mov	r1, r2
+ 343              	.LVL34:
+ 344              		.loc 1 68 16 view .LVU82
+ 345 000a FFF7FEFF 		bl	SR_bitadj
+ 346              	.LVL35:
+ 347              	.L25:
+  69:Core/Src/light_logic.c ****     }else{
+  70:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED2324);
+  71:Core/Src/light_logic.c ****     }
+  72:Core/Src/light_logic.c ****     return bits;
+  73:Core/Src/light_logic.c **** }
+ 348              		.loc 1 73 1 view .LVU83
+ 349 000e 08BD     		pop	{r3, pc}
+ 350              	.LVL36:
+ 351              	.L26:
+  70:Core/Src/light_logic.c ****     }
+ 352              		.loc 1 70 9 is_stmt 1 view .LVU84
+  70:Core/Src/light_logic.c ****     }
+ 353              		.loc 1 70 16 is_stmt 0 view .LVU85
+ 354 0010 4FF40052 		mov	r2, #8192
+ 355 0014 0021     		movs	r1, #0
+ 356              	.LVL37:
+  70:Core/Src/light_logic.c ****     }
+ 357              		.loc 1 70 16 view .LVU86
+ 358 0016 FFF7FEFF 		bl	SR_bitadj
+ 359              	.LVL38:
+  72:Core/Src/light_logic.c **** }
+ 360              		.loc 1 72 5 is_stmt 1 view .LVU87
+  72:Core/Src/light_logic.c **** }
+ 361              		.loc 1 72 12 is_stmt 0 view .LVU88
+ 362 001a F8E7     		b	.L25
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 9
+
+
+ 363              		.cfi_endproc
+ 364              	.LFE326:
+ 366              		.section	.text.PL2_Blue_Toggle,"ax",%progbits
+ 367              		.align	1
+ 368              		.global	PL2_Blue_Toggle
+ 369              		.syntax unified
+ 370              		.thumb
+ 371              		.thumb_func
+ 373              	PL2_Blue_Toggle:
+ 374              	.LVL39:
+ 375              	.LFB327:
+  74:Core/Src/light_logic.c **** 
+  75:Core/Src/light_logic.c **** uint32_t PL2_Blue_Toggle(uint32_t bits){
+ 376              		.loc 1 75 40 is_stmt 1 view -0
+ 377              		.cfi_startproc
+ 378              		@ args = 0, pretend = 0, frame = 0
+ 379              		@ frame_needed = 0, uses_anonymous_args = 0
+ 380              		.loc 1 75 40 is_stmt 0 view .LVU90
+ 381 0000 08B5     		push	{r3, lr}
+ 382              	.LCFI7:
+ 383              		.cfi_def_cfa_offset 8
+ 384              		.cfi_offset 3, -8
+ 385              		.cfi_offset 14, -4
+  76:Core/Src/light_logic.c ****     if((bits&LED2324) == 0){
+ 386              		.loc 1 76 5 is_stmt 1 view .LVU91
+ 387              		.loc 1 76 7 is_stmt 0 view .LVU92
+ 388 0002 10F4005F 		tst	r0, #8192
+ 389 0006 05D1     		bne	.L30
+  77:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED2324, LED2324);
+ 390              		.loc 1 77 9 is_stmt 1 view .LVU93
+ 391              		.loc 1 77 16 is_stmt 0 view .LVU94
+ 392 0008 4FF40052 		mov	r2, #8192
+ 393 000c 1146     		mov	r1, r2
+ 394 000e FFF7FEFF 		bl	SR_bitadj
+ 395              	.LVL40:
+ 396              	.L29:
+  78:Core/Src/light_logic.c ****     }else{
+  79:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED2324);
+  80:Core/Src/light_logic.c ****     }
+  81:Core/Src/light_logic.c ****     return bits;
+  82:Core/Src/light_logic.c **** }
+ 397              		.loc 1 82 1 view .LVU95
+ 398 0012 08BD     		pop	{r3, pc}
+ 399              	.L30:
+  79:Core/Src/light_logic.c ****     }
+ 400              		.loc 1 79 9 is_stmt 1 view .LVU96
+  79:Core/Src/light_logic.c ****     }
+ 401              		.loc 1 79 16 is_stmt 0 view .LVU97
+ 402 0014 4FF40052 		mov	r2, #8192
+ 403 0018 0021     		movs	r1, #0
+ 404 001a FFF7FEFF 		bl	SR_bitadj
+ 405              	.LVL41:
+  81:Core/Src/light_logic.c **** }
+ 406              		.loc 1 81 5 is_stmt 1 view .LVU98
+  81:Core/Src/light_logic.c **** }
+ 407              		.loc 1 81 12 is_stmt 0 view .LVU99
+ 408 001e F8E7     		b	.L29
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 10
+
+
+ 409              		.cfi_endproc
+ 410              	.LFE327:
+ 412              		.section	.text.TL1_Red,"ax",%progbits
+ 413              		.align	1
+ 414              		.global	TL1_Red
+ 415              		.syntax unified
+ 416              		.thumb
+ 417              		.thumb_func
+ 419              	TL1_Red:
+ 420              	.LVL42:
+ 421              	.LFB328:
+  83:Core/Src/light_logic.c **** 
+  84:Core/Src/light_logic.c **** uint32_t TL1_Red(uint32_t bits, bool activated){ 
+ 422              		.loc 1 84 48 is_stmt 1 view -0
+ 423              		.cfi_startproc
+ 424              		@ args = 0, pretend = 0, frame = 0
+ 425              		@ frame_needed = 0, uses_anonymous_args = 0
+ 426              		.loc 1 84 48 is_stmt 0 view .LVU101
+ 427 0000 08B5     		push	{r3, lr}
+ 428              	.LCFI8:
+ 429              		.cfi_def_cfa_offset 8
+ 430              		.cfi_offset 3, -8
+ 431              		.cfi_offset 14, -4
+  85:Core/Src/light_logic.c ****     if(activated){
+ 432              		.loc 1 85 5 is_stmt 1 view .LVU102
+ 433              		.loc 1 85 7 is_stmt 0 view .LVU103
+ 434 0002 29B1     		cbz	r1, .L34
+  86:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED1, LED1);
+ 435              		.loc 1 86 9 is_stmt 1 view .LVU104
+ 436              		.loc 1 86 16 is_stmt 0 view .LVU105
+ 437 0004 4FF48032 		mov	r2, #65536
+ 438 0008 1146     		mov	r1, r2
+ 439              	.LVL43:
+ 440              		.loc 1 86 16 view .LVU106
+ 441 000a FFF7FEFF 		bl	SR_bitadj
+ 442              	.LVL44:
+ 443              	.L33:
+  87:Core/Src/light_logic.c ****     }else{
+  88:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED1);
+  89:Core/Src/light_logic.c ****     }
+  90:Core/Src/light_logic.c ****     return bits;
+  91:Core/Src/light_logic.c **** }
+ 444              		.loc 1 91 1 view .LVU107
+ 445 000e 08BD     		pop	{r3, pc}
+ 446              	.LVL45:
+ 447              	.L34:
+  88:Core/Src/light_logic.c ****     }
+ 448              		.loc 1 88 9 is_stmt 1 view .LVU108
+  88:Core/Src/light_logic.c ****     }
+ 449              		.loc 1 88 16 is_stmt 0 view .LVU109
+ 450 0010 4FF48032 		mov	r2, #65536
+ 451 0014 0021     		movs	r1, #0
+ 452              	.LVL46:
+  88:Core/Src/light_logic.c ****     }
+ 453              		.loc 1 88 16 view .LVU110
+ 454 0016 FFF7FEFF 		bl	SR_bitadj
+ 455              	.LVL47:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 11
+
+
+  90:Core/Src/light_logic.c **** }
+ 456              		.loc 1 90 5 is_stmt 1 view .LVU111
+  90:Core/Src/light_logic.c **** }
+ 457              		.loc 1 90 12 is_stmt 0 view .LVU112
+ 458 001a F8E7     		b	.L33
+ 459              		.cfi_endproc
+ 460              	.LFE328:
+ 462              		.section	.text.TL1_Yellow,"ax",%progbits
+ 463              		.align	1
+ 464              		.global	TL1_Yellow
+ 465              		.syntax unified
+ 466              		.thumb
+ 467              		.thumb_func
+ 469              	TL1_Yellow:
+ 470              	.LVL48:
+ 471              	.LFB329:
+  92:Core/Src/light_logic.c **** 
+  93:Core/Src/light_logic.c **** uint32_t TL1_Yellow(uint32_t bits, bool activated){ 
+ 472              		.loc 1 93 51 is_stmt 1 view -0
+ 473              		.cfi_startproc
+ 474              		@ args = 0, pretend = 0, frame = 0
+ 475              		@ frame_needed = 0, uses_anonymous_args = 0
+ 476              		.loc 1 93 51 is_stmt 0 view .LVU114
+ 477 0000 08B5     		push	{r3, lr}
+ 478              	.LCFI9:
+ 479              		.cfi_def_cfa_offset 8
+ 480              		.cfi_offset 3, -8
+ 481              		.cfi_offset 14, -4
+  94:Core/Src/light_logic.c ****     if(activated){
+ 482              		.loc 1 94 5 is_stmt 1 view .LVU115
+ 483              		.loc 1 94 7 is_stmt 0 view .LVU116
+ 484 0002 29B1     		cbz	r1, .L38
+  95:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED2, LED2);
+ 485              		.loc 1 95 9 is_stmt 1 view .LVU117
+ 486              		.loc 1 95 16 is_stmt 0 view .LVU118
+ 487 0004 4FF40032 		mov	r2, #131072
+ 488 0008 1146     		mov	r1, r2
+ 489              	.LVL49:
+ 490              		.loc 1 95 16 view .LVU119
+ 491 000a FFF7FEFF 		bl	SR_bitadj
+ 492              	.LVL50:
+ 493              	.L37:
+  96:Core/Src/light_logic.c ****     }else{
+  97:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED2);
+  98:Core/Src/light_logic.c ****     }
+  99:Core/Src/light_logic.c ****     return bits;
+ 100:Core/Src/light_logic.c **** }
+ 494              		.loc 1 100 1 view .LVU120
+ 495 000e 08BD     		pop	{r3, pc}
+ 496              	.LVL51:
+ 497              	.L38:
+  97:Core/Src/light_logic.c ****     }
+ 498              		.loc 1 97 9 is_stmt 1 view .LVU121
+  97:Core/Src/light_logic.c ****     }
+ 499              		.loc 1 97 16 is_stmt 0 view .LVU122
+ 500 0010 4FF40032 		mov	r2, #131072
+ 501 0014 0021     		movs	r1, #0
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 12
+
+
+ 502              	.LVL52:
+  97:Core/Src/light_logic.c ****     }
+ 503              		.loc 1 97 16 view .LVU123
+ 504 0016 FFF7FEFF 		bl	SR_bitadj
+ 505              	.LVL53:
+  99:Core/Src/light_logic.c **** }
+ 506              		.loc 1 99 5 is_stmt 1 view .LVU124
+  99:Core/Src/light_logic.c **** }
+ 507              		.loc 1 99 12 is_stmt 0 view .LVU125
+ 508 001a F8E7     		b	.L37
+ 509              		.cfi_endproc
+ 510              	.LFE329:
+ 512              		.section	.text.TL1_Green,"ax",%progbits
+ 513              		.align	1
+ 514              		.global	TL1_Green
+ 515              		.syntax unified
+ 516              		.thumb
+ 517              		.thumb_func
+ 519              	TL1_Green:
+ 520              	.LVL54:
+ 521              	.LFB330:
+ 101:Core/Src/light_logic.c **** 
+ 102:Core/Src/light_logic.c **** uint32_t TL1_Green(uint32_t bits,bool activated){ 
+ 522              		.loc 1 102 49 is_stmt 1 view -0
+ 523              		.cfi_startproc
+ 524              		@ args = 0, pretend = 0, frame = 0
+ 525              		@ frame_needed = 0, uses_anonymous_args = 0
+ 526              		.loc 1 102 49 is_stmt 0 view .LVU127
+ 527 0000 08B5     		push	{r3, lr}
+ 528              	.LCFI10:
+ 529              		.cfi_def_cfa_offset 8
+ 530              		.cfi_offset 3, -8
+ 531              		.cfi_offset 14, -4
+ 103:Core/Src/light_logic.c ****     if(activated){
+ 532              		.loc 1 103 5 is_stmt 1 view .LVU128
+ 533              		.loc 1 103 7 is_stmt 0 view .LVU129
+ 534 0002 29B1     		cbz	r1, .L42
+ 104:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED3, LED3);
+ 535              		.loc 1 104 9 is_stmt 1 view .LVU130
+ 536              		.loc 1 104 16 is_stmt 0 view .LVU131
+ 537 0004 4FF48022 		mov	r2, #262144
+ 538 0008 1146     		mov	r1, r2
+ 539              	.LVL55:
+ 540              		.loc 1 104 16 view .LVU132
+ 541 000a FFF7FEFF 		bl	SR_bitadj
+ 542              	.LVL56:
+ 543              	.L41:
+ 105:Core/Src/light_logic.c ****     }else{
+ 106:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED3);
+ 107:Core/Src/light_logic.c ****     }
+ 108:Core/Src/light_logic.c ****     return bits;
+ 109:Core/Src/light_logic.c **** }
+ 544              		.loc 1 109 1 view .LVU133
+ 545 000e 08BD     		pop	{r3, pc}
+ 546              	.LVL57:
+ 547              	.L42:
+ 106:Core/Src/light_logic.c ****     }
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 13
+
+
+ 548              		.loc 1 106 9 is_stmt 1 view .LVU134
+ 106:Core/Src/light_logic.c ****     }
+ 549              		.loc 1 106 16 is_stmt 0 view .LVU135
+ 550 0010 4FF48022 		mov	r2, #262144
+ 551 0014 0021     		movs	r1, #0
+ 552              	.LVL58:
+ 106:Core/Src/light_logic.c ****     }
+ 553              		.loc 1 106 16 view .LVU136
+ 554 0016 FFF7FEFF 		bl	SR_bitadj
+ 555              	.LVL59:
+ 108:Core/Src/light_logic.c **** }
+ 556              		.loc 1 108 5 is_stmt 1 view .LVU137
+ 108:Core/Src/light_logic.c **** }
+ 557              		.loc 1 108 12 is_stmt 0 view .LVU138
+ 558 001a F8E7     		b	.L41
+ 559              		.cfi_endproc
+ 560              	.LFE330:
+ 562              		.section	.text.TL4_Red,"ax",%progbits
+ 563              		.align	1
+ 564              		.global	TL4_Red
+ 565              		.syntax unified
+ 566              		.thumb
+ 567              		.thumb_func
+ 569              	TL4_Red:
+ 570              	.LVL60:
+ 571              	.LFB331:
+ 110:Core/Src/light_logic.c **** 
+ 111:Core/Src/light_logic.c **** uint32_t TL4_Red(uint32_t bits, bool activated){ 
+ 572              		.loc 1 111 48 is_stmt 1 view -0
+ 573              		.cfi_startproc
+ 574              		@ args = 0, pretend = 0, frame = 0
+ 575              		@ frame_needed = 0, uses_anonymous_args = 0
+ 576              		.loc 1 111 48 is_stmt 0 view .LVU140
+ 577 0000 08B5     		push	{r3, lr}
+ 578              	.LCFI11:
+ 579              		.cfi_def_cfa_offset 8
+ 580              		.cfi_offset 3, -8
+ 581              		.cfi_offset 14, -4
+ 112:Core/Src/light_logic.c ****     if(activated){
+ 582              		.loc 1 112 5 is_stmt 1 view .LVU141
+ 583              		.loc 1 112 7 is_stmt 0 view .LVU142
+ 584 0002 21B1     		cbz	r1, .L46
+ 113:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED10, LED10);
+ 585              		.loc 1 113 9 is_stmt 1 view .LVU143
+ 586              		.loc 1 113 16 is_stmt 0 view .LVU144
+ 587 0004 0822     		movs	r2, #8
+ 588 0006 1146     		mov	r1, r2
+ 589              	.LVL61:
+ 590              		.loc 1 113 16 view .LVU145
+ 591 0008 FFF7FEFF 		bl	SR_bitadj
+ 592              	.LVL62:
+ 593              	.L45:
+ 114:Core/Src/light_logic.c ****     }else{
+ 115:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED10);
+ 116:Core/Src/light_logic.c ****     }
+ 117:Core/Src/light_logic.c ****     return bits;
+ 118:Core/Src/light_logic.c **** }
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 14
+
+
+ 594              		.loc 1 118 1 view .LVU146
+ 595 000c 08BD     		pop	{r3, pc}
+ 596              	.LVL63:
+ 597              	.L46:
+ 115:Core/Src/light_logic.c ****     }
+ 598              		.loc 1 115 9 is_stmt 1 view .LVU147
+ 115:Core/Src/light_logic.c ****     }
+ 599              		.loc 1 115 16 is_stmt 0 view .LVU148
+ 600 000e 0822     		movs	r2, #8
+ 601 0010 0021     		movs	r1, #0
+ 602              	.LVL64:
+ 115:Core/Src/light_logic.c ****     }
+ 603              		.loc 1 115 16 view .LVU149
+ 604 0012 FFF7FEFF 		bl	SR_bitadj
+ 605              	.LVL65:
+ 117:Core/Src/light_logic.c **** }
+ 606              		.loc 1 117 5 is_stmt 1 view .LVU150
+ 117:Core/Src/light_logic.c **** }
+ 607              		.loc 1 117 12 is_stmt 0 view .LVU151
+ 608 0016 F9E7     		b	.L45
+ 609              		.cfi_endproc
+ 610              	.LFE331:
+ 612              		.section	.text.TL4_Yellow,"ax",%progbits
+ 613              		.align	1
+ 614              		.global	TL4_Yellow
+ 615              		.syntax unified
+ 616              		.thumb
+ 617              		.thumb_func
+ 619              	TL4_Yellow:
+ 620              	.LVL66:
+ 621              	.LFB332:
+ 119:Core/Src/light_logic.c **** 
+ 120:Core/Src/light_logic.c **** uint32_t TL4_Yellow(uint32_t bits, bool activated){ 
+ 622              		.loc 1 120 51 is_stmt 1 view -0
+ 623              		.cfi_startproc
+ 624              		@ args = 0, pretend = 0, frame = 0
+ 625              		@ frame_needed = 0, uses_anonymous_args = 0
+ 626              		.loc 1 120 51 is_stmt 0 view .LVU153
+ 627 0000 08B5     		push	{r3, lr}
+ 628              	.LCFI12:
+ 629              		.cfi_def_cfa_offset 8
+ 630              		.cfi_offset 3, -8
+ 631              		.cfi_offset 14, -4
+ 121:Core/Src/light_logic.c ****     if(activated){
+ 632              		.loc 1 121 5 is_stmt 1 view .LVU154
+ 633              		.loc 1 121 7 is_stmt 0 view .LVU155
+ 634 0002 21B1     		cbz	r1, .L50
+ 122:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED11, LED11);
+ 635              		.loc 1 122 9 is_stmt 1 view .LVU156
+ 636              		.loc 1 122 16 is_stmt 0 view .LVU157
+ 637 0004 1022     		movs	r2, #16
+ 638 0006 1146     		mov	r1, r2
+ 639              	.LVL67:
+ 640              		.loc 1 122 16 view .LVU158
+ 641 0008 FFF7FEFF 		bl	SR_bitadj
+ 642              	.LVL68:
+ 643              	.L49:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 15
+
+
+ 123:Core/Src/light_logic.c ****     }else{
+ 124:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED11);
+ 125:Core/Src/light_logic.c ****     }
+ 126:Core/Src/light_logic.c ****     return bits;
+ 127:Core/Src/light_logic.c **** }
+ 644              		.loc 1 127 1 view .LVU159
+ 645 000c 08BD     		pop	{r3, pc}
+ 646              	.LVL69:
+ 647              	.L50:
+ 124:Core/Src/light_logic.c ****     }
+ 648              		.loc 1 124 9 is_stmt 1 view .LVU160
+ 124:Core/Src/light_logic.c ****     }
+ 649              		.loc 1 124 16 is_stmt 0 view .LVU161
+ 650 000e 1022     		movs	r2, #16
+ 651 0010 0021     		movs	r1, #0
+ 652              	.LVL70:
+ 124:Core/Src/light_logic.c ****     }
+ 653              		.loc 1 124 16 view .LVU162
+ 654 0012 FFF7FEFF 		bl	SR_bitadj
+ 655              	.LVL71:
+ 126:Core/Src/light_logic.c **** }
+ 656              		.loc 1 126 5 is_stmt 1 view .LVU163
+ 126:Core/Src/light_logic.c **** }
+ 657              		.loc 1 126 12 is_stmt 0 view .LVU164
+ 658 0016 F9E7     		b	.L49
+ 659              		.cfi_endproc
+ 660              	.LFE332:
+ 662              		.section	.text.TL4_Green,"ax",%progbits
+ 663              		.align	1
+ 664              		.global	TL4_Green
+ 665              		.syntax unified
+ 666              		.thumb
+ 667              		.thumb_func
+ 669              	TL4_Green:
+ 670              	.LVL72:
+ 671              	.LFB333:
+ 128:Core/Src/light_logic.c **** 
+ 129:Core/Src/light_logic.c **** uint32_t TL4_Green(uint32_t bits, bool activated){ 
+ 672              		.loc 1 129 50 is_stmt 1 view -0
+ 673              		.cfi_startproc
+ 674              		@ args = 0, pretend = 0, frame = 0
+ 675              		@ frame_needed = 0, uses_anonymous_args = 0
+ 676              		.loc 1 129 50 is_stmt 0 view .LVU166
+ 677 0000 08B5     		push	{r3, lr}
+ 678              	.LCFI13:
+ 679              		.cfi_def_cfa_offset 8
+ 680              		.cfi_offset 3, -8
+ 681              		.cfi_offset 14, -4
+ 130:Core/Src/light_logic.c ****     if(activated){
+ 682              		.loc 1 130 5 is_stmt 1 view .LVU167
+ 683              		.loc 1 130 7 is_stmt 0 view .LVU168
+ 684 0002 21B1     		cbz	r1, .L54
+ 131:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED12, LED12);
+ 685              		.loc 1 131 9 is_stmt 1 view .LVU169
+ 686              		.loc 1 131 16 is_stmt 0 view .LVU170
+ 687 0004 2022     		movs	r2, #32
+ 688 0006 1146     		mov	r1, r2
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 16
+
+
+ 689              	.LVL73:
+ 690              		.loc 1 131 16 view .LVU171
+ 691 0008 FFF7FEFF 		bl	SR_bitadj
+ 692              	.LVL74:
+ 693              	.L53:
+ 132:Core/Src/light_logic.c ****     }else{
+ 133:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED12);
+ 134:Core/Src/light_logic.c ****     }
+ 135:Core/Src/light_logic.c ****     return bits;
+ 136:Core/Src/light_logic.c **** }
+ 694              		.loc 1 136 1 view .LVU172
+ 695 000c 08BD     		pop	{r3, pc}
+ 696              	.LVL75:
+ 697              	.L54:
+ 133:Core/Src/light_logic.c ****     }
+ 698              		.loc 1 133 9 is_stmt 1 view .LVU173
+ 133:Core/Src/light_logic.c ****     }
+ 699              		.loc 1 133 16 is_stmt 0 view .LVU174
+ 700 000e 2022     		movs	r2, #32
+ 701 0010 0021     		movs	r1, #0
+ 702              	.LVL76:
+ 133:Core/Src/light_logic.c ****     }
+ 703              		.loc 1 133 16 view .LVU175
+ 704 0012 FFF7FEFF 		bl	SR_bitadj
+ 705              	.LVL77:
+ 135:Core/Src/light_logic.c **** }
+ 706              		.loc 1 135 5 is_stmt 1 view .LVU176
+ 135:Core/Src/light_logic.c **** }
+ 707              		.loc 1 135 12 is_stmt 0 view .LVU177
+ 708 0016 F9E7     		b	.L53
+ 709              		.cfi_endproc
+ 710              	.LFE333:
+ 712              		.section	.text.TL2_Red,"ax",%progbits
+ 713              		.align	1
+ 714              		.global	TL2_Red
+ 715              		.syntax unified
+ 716              		.thumb
+ 717              		.thumb_func
+ 719              	TL2_Red:
+ 720              	.LVL78:
+ 721              	.LFB334:
+ 137:Core/Src/light_logic.c **** 
+ 138:Core/Src/light_logic.c **** uint32_t TL2_Red(uint32_t bits, bool activated){ 
+ 722              		.loc 1 138 48 is_stmt 1 view -0
+ 723              		.cfi_startproc
+ 724              		@ args = 0, pretend = 0, frame = 0
+ 725              		@ frame_needed = 0, uses_anonymous_args = 0
+ 726              		.loc 1 138 48 is_stmt 0 view .LVU179
+ 727 0000 08B5     		push	{r3, lr}
+ 728              	.LCFI14:
+ 729              		.cfi_def_cfa_offset 8
+ 730              		.cfi_offset 3, -8
+ 731              		.cfi_offset 14, -4
+ 139:Core/Src/light_logic.c ****     if(activated){
+ 732              		.loc 1 139 5 is_stmt 1 view .LVU180
+ 733              		.loc 1 139 7 is_stmt 0 view .LVU181
+ 734 0002 29B1     		cbz	r1, .L58
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 17
+
+
+ 140:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED4, LED4);
+ 735              		.loc 1 140 9 is_stmt 1 view .LVU182
+ 736              		.loc 1 140 16 is_stmt 0 view .LVU183
+ 737 0004 4FF48072 		mov	r2, #256
+ 738 0008 1146     		mov	r1, r2
+ 739              	.LVL79:
+ 740              		.loc 1 140 16 view .LVU184
+ 741 000a FFF7FEFF 		bl	SR_bitadj
+ 742              	.LVL80:
+ 743              	.L57:
+ 141:Core/Src/light_logic.c ****     }else{
+ 142:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED4);
+ 143:Core/Src/light_logic.c ****     }
+ 144:Core/Src/light_logic.c ****     return bits;
+ 145:Core/Src/light_logic.c **** }
+ 744              		.loc 1 145 1 view .LVU185
+ 745 000e 08BD     		pop	{r3, pc}
+ 746              	.LVL81:
+ 747              	.L58:
+ 142:Core/Src/light_logic.c ****     }
+ 748              		.loc 1 142 9 is_stmt 1 view .LVU186
+ 142:Core/Src/light_logic.c ****     }
+ 749              		.loc 1 142 16 is_stmt 0 view .LVU187
+ 750 0010 4FF48072 		mov	r2, #256
+ 751 0014 0021     		movs	r1, #0
+ 752              	.LVL82:
+ 142:Core/Src/light_logic.c ****     }
+ 753              		.loc 1 142 16 view .LVU188
+ 754 0016 FFF7FEFF 		bl	SR_bitadj
+ 755              	.LVL83:
+ 144:Core/Src/light_logic.c **** }
+ 756              		.loc 1 144 5 is_stmt 1 view .LVU189
+ 144:Core/Src/light_logic.c **** }
+ 757              		.loc 1 144 12 is_stmt 0 view .LVU190
+ 758 001a F8E7     		b	.L57
+ 759              		.cfi_endproc
+ 760              	.LFE334:
+ 762              		.section	.text.TL2_Yellow,"ax",%progbits
+ 763              		.align	1
+ 764              		.global	TL2_Yellow
+ 765              		.syntax unified
+ 766              		.thumb
+ 767              		.thumb_func
+ 769              	TL2_Yellow:
+ 770              	.LVL84:
+ 771              	.LFB335:
+ 146:Core/Src/light_logic.c **** 
+ 147:Core/Src/light_logic.c **** uint32_t TL2_Yellow(uint32_t bits, bool activated){ 
+ 772              		.loc 1 147 51 is_stmt 1 view -0
+ 773              		.cfi_startproc
+ 774              		@ args = 0, pretend = 0, frame = 0
+ 775              		@ frame_needed = 0, uses_anonymous_args = 0
+ 776              		.loc 1 147 51 is_stmt 0 view .LVU192
+ 777 0000 08B5     		push	{r3, lr}
+ 778              	.LCFI15:
+ 779              		.cfi_def_cfa_offset 8
+ 780              		.cfi_offset 3, -8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 18
+
+
+ 781              		.cfi_offset 14, -4
+ 148:Core/Src/light_logic.c ****     if(activated){
+ 782              		.loc 1 148 5 is_stmt 1 view .LVU193
+ 783              		.loc 1 148 7 is_stmt 0 view .LVU194
+ 784 0002 29B1     		cbz	r1, .L62
+ 149:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED5, LED5);
+ 785              		.loc 1 149 9 is_stmt 1 view .LVU195
+ 786              		.loc 1 149 16 is_stmt 0 view .LVU196
+ 787 0004 4FF40072 		mov	r2, #512
+ 788 0008 1146     		mov	r1, r2
+ 789              	.LVL85:
+ 790              		.loc 1 149 16 view .LVU197
+ 791 000a FFF7FEFF 		bl	SR_bitadj
+ 792              	.LVL86:
+ 793              	.L61:
+ 150:Core/Src/light_logic.c ****     }else{
+ 151:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED5);
+ 152:Core/Src/light_logic.c ****     }
+ 153:Core/Src/light_logic.c ****     return bits;
+ 154:Core/Src/light_logic.c **** }
+ 794              		.loc 1 154 1 view .LVU198
+ 795 000e 08BD     		pop	{r3, pc}
+ 796              	.LVL87:
+ 797              	.L62:
+ 151:Core/Src/light_logic.c ****     }
+ 798              		.loc 1 151 9 is_stmt 1 view .LVU199
+ 151:Core/Src/light_logic.c ****     }
+ 799              		.loc 1 151 16 is_stmt 0 view .LVU200
+ 800 0010 4FF40072 		mov	r2, #512
+ 801 0014 0021     		movs	r1, #0
+ 802              	.LVL88:
+ 151:Core/Src/light_logic.c ****     }
+ 803              		.loc 1 151 16 view .LVU201
+ 804 0016 FFF7FEFF 		bl	SR_bitadj
+ 805              	.LVL89:
+ 153:Core/Src/light_logic.c **** }
+ 806              		.loc 1 153 5 is_stmt 1 view .LVU202
+ 153:Core/Src/light_logic.c **** }
+ 807              		.loc 1 153 12 is_stmt 0 view .LVU203
+ 808 001a F8E7     		b	.L61
+ 809              		.cfi_endproc
+ 810              	.LFE335:
+ 812              		.section	.text.TL2_Green,"ax",%progbits
+ 813              		.align	1
+ 814              		.global	TL2_Green
+ 815              		.syntax unified
+ 816              		.thumb
+ 817              		.thumb_func
+ 819              	TL2_Green:
+ 820              	.LVL90:
+ 821              	.LFB336:
+ 155:Core/Src/light_logic.c **** 
+ 156:Core/Src/light_logic.c **** uint32_t TL2_Green(uint32_t bits, bool activated){ 
+ 822              		.loc 1 156 50 is_stmt 1 view -0
+ 823              		.cfi_startproc
+ 824              		@ args = 0, pretend = 0, frame = 0
+ 825              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 19
+
+
+ 826              		.loc 1 156 50 is_stmt 0 view .LVU205
+ 827 0000 08B5     		push	{r3, lr}
+ 828              	.LCFI16:
+ 829              		.cfi_def_cfa_offset 8
+ 830              		.cfi_offset 3, -8
+ 831              		.cfi_offset 14, -4
+ 157:Core/Src/light_logic.c ****     if(activated){
+ 832              		.loc 1 157 5 is_stmt 1 view .LVU206
+ 833              		.loc 1 157 7 is_stmt 0 view .LVU207
+ 834 0002 29B1     		cbz	r1, .L66
+ 158:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED6, LED6);
+ 835              		.loc 1 158 9 is_stmt 1 view .LVU208
+ 836              		.loc 1 158 16 is_stmt 0 view .LVU209
+ 837 0004 4FF48062 		mov	r2, #1024
+ 838 0008 1146     		mov	r1, r2
+ 839              	.LVL91:
+ 840              		.loc 1 158 16 view .LVU210
+ 841 000a FFF7FEFF 		bl	SR_bitadj
+ 842              	.LVL92:
+ 843              	.L65:
+ 159:Core/Src/light_logic.c ****     }else{
+ 160:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED6);
+ 161:Core/Src/light_logic.c ****     }
+ 162:Core/Src/light_logic.c ****     return bits;
+ 163:Core/Src/light_logic.c **** }
+ 844              		.loc 1 163 1 view .LVU211
+ 845 000e 08BD     		pop	{r3, pc}
+ 846              	.LVL93:
+ 847              	.L66:
+ 160:Core/Src/light_logic.c ****     }
+ 848              		.loc 1 160 9 is_stmt 1 view .LVU212
+ 160:Core/Src/light_logic.c ****     }
+ 849              		.loc 1 160 16 is_stmt 0 view .LVU213
+ 850 0010 4FF48062 		mov	r2, #1024
+ 851 0014 0021     		movs	r1, #0
+ 852              	.LVL94:
+ 160:Core/Src/light_logic.c ****     }
+ 853              		.loc 1 160 16 view .LVU214
+ 854 0016 FFF7FEFF 		bl	SR_bitadj
+ 855              	.LVL95:
+ 162:Core/Src/light_logic.c **** }
+ 856              		.loc 1 162 5 is_stmt 1 view .LVU215
+ 162:Core/Src/light_logic.c **** }
+ 857              		.loc 1 162 12 is_stmt 0 view .LVU216
+ 858 001a F8E7     		b	.L65
+ 859              		.cfi_endproc
+ 860              	.LFE336:
+ 862              		.section	.text.TL3_Red,"ax",%progbits
+ 863              		.align	1
+ 864              		.global	TL3_Red
+ 865              		.syntax unified
+ 866              		.thumb
+ 867              		.thumb_func
+ 869              	TL3_Red:
+ 870              	.LVL96:
+ 871              	.LFB337:
+ 164:Core/Src/light_logic.c **** 
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 20
+
+
+ 165:Core/Src/light_logic.c **** uint32_t TL3_Red(uint32_t bits, bool activated){ 
+ 872              		.loc 1 165 48 is_stmt 1 view -0
+ 873              		.cfi_startproc
+ 874              		@ args = 0, pretend = 0, frame = 0
+ 875              		@ frame_needed = 0, uses_anonymous_args = 0
+ 876              		.loc 1 165 48 is_stmt 0 view .LVU218
+ 877 0000 08B5     		push	{r3, lr}
+ 878              	.LCFI17:
+ 879              		.cfi_def_cfa_offset 8
+ 880              		.cfi_offset 3, -8
+ 881              		.cfi_offset 14, -4
+ 166:Core/Src/light_logic.c ****     if(activated){
+ 882              		.loc 1 166 5 is_stmt 1 view .LVU219
+ 883              		.loc 1 166 7 is_stmt 0 view .LVU220
+ 884 0002 21B1     		cbz	r1, .L70
+ 167:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED7, LED7);
+ 885              		.loc 1 167 9 is_stmt 1 view .LVU221
+ 886              		.loc 1 167 16 is_stmt 0 view .LVU222
+ 887 0004 0122     		movs	r2, #1
+ 888 0006 1146     		mov	r1, r2
+ 889              	.LVL97:
+ 890              		.loc 1 167 16 view .LVU223
+ 891 0008 FFF7FEFF 		bl	SR_bitadj
+ 892              	.LVL98:
+ 893              	.L69:
+ 168:Core/Src/light_logic.c ****     }else{
+ 169:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED7);
+ 170:Core/Src/light_logic.c ****     }
+ 171:Core/Src/light_logic.c ****     return bits;
+ 172:Core/Src/light_logic.c **** }
+ 894              		.loc 1 172 1 view .LVU224
+ 895 000c 08BD     		pop	{r3, pc}
+ 896              	.LVL99:
+ 897              	.L70:
+ 169:Core/Src/light_logic.c ****     }
+ 898              		.loc 1 169 9 is_stmt 1 view .LVU225
+ 169:Core/Src/light_logic.c ****     }
+ 899              		.loc 1 169 16 is_stmt 0 view .LVU226
+ 900 000e 0122     		movs	r2, #1
+ 901 0010 0021     		movs	r1, #0
+ 902              	.LVL100:
+ 169:Core/Src/light_logic.c ****     }
+ 903              		.loc 1 169 16 view .LVU227
+ 904 0012 FFF7FEFF 		bl	SR_bitadj
+ 905              	.LVL101:
+ 171:Core/Src/light_logic.c **** }
+ 906              		.loc 1 171 5 is_stmt 1 view .LVU228
+ 171:Core/Src/light_logic.c **** }
+ 907              		.loc 1 171 12 is_stmt 0 view .LVU229
+ 908 0016 F9E7     		b	.L69
+ 909              		.cfi_endproc
+ 910              	.LFE337:
+ 912              		.section	.text.TL3_Yellow,"ax",%progbits
+ 913              		.align	1
+ 914              		.global	TL3_Yellow
+ 915              		.syntax unified
+ 916              		.thumb
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 21
+
+
+ 917              		.thumb_func
+ 919              	TL3_Yellow:
+ 920              	.LVL102:
+ 921              	.LFB338:
+ 173:Core/Src/light_logic.c **** 
+ 174:Core/Src/light_logic.c **** uint32_t TL3_Yellow(uint32_t bits, bool activated){ 
+ 922              		.loc 1 174 51 is_stmt 1 view -0
+ 923              		.cfi_startproc
+ 924              		@ args = 0, pretend = 0, frame = 0
+ 925              		@ frame_needed = 0, uses_anonymous_args = 0
+ 926              		.loc 1 174 51 is_stmt 0 view .LVU231
+ 927 0000 08B5     		push	{r3, lr}
+ 928              	.LCFI18:
+ 929              		.cfi_def_cfa_offset 8
+ 930              		.cfi_offset 3, -8
+ 931              		.cfi_offset 14, -4
+ 175:Core/Src/light_logic.c ****     if(activated){
+ 932              		.loc 1 175 5 is_stmt 1 view .LVU232
+ 933              		.loc 1 175 7 is_stmt 0 view .LVU233
+ 934 0002 21B1     		cbz	r1, .L74
+ 176:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED8, LED8);
+ 935              		.loc 1 176 9 is_stmt 1 view .LVU234
+ 936              		.loc 1 176 16 is_stmt 0 view .LVU235
+ 937 0004 0222     		movs	r2, #2
+ 938 0006 1146     		mov	r1, r2
+ 939              	.LVL103:
+ 940              		.loc 1 176 16 view .LVU236
+ 941 0008 FFF7FEFF 		bl	SR_bitadj
+ 942              	.LVL104:
+ 943              	.L73:
+ 177:Core/Src/light_logic.c ****     }else{
+ 178:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED8);
+ 179:Core/Src/light_logic.c ****     }
+ 180:Core/Src/light_logic.c ****     return bits;
+ 181:Core/Src/light_logic.c **** }
+ 944              		.loc 1 181 1 view .LVU237
+ 945 000c 08BD     		pop	{r3, pc}
+ 946              	.LVL105:
+ 947              	.L74:
+ 178:Core/Src/light_logic.c ****     }
+ 948              		.loc 1 178 9 is_stmt 1 view .LVU238
+ 178:Core/Src/light_logic.c ****     }
+ 949              		.loc 1 178 16 is_stmt 0 view .LVU239
+ 950 000e 0222     		movs	r2, #2
+ 951 0010 0021     		movs	r1, #0
+ 952              	.LVL106:
+ 178:Core/Src/light_logic.c ****     }
+ 953              		.loc 1 178 16 view .LVU240
+ 954 0012 FFF7FEFF 		bl	SR_bitadj
+ 955              	.LVL107:
+ 180:Core/Src/light_logic.c **** }
+ 956              		.loc 1 180 5 is_stmt 1 view .LVU241
+ 180:Core/Src/light_logic.c **** }
+ 957              		.loc 1 180 12 is_stmt 0 view .LVU242
+ 958 0016 F9E7     		b	.L73
+ 959              		.cfi_endproc
+ 960              	.LFE338:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 22
+
+
+ 962              		.section	.text.TL3_Green,"ax",%progbits
+ 963              		.align	1
+ 964              		.global	TL3_Green
+ 965              		.syntax unified
+ 966              		.thumb
+ 967              		.thumb_func
+ 969              	TL3_Green:
+ 970              	.LVL108:
+ 971              	.LFB339:
+ 182:Core/Src/light_logic.c **** 
+ 183:Core/Src/light_logic.c **** uint32_t TL3_Green(uint32_t bits, bool activated){ 
+ 972              		.loc 1 183 50 is_stmt 1 view -0
+ 973              		.cfi_startproc
+ 974              		@ args = 0, pretend = 0, frame = 0
+ 975              		@ frame_needed = 0, uses_anonymous_args = 0
+ 976              		.loc 1 183 50 is_stmt 0 view .LVU244
+ 977 0000 08B5     		push	{r3, lr}
+ 978              	.LCFI19:
+ 979              		.cfi_def_cfa_offset 8
+ 980              		.cfi_offset 3, -8
+ 981              		.cfi_offset 14, -4
+ 184:Core/Src/light_logic.c ****     if(activated){
+ 982              		.loc 1 184 5 is_stmt 1 view .LVU245
+ 983              		.loc 1 184 7 is_stmt 0 view .LVU246
+ 984 0002 21B1     		cbz	r1, .L78
+ 185:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED9, LED9);
+ 985              		.loc 1 185 9 is_stmt 1 view .LVU247
+ 986              		.loc 1 185 16 is_stmt 0 view .LVU248
+ 987 0004 0422     		movs	r2, #4
+ 988 0006 1146     		mov	r1, r2
+ 989              	.LVL109:
+ 990              		.loc 1 185 16 view .LVU249
+ 991 0008 FFF7FEFF 		bl	SR_bitadj
+ 992              	.LVL110:
+ 993              	.L77:
+ 186:Core/Src/light_logic.c ****     }else{
+ 187:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, 0, LED9);
+ 188:Core/Src/light_logic.c ****     }
+ 189:Core/Src/light_logic.c ****     return bits;
+ 190:Core/Src/light_logic.c **** }
+ 994              		.loc 1 190 1 view .LVU250
+ 995 000c 08BD     		pop	{r3, pc}
+ 996              	.LVL111:
+ 997              	.L78:
+ 187:Core/Src/light_logic.c ****     }
+ 998              		.loc 1 187 9 is_stmt 1 view .LVU251
+ 187:Core/Src/light_logic.c ****     }
+ 999              		.loc 1 187 16 is_stmt 0 view .LVU252
+ 1000 000e 0422     		movs	r2, #4
+ 1001 0010 0021     		movs	r1, #0
+ 1002              	.LVL112:
+ 187:Core/Src/light_logic.c ****     }
+ 1003              		.loc 1 187 16 view .LVU253
+ 1004 0012 FFF7FEFF 		bl	SR_bitadj
+ 1005              	.LVL113:
+ 189:Core/Src/light_logic.c **** }
+ 1006              		.loc 1 189 5 is_stmt 1 view .LVU254
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 23
+
+
+ 189:Core/Src/light_logic.c **** }
+ 1007              		.loc 1 189 12 is_stmt 0 view .LVU255
+ 1008 0016 F9E7     		b	.L77
+ 1009              		.cfi_endproc
+ 1010              	.LFE339:
+ 1012              		.section	.text.TL1_R2G,"ax",%progbits
+ 1013              		.align	1
+ 1014              		.global	TL1_R2G
+ 1015              		.syntax unified
+ 1016              		.thumb
+ 1017              		.thumb_func
+ 1019              	TL1_R2G:
+ 1020              	.LVL114:
+ 1021              	.LFB340:
+ 191:Core/Src/light_logic.c **** 
+ 192:Core/Src/light_logic.c **** uint32_t TL1_R2G(uint32_t bits){
+ 1022              		.loc 1 192 32 is_stmt 1 view -0
+ 1023              		.cfi_startproc
+ 1024              		@ args = 0, pretend = 0, frame = 0
+ 1025              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1026              		.loc 1 192 32 is_stmt 0 view .LVU257
+ 1027 0000 10B5     		push	{r4, lr}
+ 1028              	.LCFI20:
+ 1029              		.cfi_def_cfa_offset 8
+ 1030              		.cfi_offset 4, -8
+ 1031              		.cfi_offset 14, -4
+ 193:Core/Src/light_logic.c ****     bits = TL1_Green(bits, false);
+ 1032              		.loc 1 193 5 is_stmt 1 view .LVU258
+ 1033              		.loc 1 193 12 is_stmt 0 view .LVU259
+ 1034 0002 0021     		movs	r1, #0
+ 1035 0004 FFF7FEFF 		bl	TL1_Green
+ 1036              	.LVL115:
+ 194:Core/Src/light_logic.c ****     bits = TL1_Red(bits, true);
+ 1037              		.loc 1 194 5 is_stmt 1 view .LVU260
+ 1038              		.loc 1 194 12 is_stmt 0 view .LVU261
+ 1039 0008 0121     		movs	r1, #1
+ 1040 000a FFF7FEFF 		bl	TL1_Red
+ 1041              	.LVL116:
+ 195:Core/Src/light_logic.c ****     bits = TL1_Yellow(bits, false);
+ 1042              		.loc 1 195 5 is_stmt 1 view .LVU262
+ 1043              		.loc 1 195 12 is_stmt 0 view .LVU263
+ 1044 000e 0021     		movs	r1, #0
+ 1045 0010 FFF7FEFF 		bl	TL1_Yellow
+ 1046              	.LVL117:
+ 1047              		.loc 1 195 12 view .LVU264
+ 1048 0014 0446     		mov	r4, r0
+ 1049              	.LVL118:
+ 196:Core/Src/light_logic.c **** 
+ 197:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1050              		.loc 1 197 5 is_stmt 1 view .LVU265
+ 1051 0016 4FF47A70 		mov	r0, #1000
+ 1052              	.LVL119:
+ 1053              		.loc 1 197 5 is_stmt 0 view .LVU266
+ 1054 001a FFF7FEFF 		bl	HAL_Delay
+ 1055              	.LVL120:
+ 198:Core/Src/light_logic.c **** 
+ 199:Core/Src/light_logic.c ****     bits = TL1_Green(bits, false);
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 24
+
+
+ 1056              		.loc 1 199 5 is_stmt 1 view .LVU267
+ 1057              		.loc 1 199 12 is_stmt 0 view .LVU268
+ 1058 001e 0021     		movs	r1, #0
+ 1059 0020 2046     		mov	r0, r4
+ 1060 0022 FFF7FEFF 		bl	TL1_Green
+ 1061              	.LVL121:
+ 200:Core/Src/light_logic.c ****     bits = TL1_Red(bits, true);
+ 1062              		.loc 1 200 5 is_stmt 1 view .LVU269
+ 1063              		.loc 1 200 12 is_stmt 0 view .LVU270
+ 1064 0026 0121     		movs	r1, #1
+ 1065 0028 FFF7FEFF 		bl	TL1_Red
+ 1066              	.LVL122:
+ 201:Core/Src/light_logic.c ****     bits = TL1_Yellow(bits, true);
+ 1067              		.loc 1 201 5 is_stmt 1 view .LVU271
+ 1068              		.loc 1 201 12 is_stmt 0 view .LVU272
+ 1069 002c 0121     		movs	r1, #1
+ 1070 002e FFF7FEFF 		bl	TL1_Yellow
+ 1071              	.LVL123:
+ 1072              		.loc 1 201 12 view .LVU273
+ 1073 0032 0446     		mov	r4, r0
+ 1074              	.LVL124:
+ 202:Core/Src/light_logic.c **** 
+ 203:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1075              		.loc 1 203 5 is_stmt 1 view .LVU274
+ 1076 0034 4FF47A70 		mov	r0, #1000
+ 1077              	.LVL125:
+ 1078              		.loc 1 203 5 is_stmt 0 view .LVU275
+ 1079 0038 FFF7FEFF 		bl	HAL_Delay
+ 1080              	.LVL126:
+ 204:Core/Src/light_logic.c **** 
+ 205:Core/Src/light_logic.c ****     bits = TL1_Green(bits, true);
+ 1081              		.loc 1 205 5 is_stmt 1 view .LVU276
+ 1082              		.loc 1 205 12 is_stmt 0 view .LVU277
+ 1083 003c 0121     		movs	r1, #1
+ 1084 003e 2046     		mov	r0, r4
+ 1085 0040 FFF7FEFF 		bl	TL1_Green
+ 1086              	.LVL127:
+ 206:Core/Src/light_logic.c ****     bits = TL1_Red(bits, false);
+ 1087              		.loc 1 206 5 is_stmt 1 view .LVU278
+ 1088              		.loc 1 206 12 is_stmt 0 view .LVU279
+ 1089 0044 0021     		movs	r1, #0
+ 1090 0046 FFF7FEFF 		bl	TL1_Red
+ 1091              	.LVL128:
+ 207:Core/Src/light_logic.c ****     bits = TL1_Yellow(bits, false);
+ 1092              		.loc 1 207 5 is_stmt 1 view .LVU280
+ 1093              		.loc 1 207 12 is_stmt 0 view .LVU281
+ 1094 004a 0021     		movs	r1, #0
+ 1095 004c FFF7FEFF 		bl	TL1_Yellow
+ 1096              	.LVL129:
+ 208:Core/Src/light_logic.c ****     return bits;
+ 1097              		.loc 1 208 5 is_stmt 1 view .LVU282
+ 209:Core/Src/light_logic.c **** }
+ 1098              		.loc 1 209 1 is_stmt 0 view .LVU283
+ 1099 0050 10BD     		pop	{r4, pc}
+ 1100              		.cfi_endproc
+ 1101              	.LFE340:
+ 1103              		.section	.text.TL1_G2R,"ax",%progbits
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 25
+
+
+ 1104              		.align	1
+ 1105              		.global	TL1_G2R
+ 1106              		.syntax unified
+ 1107              		.thumb
+ 1108              		.thumb_func
+ 1110              	TL1_G2R:
+ 1111              	.LVL130:
+ 1112              	.LFB341:
+ 210:Core/Src/light_logic.c **** 
+ 211:Core/Src/light_logic.c **** uint32_t TL1_G2R(uint32_t bits){
+ 1113              		.loc 1 211 32 is_stmt 1 view -0
+ 1114              		.cfi_startproc
+ 1115              		@ args = 0, pretend = 0, frame = 0
+ 1116              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1117              		.loc 1 211 32 is_stmt 0 view .LVU285
+ 1118 0000 10B5     		push	{r4, lr}
+ 1119              	.LCFI21:
+ 1120              		.cfi_def_cfa_offset 8
+ 1121              		.cfi_offset 4, -8
+ 1122              		.cfi_offset 14, -4
+ 212:Core/Src/light_logic.c ****     bits = TL1_Green(bits, true);
+ 1123              		.loc 1 212 5 is_stmt 1 view .LVU286
+ 1124              		.loc 1 212 12 is_stmt 0 view .LVU287
+ 1125 0002 0121     		movs	r1, #1
+ 1126 0004 FFF7FEFF 		bl	TL1_Green
+ 1127              	.LVL131:
+ 213:Core/Src/light_logic.c ****     bits = TL1_Red(bits, false);
+ 1128              		.loc 1 213 5 is_stmt 1 view .LVU288
+ 1129              		.loc 1 213 12 is_stmt 0 view .LVU289
+ 1130 0008 0021     		movs	r1, #0
+ 1131 000a FFF7FEFF 		bl	TL1_Red
+ 1132              	.LVL132:
+ 214:Core/Src/light_logic.c ****     bits = TL1_Yellow(bits, false);
+ 1133              		.loc 1 214 5 is_stmt 1 view .LVU290
+ 1134              		.loc 1 214 12 is_stmt 0 view .LVU291
+ 1135 000e 0021     		movs	r1, #0
+ 1136 0010 FFF7FEFF 		bl	TL1_Yellow
+ 1137              	.LVL133:
+ 1138              		.loc 1 214 12 view .LVU292
+ 1139 0014 0446     		mov	r4, r0
+ 1140              	.LVL134:
+ 215:Core/Src/light_logic.c **** 
+ 216:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1141              		.loc 1 216 5 is_stmt 1 view .LVU293
+ 1142 0016 4FF47A70 		mov	r0, #1000
+ 1143              	.LVL135:
+ 1144              		.loc 1 216 5 is_stmt 0 view .LVU294
+ 1145 001a FFF7FEFF 		bl	HAL_Delay
+ 1146              	.LVL136:
+ 217:Core/Src/light_logic.c **** 
+ 218:Core/Src/light_logic.c ****     bits = TL1_Green(bits, false);
+ 1147              		.loc 1 218 5 is_stmt 1 view .LVU295
+ 1148              		.loc 1 218 12 is_stmt 0 view .LVU296
+ 1149 001e 0021     		movs	r1, #0
+ 1150 0020 2046     		mov	r0, r4
+ 1151 0022 FFF7FEFF 		bl	TL1_Green
+ 1152              	.LVL137:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 26
+
+
+ 219:Core/Src/light_logic.c ****     bits = TL1_Red(bits, false);
+ 1153              		.loc 1 219 5 is_stmt 1 view .LVU297
+ 1154              		.loc 1 219 12 is_stmt 0 view .LVU298
+ 1155 0026 0021     		movs	r1, #0
+ 1156 0028 FFF7FEFF 		bl	TL1_Red
+ 1157              	.LVL138:
+ 220:Core/Src/light_logic.c ****     bits = TL1_Yellow(bits, true);
+ 1158              		.loc 1 220 5 is_stmt 1 view .LVU299
+ 1159              		.loc 1 220 12 is_stmt 0 view .LVU300
+ 1160 002c 0121     		movs	r1, #1
+ 1161 002e FFF7FEFF 		bl	TL1_Yellow
+ 1162              	.LVL139:
+ 1163              		.loc 1 220 12 view .LVU301
+ 1164 0032 0446     		mov	r4, r0
+ 1165              	.LVL140:
+ 221:Core/Src/light_logic.c **** 
+ 222:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1166              		.loc 1 222 5 is_stmt 1 view .LVU302
+ 1167 0034 4FF47A70 		mov	r0, #1000
+ 1168              	.LVL141:
+ 1169              		.loc 1 222 5 is_stmt 0 view .LVU303
+ 1170 0038 FFF7FEFF 		bl	HAL_Delay
+ 1171              	.LVL142:
+ 223:Core/Src/light_logic.c **** 
+ 224:Core/Src/light_logic.c ****     bits = TL1_Green(bits, false);
+ 1172              		.loc 1 224 5 is_stmt 1 view .LVU304
+ 1173              		.loc 1 224 12 is_stmt 0 view .LVU305
+ 1174 003c 0021     		movs	r1, #0
+ 1175 003e 2046     		mov	r0, r4
+ 1176 0040 FFF7FEFF 		bl	TL1_Green
+ 1177              	.LVL143:
+ 225:Core/Src/light_logic.c ****     bits = TL1_Red(bits, true);
+ 1178              		.loc 1 225 5 is_stmt 1 view .LVU306
+ 1179              		.loc 1 225 12 is_stmt 0 view .LVU307
+ 1180 0044 0121     		movs	r1, #1
+ 1181 0046 FFF7FEFF 		bl	TL1_Red
+ 1182              	.LVL144:
+ 226:Core/Src/light_logic.c ****     bits = TL1_Yellow(bits, false);
+ 1183              		.loc 1 226 5 is_stmt 1 view .LVU308
+ 1184              		.loc 1 226 12 is_stmt 0 view .LVU309
+ 1185 004a 0021     		movs	r1, #0
+ 1186 004c FFF7FEFF 		bl	TL1_Yellow
+ 1187              	.LVL145:
+ 227:Core/Src/light_logic.c ****     return bits;
+ 1188              		.loc 1 227 5 is_stmt 1 view .LVU310
+ 228:Core/Src/light_logic.c **** }
+ 1189              		.loc 1 228 1 is_stmt 0 view .LVU311
+ 1190 0050 10BD     		pop	{r4, pc}
+ 1191              		.cfi_endproc
+ 1192              	.LFE341:
+ 1194              		.section	.text.TL4_R2G,"ax",%progbits
+ 1195              		.align	1
+ 1196              		.global	TL4_R2G
+ 1197              		.syntax unified
+ 1198              		.thumb
+ 1199              		.thumb_func
+ 1201              	TL4_R2G:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 27
+
+
+ 1202              	.LVL146:
+ 1203              	.LFB342:
+ 229:Core/Src/light_logic.c **** 
+ 230:Core/Src/light_logic.c **** uint32_t TL4_R2G(uint32_t bits){
+ 1204              		.loc 1 230 32 is_stmt 1 view -0
+ 1205              		.cfi_startproc
+ 1206              		@ args = 0, pretend = 0, frame = 0
+ 1207              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1208              		.loc 1 230 32 is_stmt 0 view .LVU313
+ 1209 0000 10B5     		push	{r4, lr}
+ 1210              	.LCFI22:
+ 1211              		.cfi_def_cfa_offset 8
+ 1212              		.cfi_offset 4, -8
+ 1213              		.cfi_offset 14, -4
+ 231:Core/Src/light_logic.c ****     bits = TL2_Green(bits, false);
+ 1214              		.loc 1 231 5 is_stmt 1 view .LVU314
+ 1215              		.loc 1 231 12 is_stmt 0 view .LVU315
+ 1216 0002 0021     		movs	r1, #0
+ 1217 0004 FFF7FEFF 		bl	TL2_Green
+ 1218              	.LVL147:
+ 232:Core/Src/light_logic.c ****     bits = TL2_Red(bits, true);
+ 1219              		.loc 1 232 5 is_stmt 1 view .LVU316
+ 1220              		.loc 1 232 12 is_stmt 0 view .LVU317
+ 1221 0008 0121     		movs	r1, #1
+ 1222 000a FFF7FEFF 		bl	TL2_Red
+ 1223              	.LVL148:
+ 233:Core/Src/light_logic.c ****     bits = TL2_Yellow(bits, false);
+ 1224              		.loc 1 233 5 is_stmt 1 view .LVU318
+ 1225              		.loc 1 233 12 is_stmt 0 view .LVU319
+ 1226 000e 0021     		movs	r1, #0
+ 1227 0010 FFF7FEFF 		bl	TL2_Yellow
+ 1228              	.LVL149:
+ 1229              		.loc 1 233 12 view .LVU320
+ 1230 0014 0446     		mov	r4, r0
+ 1231              	.LVL150:
+ 234:Core/Src/light_logic.c **** 
+ 235:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1232              		.loc 1 235 5 is_stmt 1 view .LVU321
+ 1233 0016 4FF47A70 		mov	r0, #1000
+ 1234              	.LVL151:
+ 1235              		.loc 1 235 5 is_stmt 0 view .LVU322
+ 1236 001a FFF7FEFF 		bl	HAL_Delay
+ 1237              	.LVL152:
+ 236:Core/Src/light_logic.c **** 
+ 237:Core/Src/light_logic.c ****     bits = TL2_Green(bits, false);
+ 1238              		.loc 1 237 5 is_stmt 1 view .LVU323
+ 1239              		.loc 1 237 12 is_stmt 0 view .LVU324
+ 1240 001e 0021     		movs	r1, #0
+ 1241 0020 2046     		mov	r0, r4
+ 1242 0022 FFF7FEFF 		bl	TL2_Green
+ 1243              	.LVL153:
+ 238:Core/Src/light_logic.c ****     bits = TL2_Red(bits, true);
+ 1244              		.loc 1 238 5 is_stmt 1 view .LVU325
+ 1245              		.loc 1 238 12 is_stmt 0 view .LVU326
+ 1246 0026 0121     		movs	r1, #1
+ 1247 0028 FFF7FEFF 		bl	TL2_Red
+ 1248              	.LVL154:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 28
+
+
+ 239:Core/Src/light_logic.c ****     bits = TL2_Yellow(bits, true);
+ 1249              		.loc 1 239 5 is_stmt 1 view .LVU327
+ 1250              		.loc 1 239 12 is_stmt 0 view .LVU328
+ 1251 002c 0121     		movs	r1, #1
+ 1252 002e FFF7FEFF 		bl	TL2_Yellow
+ 1253              	.LVL155:
+ 1254              		.loc 1 239 12 view .LVU329
+ 1255 0032 0446     		mov	r4, r0
+ 1256              	.LVL156:
+ 240:Core/Src/light_logic.c **** 
+ 241:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1257              		.loc 1 241 5 is_stmt 1 view .LVU330
+ 1258 0034 4FF47A70 		mov	r0, #1000
+ 1259              	.LVL157:
+ 1260              		.loc 1 241 5 is_stmt 0 view .LVU331
+ 1261 0038 FFF7FEFF 		bl	HAL_Delay
+ 1262              	.LVL158:
+ 242:Core/Src/light_logic.c **** 
+ 243:Core/Src/light_logic.c ****     bits = TL2_Green(bits, true);
+ 1263              		.loc 1 243 5 is_stmt 1 view .LVU332
+ 1264              		.loc 1 243 12 is_stmt 0 view .LVU333
+ 1265 003c 0121     		movs	r1, #1
+ 1266 003e 2046     		mov	r0, r4
+ 1267 0040 FFF7FEFF 		bl	TL2_Green
+ 1268              	.LVL159:
+ 244:Core/Src/light_logic.c ****     bits = TL2_Red(bits, false);
+ 1269              		.loc 1 244 5 is_stmt 1 view .LVU334
+ 1270              		.loc 1 244 12 is_stmt 0 view .LVU335
+ 1271 0044 0021     		movs	r1, #0
+ 1272 0046 FFF7FEFF 		bl	TL2_Red
+ 1273              	.LVL160:
+ 245:Core/Src/light_logic.c ****     bits = TL2_Yellow(bits, false);
+ 1274              		.loc 1 245 5 is_stmt 1 view .LVU336
+ 1275              		.loc 1 245 12 is_stmt 0 view .LVU337
+ 1276 004a 0021     		movs	r1, #0
+ 1277 004c FFF7FEFF 		bl	TL2_Yellow
+ 1278              	.LVL161:
+ 246:Core/Src/light_logic.c ****     return bits;
+ 1279              		.loc 1 246 5 is_stmt 1 view .LVU338
+ 247:Core/Src/light_logic.c **** }
+ 1280              		.loc 1 247 1 is_stmt 0 view .LVU339
+ 1281 0050 10BD     		pop	{r4, pc}
+ 1282              		.cfi_endproc
+ 1283              	.LFE342:
+ 1285              		.section	.text.TL4_G2R,"ax",%progbits
+ 1286              		.align	1
+ 1287              		.global	TL4_G2R
+ 1288              		.syntax unified
+ 1289              		.thumb
+ 1290              		.thumb_func
+ 1292              	TL4_G2R:
+ 1293              	.LVL162:
+ 1294              	.LFB343:
+ 248:Core/Src/light_logic.c **** 
+ 249:Core/Src/light_logic.c **** uint32_t TL4_G2R(uint32_t bits){
+ 1295              		.loc 1 249 32 is_stmt 1 view -0
+ 1296              		.cfi_startproc
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 29
+
+
+ 1297              		@ args = 0, pretend = 0, frame = 0
+ 1298              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1299              		.loc 1 249 32 is_stmt 0 view .LVU341
+ 1300 0000 10B5     		push	{r4, lr}
+ 1301              	.LCFI23:
+ 1302              		.cfi_def_cfa_offset 8
+ 1303              		.cfi_offset 4, -8
+ 1304              		.cfi_offset 14, -4
+ 250:Core/Src/light_logic.c ****     bits = TL2_Green(bits, true);
+ 1305              		.loc 1 250 5 is_stmt 1 view .LVU342
+ 1306              		.loc 1 250 12 is_stmt 0 view .LVU343
+ 1307 0002 0121     		movs	r1, #1
+ 1308 0004 FFF7FEFF 		bl	TL2_Green
+ 1309              	.LVL163:
+ 251:Core/Src/light_logic.c ****     bits = TL2_Red(bits, false);
+ 1310              		.loc 1 251 5 is_stmt 1 view .LVU344
+ 1311              		.loc 1 251 12 is_stmt 0 view .LVU345
+ 1312 0008 0021     		movs	r1, #0
+ 1313 000a FFF7FEFF 		bl	TL2_Red
+ 1314              	.LVL164:
+ 252:Core/Src/light_logic.c ****     bits = TL2_Yellow(bits, false);
+ 1315              		.loc 1 252 5 is_stmt 1 view .LVU346
+ 1316              		.loc 1 252 12 is_stmt 0 view .LVU347
+ 1317 000e 0021     		movs	r1, #0
+ 1318 0010 FFF7FEFF 		bl	TL2_Yellow
+ 1319              	.LVL165:
+ 1320              		.loc 1 252 12 view .LVU348
+ 1321 0014 0446     		mov	r4, r0
+ 1322              	.LVL166:
+ 253:Core/Src/light_logic.c **** 
+ 254:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1323              		.loc 1 254 5 is_stmt 1 view .LVU349
+ 1324 0016 4FF47A70 		mov	r0, #1000
+ 1325              	.LVL167:
+ 1326              		.loc 1 254 5 is_stmt 0 view .LVU350
+ 1327 001a FFF7FEFF 		bl	HAL_Delay
+ 1328              	.LVL168:
+ 255:Core/Src/light_logic.c **** 
+ 256:Core/Src/light_logic.c ****     bits = TL2_Green(bits, false);
+ 1329              		.loc 1 256 5 is_stmt 1 view .LVU351
+ 1330              		.loc 1 256 12 is_stmt 0 view .LVU352
+ 1331 001e 0021     		movs	r1, #0
+ 1332 0020 2046     		mov	r0, r4
+ 1333 0022 FFF7FEFF 		bl	TL2_Green
+ 1334              	.LVL169:
+ 257:Core/Src/light_logic.c ****     bits = TL2_Red(bits, false);
+ 1335              		.loc 1 257 5 is_stmt 1 view .LVU353
+ 1336              		.loc 1 257 12 is_stmt 0 view .LVU354
+ 1337 0026 0021     		movs	r1, #0
+ 1338 0028 FFF7FEFF 		bl	TL2_Red
+ 1339              	.LVL170:
+ 258:Core/Src/light_logic.c ****     bits = TL2_Yellow(bits, true);
+ 1340              		.loc 1 258 5 is_stmt 1 view .LVU355
+ 1341              		.loc 1 258 12 is_stmt 0 view .LVU356
+ 1342 002c 0121     		movs	r1, #1
+ 1343 002e FFF7FEFF 		bl	TL2_Yellow
+ 1344              	.LVL171:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 30
+
+
+ 1345              		.loc 1 258 12 view .LVU357
+ 1346 0032 0446     		mov	r4, r0
+ 1347              	.LVL172:
+ 259:Core/Src/light_logic.c **** 
+ 260:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1348              		.loc 1 260 5 is_stmt 1 view .LVU358
+ 1349 0034 4FF47A70 		mov	r0, #1000
+ 1350              	.LVL173:
+ 1351              		.loc 1 260 5 is_stmt 0 view .LVU359
+ 1352 0038 FFF7FEFF 		bl	HAL_Delay
+ 1353              	.LVL174:
+ 261:Core/Src/light_logic.c **** 
+ 262:Core/Src/light_logic.c ****     bits = TL2_Green(bits, false);
+ 1354              		.loc 1 262 5 is_stmt 1 view .LVU360
+ 1355              		.loc 1 262 12 is_stmt 0 view .LVU361
+ 1356 003c 0021     		movs	r1, #0
+ 1357 003e 2046     		mov	r0, r4
+ 1358 0040 FFF7FEFF 		bl	TL2_Green
+ 1359              	.LVL175:
+ 263:Core/Src/light_logic.c ****     bits = TL2_Red(bits, true);
+ 1360              		.loc 1 263 5 is_stmt 1 view .LVU362
+ 1361              		.loc 1 263 12 is_stmt 0 view .LVU363
+ 1362 0044 0121     		movs	r1, #1
+ 1363 0046 FFF7FEFF 		bl	TL2_Red
+ 1364              	.LVL176:
+ 264:Core/Src/light_logic.c ****     bits = TL2_Yellow(bits, false);
+ 1365              		.loc 1 264 5 is_stmt 1 view .LVU364
+ 1366              		.loc 1 264 12 is_stmt 0 view .LVU365
+ 1367 004a 0021     		movs	r1, #0
+ 1368 004c FFF7FEFF 		bl	TL2_Yellow
+ 1369              	.LVL177:
+ 265:Core/Src/light_logic.c ****     return bits;
+ 1370              		.loc 1 265 5 is_stmt 1 view .LVU366
+ 266:Core/Src/light_logic.c **** }
+ 1371              		.loc 1 266 1 is_stmt 0 view .LVU367
+ 1372 0050 10BD     		pop	{r4, pc}
+ 1373              		.cfi_endproc
+ 1374              	.LFE343:
+ 1376              		.section	.text.TL2_R2G,"ax",%progbits
+ 1377              		.align	1
+ 1378              		.global	TL2_R2G
+ 1379              		.syntax unified
+ 1380              		.thumb
+ 1381              		.thumb_func
+ 1383              	TL2_R2G:
+ 1384              	.LVL178:
+ 1385              	.LFB344:
+ 267:Core/Src/light_logic.c **** 
+ 268:Core/Src/light_logic.c **** uint32_t TL2_R2G(uint32_t bits){
+ 1386              		.loc 1 268 32 is_stmt 1 view -0
+ 1387              		.cfi_startproc
+ 1388              		@ args = 0, pretend = 0, frame = 0
+ 1389              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1390              		.loc 1 268 32 is_stmt 0 view .LVU369
+ 1391 0000 10B5     		push	{r4, lr}
+ 1392              	.LCFI24:
+ 1393              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 31
+
+
+ 1394              		.cfi_offset 4, -8
+ 1395              		.cfi_offset 14, -4
+ 269:Core/Src/light_logic.c ****     bits = TL3_Green(bits, false);
+ 1396              		.loc 1 269 5 is_stmt 1 view .LVU370
+ 1397              		.loc 1 269 12 is_stmt 0 view .LVU371
+ 1398 0002 0021     		movs	r1, #0
+ 1399 0004 FFF7FEFF 		bl	TL3_Green
+ 1400              	.LVL179:
+ 270:Core/Src/light_logic.c ****     bits = TL3_Red(bits, true);
+ 1401              		.loc 1 270 5 is_stmt 1 view .LVU372
+ 1402              		.loc 1 270 12 is_stmt 0 view .LVU373
+ 1403 0008 0121     		movs	r1, #1
+ 1404 000a FFF7FEFF 		bl	TL3_Red
+ 1405              	.LVL180:
+ 271:Core/Src/light_logic.c ****     bits = TL3_Yellow(bits, false);
+ 1406              		.loc 1 271 5 is_stmt 1 view .LVU374
+ 1407              		.loc 1 271 12 is_stmt 0 view .LVU375
+ 1408 000e 0021     		movs	r1, #0
+ 1409 0010 FFF7FEFF 		bl	TL3_Yellow
+ 1410              	.LVL181:
+ 1411              		.loc 1 271 12 view .LVU376
+ 1412 0014 0446     		mov	r4, r0
+ 1413              	.LVL182:
+ 272:Core/Src/light_logic.c **** 
+ 273:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1414              		.loc 1 273 5 is_stmt 1 view .LVU377
+ 1415 0016 4FF47A70 		mov	r0, #1000
+ 1416              	.LVL183:
+ 1417              		.loc 1 273 5 is_stmt 0 view .LVU378
+ 1418 001a FFF7FEFF 		bl	HAL_Delay
+ 1419              	.LVL184:
+ 274:Core/Src/light_logic.c **** 
+ 275:Core/Src/light_logic.c ****     bits = TL3_Green(bits, false);
+ 1420              		.loc 1 275 5 is_stmt 1 view .LVU379
+ 1421              		.loc 1 275 12 is_stmt 0 view .LVU380
+ 1422 001e 0021     		movs	r1, #0
+ 1423 0020 2046     		mov	r0, r4
+ 1424 0022 FFF7FEFF 		bl	TL3_Green
+ 1425              	.LVL185:
+ 276:Core/Src/light_logic.c ****     bits = TL3_Red(bits, true);
+ 1426              		.loc 1 276 5 is_stmt 1 view .LVU381
+ 1427              		.loc 1 276 12 is_stmt 0 view .LVU382
+ 1428 0026 0121     		movs	r1, #1
+ 1429 0028 FFF7FEFF 		bl	TL3_Red
+ 1430              	.LVL186:
+ 277:Core/Src/light_logic.c ****     bits = TL3_Yellow(bits, true);
+ 1431              		.loc 1 277 5 is_stmt 1 view .LVU383
+ 1432              		.loc 1 277 12 is_stmt 0 view .LVU384
+ 1433 002c 0121     		movs	r1, #1
+ 1434 002e FFF7FEFF 		bl	TL3_Yellow
+ 1435              	.LVL187:
+ 1436              		.loc 1 277 12 view .LVU385
+ 1437 0032 0446     		mov	r4, r0
+ 1438              	.LVL188:
+ 278:Core/Src/light_logic.c **** 
+ 279:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1439              		.loc 1 279 5 is_stmt 1 view .LVU386
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 32
+
+
+ 1440 0034 4FF47A70 		mov	r0, #1000
+ 1441              	.LVL189:
+ 1442              		.loc 1 279 5 is_stmt 0 view .LVU387
+ 1443 0038 FFF7FEFF 		bl	HAL_Delay
+ 1444              	.LVL190:
+ 280:Core/Src/light_logic.c **** 
+ 281:Core/Src/light_logic.c ****     bits = TL3_Green(bits, true);
+ 1445              		.loc 1 281 5 is_stmt 1 view .LVU388
+ 1446              		.loc 1 281 12 is_stmt 0 view .LVU389
+ 1447 003c 0121     		movs	r1, #1
+ 1448 003e 2046     		mov	r0, r4
+ 1449 0040 FFF7FEFF 		bl	TL3_Green
+ 1450              	.LVL191:
+ 282:Core/Src/light_logic.c ****     bits = TL3_Red(bits, false);
+ 1451              		.loc 1 282 5 is_stmt 1 view .LVU390
+ 1452              		.loc 1 282 12 is_stmt 0 view .LVU391
+ 1453 0044 0021     		movs	r1, #0
+ 1454 0046 FFF7FEFF 		bl	TL3_Red
+ 1455              	.LVL192:
+ 283:Core/Src/light_logic.c ****     bits = TL3_Yellow(bits, false);
+ 1456              		.loc 1 283 5 is_stmt 1 view .LVU392
+ 1457              		.loc 1 283 12 is_stmt 0 view .LVU393
+ 1458 004a 0021     		movs	r1, #0
+ 1459 004c FFF7FEFF 		bl	TL3_Yellow
+ 1460              	.LVL193:
+ 284:Core/Src/light_logic.c ****     return bits;
+ 1461              		.loc 1 284 5 is_stmt 1 view .LVU394
+ 285:Core/Src/light_logic.c **** }
+ 1462              		.loc 1 285 1 is_stmt 0 view .LVU395
+ 1463 0050 10BD     		pop	{r4, pc}
+ 1464              		.cfi_endproc
+ 1465              	.LFE344:
+ 1467              		.section	.text.TL2_G2R,"ax",%progbits
+ 1468              		.align	1
+ 1469              		.global	TL2_G2R
+ 1470              		.syntax unified
+ 1471              		.thumb
+ 1472              		.thumb_func
+ 1474              	TL2_G2R:
+ 1475              	.LVL194:
+ 1476              	.LFB345:
+ 286:Core/Src/light_logic.c **** 
+ 287:Core/Src/light_logic.c **** uint32_t TL2_G2R(uint32_t bits){
+ 1477              		.loc 1 287 32 is_stmt 1 view -0
+ 1478              		.cfi_startproc
+ 1479              		@ args = 0, pretend = 0, frame = 0
+ 1480              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1481              		.loc 1 287 32 is_stmt 0 view .LVU397
+ 1482 0000 10B5     		push	{r4, lr}
+ 1483              	.LCFI25:
+ 1484              		.cfi_def_cfa_offset 8
+ 1485              		.cfi_offset 4, -8
+ 1486              		.cfi_offset 14, -4
+ 288:Core/Src/light_logic.c ****     bits = TL3_Green(bits, true);
+ 1487              		.loc 1 288 5 is_stmt 1 view .LVU398
+ 1488              		.loc 1 288 12 is_stmt 0 view .LVU399
+ 1489 0002 0121     		movs	r1, #1
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 33
+
+
+ 1490 0004 FFF7FEFF 		bl	TL3_Green
+ 1491              	.LVL195:
+ 289:Core/Src/light_logic.c ****     bits = TL3_Red(bits, false);
+ 1492              		.loc 1 289 5 is_stmt 1 view .LVU400
+ 1493              		.loc 1 289 12 is_stmt 0 view .LVU401
+ 1494 0008 0021     		movs	r1, #0
+ 1495 000a FFF7FEFF 		bl	TL3_Red
+ 1496              	.LVL196:
+ 290:Core/Src/light_logic.c ****     bits = TL3_Yellow(bits, false);
+ 1497              		.loc 1 290 5 is_stmt 1 view .LVU402
+ 1498              		.loc 1 290 12 is_stmt 0 view .LVU403
+ 1499 000e 0021     		movs	r1, #0
+ 1500 0010 FFF7FEFF 		bl	TL3_Yellow
+ 1501              	.LVL197:
+ 1502              		.loc 1 290 12 view .LVU404
+ 1503 0014 0446     		mov	r4, r0
+ 1504              	.LVL198:
+ 291:Core/Src/light_logic.c **** 
+ 292:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1505              		.loc 1 292 5 is_stmt 1 view .LVU405
+ 1506 0016 4FF47A70 		mov	r0, #1000
+ 1507              	.LVL199:
+ 1508              		.loc 1 292 5 is_stmt 0 view .LVU406
+ 1509 001a FFF7FEFF 		bl	HAL_Delay
+ 1510              	.LVL200:
+ 293:Core/Src/light_logic.c **** 
+ 294:Core/Src/light_logic.c ****     bits = TL3_Green(bits, false);
+ 1511              		.loc 1 294 5 is_stmt 1 view .LVU407
+ 1512              		.loc 1 294 12 is_stmt 0 view .LVU408
+ 1513 001e 0021     		movs	r1, #0
+ 1514 0020 2046     		mov	r0, r4
+ 1515 0022 FFF7FEFF 		bl	TL3_Green
+ 1516              	.LVL201:
+ 295:Core/Src/light_logic.c ****     bits = TL3_Red(bits, false);
+ 1517              		.loc 1 295 5 is_stmt 1 view .LVU409
+ 1518              		.loc 1 295 12 is_stmt 0 view .LVU410
+ 1519 0026 0021     		movs	r1, #0
+ 1520 0028 FFF7FEFF 		bl	TL3_Red
+ 1521              	.LVL202:
+ 296:Core/Src/light_logic.c ****     bits = TL3_Yellow(bits, true);
+ 1522              		.loc 1 296 5 is_stmt 1 view .LVU411
+ 1523              		.loc 1 296 12 is_stmt 0 view .LVU412
+ 1524 002c 0121     		movs	r1, #1
+ 1525 002e FFF7FEFF 		bl	TL3_Yellow
+ 1526              	.LVL203:
+ 1527              		.loc 1 296 12 view .LVU413
+ 1528 0032 0446     		mov	r4, r0
+ 1529              	.LVL204:
+ 297:Core/Src/light_logic.c **** 
+ 298:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1530              		.loc 1 298 5 is_stmt 1 view .LVU414
+ 1531 0034 4FF47A70 		mov	r0, #1000
+ 1532              	.LVL205:
+ 1533              		.loc 1 298 5 is_stmt 0 view .LVU415
+ 1534 0038 FFF7FEFF 		bl	HAL_Delay
+ 1535              	.LVL206:
+ 299:Core/Src/light_logic.c **** 
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 34
+
+
+ 300:Core/Src/light_logic.c ****     bits = TL3_Green(bits, false);
+ 1536              		.loc 1 300 5 is_stmt 1 view .LVU416
+ 1537              		.loc 1 300 12 is_stmt 0 view .LVU417
+ 1538 003c 0021     		movs	r1, #0
+ 1539 003e 2046     		mov	r0, r4
+ 1540 0040 FFF7FEFF 		bl	TL3_Green
+ 1541              	.LVL207:
+ 301:Core/Src/light_logic.c ****     bits = TL3_Red(bits, true);
+ 1542              		.loc 1 301 5 is_stmt 1 view .LVU418
+ 1543              		.loc 1 301 12 is_stmt 0 view .LVU419
+ 1544 0044 0121     		movs	r1, #1
+ 1545 0046 FFF7FEFF 		bl	TL3_Red
+ 1546              	.LVL208:
+ 302:Core/Src/light_logic.c ****     bits = TL3_Yellow(bits, false);
+ 1547              		.loc 1 302 5 is_stmt 1 view .LVU420
+ 1548              		.loc 1 302 12 is_stmt 0 view .LVU421
+ 1549 004a 0021     		movs	r1, #0
+ 1550 004c FFF7FEFF 		bl	TL3_Yellow
+ 1551              	.LVL209:
+ 303:Core/Src/light_logic.c ****     return bits;
+ 1552              		.loc 1 303 5 is_stmt 1 view .LVU422
+ 304:Core/Src/light_logic.c **** }
+ 1553              		.loc 1 304 1 is_stmt 0 view .LVU423
+ 1554 0050 10BD     		pop	{r4, pc}
+ 1555              		.cfi_endproc
+ 1556              	.LFE345:
+ 1558              		.section	.text.TL3_R2G,"ax",%progbits
+ 1559              		.align	1
+ 1560              		.global	TL3_R2G
+ 1561              		.syntax unified
+ 1562              		.thumb
+ 1563              		.thumb_func
+ 1565              	TL3_R2G:
+ 1566              	.LVL210:
+ 1567              	.LFB346:
+ 305:Core/Src/light_logic.c **** 
+ 306:Core/Src/light_logic.c **** uint32_t TL3_R2G(uint32_t bits){
+ 1568              		.loc 1 306 32 is_stmt 1 view -0
+ 1569              		.cfi_startproc
+ 1570              		@ args = 0, pretend = 0, frame = 0
+ 1571              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1572              		.loc 1 306 32 is_stmt 0 view .LVU425
+ 1573 0000 10B5     		push	{r4, lr}
+ 1574              	.LCFI26:
+ 1575              		.cfi_def_cfa_offset 8
+ 1576              		.cfi_offset 4, -8
+ 1577              		.cfi_offset 14, -4
+ 307:Core/Src/light_logic.c ****     bits = TL4_Green(bits, false);
+ 1578              		.loc 1 307 5 is_stmt 1 view .LVU426
+ 1579              		.loc 1 307 12 is_stmt 0 view .LVU427
+ 1580 0002 0021     		movs	r1, #0
+ 1581 0004 FFF7FEFF 		bl	TL4_Green
+ 1582              	.LVL211:
+ 308:Core/Src/light_logic.c ****     bits = TL4_Red(bits, true);
+ 1583              		.loc 1 308 5 is_stmt 1 view .LVU428
+ 1584              		.loc 1 308 12 is_stmt 0 view .LVU429
+ 1585 0008 0121     		movs	r1, #1
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 35
+
+
+ 1586 000a FFF7FEFF 		bl	TL4_Red
+ 1587              	.LVL212:
+ 309:Core/Src/light_logic.c ****     bits = TL4_Yellow(bits, false);
+ 1588              		.loc 1 309 5 is_stmt 1 view .LVU430
+ 1589              		.loc 1 309 12 is_stmt 0 view .LVU431
+ 1590 000e 0021     		movs	r1, #0
+ 1591 0010 FFF7FEFF 		bl	TL4_Yellow
+ 1592              	.LVL213:
+ 1593              		.loc 1 309 12 view .LVU432
+ 1594 0014 0446     		mov	r4, r0
+ 1595              	.LVL214:
+ 310:Core/Src/light_logic.c **** 
+ 311:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1596              		.loc 1 311 5 is_stmt 1 view .LVU433
+ 1597 0016 4FF47A70 		mov	r0, #1000
+ 1598              	.LVL215:
+ 1599              		.loc 1 311 5 is_stmt 0 view .LVU434
+ 1600 001a FFF7FEFF 		bl	HAL_Delay
+ 1601              	.LVL216:
+ 312:Core/Src/light_logic.c **** 
+ 313:Core/Src/light_logic.c ****     bits = TL4_Green(bits, false);
+ 1602              		.loc 1 313 5 is_stmt 1 view .LVU435
+ 1603              		.loc 1 313 12 is_stmt 0 view .LVU436
+ 1604 001e 0021     		movs	r1, #0
+ 1605 0020 2046     		mov	r0, r4
+ 1606 0022 FFF7FEFF 		bl	TL4_Green
+ 1607              	.LVL217:
+ 314:Core/Src/light_logic.c ****     bits = TL4_Red(bits, true);
+ 1608              		.loc 1 314 5 is_stmt 1 view .LVU437
+ 1609              		.loc 1 314 12 is_stmt 0 view .LVU438
+ 1610 0026 0121     		movs	r1, #1
+ 1611 0028 FFF7FEFF 		bl	TL4_Red
+ 1612              	.LVL218:
+ 315:Core/Src/light_logic.c ****     bits = TL4_Yellow(bits, true);
+ 1613              		.loc 1 315 5 is_stmt 1 view .LVU439
+ 1614              		.loc 1 315 12 is_stmt 0 view .LVU440
+ 1615 002c 0121     		movs	r1, #1
+ 1616 002e FFF7FEFF 		bl	TL4_Yellow
+ 1617              	.LVL219:
+ 1618              		.loc 1 315 12 view .LVU441
+ 1619 0032 0446     		mov	r4, r0
+ 1620              	.LVL220:
+ 316:Core/Src/light_logic.c **** 
+ 317:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1621              		.loc 1 317 5 is_stmt 1 view .LVU442
+ 1622 0034 4FF47A70 		mov	r0, #1000
+ 1623              	.LVL221:
+ 1624              		.loc 1 317 5 is_stmt 0 view .LVU443
+ 1625 0038 FFF7FEFF 		bl	HAL_Delay
+ 1626              	.LVL222:
+ 318:Core/Src/light_logic.c **** 
+ 319:Core/Src/light_logic.c ****     bits = TL4_Green(bits, true);
+ 1627              		.loc 1 319 5 is_stmt 1 view .LVU444
+ 1628              		.loc 1 319 12 is_stmt 0 view .LVU445
+ 1629 003c 0121     		movs	r1, #1
+ 1630 003e 2046     		mov	r0, r4
+ 1631 0040 FFF7FEFF 		bl	TL4_Green
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 36
+
+
+ 1632              	.LVL223:
+ 320:Core/Src/light_logic.c ****     bits = TL4_Red(bits, false);
+ 1633              		.loc 1 320 5 is_stmt 1 view .LVU446
+ 1634              		.loc 1 320 12 is_stmt 0 view .LVU447
+ 1635 0044 0021     		movs	r1, #0
+ 1636 0046 FFF7FEFF 		bl	TL4_Red
+ 1637              	.LVL224:
+ 321:Core/Src/light_logic.c ****     bits = TL4_Yellow(bits, false);
+ 1638              		.loc 1 321 5 is_stmt 1 view .LVU448
+ 1639              		.loc 1 321 12 is_stmt 0 view .LVU449
+ 1640 004a 0021     		movs	r1, #0
+ 1641 004c FFF7FEFF 		bl	TL4_Yellow
+ 1642              	.LVL225:
+ 322:Core/Src/light_logic.c ****     return bits;
+ 1643              		.loc 1 322 5 is_stmt 1 view .LVU450
+ 323:Core/Src/light_logic.c **** }
+ 1644              		.loc 1 323 1 is_stmt 0 view .LVU451
+ 1645 0050 10BD     		pop	{r4, pc}
+ 1646              		.cfi_endproc
+ 1647              	.LFE346:
+ 1649              		.section	.text.TL3_G2R,"ax",%progbits
+ 1650              		.align	1
+ 1651              		.global	TL3_G2R
+ 1652              		.syntax unified
+ 1653              		.thumb
+ 1654              		.thumb_func
+ 1656              	TL3_G2R:
+ 1657              	.LVL226:
+ 1658              	.LFB347:
+ 324:Core/Src/light_logic.c **** 
+ 325:Core/Src/light_logic.c **** uint32_t TL3_G2R(uint32_t bits){
+ 1659              		.loc 1 325 32 is_stmt 1 view -0
+ 1660              		.cfi_startproc
+ 1661              		@ args = 0, pretend = 0, frame = 0
+ 1662              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1663              		.loc 1 325 32 is_stmt 0 view .LVU453
+ 1664 0000 10B5     		push	{r4, lr}
+ 1665              	.LCFI27:
+ 1666              		.cfi_def_cfa_offset 8
+ 1667              		.cfi_offset 4, -8
+ 1668              		.cfi_offset 14, -4
+ 326:Core/Src/light_logic.c ****     bits = TL4_Green(bits, true);
+ 1669              		.loc 1 326 5 is_stmt 1 view .LVU454
+ 1670              		.loc 1 326 12 is_stmt 0 view .LVU455
+ 1671 0002 0121     		movs	r1, #1
+ 1672 0004 FFF7FEFF 		bl	TL4_Green
+ 1673              	.LVL227:
+ 327:Core/Src/light_logic.c ****     bits = TL4_Red(bits, false);
+ 1674              		.loc 1 327 5 is_stmt 1 view .LVU456
+ 1675              		.loc 1 327 12 is_stmt 0 view .LVU457
+ 1676 0008 0021     		movs	r1, #0
+ 1677 000a FFF7FEFF 		bl	TL4_Red
+ 1678              	.LVL228:
+ 328:Core/Src/light_logic.c ****     bits = TL4_Yellow(bits, false);
+ 1679              		.loc 1 328 5 is_stmt 1 view .LVU458
+ 1680              		.loc 1 328 12 is_stmt 0 view .LVU459
+ 1681 000e 0021     		movs	r1, #0
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 37
+
+
+ 1682 0010 FFF7FEFF 		bl	TL4_Yellow
+ 1683              	.LVL229:
+ 1684              		.loc 1 328 12 view .LVU460
+ 1685 0014 0446     		mov	r4, r0
+ 1686              	.LVL230:
+ 329:Core/Src/light_logic.c **** 
+ 330:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1687              		.loc 1 330 5 is_stmt 1 view .LVU461
+ 1688 0016 4FF47A70 		mov	r0, #1000
+ 1689              	.LVL231:
+ 1690              		.loc 1 330 5 is_stmt 0 view .LVU462
+ 1691 001a FFF7FEFF 		bl	HAL_Delay
+ 1692              	.LVL232:
+ 331:Core/Src/light_logic.c **** 
+ 332:Core/Src/light_logic.c ****     bits = TL4_Green(bits, false);
+ 1693              		.loc 1 332 5 is_stmt 1 view .LVU463
+ 1694              		.loc 1 332 12 is_stmt 0 view .LVU464
+ 1695 001e 0021     		movs	r1, #0
+ 1696 0020 2046     		mov	r0, r4
+ 1697 0022 FFF7FEFF 		bl	TL4_Green
+ 1698              	.LVL233:
+ 333:Core/Src/light_logic.c ****     bits = TL4_Red(bits, false);
+ 1699              		.loc 1 333 5 is_stmt 1 view .LVU465
+ 1700              		.loc 1 333 12 is_stmt 0 view .LVU466
+ 1701 0026 0021     		movs	r1, #0
+ 1702 0028 FFF7FEFF 		bl	TL4_Red
+ 1703              	.LVL234:
+ 334:Core/Src/light_logic.c ****     bits = TL4_Yellow(bits, true);
+ 1704              		.loc 1 334 5 is_stmt 1 view .LVU467
+ 1705              		.loc 1 334 12 is_stmt 0 view .LVU468
+ 1706 002c 0121     		movs	r1, #1
+ 1707 002e FFF7FEFF 		bl	TL4_Yellow
+ 1708              	.LVL235:
+ 1709              		.loc 1 334 12 view .LVU469
+ 1710 0032 0446     		mov	r4, r0
+ 1711              	.LVL236:
+ 335:Core/Src/light_logic.c **** 
+ 336:Core/Src/light_logic.c ****     HAL_Delay(1000);
+ 1712              		.loc 1 336 5 is_stmt 1 view .LVU470
+ 1713 0034 4FF47A70 		mov	r0, #1000
+ 1714              	.LVL237:
+ 1715              		.loc 1 336 5 is_stmt 0 view .LVU471
+ 1716 0038 FFF7FEFF 		bl	HAL_Delay
+ 1717              	.LVL238:
+ 337:Core/Src/light_logic.c **** 
+ 338:Core/Src/light_logic.c ****     bits = TL4_Green(bits, false);
+ 1718              		.loc 1 338 5 is_stmt 1 view .LVU472
+ 1719              		.loc 1 338 12 is_stmt 0 view .LVU473
+ 1720 003c 0021     		movs	r1, #0
+ 1721 003e 2046     		mov	r0, r4
+ 1722 0040 FFF7FEFF 		bl	TL4_Green
+ 1723              	.LVL239:
+ 339:Core/Src/light_logic.c ****     bits = TL4_Red(bits, true);
+ 1724              		.loc 1 339 5 is_stmt 1 view .LVU474
+ 1725              		.loc 1 339 12 is_stmt 0 view .LVU475
+ 1726 0044 0121     		movs	r1, #1
+ 1727 0046 FFF7FEFF 		bl	TL4_Red
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 38
+
+
+ 1728              	.LVL240:
+ 340:Core/Src/light_logic.c ****     bits = TL4_Yellow(bits, false);
+ 1729              		.loc 1 340 5 is_stmt 1 view .LVU476
+ 1730              		.loc 1 340 12 is_stmt 0 view .LVU477
+ 1731 004a 0021     		movs	r1, #0
+ 1732 004c FFF7FEFF 		bl	TL4_Yellow
+ 1733              	.LVL241:
+ 341:Core/Src/light_logic.c ****     return bits;
+ 1734              		.loc 1 341 5 is_stmt 1 view .LVU478
+ 342:Core/Src/light_logic.c **** }
+ 1735              		.loc 1 342 1 is_stmt 0 view .LVU479
+ 1736 0050 10BD     		pop	{r4, pc}
+ 1737              		.cfi_endproc
+ 1738              	.LFE347:
+ 1740              		.section	.text.Init_Task1,"ax",%progbits
+ 1741              		.align	1
+ 1742              		.global	Init_Task1
+ 1743              		.syntax unified
+ 1744              		.thumb
+ 1745              		.thumb_func
+ 1747              	Init_Task1:
+ 1748              	.LVL242:
+ 1749              	.LFB348:
+ 343:Core/Src/light_logic.c **** 
+ 344:Core/Src/light_logic.c **** uint32_t Init_Task1(uint32_t bits){
+ 1750              		.loc 1 344 35 is_stmt 1 view -0
+ 1751              		.cfi_startproc
+ 1752              		@ args = 0, pretend = 0, frame = 0
+ 1753              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1754              		.loc 1 344 35 is_stmt 0 view .LVU481
+ 1755 0000 08B5     		push	{r3, lr}
+ 1756              	.LCFI28:
+ 1757              		.cfi_def_cfa_offset 8
+ 1758              		.cfi_offset 3, -8
+ 1759              		.cfi_offset 14, -4
+ 345:Core/Src/light_logic.c ****     bits = SR_bitset(0);
+ 1760              		.loc 1 345 5 is_stmt 1 view .LVU482
+ 1761              		.loc 1 345 12 is_stmt 0 view .LVU483
+ 1762 0002 0020     		movs	r0, #0
+ 1763              	.LVL243:
+ 1764              		.loc 1 345 12 view .LVU484
+ 1765 0004 FFF7FEFF 		bl	SR_bitset
+ 1766              	.LVL244:
+ 346:Core/Src/light_logic.c **** 
+ 347:Core/Src/light_logic.c ****     bits = TL2_Green(bits, true);
+ 1767              		.loc 1 347 5 is_stmt 1 view .LVU485
+ 1768              		.loc 1 347 12 is_stmt 0 view .LVU486
+ 1769 0008 0121     		movs	r1, #1
+ 1770 000a FFF7FEFF 		bl	TL2_Green
+ 1771              	.LVL245:
+ 348:Core/Src/light_logic.c **** 
+ 349:Core/Src/light_logic.c ****     bits = TL4_Green(bits, true);
+ 1772              		.loc 1 349 5 is_stmt 1 view .LVU487
+ 1773              		.loc 1 349 12 is_stmt 0 view .LVU488
+ 1774 000e 0121     		movs	r1, #1
+ 1775 0010 FFF7FEFF 		bl	TL4_Green
+ 1776              	.LVL246:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 39
+
+
+ 350:Core/Src/light_logic.c **** 
+ 351:Core/Src/light_logic.c ****     bits = PL2_Red(bits, true);
+ 1777              		.loc 1 351 5 is_stmt 1 view .LVU489
+ 1778              		.loc 1 351 12 is_stmt 0 view .LVU490
+ 1779 0014 0121     		movs	r1, #1
+ 1780 0016 FFF7FEFF 		bl	PL2_Red
+ 1781              	.LVL247:
+ 352:Core/Src/light_logic.c **** 
+ 353:Core/Src/light_logic.c ****     return bits;
+ 1782              		.loc 1 353 5 is_stmt 1 view .LVU491
+ 354:Core/Src/light_logic.c **** }...
+ 1783              		.loc 1 354 1 is_stmt 0 view .LVU492
+ 1784 001a 08BD     		pop	{r3, pc}
+ 1785              		.cfi_endproc
+ 1786              	.LFE348:
+ 1788              		.text
+ 1789              	.Letext0:
+ 1790              		.file 2 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
+ 1791              		.file 3 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
+ 1792              		.file 4 "Core/Inc/light_logic.h"
+ 1793              		.file 5 "Core/Inc/shift_register.h"
+ 1794              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 40
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 light_logic.c
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:21     .text.PL1_Green:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:27     .text.PL1_Green:00000000 PL1_Green
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:71     .text.PL1_Red:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:77     .text.PL1_Red:00000000 PL1_Red
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:121    .text.PL1_Blue:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:127    .text.PL1_Blue:00000000 PL1_Blue
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:171    .text.PL1_Blue_Toggle:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:177    .text.PL1_Blue_Toggle:00000000 PL1_Blue_Toggle
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:217    .text.PL2_Green:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:223    .text.PL2_Green:00000000 PL2_Green
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:267    .text.PL2_Red:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:273    .text.PL2_Red:00000000 PL2_Red
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:317    .text.PL2_Blue:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:323    .text.PL2_Blue:00000000 PL2_Blue
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:367    .text.PL2_Blue_Toggle:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:373    .text.PL2_Blue_Toggle:00000000 PL2_Blue_Toggle
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:413    .text.TL1_Red:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:419    .text.TL1_Red:00000000 TL1_Red
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:463    .text.TL1_Yellow:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:469    .text.TL1_Yellow:00000000 TL1_Yellow
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:513    .text.TL1_Green:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:519    .text.TL1_Green:00000000 TL1_Green
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:563    .text.TL4_Red:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:569    .text.TL4_Red:00000000 TL4_Red
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:613    .text.TL4_Yellow:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:619    .text.TL4_Yellow:00000000 TL4_Yellow
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:663    .text.TL4_Green:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:669    .text.TL4_Green:00000000 TL4_Green
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:713    .text.TL2_Red:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:719    .text.TL2_Red:00000000 TL2_Red
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:763    .text.TL2_Yellow:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:769    .text.TL2_Yellow:00000000 TL2_Yellow
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:813    .text.TL2_Green:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:819    .text.TL2_Green:00000000 TL2_Green
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:863    .text.TL3_Red:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:869    .text.TL3_Red:00000000 TL3_Red
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:913    .text.TL3_Yellow:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:919    .text.TL3_Yellow:00000000 TL3_Yellow
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:963    .text.TL3_Green:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:969    .text.TL3_Green:00000000 TL3_Green
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1013   .text.TL1_R2G:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1019   .text.TL1_R2G:00000000 TL1_R2G
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1104   .text.TL1_G2R:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1110   .text.TL1_G2R:00000000 TL1_G2R
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1195   .text.TL4_R2G:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1201   .text.TL4_R2G:00000000 TL4_R2G
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1286   .text.TL4_G2R:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1292   .text.TL4_G2R:00000000 TL4_G2R
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1377   .text.TL2_R2G:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1383   .text.TL2_R2G:00000000 TL2_R2G
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1468   .text.TL2_G2R:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1474   .text.TL2_G2R:00000000 TL2_G2R
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1559   .text.TL3_R2G:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1565   .text.TL3_R2G:00000000 TL3_R2G
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1650   .text.TL3_G2R:00000000 $t
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s 			page 41
+
+
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1656   .text.TL3_G2R:00000000 TL3_G2R
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1741   .text.Init_Task1:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccdhnJOH.s:1747   .text.Init_Task1:00000000 Init_Task1
+
+UNDEFINED SYMBOLS
+SR_bitadj
+HAL_Delay
+SR_bitset

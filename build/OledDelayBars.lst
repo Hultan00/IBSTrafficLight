@@ -1,0 +1,2868 @@
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"OledDelayBars.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/OledDelayBars.c"
+  20              		.section	.rodata.Show_P1Bar.str1.4,"aMS",%progbits,1
+  21              		.align	2
+  22              	.LC0:
+  23 0000 503100   		.ascii	"P1\000"
+  24              		.global	__aeabi_f2d
+  25              		.global	__aeabi_ddiv
+  26              		.global	__aeabi_dmul
+  27              		.global	__aeabi_d2f
+  28              		.section	.text.Show_P1Bar,"ax",%progbits
+  29              		.align	1
+  30              		.global	Show_P1Bar
+  31              		.syntax unified
+  32              		.thumb
+  33              		.thumb_func
+  35              	Show_P1Bar:
+  36              	.LVL0:
+  37              	.LFB320:
+   1:Core/Src/OledDelayBars.c **** #include <stdio.h>
+   2:Core/Src/OledDelayBars.c **** #include <stdlib.h>
+   3:Core/Src/OledDelayBars.c **** #include <stdbool.h>
+   4:Core/Src/OledDelayBars.c **** 
+   5:Core/Src/OledDelayBars.c **** #include "main.h"
+   6:Core/Src/OledDelayBars.c **** #include "stm32l4xx_it.h"
+   7:Core/Src/OledDelayBars.c **** #include "stm32l4xx_hal_conf.h"
+   8:Core/Src/OledDelayBars.c **** #include "spi.h"
+   9:Core/Src/OledDelayBars.c **** #include "ssd1306.h"
+  10:Core/Src/OledDelayBars.c **** #include "OledDelayBars.h"
+  11:Core/Src/OledDelayBars.c **** 
+  12:Core/Src/OledDelayBars.c **** void Show_P1Bar(bool state, uint8_t percent){
+  38              		.loc 1 12 45 view -0
+  39              		.cfi_startproc
+  40              		@ args = 0, pretend = 0, frame = 8
+  41              		@ frame_needed = 0, uses_anonymous_args = 0
+  42              		.loc 1 12 45 is_stmt 0 view .LVU1
+  43 0000 10B5     		push	{r4, lr}
+  44              	.LCFI0:
+  45              		.cfi_def_cfa_offset 8
+  46              		.cfi_offset 4, -8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 2
+
+
+  47              		.cfi_offset 14, -4
+  48 0002 2DED048B 		vpush.64	{d8, d9}
+  49              	.LCFI1:
+  50              		.cfi_def_cfa_offset 24
+  51              		.cfi_offset 80, -24
+  52              		.cfi_offset 81, -20
+  53              		.cfi_offset 82, -16
+  54              		.cfi_offset 83, -12
+  55 0006 84B0     		sub	sp, sp, #16
+  56              	.LCFI2:
+  57              		.cfi_def_cfa_offset 40
+  58 0008 0391     		str	r1, [sp, #12]
+  13:Core/Src/OledDelayBars.c ****     if(state){
+  59              		.loc 1 13 5 is_stmt 1 view .LVU2
+  60              		.loc 1 13 7 is_stmt 0 view .LVU3
+  61 000a 0028     		cmp	r0, #0
+  62 000c 69D0     		beq	.L2
+  63              	.LBB2:
+  14:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(2,10,12,50,White);
+  64              		.loc 1 14 9 is_stmt 1 view .LVU4
+  65 000e 0124     		movs	r4, #1
+  66 0010 0094     		str	r4, [sp]
+  67 0012 3223     		movs	r3, #50
+  68 0014 0C22     		movs	r2, #12
+  69 0016 0A21     		movs	r1, #10
+  70              	.LVL1:
+  71              		.loc 1 14 9 is_stmt 0 view .LVU5
+  72 0018 0220     		movs	r0, #2
+  73              	.LVL2:
+  74              		.loc 1 14 9 view .LVU6
+  75 001a FFF7FEFF 		bl	ssd1306_DrawRectangle
+  76              	.LVL3:
+  15:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(2,53);
+  77              		.loc 1 15 9 is_stmt 1 view .LVU7
+  78 001e 3521     		movs	r1, #53
+  79 0020 0220     		movs	r0, #2
+  80 0022 FFF7FEFF 		bl	ssd1306_SetCursor
+  81              	.LVL4:
+  16:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("P1", Font_7x10, White);
+  82              		.loc 1 16 9 view .LVU8
+  83 0026 494A     		ldr	r2, .L11
+  84 0028 2346     		mov	r3, r4
+  85 002a 06CA     		ldm	r2, {r1, r2}
+  86 002c 4848     		ldr	r0, .L11+4
+  87 002e FFF7FEFF 		bl	ssd1306_WriteString
+  88              	.LVL5:
+  17:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+  89              		.loc 1 17 9 view .LVU9
+  90              	.LBB3:
+  91              		.loc 1 17 13 view .LVU10
+  92              		.loc 1 17 19 is_stmt 0 view .LVU11
+  93 0032 B7EE008A 		vmov.f32	s16, #1.0e+0
+  94              		.loc 1 17 9 view .LVU12
+  95 0036 14E0     		b	.L3
+  96              	.LVL6:
+  97              	.L4:
+  18:Core/Src/OledDelayBars.c ****             ssd1306_Line(2+1,50-y,12-1,50-y,Black);
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 3
+
+
+  98              		.loc 1 18 13 is_stmt 1 discriminator 3 view .LVU13
+  99              		.loc 1 18 32 is_stmt 0 discriminator 3 view .LVU14
+ 100 0038 DFED467A 		vldr.32	s15, .L11+8
+ 101 003c 77EEC87A 		vsub.f32	s15, s15, s16
+ 102              		.loc 1 18 13 discriminator 3 view .LVU15
+ 103 0040 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 104 0044 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 105 0048 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 106 004c 0023     		movs	r3, #0
+ 107 004e 0093     		str	r3, [sp]
+ 108 0050 0B46     		mov	r3, r1
+ 109 0052 0B22     		movs	r2, #11
+ 110 0054 0320     		movs	r0, #3
+ 111 0056 FFF7FEFF 		bl	ssd1306_Line
+ 112              	.LVL7:
+  17:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 113              		.loc 1 17 35 is_stmt 1 discriminator 3 view .LVU16
+ 114 005a F7EE007A 		vmov.f32	s15, #1.0e+0
+ 115 005e 38EE278A 		vadd.f32	s16, s16, s15
+ 116              	.LVL8:
+ 117              	.L3:
+  17:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 118              		.loc 1 17 29 discriminator 1 view .LVU17
+ 119 0062 DFED3D7A 		vldr.32	s15, .L11+12
+ 120 0066 B4EEE78A 		vcmpe.f32	s16, s15
+ 121 006a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 122 006e E3D4     		bmi	.L4
+ 123              	.LBE3:
+  19:Core/Src/OledDelayBars.c ****         }
+  20:Core/Src/OledDelayBars.c ****         float fpercent = percent;
+ 124              		.loc 1 20 9 view .LVU18
+ 125              		.loc 1 20 15 is_stmt 0 view .LVU19
+ 126 0070 DDED037A 		vldr.32	s15, [sp, #12]	@ int
+ 127 0074 B8EE679A 		vcvt.f32.u32	s18, s15
+ 128              	.LVL9:
+  21:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 129              		.loc 1 21 9 is_stmt 1 view .LVU20
+  22:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 130              		.loc 1 22 9 view .LVU21
+ 131              	.LBB4:
+ 132              		.loc 1 22 13 view .LVU22
+ 133              		.loc 1 22 19 is_stmt 0 view .LVU23
+ 134 0078 F7EE008A 		vmov.f32	s17, #1.0e+0
+ 135              	.LBE4:
+  21:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 136              		.loc 1 21 15 view .LVU24
+ 137 007c B0EE048A 		vmov.f32	s16, #2.5e+0
+ 138              	.LVL10:
+ 139              	.LBB5:
+ 140              		.loc 1 22 9 view .LVU25
+ 141 0080 24E0     		b	.L5
+ 142              	.LVL11:
+ 143              	.L6:
+  23:Core/Src/OledDelayBars.c ****             calc = ((y/40.0)*100.0);
+ 144              		.loc 1 23 13 is_stmt 1 discriminator 3 view .LVU26
+ 145              		.loc 1 23 23 is_stmt 0 discriminator 3 view .LVU27
+ 146 0082 18EE900A 		vmov	r0, s17
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 4
+
+
+ 147 0086 FFF7FEFF 		bl	__aeabi_f2d
+ 148              	.LVL12:
+ 149 008a 0022     		movs	r2, #0
+ 150 008c 334B     		ldr	r3, .L11+16
+ 151 008e FFF7FEFF 		bl	__aeabi_ddiv
+ 152              	.LVL13:
+ 153              		.loc 1 23 29 discriminator 3 view .LVU28
+ 154 0092 0022     		movs	r2, #0
+ 155 0094 324B     		ldr	r3, .L11+20
+ 156 0096 FFF7FEFF 		bl	__aeabi_dmul
+ 157              	.LVL14:
+ 158              		.loc 1 23 18 discriminator 3 view .LVU29
+ 159 009a FFF7FEFF 		bl	__aeabi_d2f
+ 160              	.LVL15:
+ 161 009e 08EE100A 		vmov	s16, r0
+ 162              	.LVL16:
+  24:Core/Src/OledDelayBars.c ****             ssd1306_Line(2+1,50-y,12-1,50-y,White);
+ 163              		.loc 1 24 13 is_stmt 1 discriminator 3 view .LVU30
+ 164              		.loc 1 24 32 is_stmt 0 discriminator 3 view .LVU31
+ 165 00a2 DFED2C7A 		vldr.32	s15, .L11+8
+ 166 00a6 77EEE87A 		vsub.f32	s15, s15, s17
+ 167              		.loc 1 24 13 discriminator 3 view .LVU32
+ 168 00aa FCEEE77A 		vcvt.u32.f32	s15, s15
+ 169 00ae CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 170 00b2 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 171 00b6 0123     		movs	r3, #1
+ 172 00b8 0093     		str	r3, [sp]
+ 173 00ba 0B46     		mov	r3, r1
+ 174 00bc 0B22     		movs	r2, #11
+ 175 00be 0320     		movs	r0, #3
+ 176              	.LVL17:
+ 177              		.loc 1 24 13 discriminator 3 view .LVU33
+ 178 00c0 FFF7FEFF 		bl	ssd1306_Line
+ 179              	.LVL18:
+  22:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 180              		.loc 1 22 46 is_stmt 1 discriminator 3 view .LVU34
+ 181 00c4 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 182 00c8 78EEA78A 		vadd.f32	s17, s17, s15
+ 183              	.LVL19:
+ 184              	.L5:
+  22:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 185              		.loc 1 22 33 discriminator 1 view .LVU35
+ 186 00cc B4EEC98A 		vcmpe.f32	s16, s18
+ 187 00d0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 188 00d4 D5D4     		bmi	.L6
+ 189              	.LBE5:
+  25:Core/Src/OledDelayBars.c ****         }
+  26:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 190              		.loc 1 26 9 view .LVU36
+ 191 00d6 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 192              	.LVL20:
+ 193              	.L1:
+ 194              		.loc 1 26 9 is_stmt 0 view .LVU37
+ 195              	.LBE2:
+  27:Core/Src/OledDelayBars.c ****     }else{
+  28:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(2,10,12,50,Black);
+  29:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(2,53);
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 5
+
+
+  30:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("P1", Font_7x10, Black);
+  31:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+  32:Core/Src/OledDelayBars.c ****             ssd1306_Line(2+1,50-y,12-1,50-y,Black);
+  33:Core/Src/OledDelayBars.c ****         }
+  34:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+  35:Core/Src/OledDelayBars.c ****     }
+  36:Core/Src/OledDelayBars.c **** }
+ 196              		.loc 1 36 1 view .LVU38
+ 197 00da 04B0     		add	sp, sp, #16
+ 198              	.LCFI3:
+ 199              		.cfi_remember_state
+ 200              		.cfi_def_cfa_offset 24
+ 201              		@ sp needed
+ 202 00dc BDEC048B 		vldm	sp!, {d8-d9}
+ 203              	.LCFI4:
+ 204              		.cfi_restore 82
+ 205              		.cfi_restore 83
+ 206              		.cfi_restore 80
+ 207              		.cfi_restore 81
+ 208              		.cfi_def_cfa_offset 8
+ 209 00e0 10BD     		pop	{r4, pc}
+ 210              	.LVL21:
+ 211              	.L2:
+ 212              	.LCFI5:
+ 213              		.cfi_restore_state
+  28:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(2,53);
+ 214              		.loc 1 28 9 is_stmt 1 view .LVU39
+ 215 00e2 0024     		movs	r4, #0
+ 216 00e4 0094     		str	r4, [sp]
+ 217 00e6 3223     		movs	r3, #50
+ 218 00e8 0C22     		movs	r2, #12
+ 219 00ea 0A21     		movs	r1, #10
+ 220              	.LVL22:
+  28:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(2,53);
+ 221              		.loc 1 28 9 is_stmt 0 view .LVU40
+ 222 00ec 0220     		movs	r0, #2
+ 223              	.LVL23:
+  28:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(2,53);
+ 224              		.loc 1 28 9 view .LVU41
+ 225 00ee FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 226              	.LVL24:
+  29:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("P1", Font_7x10, Black);
+ 227              		.loc 1 29 9 is_stmt 1 view .LVU42
+ 228 00f2 3521     		movs	r1, #53
+ 229 00f4 0220     		movs	r0, #2
+ 230 00f6 FFF7FEFF 		bl	ssd1306_SetCursor
+ 231              	.LVL25:
+  30:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 232              		.loc 1 30 9 view .LVU43
+ 233 00fa 144A     		ldr	r2, .L11
+ 234 00fc 2346     		mov	r3, r4
+ 235 00fe 06CA     		ldm	r2, {r1, r2}
+ 236 0100 1348     		ldr	r0, .L11+4
+ 237 0102 FFF7FEFF 		bl	ssd1306_WriteString
+ 238              	.LVL26:
+  31:Core/Src/OledDelayBars.c ****             ssd1306_Line(2+1,50-y,12-1,50-y,Black);
+ 239              		.loc 1 31 9 view .LVU44
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 6
+
+
+ 240              	.LBB6:
+  31:Core/Src/OledDelayBars.c ****             ssd1306_Line(2+1,50-y,12-1,50-y,Black);
+ 241              		.loc 1 31 13 view .LVU45
+  31:Core/Src/OledDelayBars.c ****             ssd1306_Line(2+1,50-y,12-1,50-y,Black);
+ 242              		.loc 1 31 19 is_stmt 0 view .LVU46
+ 243 0106 B7EE008A 		vmov.f32	s16, #1.0e+0
+  31:Core/Src/OledDelayBars.c ****             ssd1306_Line(2+1,50-y,12-1,50-y,Black);
+ 244              		.loc 1 31 9 view .LVU47
+ 245 010a 14E0     		b	.L8
+ 246              	.LVL27:
+ 247              	.L9:
+  32:Core/Src/OledDelayBars.c ****         }
+ 248              		.loc 1 32 13 is_stmt 1 discriminator 3 view .LVU48
+  32:Core/Src/OledDelayBars.c ****         }
+ 249              		.loc 1 32 32 is_stmt 0 discriminator 3 view .LVU49
+ 250 010c DFED117A 		vldr.32	s15, .L11+8
+ 251 0110 77EEC87A 		vsub.f32	s15, s15, s16
+  32:Core/Src/OledDelayBars.c ****         }
+ 252              		.loc 1 32 13 discriminator 3 view .LVU50
+ 253 0114 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 254 0118 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 255 011c 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 256 0120 0023     		movs	r3, #0
+ 257 0122 0093     		str	r3, [sp]
+ 258 0124 0B46     		mov	r3, r1
+ 259 0126 0B22     		movs	r2, #11
+ 260 0128 0320     		movs	r0, #3
+ 261 012a FFF7FEFF 		bl	ssd1306_Line
+ 262              	.LVL28:
+  31:Core/Src/OledDelayBars.c ****             ssd1306_Line(2+1,50-y,12-1,50-y,Black);
+ 263              		.loc 1 31 35 is_stmt 1 discriminator 3 view .LVU51
+ 264 012e F7EE007A 		vmov.f32	s15, #1.0e+0
+ 265 0132 38EE278A 		vadd.f32	s16, s16, s15
+ 266              	.LVL29:
+ 267              	.L8:
+  31:Core/Src/OledDelayBars.c ****             ssd1306_Line(2+1,50-y,12-1,50-y,Black);
+ 268              		.loc 1 31 29 discriminator 1 view .LVU52
+ 269 0136 DFED087A 		vldr.32	s15, .L11+12
+ 270 013a B4EEE78A 		vcmpe.f32	s16, s15
+ 271 013e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 272 0142 E3D4     		bmi	.L9
+ 273              	.LBE6:
+  34:Core/Src/OledDelayBars.c ****     }
+ 274              		.loc 1 34 9 view .LVU53
+ 275 0144 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 276              	.LVL30:
+ 277              		.loc 1 36 1 is_stmt 0 view .LVU54
+ 278 0148 C7E7     		b	.L1
+ 279              	.L12:
+ 280 014a 00BF     		.align	2
+ 281              	.L11:
+ 282 014c 00000000 		.word	Font_7x10
+ 283 0150 00000000 		.word	.LC0
+ 284 0154 00004842 		.word	1112014848
+ 285 0158 00002042 		.word	1109393408
+ 286 015c 00004440 		.word	1078198272
+ 287 0160 00005940 		.word	1079574528
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 7
+
+
+ 288              		.cfi_endproc
+ 289              	.LFE320:
+ 291              		.section	.rodata.Show_W1Bar.str1.4,"aMS",%progbits,1
+ 292              		.align	2
+ 293              	.LC1:
+ 294 0000 573100   		.ascii	"W1\000"
+ 295              		.section	.text.Show_W1Bar,"ax",%progbits
+ 296              		.align	1
+ 297              		.global	Show_W1Bar
+ 298              		.syntax unified
+ 299              		.thumb
+ 300              		.thumb_func
+ 302              	Show_W1Bar:
+ 303              	.LVL31:
+ 304              	.LFB321:
+  37:Core/Src/OledDelayBars.c **** 
+  38:Core/Src/OledDelayBars.c **** void Show_W1Bar(bool state, uint8_t percent){
+ 305              		.loc 1 38 45 is_stmt 1 view -0
+ 306              		.cfi_startproc
+ 307              		@ args = 0, pretend = 0, frame = 8
+ 308              		@ frame_needed = 0, uses_anonymous_args = 0
+ 309              		.loc 1 38 45 is_stmt 0 view .LVU56
+ 310 0000 10B5     		push	{r4, lr}
+ 311              	.LCFI6:
+ 312              		.cfi_def_cfa_offset 8
+ 313              		.cfi_offset 4, -8
+ 314              		.cfi_offset 14, -4
+ 315 0002 2DED048B 		vpush.64	{d8, d9}
+ 316              	.LCFI7:
+ 317              		.cfi_def_cfa_offset 24
+ 318              		.cfi_offset 80, -24
+ 319              		.cfi_offset 81, -20
+ 320              		.cfi_offset 82, -16
+ 321              		.cfi_offset 83, -12
+ 322 0006 84B0     		sub	sp, sp, #16
+ 323              	.LCFI8:
+ 324              		.cfi_def_cfa_offset 40
+ 325 0008 0391     		str	r1, [sp, #12]
+  39:Core/Src/OledDelayBars.c ****     if(state){
+ 326              		.loc 1 39 5 is_stmt 1 view .LVU57
+ 327              		.loc 1 39 7 is_stmt 0 view .LVU58
+ 328 000a 0028     		cmp	r0, #0
+ 329 000c 69D0     		beq	.L14
+ 330              	.LBB7:
+  40:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(18,10,28,50,White);
+ 331              		.loc 1 40 9 is_stmt 1 view .LVU59
+ 332 000e 0124     		movs	r4, #1
+ 333 0010 0094     		str	r4, [sp]
+ 334 0012 3223     		movs	r3, #50
+ 335 0014 1C22     		movs	r2, #28
+ 336 0016 0A21     		movs	r1, #10
+ 337              	.LVL32:
+ 338              		.loc 1 40 9 is_stmt 0 view .LVU60
+ 339 0018 1220     		movs	r0, #18
+ 340              	.LVL33:
+ 341              		.loc 1 40 9 view .LVU61
+ 342 001a FFF7FEFF 		bl	ssd1306_DrawRectangle
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 8
+
+
+ 343              	.LVL34:
+  41:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(18,53);
+ 344              		.loc 1 41 9 is_stmt 1 view .LVU62
+ 345 001e 3521     		movs	r1, #53
+ 346 0020 1220     		movs	r0, #18
+ 347 0022 FFF7FEFF 		bl	ssd1306_SetCursor
+ 348              	.LVL35:
+  42:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("W1", Font_7x10, White);
+ 349              		.loc 1 42 9 view .LVU63
+ 350 0026 494A     		ldr	r2, .L23
+ 351 0028 2346     		mov	r3, r4
+ 352 002a 06CA     		ldm	r2, {r1, r2}
+ 353 002c 4848     		ldr	r0, .L23+4
+ 354 002e FFF7FEFF 		bl	ssd1306_WriteString
+ 355              	.LVL36:
+  43:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 356              		.loc 1 43 9 view .LVU64
+ 357              	.LBB8:
+ 358              		.loc 1 43 13 view .LVU65
+ 359              		.loc 1 43 19 is_stmt 0 view .LVU66
+ 360 0032 B7EE008A 		vmov.f32	s16, #1.0e+0
+ 361              		.loc 1 43 9 view .LVU67
+ 362 0036 14E0     		b	.L15
+ 363              	.LVL37:
+ 364              	.L16:
+  44:Core/Src/OledDelayBars.c ****             ssd1306_Line(18+1,50-y,28-1,50-y,Black);
+ 365              		.loc 1 44 13 is_stmt 1 discriminator 3 view .LVU68
+ 366              		.loc 1 44 33 is_stmt 0 discriminator 3 view .LVU69
+ 367 0038 DFED467A 		vldr.32	s15, .L23+8
+ 368 003c 77EEC87A 		vsub.f32	s15, s15, s16
+ 369              		.loc 1 44 13 discriminator 3 view .LVU70
+ 370 0040 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 371 0044 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 372 0048 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 373 004c 0023     		movs	r3, #0
+ 374 004e 0093     		str	r3, [sp]
+ 375 0050 0B46     		mov	r3, r1
+ 376 0052 1B22     		movs	r2, #27
+ 377 0054 1320     		movs	r0, #19
+ 378 0056 FFF7FEFF 		bl	ssd1306_Line
+ 379              	.LVL38:
+  43:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 380              		.loc 1 43 35 is_stmt 1 discriminator 3 view .LVU71
+ 381 005a F7EE007A 		vmov.f32	s15, #1.0e+0
+ 382 005e 38EE278A 		vadd.f32	s16, s16, s15
+ 383              	.LVL39:
+ 384              	.L15:
+  43:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 385              		.loc 1 43 29 discriminator 1 view .LVU72
+ 386 0062 DFED3D7A 		vldr.32	s15, .L23+12
+ 387 0066 B4EEE78A 		vcmpe.f32	s16, s15
+ 388 006a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 389 006e E3D4     		bmi	.L16
+ 390              	.LBE8:
+  45:Core/Src/OledDelayBars.c ****         }
+  46:Core/Src/OledDelayBars.c ****         float fpercent = percent;
+ 391              		.loc 1 46 9 view .LVU73
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 9
+
+
+ 392              		.loc 1 46 15 is_stmt 0 view .LVU74
+ 393 0070 DDED037A 		vldr.32	s15, [sp, #12]	@ int
+ 394 0074 B8EE679A 		vcvt.f32.u32	s18, s15
+ 395              	.LVL40:
+  47:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 396              		.loc 1 47 9 is_stmt 1 view .LVU75
+  48:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 397              		.loc 1 48 9 view .LVU76
+ 398              	.LBB9:
+ 399              		.loc 1 48 13 view .LVU77
+ 400              		.loc 1 48 19 is_stmt 0 view .LVU78
+ 401 0078 F7EE008A 		vmov.f32	s17, #1.0e+0
+ 402              	.LBE9:
+  47:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 403              		.loc 1 47 15 view .LVU79
+ 404 007c B0EE048A 		vmov.f32	s16, #2.5e+0
+ 405              	.LVL41:
+ 406              	.LBB10:
+ 407              		.loc 1 48 9 view .LVU80
+ 408 0080 24E0     		b	.L17
+ 409              	.LVL42:
+ 410              	.L18:
+  49:Core/Src/OledDelayBars.c ****             calc = ((y/40.0)*100.0);
+ 411              		.loc 1 49 13 is_stmt 1 discriminator 3 view .LVU81
+ 412              		.loc 1 49 23 is_stmt 0 discriminator 3 view .LVU82
+ 413 0082 18EE900A 		vmov	r0, s17
+ 414 0086 FFF7FEFF 		bl	__aeabi_f2d
+ 415              	.LVL43:
+ 416 008a 0022     		movs	r2, #0
+ 417 008c 334B     		ldr	r3, .L23+16
+ 418 008e FFF7FEFF 		bl	__aeabi_ddiv
+ 419              	.LVL44:
+ 420              		.loc 1 49 29 discriminator 3 view .LVU83
+ 421 0092 0022     		movs	r2, #0
+ 422 0094 324B     		ldr	r3, .L23+20
+ 423 0096 FFF7FEFF 		bl	__aeabi_dmul
+ 424              	.LVL45:
+ 425              		.loc 1 49 18 discriminator 3 view .LVU84
+ 426 009a FFF7FEFF 		bl	__aeabi_d2f
+ 427              	.LVL46:
+ 428 009e 08EE100A 		vmov	s16, r0
+ 429              	.LVL47:
+  50:Core/Src/OledDelayBars.c ****             ssd1306_Line(18+1,50-y,28-1,50-y,White);
+ 430              		.loc 1 50 13 is_stmt 1 discriminator 3 view .LVU85
+ 431              		.loc 1 50 33 is_stmt 0 discriminator 3 view .LVU86
+ 432 00a2 DFED2C7A 		vldr.32	s15, .L23+8
+ 433 00a6 77EEE87A 		vsub.f32	s15, s15, s17
+ 434              		.loc 1 50 13 discriminator 3 view .LVU87
+ 435 00aa FCEEE77A 		vcvt.u32.f32	s15, s15
+ 436 00ae CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 437 00b2 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 438 00b6 0123     		movs	r3, #1
+ 439 00b8 0093     		str	r3, [sp]
+ 440 00ba 0B46     		mov	r3, r1
+ 441 00bc 1B22     		movs	r2, #27
+ 442 00be 1320     		movs	r0, #19
+ 443              	.LVL48:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 10
+
+
+ 444              		.loc 1 50 13 discriminator 3 view .LVU88
+ 445 00c0 FFF7FEFF 		bl	ssd1306_Line
+ 446              	.LVL49:
+  48:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 447              		.loc 1 48 46 is_stmt 1 discriminator 3 view .LVU89
+ 448 00c4 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 449 00c8 78EEA78A 		vadd.f32	s17, s17, s15
+ 450              	.LVL50:
+ 451              	.L17:
+  48:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 452              		.loc 1 48 33 discriminator 1 view .LVU90
+ 453 00cc B4EEC98A 		vcmpe.f32	s16, s18
+ 454 00d0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 455 00d4 D5D4     		bmi	.L18
+ 456              	.LBE10:
+  51:Core/Src/OledDelayBars.c ****         }
+  52:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 457              		.loc 1 52 9 view .LVU91
+ 458 00d6 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 459              	.LVL51:
+ 460              	.L13:
+ 461              		.loc 1 52 9 is_stmt 0 view .LVU92
+ 462              	.LBE7:
+  53:Core/Src/OledDelayBars.c ****     }else{
+  54:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(18,10,28,50,Black);
+  55:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(18,53);
+  56:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("W1", Font_7x10, Black);
+  57:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+  58:Core/Src/OledDelayBars.c ****             ssd1306_Line(18+1,50-y,28-1,50-y,Black);
+  59:Core/Src/OledDelayBars.c ****         }
+  60:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+  61:Core/Src/OledDelayBars.c ****     }
+  62:Core/Src/OledDelayBars.c **** }
+ 463              		.loc 1 62 1 view .LVU93
+ 464 00da 04B0     		add	sp, sp, #16
+ 465              	.LCFI9:
+ 466              		.cfi_remember_state
+ 467              		.cfi_def_cfa_offset 24
+ 468              		@ sp needed
+ 469 00dc BDEC048B 		vldm	sp!, {d8-d9}
+ 470              	.LCFI10:
+ 471              		.cfi_restore 82
+ 472              		.cfi_restore 83
+ 473              		.cfi_restore 80
+ 474              		.cfi_restore 81
+ 475              		.cfi_def_cfa_offset 8
+ 476 00e0 10BD     		pop	{r4, pc}
+ 477              	.LVL52:
+ 478              	.L14:
+ 479              	.LCFI11:
+ 480              		.cfi_restore_state
+  54:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(18,53);
+ 481              		.loc 1 54 9 is_stmt 1 view .LVU94
+ 482 00e2 0024     		movs	r4, #0
+ 483 00e4 0094     		str	r4, [sp]
+ 484 00e6 3223     		movs	r3, #50
+ 485 00e8 1C22     		movs	r2, #28
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 11
+
+
+ 486 00ea 0A21     		movs	r1, #10
+ 487              	.LVL53:
+  54:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(18,53);
+ 488              		.loc 1 54 9 is_stmt 0 view .LVU95
+ 489 00ec 1220     		movs	r0, #18
+ 490              	.LVL54:
+  54:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(18,53);
+ 491              		.loc 1 54 9 view .LVU96
+ 492 00ee FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 493              	.LVL55:
+  55:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("W1", Font_7x10, Black);
+ 494              		.loc 1 55 9 is_stmt 1 view .LVU97
+ 495 00f2 3521     		movs	r1, #53
+ 496 00f4 1220     		movs	r0, #18
+ 497 00f6 FFF7FEFF 		bl	ssd1306_SetCursor
+ 498              	.LVL56:
+  56:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 499              		.loc 1 56 9 view .LVU98
+ 500 00fa 144A     		ldr	r2, .L23
+ 501 00fc 2346     		mov	r3, r4
+ 502 00fe 06CA     		ldm	r2, {r1, r2}
+ 503 0100 1348     		ldr	r0, .L23+4
+ 504 0102 FFF7FEFF 		bl	ssd1306_WriteString
+ 505              	.LVL57:
+  57:Core/Src/OledDelayBars.c ****             ssd1306_Line(18+1,50-y,28-1,50-y,Black);
+ 506              		.loc 1 57 9 view .LVU99
+ 507              	.LBB11:
+  57:Core/Src/OledDelayBars.c ****             ssd1306_Line(18+1,50-y,28-1,50-y,Black);
+ 508              		.loc 1 57 13 view .LVU100
+  57:Core/Src/OledDelayBars.c ****             ssd1306_Line(18+1,50-y,28-1,50-y,Black);
+ 509              		.loc 1 57 19 is_stmt 0 view .LVU101
+ 510 0106 B7EE008A 		vmov.f32	s16, #1.0e+0
+  57:Core/Src/OledDelayBars.c ****             ssd1306_Line(18+1,50-y,28-1,50-y,Black);
+ 511              		.loc 1 57 9 view .LVU102
+ 512 010a 14E0     		b	.L20
+ 513              	.LVL58:
+ 514              	.L21:
+  58:Core/Src/OledDelayBars.c ****         }
+ 515              		.loc 1 58 13 is_stmt 1 discriminator 3 view .LVU103
+  58:Core/Src/OledDelayBars.c ****         }
+ 516              		.loc 1 58 33 is_stmt 0 discriminator 3 view .LVU104
+ 517 010c DFED117A 		vldr.32	s15, .L23+8
+ 518 0110 77EEC87A 		vsub.f32	s15, s15, s16
+  58:Core/Src/OledDelayBars.c ****         }
+ 519              		.loc 1 58 13 discriminator 3 view .LVU105
+ 520 0114 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 521 0118 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 522 011c 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 523 0120 0023     		movs	r3, #0
+ 524 0122 0093     		str	r3, [sp]
+ 525 0124 0B46     		mov	r3, r1
+ 526 0126 1B22     		movs	r2, #27
+ 527 0128 1320     		movs	r0, #19
+ 528 012a FFF7FEFF 		bl	ssd1306_Line
+ 529              	.LVL59:
+  57:Core/Src/OledDelayBars.c ****             ssd1306_Line(18+1,50-y,28-1,50-y,Black);
+ 530              		.loc 1 57 35 is_stmt 1 discriminator 3 view .LVU106
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 12
+
+
+ 531 012e F7EE007A 		vmov.f32	s15, #1.0e+0
+ 532 0132 38EE278A 		vadd.f32	s16, s16, s15
+ 533              	.LVL60:
+ 534              	.L20:
+  57:Core/Src/OledDelayBars.c ****             ssd1306_Line(18+1,50-y,28-1,50-y,Black);
+ 535              		.loc 1 57 29 discriminator 1 view .LVU107
+ 536 0136 DFED087A 		vldr.32	s15, .L23+12
+ 537 013a B4EEE78A 		vcmpe.f32	s16, s15
+ 538 013e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 539 0142 E3D4     		bmi	.L21
+ 540              	.LBE11:
+  60:Core/Src/OledDelayBars.c ****     }
+ 541              		.loc 1 60 9 view .LVU108
+ 542 0144 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 543              	.LVL61:
+ 544              		.loc 1 62 1 is_stmt 0 view .LVU109
+ 545 0148 C7E7     		b	.L13
+ 546              	.L24:
+ 547 014a 00BF     		.align	2
+ 548              	.L23:
+ 549 014c 00000000 		.word	Font_7x10
+ 550 0150 00000000 		.word	.LC1
+ 551 0154 00004842 		.word	1112014848
+ 552 0158 00002042 		.word	1109393408
+ 553 015c 00004440 		.word	1078198272
+ 554 0160 00005940 		.word	1079574528
+ 555              		.cfi_endproc
+ 556              	.LFE321:
+ 558              		.section	.rodata.Show_P2Bar.str1.4,"aMS",%progbits,1
+ 559              		.align	2
+ 560              	.LC2:
+ 561 0000 503200   		.ascii	"P2\000"
+ 562              		.section	.text.Show_P2Bar,"ax",%progbits
+ 563              		.align	1
+ 564              		.global	Show_P2Bar
+ 565              		.syntax unified
+ 566              		.thumb
+ 567              		.thumb_func
+ 569              	Show_P2Bar:
+ 570              	.LVL62:
+ 571              	.LFB322:
+  63:Core/Src/OledDelayBars.c **** 
+  64:Core/Src/OledDelayBars.c **** void Show_P2Bar(bool state, uint8_t percent){
+ 572              		.loc 1 64 45 is_stmt 1 view -0
+ 573              		.cfi_startproc
+ 574              		@ args = 0, pretend = 0, frame = 8
+ 575              		@ frame_needed = 0, uses_anonymous_args = 0
+ 576              		.loc 1 64 45 is_stmt 0 view .LVU111
+ 577 0000 10B5     		push	{r4, lr}
+ 578              	.LCFI12:
+ 579              		.cfi_def_cfa_offset 8
+ 580              		.cfi_offset 4, -8
+ 581              		.cfi_offset 14, -4
+ 582 0002 2DED048B 		vpush.64	{d8, d9}
+ 583              	.LCFI13:
+ 584              		.cfi_def_cfa_offset 24
+ 585              		.cfi_offset 80, -24
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 13
+
+
+ 586              		.cfi_offset 81, -20
+ 587              		.cfi_offset 82, -16
+ 588              		.cfi_offset 83, -12
+ 589 0006 84B0     		sub	sp, sp, #16
+ 590              	.LCFI14:
+ 591              		.cfi_def_cfa_offset 40
+ 592 0008 0391     		str	r1, [sp, #12]
+  65:Core/Src/OledDelayBars.c ****     if(state){
+ 593              		.loc 1 65 5 is_stmt 1 view .LVU112
+ 594              		.loc 1 65 7 is_stmt 0 view .LVU113
+ 595 000a 0028     		cmp	r0, #0
+ 596 000c 69D0     		beq	.L26
+ 597              	.LBB12:
+  66:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(34,10,44,50,White);
+ 598              		.loc 1 66 9 is_stmt 1 view .LVU114
+ 599 000e 0124     		movs	r4, #1
+ 600 0010 0094     		str	r4, [sp]
+ 601 0012 3223     		movs	r3, #50
+ 602 0014 2C22     		movs	r2, #44
+ 603 0016 0A21     		movs	r1, #10
+ 604              	.LVL63:
+ 605              		.loc 1 66 9 is_stmt 0 view .LVU115
+ 606 0018 2220     		movs	r0, #34
+ 607              	.LVL64:
+ 608              		.loc 1 66 9 view .LVU116
+ 609 001a FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 610              	.LVL65:
+  67:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(34,53);
+ 611              		.loc 1 67 9 is_stmt 1 view .LVU117
+ 612 001e 3521     		movs	r1, #53
+ 613 0020 2220     		movs	r0, #34
+ 614 0022 FFF7FEFF 		bl	ssd1306_SetCursor
+ 615              	.LVL66:
+  68:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("P2", Font_7x10, White);
+ 616              		.loc 1 68 9 view .LVU118
+ 617 0026 494A     		ldr	r2, .L35
+ 618 0028 2346     		mov	r3, r4
+ 619 002a 06CA     		ldm	r2, {r1, r2}
+ 620 002c 4848     		ldr	r0, .L35+4
+ 621 002e FFF7FEFF 		bl	ssd1306_WriteString
+ 622              	.LVL67:
+  69:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 623              		.loc 1 69 9 view .LVU119
+ 624              	.LBB13:
+ 625              		.loc 1 69 13 view .LVU120
+ 626              		.loc 1 69 19 is_stmt 0 view .LVU121
+ 627 0032 B7EE008A 		vmov.f32	s16, #1.0e+0
+ 628              		.loc 1 69 9 view .LVU122
+ 629 0036 14E0     		b	.L27
+ 630              	.LVL68:
+ 631              	.L28:
+  70:Core/Src/OledDelayBars.c ****             ssd1306_Line(34+1,50-y,44-1,50-y,Black);
+ 632              		.loc 1 70 13 is_stmt 1 discriminator 3 view .LVU123
+ 633              		.loc 1 70 33 is_stmt 0 discriminator 3 view .LVU124
+ 634 0038 DFED467A 		vldr.32	s15, .L35+8
+ 635 003c 77EEC87A 		vsub.f32	s15, s15, s16
+ 636              		.loc 1 70 13 discriminator 3 view .LVU125
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 14
+
+
+ 637 0040 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 638 0044 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 639 0048 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 640 004c 0023     		movs	r3, #0
+ 641 004e 0093     		str	r3, [sp]
+ 642 0050 0B46     		mov	r3, r1
+ 643 0052 2B22     		movs	r2, #43
+ 644 0054 2320     		movs	r0, #35
+ 645 0056 FFF7FEFF 		bl	ssd1306_Line
+ 646              	.LVL69:
+  69:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 647              		.loc 1 69 35 is_stmt 1 discriminator 3 view .LVU126
+ 648 005a F7EE007A 		vmov.f32	s15, #1.0e+0
+ 649 005e 38EE278A 		vadd.f32	s16, s16, s15
+ 650              	.LVL70:
+ 651              	.L27:
+  69:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 652              		.loc 1 69 29 discriminator 1 view .LVU127
+ 653 0062 DFED3D7A 		vldr.32	s15, .L35+12
+ 654 0066 B4EEE78A 		vcmpe.f32	s16, s15
+ 655 006a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 656 006e E3D4     		bmi	.L28
+ 657              	.LBE13:
+  71:Core/Src/OledDelayBars.c ****         }
+  72:Core/Src/OledDelayBars.c ****         float fpercent = percent;
+ 658              		.loc 1 72 9 view .LVU128
+ 659              		.loc 1 72 15 is_stmt 0 view .LVU129
+ 660 0070 DDED037A 		vldr.32	s15, [sp, #12]	@ int
+ 661 0074 B8EE679A 		vcvt.f32.u32	s18, s15
+ 662              	.LVL71:
+  73:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 663              		.loc 1 73 9 is_stmt 1 view .LVU130
+  74:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 664              		.loc 1 74 9 view .LVU131
+ 665              	.LBB14:
+ 666              		.loc 1 74 13 view .LVU132
+ 667              		.loc 1 74 19 is_stmt 0 view .LVU133
+ 668 0078 F7EE008A 		vmov.f32	s17, #1.0e+0
+ 669              	.LBE14:
+  73:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 670              		.loc 1 73 15 view .LVU134
+ 671 007c B0EE048A 		vmov.f32	s16, #2.5e+0
+ 672              	.LVL72:
+ 673              	.LBB15:
+ 674              		.loc 1 74 9 view .LVU135
+ 675 0080 24E0     		b	.L29
+ 676              	.LVL73:
+ 677              	.L30:
+  75:Core/Src/OledDelayBars.c ****             calc = ((y/40.0)*100.0);
+ 678              		.loc 1 75 13 is_stmt 1 discriminator 3 view .LVU136
+ 679              		.loc 1 75 23 is_stmt 0 discriminator 3 view .LVU137
+ 680 0082 18EE900A 		vmov	r0, s17
+ 681 0086 FFF7FEFF 		bl	__aeabi_f2d
+ 682              	.LVL74:
+ 683 008a 0022     		movs	r2, #0
+ 684 008c 334B     		ldr	r3, .L35+16
+ 685 008e FFF7FEFF 		bl	__aeabi_ddiv
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 15
+
+
+ 686              	.LVL75:
+ 687              		.loc 1 75 29 discriminator 3 view .LVU138
+ 688 0092 0022     		movs	r2, #0
+ 689 0094 324B     		ldr	r3, .L35+20
+ 690 0096 FFF7FEFF 		bl	__aeabi_dmul
+ 691              	.LVL76:
+ 692              		.loc 1 75 18 discriminator 3 view .LVU139
+ 693 009a FFF7FEFF 		bl	__aeabi_d2f
+ 694              	.LVL77:
+ 695 009e 08EE100A 		vmov	s16, r0
+ 696              	.LVL78:
+  76:Core/Src/OledDelayBars.c ****             ssd1306_Line(34+1,50-y,44-1,50-y,White);
+ 697              		.loc 1 76 13 is_stmt 1 discriminator 3 view .LVU140
+ 698              		.loc 1 76 33 is_stmt 0 discriminator 3 view .LVU141
+ 699 00a2 DFED2C7A 		vldr.32	s15, .L35+8
+ 700 00a6 77EEE87A 		vsub.f32	s15, s15, s17
+ 701              		.loc 1 76 13 discriminator 3 view .LVU142
+ 702 00aa FCEEE77A 		vcvt.u32.f32	s15, s15
+ 703 00ae CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 704 00b2 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 705 00b6 0123     		movs	r3, #1
+ 706 00b8 0093     		str	r3, [sp]
+ 707 00ba 0B46     		mov	r3, r1
+ 708 00bc 2B22     		movs	r2, #43
+ 709 00be 2320     		movs	r0, #35
+ 710              	.LVL79:
+ 711              		.loc 1 76 13 discriminator 3 view .LVU143
+ 712 00c0 FFF7FEFF 		bl	ssd1306_Line
+ 713              	.LVL80:
+  74:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 714              		.loc 1 74 46 is_stmt 1 discriminator 3 view .LVU144
+ 715 00c4 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 716 00c8 78EEA78A 		vadd.f32	s17, s17, s15
+ 717              	.LVL81:
+ 718              	.L29:
+  74:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 719              		.loc 1 74 33 discriminator 1 view .LVU145
+ 720 00cc B4EEC98A 		vcmpe.f32	s16, s18
+ 721 00d0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 722 00d4 D5D4     		bmi	.L30
+ 723              	.LBE15:
+  77:Core/Src/OledDelayBars.c ****         }
+  78:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 724              		.loc 1 78 9 view .LVU146
+ 725 00d6 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 726              	.LVL82:
+ 727              	.L25:
+ 728              		.loc 1 78 9 is_stmt 0 view .LVU147
+ 729              	.LBE12:
+  79:Core/Src/OledDelayBars.c ****     }else{
+  80:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(34,10,44,50,Black);
+  81:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(34,53);
+  82:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("P2", Font_7x10, Black);
+  83:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+  84:Core/Src/OledDelayBars.c ****             ssd1306_Line(34+1,50-y,44-1,50-y,Black);
+  85:Core/Src/OledDelayBars.c ****         }
+  86:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 16
+
+
+  87:Core/Src/OledDelayBars.c ****     }
+  88:Core/Src/OledDelayBars.c **** }
+ 730              		.loc 1 88 1 view .LVU148
+ 731 00da 04B0     		add	sp, sp, #16
+ 732              	.LCFI15:
+ 733              		.cfi_remember_state
+ 734              		.cfi_def_cfa_offset 24
+ 735              		@ sp needed
+ 736 00dc BDEC048B 		vldm	sp!, {d8-d9}
+ 737              	.LCFI16:
+ 738              		.cfi_restore 82
+ 739              		.cfi_restore 83
+ 740              		.cfi_restore 80
+ 741              		.cfi_restore 81
+ 742              		.cfi_def_cfa_offset 8
+ 743 00e0 10BD     		pop	{r4, pc}
+ 744              	.LVL83:
+ 745              	.L26:
+ 746              	.LCFI17:
+ 747              		.cfi_restore_state
+  80:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(34,53);
+ 748              		.loc 1 80 9 is_stmt 1 view .LVU149
+ 749 00e2 0024     		movs	r4, #0
+ 750 00e4 0094     		str	r4, [sp]
+ 751 00e6 3223     		movs	r3, #50
+ 752 00e8 2C22     		movs	r2, #44
+ 753 00ea 0A21     		movs	r1, #10
+ 754              	.LVL84:
+  80:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(34,53);
+ 755              		.loc 1 80 9 is_stmt 0 view .LVU150
+ 756 00ec 2220     		movs	r0, #34
+ 757              	.LVL85:
+  80:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(34,53);
+ 758              		.loc 1 80 9 view .LVU151
+ 759 00ee FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 760              	.LVL86:
+  81:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("P2", Font_7x10, Black);
+ 761              		.loc 1 81 9 is_stmt 1 view .LVU152
+ 762 00f2 3521     		movs	r1, #53
+ 763 00f4 2220     		movs	r0, #34
+ 764 00f6 FFF7FEFF 		bl	ssd1306_SetCursor
+ 765              	.LVL87:
+  82:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 766              		.loc 1 82 9 view .LVU153
+ 767 00fa 144A     		ldr	r2, .L35
+ 768 00fc 2346     		mov	r3, r4
+ 769 00fe 06CA     		ldm	r2, {r1, r2}
+ 770 0100 1348     		ldr	r0, .L35+4
+ 771 0102 FFF7FEFF 		bl	ssd1306_WriteString
+ 772              	.LVL88:
+  83:Core/Src/OledDelayBars.c ****             ssd1306_Line(34+1,50-y,44-1,50-y,Black);
+ 773              		.loc 1 83 9 view .LVU154
+ 774              	.LBB16:
+  83:Core/Src/OledDelayBars.c ****             ssd1306_Line(34+1,50-y,44-1,50-y,Black);
+ 775              		.loc 1 83 13 view .LVU155
+  83:Core/Src/OledDelayBars.c ****             ssd1306_Line(34+1,50-y,44-1,50-y,Black);
+ 776              		.loc 1 83 19 is_stmt 0 view .LVU156
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 17
+
+
+ 777 0106 B7EE008A 		vmov.f32	s16, #1.0e+0
+  83:Core/Src/OledDelayBars.c ****             ssd1306_Line(34+1,50-y,44-1,50-y,Black);
+ 778              		.loc 1 83 9 view .LVU157
+ 779 010a 14E0     		b	.L32
+ 780              	.LVL89:
+ 781              	.L33:
+  84:Core/Src/OledDelayBars.c ****         }
+ 782              		.loc 1 84 13 is_stmt 1 discriminator 3 view .LVU158
+  84:Core/Src/OledDelayBars.c ****         }
+ 783              		.loc 1 84 33 is_stmt 0 discriminator 3 view .LVU159
+ 784 010c DFED117A 		vldr.32	s15, .L35+8
+ 785 0110 77EEC87A 		vsub.f32	s15, s15, s16
+  84:Core/Src/OledDelayBars.c ****         }
+ 786              		.loc 1 84 13 discriminator 3 view .LVU160
+ 787 0114 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 788 0118 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 789 011c 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 790 0120 0023     		movs	r3, #0
+ 791 0122 0093     		str	r3, [sp]
+ 792 0124 0B46     		mov	r3, r1
+ 793 0126 2B22     		movs	r2, #43
+ 794 0128 2320     		movs	r0, #35
+ 795 012a FFF7FEFF 		bl	ssd1306_Line
+ 796              	.LVL90:
+  83:Core/Src/OledDelayBars.c ****             ssd1306_Line(34+1,50-y,44-1,50-y,Black);
+ 797              		.loc 1 83 35 is_stmt 1 discriminator 3 view .LVU161
+ 798 012e F7EE007A 		vmov.f32	s15, #1.0e+0
+ 799 0132 38EE278A 		vadd.f32	s16, s16, s15
+ 800              	.LVL91:
+ 801              	.L32:
+  83:Core/Src/OledDelayBars.c ****             ssd1306_Line(34+1,50-y,44-1,50-y,Black);
+ 802              		.loc 1 83 29 discriminator 1 view .LVU162
+ 803 0136 DFED087A 		vldr.32	s15, .L35+12
+ 804 013a B4EEE78A 		vcmpe.f32	s16, s15
+ 805 013e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 806 0142 E3D4     		bmi	.L33
+ 807              	.LBE16:
+  86:Core/Src/OledDelayBars.c ****     }
+ 808              		.loc 1 86 9 view .LVU163
+ 809 0144 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 810              	.LVL92:
+ 811              		.loc 1 88 1 is_stmt 0 view .LVU164
+ 812 0148 C7E7     		b	.L25
+ 813              	.L36:
+ 814 014a 00BF     		.align	2
+ 815              	.L35:
+ 816 014c 00000000 		.word	Font_7x10
+ 817 0150 00000000 		.word	.LC2
+ 818 0154 00004842 		.word	1112014848
+ 819 0158 00002042 		.word	1109393408
+ 820 015c 00004440 		.word	1078198272
+ 821 0160 00005940 		.word	1079574528
+ 822              		.cfi_endproc
+ 823              	.LFE322:
+ 825              		.section	.rodata.Show_W2Bar.str1.4,"aMS",%progbits,1
+ 826              		.align	2
+ 827              	.LC3:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 18
+
+
+ 828 0000 573200   		.ascii	"W2\000"
+ 829              		.section	.text.Show_W2Bar,"ax",%progbits
+ 830              		.align	1
+ 831              		.global	Show_W2Bar
+ 832              		.syntax unified
+ 833              		.thumb
+ 834              		.thumb_func
+ 836              	Show_W2Bar:
+ 837              	.LVL93:
+ 838              	.LFB323:
+  89:Core/Src/OledDelayBars.c **** 
+  90:Core/Src/OledDelayBars.c **** void Show_W2Bar(bool state, uint8_t percent){
+ 839              		.loc 1 90 45 is_stmt 1 view -0
+ 840              		.cfi_startproc
+ 841              		@ args = 0, pretend = 0, frame = 8
+ 842              		@ frame_needed = 0, uses_anonymous_args = 0
+ 843              		.loc 1 90 45 is_stmt 0 view .LVU166
+ 844 0000 10B5     		push	{r4, lr}
+ 845              	.LCFI18:
+ 846              		.cfi_def_cfa_offset 8
+ 847              		.cfi_offset 4, -8
+ 848              		.cfi_offset 14, -4
+ 849 0002 2DED048B 		vpush.64	{d8, d9}
+ 850              	.LCFI19:
+ 851              		.cfi_def_cfa_offset 24
+ 852              		.cfi_offset 80, -24
+ 853              		.cfi_offset 81, -20
+ 854              		.cfi_offset 82, -16
+ 855              		.cfi_offset 83, -12
+ 856 0006 84B0     		sub	sp, sp, #16
+ 857              	.LCFI20:
+ 858              		.cfi_def_cfa_offset 40
+ 859 0008 0391     		str	r1, [sp, #12]
+  91:Core/Src/OledDelayBars.c ****     if(state){
+ 860              		.loc 1 91 5 is_stmt 1 view .LVU167
+ 861              		.loc 1 91 7 is_stmt 0 view .LVU168
+ 862 000a 0028     		cmp	r0, #0
+ 863 000c 69D0     		beq	.L38
+ 864              	.LBB17:
+  92:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(50,10,60,50,White);
+ 865              		.loc 1 92 9 is_stmt 1 view .LVU169
+ 866 000e 0124     		movs	r4, #1
+ 867 0010 0094     		str	r4, [sp]
+ 868 0012 3223     		movs	r3, #50
+ 869 0014 3C22     		movs	r2, #60
+ 870 0016 0A21     		movs	r1, #10
+ 871              	.LVL94:
+ 872              		.loc 1 92 9 is_stmt 0 view .LVU170
+ 873 0018 1846     		mov	r0, r3
+ 874              	.LVL95:
+ 875              		.loc 1 92 9 view .LVU171
+ 876 001a FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 877              	.LVL96:
+  93:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(50,53);
+ 878              		.loc 1 93 9 is_stmt 1 view .LVU172
+ 879 001e 3521     		movs	r1, #53
+ 880 0020 3220     		movs	r0, #50
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 19
+
+
+ 881 0022 FFF7FEFF 		bl	ssd1306_SetCursor
+ 882              	.LVL97:
+  94:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("W2", Font_7x10, White);
+ 883              		.loc 1 94 9 view .LVU173
+ 884 0026 494A     		ldr	r2, .L47
+ 885 0028 2346     		mov	r3, r4
+ 886 002a 06CA     		ldm	r2, {r1, r2}
+ 887 002c 4848     		ldr	r0, .L47+4
+ 888 002e FFF7FEFF 		bl	ssd1306_WriteString
+ 889              	.LVL98:
+  95:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 890              		.loc 1 95 9 view .LVU174
+ 891              	.LBB18:
+ 892              		.loc 1 95 13 view .LVU175
+ 893              		.loc 1 95 19 is_stmt 0 view .LVU176
+ 894 0032 B7EE008A 		vmov.f32	s16, #1.0e+0
+ 895              		.loc 1 95 9 view .LVU177
+ 896 0036 14E0     		b	.L39
+ 897              	.LVL99:
+ 898              	.L40:
+  96:Core/Src/OledDelayBars.c ****             ssd1306_Line(50+1,50-y,60-1,50-y,Black);
+ 899              		.loc 1 96 13 is_stmt 1 discriminator 3 view .LVU178
+ 900              		.loc 1 96 33 is_stmt 0 discriminator 3 view .LVU179
+ 901 0038 DFED467A 		vldr.32	s15, .L47+8
+ 902 003c 77EEC87A 		vsub.f32	s15, s15, s16
+ 903              		.loc 1 96 13 discriminator 3 view .LVU180
+ 904 0040 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 905 0044 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 906 0048 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 907 004c 0023     		movs	r3, #0
+ 908 004e 0093     		str	r3, [sp]
+ 909 0050 0B46     		mov	r3, r1
+ 910 0052 3B22     		movs	r2, #59
+ 911 0054 3320     		movs	r0, #51
+ 912 0056 FFF7FEFF 		bl	ssd1306_Line
+ 913              	.LVL100:
+  95:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 914              		.loc 1 95 35 is_stmt 1 discriminator 3 view .LVU181
+ 915 005a F7EE007A 		vmov.f32	s15, #1.0e+0
+ 916 005e 38EE278A 		vadd.f32	s16, s16, s15
+ 917              	.LVL101:
+ 918              	.L39:
+  95:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 919              		.loc 1 95 29 discriminator 1 view .LVU182
+ 920 0062 DFED3D7A 		vldr.32	s15, .L47+12
+ 921 0066 B4EEE78A 		vcmpe.f32	s16, s15
+ 922 006a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 923 006e E3D4     		bmi	.L40
+ 924              	.LBE18:
+  97:Core/Src/OledDelayBars.c ****         }
+  98:Core/Src/OledDelayBars.c ****         float fpercent = percent;
+ 925              		.loc 1 98 9 view .LVU183
+ 926              		.loc 1 98 15 is_stmt 0 view .LVU184
+ 927 0070 DDED037A 		vldr.32	s15, [sp, #12]	@ int
+ 928 0074 B8EE679A 		vcvt.f32.u32	s18, s15
+ 929              	.LVL102:
+  99:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 20
+
+
+ 930              		.loc 1 99 9 is_stmt 1 view .LVU185
+ 100:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 931              		.loc 1 100 9 view .LVU186
+ 932              	.LBB19:
+ 933              		.loc 1 100 13 view .LVU187
+ 934              		.loc 1 100 19 is_stmt 0 view .LVU188
+ 935 0078 F7EE008A 		vmov.f32	s17, #1.0e+0
+ 936              	.LBE19:
+  99:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 937              		.loc 1 99 15 view .LVU189
+ 938 007c B0EE048A 		vmov.f32	s16, #2.5e+0
+ 939              	.LVL103:
+ 940              	.LBB20:
+ 941              		.loc 1 100 9 view .LVU190
+ 942 0080 24E0     		b	.L41
+ 943              	.LVL104:
+ 944              	.L42:
+ 101:Core/Src/OledDelayBars.c ****             calc = ((y/40.0)*100.0);
+ 945              		.loc 1 101 13 is_stmt 1 discriminator 3 view .LVU191
+ 946              		.loc 1 101 23 is_stmt 0 discriminator 3 view .LVU192
+ 947 0082 18EE900A 		vmov	r0, s17
+ 948 0086 FFF7FEFF 		bl	__aeabi_f2d
+ 949              	.LVL105:
+ 950 008a 0022     		movs	r2, #0
+ 951 008c 334B     		ldr	r3, .L47+16
+ 952 008e FFF7FEFF 		bl	__aeabi_ddiv
+ 953              	.LVL106:
+ 954              		.loc 1 101 29 discriminator 3 view .LVU193
+ 955 0092 0022     		movs	r2, #0
+ 956 0094 324B     		ldr	r3, .L47+20
+ 957 0096 FFF7FEFF 		bl	__aeabi_dmul
+ 958              	.LVL107:
+ 959              		.loc 1 101 18 discriminator 3 view .LVU194
+ 960 009a FFF7FEFF 		bl	__aeabi_d2f
+ 961              	.LVL108:
+ 962 009e 08EE100A 		vmov	s16, r0
+ 963              	.LVL109:
+ 102:Core/Src/OledDelayBars.c ****             ssd1306_Line(50+1,50-y,60-1,50-y,White);
+ 964              		.loc 1 102 13 is_stmt 1 discriminator 3 view .LVU195
+ 965              		.loc 1 102 33 is_stmt 0 discriminator 3 view .LVU196
+ 966 00a2 DFED2C7A 		vldr.32	s15, .L47+8
+ 967 00a6 77EEE87A 		vsub.f32	s15, s15, s17
+ 968              		.loc 1 102 13 discriminator 3 view .LVU197
+ 969 00aa FCEEE77A 		vcvt.u32.f32	s15, s15
+ 970 00ae CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 971 00b2 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 972 00b6 0123     		movs	r3, #1
+ 973 00b8 0093     		str	r3, [sp]
+ 974 00ba 0B46     		mov	r3, r1
+ 975 00bc 3B22     		movs	r2, #59
+ 976 00be 3320     		movs	r0, #51
+ 977              	.LVL110:
+ 978              		.loc 1 102 13 discriminator 3 view .LVU198
+ 979 00c0 FFF7FEFF 		bl	ssd1306_Line
+ 980              	.LVL111:
+ 100:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 981              		.loc 1 100 46 is_stmt 1 discriminator 3 view .LVU199
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 21
+
+
+ 982 00c4 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 983 00c8 78EEA78A 		vadd.f32	s17, s17, s15
+ 984              	.LVL112:
+ 985              	.L41:
+ 100:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 986              		.loc 1 100 33 discriminator 1 view .LVU200
+ 987 00cc B4EEC98A 		vcmpe.f32	s16, s18
+ 988 00d0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 989 00d4 D5D4     		bmi	.L42
+ 990              	.LBE20:
+ 103:Core/Src/OledDelayBars.c ****         }
+ 104:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 991              		.loc 1 104 9 view .LVU201
+ 992 00d6 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 993              	.LVL113:
+ 994              	.L37:
+ 995              		.loc 1 104 9 is_stmt 0 view .LVU202
+ 996              	.LBE17:
+ 105:Core/Src/OledDelayBars.c ****     }else{
+ 106:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(50,10,60,50,Black);
+ 107:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(50,53);
+ 108:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("W2", Font_7x10, Black);
+ 109:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 110:Core/Src/OledDelayBars.c ****             ssd1306_Line(50+1,50-y,60-1,50-y,Black);
+ 111:Core/Src/OledDelayBars.c ****         }
+ 112:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 113:Core/Src/OledDelayBars.c ****     }
+ 114:Core/Src/OledDelayBars.c **** }
+ 997              		.loc 1 114 1 view .LVU203
+ 998 00da 04B0     		add	sp, sp, #16
+ 999              	.LCFI21:
+ 1000              		.cfi_remember_state
+ 1001              		.cfi_def_cfa_offset 24
+ 1002              		@ sp needed
+ 1003 00dc BDEC048B 		vldm	sp!, {d8-d9}
+ 1004              	.LCFI22:
+ 1005              		.cfi_restore 82
+ 1006              		.cfi_restore 83
+ 1007              		.cfi_restore 80
+ 1008              		.cfi_restore 81
+ 1009              		.cfi_def_cfa_offset 8
+ 1010 00e0 10BD     		pop	{r4, pc}
+ 1011              	.LVL114:
+ 1012              	.L38:
+ 1013              	.LCFI23:
+ 1014              		.cfi_restore_state
+ 106:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(50,53);
+ 1015              		.loc 1 106 9 is_stmt 1 view .LVU204
+ 1016 00e2 0024     		movs	r4, #0
+ 1017 00e4 0094     		str	r4, [sp]
+ 1018 00e6 3223     		movs	r3, #50
+ 1019 00e8 3C22     		movs	r2, #60
+ 1020 00ea 0A21     		movs	r1, #10
+ 1021              	.LVL115:
+ 106:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(50,53);
+ 1022              		.loc 1 106 9 is_stmt 0 view .LVU205
+ 1023 00ec 1846     		mov	r0, r3
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 22
+
+
+ 1024              	.LVL116:
+ 106:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(50,53);
+ 1025              		.loc 1 106 9 view .LVU206
+ 1026 00ee FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 1027              	.LVL117:
+ 107:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("W2", Font_7x10, Black);
+ 1028              		.loc 1 107 9 is_stmt 1 view .LVU207
+ 1029 00f2 3521     		movs	r1, #53
+ 1030 00f4 3220     		movs	r0, #50
+ 1031 00f6 FFF7FEFF 		bl	ssd1306_SetCursor
+ 1032              	.LVL118:
+ 108:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1033              		.loc 1 108 9 view .LVU208
+ 1034 00fa 144A     		ldr	r2, .L47
+ 1035 00fc 2346     		mov	r3, r4
+ 1036 00fe 06CA     		ldm	r2, {r1, r2}
+ 1037 0100 1348     		ldr	r0, .L47+4
+ 1038 0102 FFF7FEFF 		bl	ssd1306_WriteString
+ 1039              	.LVL119:
+ 109:Core/Src/OledDelayBars.c ****             ssd1306_Line(50+1,50-y,60-1,50-y,Black);
+ 1040              		.loc 1 109 9 view .LVU209
+ 1041              	.LBB21:
+ 109:Core/Src/OledDelayBars.c ****             ssd1306_Line(50+1,50-y,60-1,50-y,Black);
+ 1042              		.loc 1 109 13 view .LVU210
+ 109:Core/Src/OledDelayBars.c ****             ssd1306_Line(50+1,50-y,60-1,50-y,Black);
+ 1043              		.loc 1 109 19 is_stmt 0 view .LVU211
+ 1044 0106 B7EE008A 		vmov.f32	s16, #1.0e+0
+ 109:Core/Src/OledDelayBars.c ****             ssd1306_Line(50+1,50-y,60-1,50-y,Black);
+ 1045              		.loc 1 109 9 view .LVU212
+ 1046 010a 14E0     		b	.L44
+ 1047              	.LVL120:
+ 1048              	.L45:
+ 110:Core/Src/OledDelayBars.c ****         }
+ 1049              		.loc 1 110 13 is_stmt 1 discriminator 3 view .LVU213
+ 110:Core/Src/OledDelayBars.c ****         }
+ 1050              		.loc 1 110 33 is_stmt 0 discriminator 3 view .LVU214
+ 1051 010c DFED117A 		vldr.32	s15, .L47+8
+ 1052 0110 77EEC87A 		vsub.f32	s15, s15, s16
+ 110:Core/Src/OledDelayBars.c ****         }
+ 1053              		.loc 1 110 13 discriminator 3 view .LVU215
+ 1054 0114 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1055 0118 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 1056 011c 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 1057 0120 0023     		movs	r3, #0
+ 1058 0122 0093     		str	r3, [sp]
+ 1059 0124 0B46     		mov	r3, r1
+ 1060 0126 3B22     		movs	r2, #59
+ 1061 0128 3320     		movs	r0, #51
+ 1062 012a FFF7FEFF 		bl	ssd1306_Line
+ 1063              	.LVL121:
+ 109:Core/Src/OledDelayBars.c ****             ssd1306_Line(50+1,50-y,60-1,50-y,Black);
+ 1064              		.loc 1 109 35 is_stmt 1 discriminator 3 view .LVU216
+ 1065 012e F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1066 0132 38EE278A 		vadd.f32	s16, s16, s15
+ 1067              	.LVL122:
+ 1068              	.L44:
+ 109:Core/Src/OledDelayBars.c ****             ssd1306_Line(50+1,50-y,60-1,50-y,Black);
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 23
+
+
+ 1069              		.loc 1 109 29 discriminator 1 view .LVU217
+ 1070 0136 DFED087A 		vldr.32	s15, .L47+12
+ 1071 013a B4EEE78A 		vcmpe.f32	s16, s15
+ 1072 013e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1073 0142 E3D4     		bmi	.L45
+ 1074              	.LBE21:
+ 112:Core/Src/OledDelayBars.c ****     }
+ 1075              		.loc 1 112 9 view .LVU218
+ 1076 0144 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 1077              	.LVL123:
+ 1078              		.loc 1 114 1 is_stmt 0 view .LVU219
+ 1079 0148 C7E7     		b	.L37
+ 1080              	.L48:
+ 1081 014a 00BF     		.align	2
+ 1082              	.L47:
+ 1083 014c 00000000 		.word	Font_7x10
+ 1084 0150 00000000 		.word	.LC3
+ 1085 0154 00004842 		.word	1112014848
+ 1086 0158 00002042 		.word	1109393408
+ 1087 015c 00004440 		.word	1078198272
+ 1088 0160 00005940 		.word	1079574528
+ 1089              		.cfi_endproc
+ 1090              	.LFE323:
+ 1092              		.section	.rodata.Show_G1Bar.str1.4,"aMS",%progbits,1
+ 1093              		.align	2
+ 1094              	.LC4:
+ 1095 0000 473100   		.ascii	"G1\000"
+ 1096              		.section	.text.Show_G1Bar,"ax",%progbits
+ 1097              		.align	1
+ 1098              		.global	Show_G1Bar
+ 1099              		.syntax unified
+ 1100              		.thumb
+ 1101              		.thumb_func
+ 1103              	Show_G1Bar:
+ 1104              	.LVL124:
+ 1105              	.LFB324:
+ 115:Core/Src/OledDelayBars.c **** 
+ 116:Core/Src/OledDelayBars.c **** void Show_G1Bar(bool state, uint8_t percent){
+ 1106              		.loc 1 116 45 is_stmt 1 view -0
+ 1107              		.cfi_startproc
+ 1108              		@ args = 0, pretend = 0, frame = 8
+ 1109              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1110              		.loc 1 116 45 is_stmt 0 view .LVU221
+ 1111 0000 10B5     		push	{r4, lr}
+ 1112              	.LCFI24:
+ 1113              		.cfi_def_cfa_offset 8
+ 1114              		.cfi_offset 4, -8
+ 1115              		.cfi_offset 14, -4
+ 1116 0002 2DED048B 		vpush.64	{d8, d9}
+ 1117              	.LCFI25:
+ 1118              		.cfi_def_cfa_offset 24
+ 1119              		.cfi_offset 80, -24
+ 1120              		.cfi_offset 81, -20
+ 1121              		.cfi_offset 82, -16
+ 1122              		.cfi_offset 83, -12
+ 1123 0006 84B0     		sub	sp, sp, #16
+ 1124              	.LCFI26:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 24
+
+
+ 1125              		.cfi_def_cfa_offset 40
+ 1126 0008 0391     		str	r1, [sp, #12]
+ 117:Core/Src/OledDelayBars.c ****     if(state){
+ 1127              		.loc 1 117 5 is_stmt 1 view .LVU222
+ 1128              		.loc 1 117 7 is_stmt 0 view .LVU223
+ 1129 000a 0028     		cmp	r0, #0
+ 1130 000c 69D0     		beq	.L50
+ 1131              	.LBB22:
+ 118:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(66,10,76,50,White);
+ 1132              		.loc 1 118 9 is_stmt 1 view .LVU224
+ 1133 000e 0124     		movs	r4, #1
+ 1134 0010 0094     		str	r4, [sp]
+ 1135 0012 3223     		movs	r3, #50
+ 1136 0014 4C22     		movs	r2, #76
+ 1137 0016 0A21     		movs	r1, #10
+ 1138              	.LVL125:
+ 1139              		.loc 1 118 9 is_stmt 0 view .LVU225
+ 1140 0018 4220     		movs	r0, #66
+ 1141              	.LVL126:
+ 1142              		.loc 1 118 9 view .LVU226
+ 1143 001a FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 1144              	.LVL127:
+ 119:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(66,53);
+ 1145              		.loc 1 119 9 is_stmt 1 view .LVU227
+ 1146 001e 3521     		movs	r1, #53
+ 1147 0020 4220     		movs	r0, #66
+ 1148 0022 FFF7FEFF 		bl	ssd1306_SetCursor
+ 1149              	.LVL128:
+ 120:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("G1", Font_7x10, White);
+ 1150              		.loc 1 120 9 view .LVU228
+ 1151 0026 494A     		ldr	r2, .L59
+ 1152 0028 2346     		mov	r3, r4
+ 1153 002a 06CA     		ldm	r2, {r1, r2}
+ 1154 002c 4848     		ldr	r0, .L59+4
+ 1155 002e FFF7FEFF 		bl	ssd1306_WriteString
+ 1156              	.LVL129:
+ 121:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1157              		.loc 1 121 9 view .LVU229
+ 1158              	.LBB23:
+ 1159              		.loc 1 121 13 view .LVU230
+ 1160              		.loc 1 121 19 is_stmt 0 view .LVU231
+ 1161 0032 B7EE008A 		vmov.f32	s16, #1.0e+0
+ 1162              		.loc 1 121 9 view .LVU232
+ 1163 0036 14E0     		b	.L51
+ 1164              	.LVL130:
+ 1165              	.L52:
+ 122:Core/Src/OledDelayBars.c ****             ssd1306_Line(66+1,50-y,76-1,50-y,Black);
+ 1166              		.loc 1 122 13 is_stmt 1 discriminator 3 view .LVU233
+ 1167              		.loc 1 122 33 is_stmt 0 discriminator 3 view .LVU234
+ 1168 0038 DFED467A 		vldr.32	s15, .L59+8
+ 1169 003c 77EEC87A 		vsub.f32	s15, s15, s16
+ 1170              		.loc 1 122 13 discriminator 3 view .LVU235
+ 1171 0040 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1172 0044 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 1173 0048 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 1174 004c 0023     		movs	r3, #0
+ 1175 004e 0093     		str	r3, [sp]
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 25
+
+
+ 1176 0050 0B46     		mov	r3, r1
+ 1177 0052 4B22     		movs	r2, #75
+ 1178 0054 4320     		movs	r0, #67
+ 1179 0056 FFF7FEFF 		bl	ssd1306_Line
+ 1180              	.LVL131:
+ 121:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1181              		.loc 1 121 35 is_stmt 1 discriminator 3 view .LVU236
+ 1182 005a F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1183 005e 38EE278A 		vadd.f32	s16, s16, s15
+ 1184              	.LVL132:
+ 1185              	.L51:
+ 121:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1186              		.loc 1 121 29 discriminator 1 view .LVU237
+ 1187 0062 DFED3D7A 		vldr.32	s15, .L59+12
+ 1188 0066 B4EEE78A 		vcmpe.f32	s16, s15
+ 1189 006a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1190 006e E3D4     		bmi	.L52
+ 1191              	.LBE23:
+ 123:Core/Src/OledDelayBars.c ****         }
+ 124:Core/Src/OledDelayBars.c ****         float fpercent = percent;
+ 1192              		.loc 1 124 9 view .LVU238
+ 1193              		.loc 1 124 15 is_stmt 0 view .LVU239
+ 1194 0070 DDED037A 		vldr.32	s15, [sp, #12]	@ int
+ 1195 0074 B8EE679A 		vcvt.f32.u32	s18, s15
+ 1196              	.LVL133:
+ 125:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 1197              		.loc 1 125 9 is_stmt 1 view .LVU240
+ 126:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 1198              		.loc 1 126 9 view .LVU241
+ 1199              	.LBB24:
+ 1200              		.loc 1 126 13 view .LVU242
+ 1201              		.loc 1 126 19 is_stmt 0 view .LVU243
+ 1202 0078 F7EE008A 		vmov.f32	s17, #1.0e+0
+ 1203              	.LBE24:
+ 125:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 1204              		.loc 1 125 15 view .LVU244
+ 1205 007c B0EE048A 		vmov.f32	s16, #2.5e+0
+ 1206              	.LVL134:
+ 1207              	.LBB25:
+ 1208              		.loc 1 126 9 view .LVU245
+ 1209 0080 24E0     		b	.L53
+ 1210              	.LVL135:
+ 1211              	.L54:
+ 127:Core/Src/OledDelayBars.c ****             calc = ((y/40.0)*100.0);
+ 1212              		.loc 1 127 13 is_stmt 1 discriminator 3 view .LVU246
+ 1213              		.loc 1 127 23 is_stmt 0 discriminator 3 view .LVU247
+ 1214 0082 18EE900A 		vmov	r0, s17
+ 1215 0086 FFF7FEFF 		bl	__aeabi_f2d
+ 1216              	.LVL136:
+ 1217 008a 0022     		movs	r2, #0
+ 1218 008c 334B     		ldr	r3, .L59+16
+ 1219 008e FFF7FEFF 		bl	__aeabi_ddiv
+ 1220              	.LVL137:
+ 1221              		.loc 1 127 29 discriminator 3 view .LVU248
+ 1222 0092 0022     		movs	r2, #0
+ 1223 0094 324B     		ldr	r3, .L59+20
+ 1224 0096 FFF7FEFF 		bl	__aeabi_dmul
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 26
+
+
+ 1225              	.LVL138:
+ 1226              		.loc 1 127 18 discriminator 3 view .LVU249
+ 1227 009a FFF7FEFF 		bl	__aeabi_d2f
+ 1228              	.LVL139:
+ 1229 009e 08EE100A 		vmov	s16, r0
+ 1230              	.LVL140:
+ 128:Core/Src/OledDelayBars.c ****             ssd1306_Line(66+1,50-y,76-1,50-y,White);
+ 1231              		.loc 1 128 13 is_stmt 1 discriminator 3 view .LVU250
+ 1232              		.loc 1 128 33 is_stmt 0 discriminator 3 view .LVU251
+ 1233 00a2 DFED2C7A 		vldr.32	s15, .L59+8
+ 1234 00a6 77EEE87A 		vsub.f32	s15, s15, s17
+ 1235              		.loc 1 128 13 discriminator 3 view .LVU252
+ 1236 00aa FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1237 00ae CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 1238 00b2 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 1239 00b6 0123     		movs	r3, #1
+ 1240 00b8 0093     		str	r3, [sp]
+ 1241 00ba 0B46     		mov	r3, r1
+ 1242 00bc 4B22     		movs	r2, #75
+ 1243 00be 4320     		movs	r0, #67
+ 1244              	.LVL141:
+ 1245              		.loc 1 128 13 discriminator 3 view .LVU253
+ 1246 00c0 FFF7FEFF 		bl	ssd1306_Line
+ 1247              	.LVL142:
+ 126:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 1248              		.loc 1 126 46 is_stmt 1 discriminator 3 view .LVU254
+ 1249 00c4 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1250 00c8 78EEA78A 		vadd.f32	s17, s17, s15
+ 1251              	.LVL143:
+ 1252              	.L53:
+ 126:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 1253              		.loc 1 126 33 discriminator 1 view .LVU255
+ 1254 00cc B4EEC98A 		vcmpe.f32	s16, s18
+ 1255 00d0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1256 00d4 D5D4     		bmi	.L54
+ 1257              	.LBE25:
+ 129:Core/Src/OledDelayBars.c ****         }
+ 130:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 1258              		.loc 1 130 9 view .LVU256
+ 1259 00d6 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 1260              	.LVL144:
+ 1261              	.L49:
+ 1262              		.loc 1 130 9 is_stmt 0 view .LVU257
+ 1263              	.LBE22:
+ 131:Core/Src/OledDelayBars.c ****     }else{
+ 132:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(66,10,76,50,Black);
+ 133:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(66,53);
+ 134:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("G1", Font_7x10, Black);
+ 135:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 136:Core/Src/OledDelayBars.c ****             ssd1306_Line(66+1,50-y,76-1,50-y,Black);
+ 137:Core/Src/OledDelayBars.c ****         }
+ 138:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 139:Core/Src/OledDelayBars.c ****     }
+ 140:Core/Src/OledDelayBars.c **** }
+ 1264              		.loc 1 140 1 view .LVU258
+ 1265 00da 04B0     		add	sp, sp, #16
+ 1266              	.LCFI27:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 27
+
+
+ 1267              		.cfi_remember_state
+ 1268              		.cfi_def_cfa_offset 24
+ 1269              		@ sp needed
+ 1270 00dc BDEC048B 		vldm	sp!, {d8-d9}
+ 1271              	.LCFI28:
+ 1272              		.cfi_restore 82
+ 1273              		.cfi_restore 83
+ 1274              		.cfi_restore 80
+ 1275              		.cfi_restore 81
+ 1276              		.cfi_def_cfa_offset 8
+ 1277 00e0 10BD     		pop	{r4, pc}
+ 1278              	.LVL145:
+ 1279              	.L50:
+ 1280              	.LCFI29:
+ 1281              		.cfi_restore_state
+ 132:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(66,53);
+ 1282              		.loc 1 132 9 is_stmt 1 view .LVU259
+ 1283 00e2 0024     		movs	r4, #0
+ 1284 00e4 0094     		str	r4, [sp]
+ 1285 00e6 3223     		movs	r3, #50
+ 1286 00e8 4C22     		movs	r2, #76
+ 1287 00ea 0A21     		movs	r1, #10
+ 1288              	.LVL146:
+ 132:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(66,53);
+ 1289              		.loc 1 132 9 is_stmt 0 view .LVU260
+ 1290 00ec 4220     		movs	r0, #66
+ 1291              	.LVL147:
+ 132:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(66,53);
+ 1292              		.loc 1 132 9 view .LVU261
+ 1293 00ee FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 1294              	.LVL148:
+ 133:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("G1", Font_7x10, Black);
+ 1295              		.loc 1 133 9 is_stmt 1 view .LVU262
+ 1296 00f2 3521     		movs	r1, #53
+ 1297 00f4 4220     		movs	r0, #66
+ 1298 00f6 FFF7FEFF 		bl	ssd1306_SetCursor
+ 1299              	.LVL149:
+ 134:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1300              		.loc 1 134 9 view .LVU263
+ 1301 00fa 144A     		ldr	r2, .L59
+ 1302 00fc 2346     		mov	r3, r4
+ 1303 00fe 06CA     		ldm	r2, {r1, r2}
+ 1304 0100 1348     		ldr	r0, .L59+4
+ 1305 0102 FFF7FEFF 		bl	ssd1306_WriteString
+ 1306              	.LVL150:
+ 135:Core/Src/OledDelayBars.c ****             ssd1306_Line(66+1,50-y,76-1,50-y,Black);
+ 1307              		.loc 1 135 9 view .LVU264
+ 1308              	.LBB26:
+ 135:Core/Src/OledDelayBars.c ****             ssd1306_Line(66+1,50-y,76-1,50-y,Black);
+ 1309              		.loc 1 135 13 view .LVU265
+ 135:Core/Src/OledDelayBars.c ****             ssd1306_Line(66+1,50-y,76-1,50-y,Black);
+ 1310              		.loc 1 135 19 is_stmt 0 view .LVU266
+ 1311 0106 B7EE008A 		vmov.f32	s16, #1.0e+0
+ 135:Core/Src/OledDelayBars.c ****             ssd1306_Line(66+1,50-y,76-1,50-y,Black);
+ 1312              		.loc 1 135 9 view .LVU267
+ 1313 010a 14E0     		b	.L56
+ 1314              	.LVL151:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 28
+
+
+ 1315              	.L57:
+ 136:Core/Src/OledDelayBars.c ****         }
+ 1316              		.loc 1 136 13 is_stmt 1 discriminator 3 view .LVU268
+ 136:Core/Src/OledDelayBars.c ****         }
+ 1317              		.loc 1 136 33 is_stmt 0 discriminator 3 view .LVU269
+ 1318 010c DFED117A 		vldr.32	s15, .L59+8
+ 1319 0110 77EEC87A 		vsub.f32	s15, s15, s16
+ 136:Core/Src/OledDelayBars.c ****         }
+ 1320              		.loc 1 136 13 discriminator 3 view .LVU270
+ 1321 0114 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1322 0118 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 1323 011c 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 1324 0120 0023     		movs	r3, #0
+ 1325 0122 0093     		str	r3, [sp]
+ 1326 0124 0B46     		mov	r3, r1
+ 1327 0126 4B22     		movs	r2, #75
+ 1328 0128 4320     		movs	r0, #67
+ 1329 012a FFF7FEFF 		bl	ssd1306_Line
+ 1330              	.LVL152:
+ 135:Core/Src/OledDelayBars.c ****             ssd1306_Line(66+1,50-y,76-1,50-y,Black);
+ 1331              		.loc 1 135 35 is_stmt 1 discriminator 3 view .LVU271
+ 1332 012e F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1333 0132 38EE278A 		vadd.f32	s16, s16, s15
+ 1334              	.LVL153:
+ 1335              	.L56:
+ 135:Core/Src/OledDelayBars.c ****             ssd1306_Line(66+1,50-y,76-1,50-y,Black);
+ 1336              		.loc 1 135 29 discriminator 1 view .LVU272
+ 1337 0136 DFED087A 		vldr.32	s15, .L59+12
+ 1338 013a B4EEE78A 		vcmpe.f32	s16, s15
+ 1339 013e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1340 0142 E3D4     		bmi	.L57
+ 1341              	.LBE26:
+ 138:Core/Src/OledDelayBars.c ****     }
+ 1342              		.loc 1 138 9 view .LVU273
+ 1343 0144 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 1344              	.LVL154:
+ 1345              		.loc 1 140 1 is_stmt 0 view .LVU274
+ 1346 0148 C7E7     		b	.L49
+ 1347              	.L60:
+ 1348 014a 00BF     		.align	2
+ 1349              	.L59:
+ 1350 014c 00000000 		.word	Font_7x10
+ 1351 0150 00000000 		.word	.LC4
+ 1352 0154 00004842 		.word	1112014848
+ 1353 0158 00002042 		.word	1109393408
+ 1354 015c 00004440 		.word	1078198272
+ 1355 0160 00005940 		.word	1079574528
+ 1356              		.cfi_endproc
+ 1357              	.LFE324:
+ 1359              		.section	.rodata.Show_R1Bar.str1.4,"aMS",%progbits,1
+ 1360              		.align	2
+ 1361              	.LC5:
+ 1362 0000 523100   		.ascii	"R1\000"
+ 1363              		.section	.text.Show_R1Bar,"ax",%progbits
+ 1364              		.align	1
+ 1365              		.global	Show_R1Bar
+ 1366              		.syntax unified
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 29
+
+
+ 1367              		.thumb
+ 1368              		.thumb_func
+ 1370              	Show_R1Bar:
+ 1371              	.LVL155:
+ 1372              	.LFB325:
+ 141:Core/Src/OledDelayBars.c **** 
+ 142:Core/Src/OledDelayBars.c **** void Show_R1Bar(bool state, uint8_t percent){
+ 1373              		.loc 1 142 45 is_stmt 1 view -0
+ 1374              		.cfi_startproc
+ 1375              		@ args = 0, pretend = 0, frame = 8
+ 1376              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1377              		.loc 1 142 45 is_stmt 0 view .LVU276
+ 1378 0000 10B5     		push	{r4, lr}
+ 1379              	.LCFI30:
+ 1380              		.cfi_def_cfa_offset 8
+ 1381              		.cfi_offset 4, -8
+ 1382              		.cfi_offset 14, -4
+ 1383 0002 2DED048B 		vpush.64	{d8, d9}
+ 1384              	.LCFI31:
+ 1385              		.cfi_def_cfa_offset 24
+ 1386              		.cfi_offset 80, -24
+ 1387              		.cfi_offset 81, -20
+ 1388              		.cfi_offset 82, -16
+ 1389              		.cfi_offset 83, -12
+ 1390 0006 84B0     		sub	sp, sp, #16
+ 1391              	.LCFI32:
+ 1392              		.cfi_def_cfa_offset 40
+ 1393 0008 0391     		str	r1, [sp, #12]
+ 143:Core/Src/OledDelayBars.c ****     if(state){
+ 1394              		.loc 1 143 5 is_stmt 1 view .LVU277
+ 1395              		.loc 1 143 7 is_stmt 0 view .LVU278
+ 1396 000a 0028     		cmp	r0, #0
+ 1397 000c 69D0     		beq	.L62
+ 1398              	.LBB27:
+ 144:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(82,10,92,50,White);
+ 1399              		.loc 1 144 9 is_stmt 1 view .LVU279
+ 1400 000e 0124     		movs	r4, #1
+ 1401 0010 0094     		str	r4, [sp]
+ 1402 0012 3223     		movs	r3, #50
+ 1403 0014 5C22     		movs	r2, #92
+ 1404 0016 0A21     		movs	r1, #10
+ 1405              	.LVL156:
+ 1406              		.loc 1 144 9 is_stmt 0 view .LVU280
+ 1407 0018 5220     		movs	r0, #82
+ 1408              	.LVL157:
+ 1409              		.loc 1 144 9 view .LVU281
+ 1410 001a FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 1411              	.LVL158:
+ 145:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(82,53);
+ 1412              		.loc 1 145 9 is_stmt 1 view .LVU282
+ 1413 001e 3521     		movs	r1, #53
+ 1414 0020 5220     		movs	r0, #82
+ 1415 0022 FFF7FEFF 		bl	ssd1306_SetCursor
+ 1416              	.LVL159:
+ 146:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("R1", Font_7x10, White);
+ 1417              		.loc 1 146 9 view .LVU283
+ 1418 0026 494A     		ldr	r2, .L71
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 30
+
+
+ 1419 0028 2346     		mov	r3, r4
+ 1420 002a 06CA     		ldm	r2, {r1, r2}
+ 1421 002c 4848     		ldr	r0, .L71+4
+ 1422 002e FFF7FEFF 		bl	ssd1306_WriteString
+ 1423              	.LVL160:
+ 147:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1424              		.loc 1 147 9 view .LVU284
+ 1425              	.LBB28:
+ 1426              		.loc 1 147 13 view .LVU285
+ 1427              		.loc 1 147 19 is_stmt 0 view .LVU286
+ 1428 0032 B7EE008A 		vmov.f32	s16, #1.0e+0
+ 1429              		.loc 1 147 9 view .LVU287
+ 1430 0036 14E0     		b	.L63
+ 1431              	.LVL161:
+ 1432              	.L64:
+ 148:Core/Src/OledDelayBars.c ****             ssd1306_Line(82+1,50-y,92-1,50-y,Black);
+ 1433              		.loc 1 148 13 is_stmt 1 discriminator 3 view .LVU288
+ 1434              		.loc 1 148 33 is_stmt 0 discriminator 3 view .LVU289
+ 1435 0038 DFED467A 		vldr.32	s15, .L71+8
+ 1436 003c 77EEC87A 		vsub.f32	s15, s15, s16
+ 1437              		.loc 1 148 13 discriminator 3 view .LVU290
+ 1438 0040 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1439 0044 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 1440 0048 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 1441 004c 0023     		movs	r3, #0
+ 1442 004e 0093     		str	r3, [sp]
+ 1443 0050 0B46     		mov	r3, r1
+ 1444 0052 5B22     		movs	r2, #91
+ 1445 0054 5320     		movs	r0, #83
+ 1446 0056 FFF7FEFF 		bl	ssd1306_Line
+ 1447              	.LVL162:
+ 147:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1448              		.loc 1 147 35 is_stmt 1 discriminator 3 view .LVU291
+ 1449 005a F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1450 005e 38EE278A 		vadd.f32	s16, s16, s15
+ 1451              	.LVL163:
+ 1452              	.L63:
+ 147:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1453              		.loc 1 147 29 discriminator 1 view .LVU292
+ 1454 0062 DFED3D7A 		vldr.32	s15, .L71+12
+ 1455 0066 B4EEE78A 		vcmpe.f32	s16, s15
+ 1456 006a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1457 006e E3D4     		bmi	.L64
+ 1458              	.LBE28:
+ 149:Core/Src/OledDelayBars.c ****         }
+ 150:Core/Src/OledDelayBars.c ****         float fpercent = percent;
+ 1459              		.loc 1 150 9 view .LVU293
+ 1460              		.loc 1 150 15 is_stmt 0 view .LVU294
+ 1461 0070 DDED037A 		vldr.32	s15, [sp, #12]	@ int
+ 1462 0074 B8EE679A 		vcvt.f32.u32	s18, s15
+ 1463              	.LVL164:
+ 151:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 1464              		.loc 1 151 9 is_stmt 1 view .LVU295
+ 152:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 1465              		.loc 1 152 9 view .LVU296
+ 1466              	.LBB29:
+ 1467              		.loc 1 152 13 view .LVU297
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 31
+
+
+ 1468              		.loc 1 152 19 is_stmt 0 view .LVU298
+ 1469 0078 F7EE008A 		vmov.f32	s17, #1.0e+0
+ 1470              	.LBE29:
+ 151:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 1471              		.loc 1 151 15 view .LVU299
+ 1472 007c B0EE048A 		vmov.f32	s16, #2.5e+0
+ 1473              	.LVL165:
+ 1474              	.LBB30:
+ 1475              		.loc 1 152 9 view .LVU300
+ 1476 0080 24E0     		b	.L65
+ 1477              	.LVL166:
+ 1478              	.L66:
+ 153:Core/Src/OledDelayBars.c ****             calc = ((y/40.0)*100.0);
+ 1479              		.loc 1 153 13 is_stmt 1 discriminator 3 view .LVU301
+ 1480              		.loc 1 153 23 is_stmt 0 discriminator 3 view .LVU302
+ 1481 0082 18EE900A 		vmov	r0, s17
+ 1482 0086 FFF7FEFF 		bl	__aeabi_f2d
+ 1483              	.LVL167:
+ 1484 008a 0022     		movs	r2, #0
+ 1485 008c 334B     		ldr	r3, .L71+16
+ 1486 008e FFF7FEFF 		bl	__aeabi_ddiv
+ 1487              	.LVL168:
+ 1488              		.loc 1 153 29 discriminator 3 view .LVU303
+ 1489 0092 0022     		movs	r2, #0
+ 1490 0094 324B     		ldr	r3, .L71+20
+ 1491 0096 FFF7FEFF 		bl	__aeabi_dmul
+ 1492              	.LVL169:
+ 1493              		.loc 1 153 18 discriminator 3 view .LVU304
+ 1494 009a FFF7FEFF 		bl	__aeabi_d2f
+ 1495              	.LVL170:
+ 1496 009e 08EE100A 		vmov	s16, r0
+ 1497              	.LVL171:
+ 154:Core/Src/OledDelayBars.c ****             ssd1306_Line(82+1,50-y,92-1,50-y,White);
+ 1498              		.loc 1 154 13 is_stmt 1 discriminator 3 view .LVU305
+ 1499              		.loc 1 154 33 is_stmt 0 discriminator 3 view .LVU306
+ 1500 00a2 DFED2C7A 		vldr.32	s15, .L71+8
+ 1501 00a6 77EEE87A 		vsub.f32	s15, s15, s17
+ 1502              		.loc 1 154 13 discriminator 3 view .LVU307
+ 1503 00aa FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1504 00ae CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 1505 00b2 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 1506 00b6 0123     		movs	r3, #1
+ 1507 00b8 0093     		str	r3, [sp]
+ 1508 00ba 0B46     		mov	r3, r1
+ 1509 00bc 5B22     		movs	r2, #91
+ 1510 00be 5320     		movs	r0, #83
+ 1511              	.LVL172:
+ 1512              		.loc 1 154 13 discriminator 3 view .LVU308
+ 1513 00c0 FFF7FEFF 		bl	ssd1306_Line
+ 1514              	.LVL173:
+ 152:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 1515              		.loc 1 152 46 is_stmt 1 discriminator 3 view .LVU309
+ 1516 00c4 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1517 00c8 78EEA78A 		vadd.f32	s17, s17, s15
+ 1518              	.LVL174:
+ 1519              	.L65:
+ 152:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 32
+
+
+ 1520              		.loc 1 152 33 discriminator 1 view .LVU310
+ 1521 00cc B4EEC98A 		vcmpe.f32	s16, s18
+ 1522 00d0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1523 00d4 D5D4     		bmi	.L66
+ 1524              	.LBE30:
+ 155:Core/Src/OledDelayBars.c ****         }
+ 156:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 1525              		.loc 1 156 9 view .LVU311
+ 1526 00d6 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 1527              	.LVL175:
+ 1528              	.L61:
+ 1529              		.loc 1 156 9 is_stmt 0 view .LVU312
+ 1530              	.LBE27:
+ 157:Core/Src/OledDelayBars.c ****     }else{
+ 158:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(82,10,92,50,Black);
+ 159:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(82,53);
+ 160:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("R1", Font_7x10, Black);
+ 161:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 162:Core/Src/OledDelayBars.c ****             ssd1306_Line(82+1,50-y,92-1,50-y,Black);
+ 163:Core/Src/OledDelayBars.c ****         }
+ 164:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 165:Core/Src/OledDelayBars.c ****     }
+ 166:Core/Src/OledDelayBars.c **** }
+ 1531              		.loc 1 166 1 view .LVU313
+ 1532 00da 04B0     		add	sp, sp, #16
+ 1533              	.LCFI33:
+ 1534              		.cfi_remember_state
+ 1535              		.cfi_def_cfa_offset 24
+ 1536              		@ sp needed
+ 1537 00dc BDEC048B 		vldm	sp!, {d8-d9}
+ 1538              	.LCFI34:
+ 1539              		.cfi_restore 82
+ 1540              		.cfi_restore 83
+ 1541              		.cfi_restore 80
+ 1542              		.cfi_restore 81
+ 1543              		.cfi_def_cfa_offset 8
+ 1544 00e0 10BD     		pop	{r4, pc}
+ 1545              	.LVL176:
+ 1546              	.L62:
+ 1547              	.LCFI35:
+ 1548              		.cfi_restore_state
+ 158:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(82,53);
+ 1549              		.loc 1 158 9 is_stmt 1 view .LVU314
+ 1550 00e2 0024     		movs	r4, #0
+ 1551 00e4 0094     		str	r4, [sp]
+ 1552 00e6 3223     		movs	r3, #50
+ 1553 00e8 5C22     		movs	r2, #92
+ 1554 00ea 0A21     		movs	r1, #10
+ 1555              	.LVL177:
+ 158:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(82,53);
+ 1556              		.loc 1 158 9 is_stmt 0 view .LVU315
+ 1557 00ec 5220     		movs	r0, #82
+ 1558              	.LVL178:
+ 158:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(82,53);
+ 1559              		.loc 1 158 9 view .LVU316
+ 1560 00ee FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 1561              	.LVL179:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 33
+
+
+ 159:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("R1", Font_7x10, Black);
+ 1562              		.loc 1 159 9 is_stmt 1 view .LVU317
+ 1563 00f2 3521     		movs	r1, #53
+ 1564 00f4 5220     		movs	r0, #82
+ 1565 00f6 FFF7FEFF 		bl	ssd1306_SetCursor
+ 1566              	.LVL180:
+ 160:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1567              		.loc 1 160 9 view .LVU318
+ 1568 00fa 144A     		ldr	r2, .L71
+ 1569 00fc 2346     		mov	r3, r4
+ 1570 00fe 06CA     		ldm	r2, {r1, r2}
+ 1571 0100 1348     		ldr	r0, .L71+4
+ 1572 0102 FFF7FEFF 		bl	ssd1306_WriteString
+ 1573              	.LVL181:
+ 161:Core/Src/OledDelayBars.c ****             ssd1306_Line(82+1,50-y,92-1,50-y,Black);
+ 1574              		.loc 1 161 9 view .LVU319
+ 1575              	.LBB31:
+ 161:Core/Src/OledDelayBars.c ****             ssd1306_Line(82+1,50-y,92-1,50-y,Black);
+ 1576              		.loc 1 161 13 view .LVU320
+ 161:Core/Src/OledDelayBars.c ****             ssd1306_Line(82+1,50-y,92-1,50-y,Black);
+ 1577              		.loc 1 161 19 is_stmt 0 view .LVU321
+ 1578 0106 B7EE008A 		vmov.f32	s16, #1.0e+0
+ 161:Core/Src/OledDelayBars.c ****             ssd1306_Line(82+1,50-y,92-1,50-y,Black);
+ 1579              		.loc 1 161 9 view .LVU322
+ 1580 010a 14E0     		b	.L68
+ 1581              	.LVL182:
+ 1582              	.L69:
+ 162:Core/Src/OledDelayBars.c ****         }
+ 1583              		.loc 1 162 13 is_stmt 1 discriminator 3 view .LVU323
+ 162:Core/Src/OledDelayBars.c ****         }
+ 1584              		.loc 1 162 33 is_stmt 0 discriminator 3 view .LVU324
+ 1585 010c DFED117A 		vldr.32	s15, .L71+8
+ 1586 0110 77EEC87A 		vsub.f32	s15, s15, s16
+ 162:Core/Src/OledDelayBars.c ****         }
+ 1587              		.loc 1 162 13 discriminator 3 view .LVU325
+ 1588 0114 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1589 0118 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 1590 011c 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 1591 0120 0023     		movs	r3, #0
+ 1592 0122 0093     		str	r3, [sp]
+ 1593 0124 0B46     		mov	r3, r1
+ 1594 0126 5B22     		movs	r2, #91
+ 1595 0128 5320     		movs	r0, #83
+ 1596 012a FFF7FEFF 		bl	ssd1306_Line
+ 1597              	.LVL183:
+ 161:Core/Src/OledDelayBars.c ****             ssd1306_Line(82+1,50-y,92-1,50-y,Black);
+ 1598              		.loc 1 161 35 is_stmt 1 discriminator 3 view .LVU326
+ 1599 012e F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1600 0132 38EE278A 		vadd.f32	s16, s16, s15
+ 1601              	.LVL184:
+ 1602              	.L68:
+ 161:Core/Src/OledDelayBars.c ****             ssd1306_Line(82+1,50-y,92-1,50-y,Black);
+ 1603              		.loc 1 161 29 discriminator 1 view .LVU327
+ 1604 0136 DFED087A 		vldr.32	s15, .L71+12
+ 1605 013a B4EEE78A 		vcmpe.f32	s16, s15
+ 1606 013e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1607 0142 E3D4     		bmi	.L69
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 34
+
+
+ 1608              	.LBE31:
+ 164:Core/Src/OledDelayBars.c ****     }
+ 1609              		.loc 1 164 9 view .LVU328
+ 1610 0144 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 1611              	.LVL185:
+ 1612              		.loc 1 166 1 is_stmt 0 view .LVU329
+ 1613 0148 C7E7     		b	.L61
+ 1614              	.L72:
+ 1615 014a 00BF     		.align	2
+ 1616              	.L71:
+ 1617 014c 00000000 		.word	Font_7x10
+ 1618 0150 00000000 		.word	.LC5
+ 1619 0154 00004842 		.word	1112014848
+ 1620 0158 00002042 		.word	1109393408
+ 1621 015c 00004440 		.word	1078198272
+ 1622 0160 00005940 		.word	1079574528
+ 1623              		.cfi_endproc
+ 1624              	.LFE325:
+ 1626              		.section	.rodata.Show_G2Bar.str1.4,"aMS",%progbits,1
+ 1627              		.align	2
+ 1628              	.LC6:
+ 1629 0000 473200   		.ascii	"G2\000"
+ 1630              		.section	.text.Show_G2Bar,"ax",%progbits
+ 1631              		.align	1
+ 1632              		.global	Show_G2Bar
+ 1633              		.syntax unified
+ 1634              		.thumb
+ 1635              		.thumb_func
+ 1637              	Show_G2Bar:
+ 1638              	.LVL186:
+ 1639              	.LFB326:
+ 167:Core/Src/OledDelayBars.c **** 
+ 168:Core/Src/OledDelayBars.c **** void Show_G2Bar(bool state, uint8_t percent){
+ 1640              		.loc 1 168 45 is_stmt 1 view -0
+ 1641              		.cfi_startproc
+ 1642              		@ args = 0, pretend = 0, frame = 8
+ 1643              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1644              		.loc 1 168 45 is_stmt 0 view .LVU331
+ 1645 0000 10B5     		push	{r4, lr}
+ 1646              	.LCFI36:
+ 1647              		.cfi_def_cfa_offset 8
+ 1648              		.cfi_offset 4, -8
+ 1649              		.cfi_offset 14, -4
+ 1650 0002 2DED048B 		vpush.64	{d8, d9}
+ 1651              	.LCFI37:
+ 1652              		.cfi_def_cfa_offset 24
+ 1653              		.cfi_offset 80, -24
+ 1654              		.cfi_offset 81, -20
+ 1655              		.cfi_offset 82, -16
+ 1656              		.cfi_offset 83, -12
+ 1657 0006 84B0     		sub	sp, sp, #16
+ 1658              	.LCFI38:
+ 1659              		.cfi_def_cfa_offset 40
+ 1660 0008 0391     		str	r1, [sp, #12]
+ 169:Core/Src/OledDelayBars.c ****     if(state){
+ 1661              		.loc 1 169 5 is_stmt 1 view .LVU332
+ 1662              		.loc 1 169 7 is_stmt 0 view .LVU333
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 35
+
+
+ 1663 000a 0028     		cmp	r0, #0
+ 1664 000c 69D0     		beq	.L74
+ 1665              	.LBB32:
+ 170:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(98,10,108,50,White);
+ 1666              		.loc 1 170 9 is_stmt 1 view .LVU334
+ 1667 000e 0124     		movs	r4, #1
+ 1668 0010 0094     		str	r4, [sp]
+ 1669 0012 3223     		movs	r3, #50
+ 1670 0014 6C22     		movs	r2, #108
+ 1671 0016 0A21     		movs	r1, #10
+ 1672              	.LVL187:
+ 1673              		.loc 1 170 9 is_stmt 0 view .LVU335
+ 1674 0018 6220     		movs	r0, #98
+ 1675              	.LVL188:
+ 1676              		.loc 1 170 9 view .LVU336
+ 1677 001a FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 1678              	.LVL189:
+ 171:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(98,53);
+ 1679              		.loc 1 171 9 is_stmt 1 view .LVU337
+ 1680 001e 3521     		movs	r1, #53
+ 1681 0020 6220     		movs	r0, #98
+ 1682 0022 FFF7FEFF 		bl	ssd1306_SetCursor
+ 1683              	.LVL190:
+ 172:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("G2", Font_7x10, White);
+ 1684              		.loc 1 172 9 view .LVU338
+ 1685 0026 494A     		ldr	r2, .L83
+ 1686 0028 2346     		mov	r3, r4
+ 1687 002a 06CA     		ldm	r2, {r1, r2}
+ 1688 002c 4848     		ldr	r0, .L83+4
+ 1689 002e FFF7FEFF 		bl	ssd1306_WriteString
+ 1690              	.LVL191:
+ 173:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1691              		.loc 1 173 9 view .LVU339
+ 1692              	.LBB33:
+ 1693              		.loc 1 173 13 view .LVU340
+ 1694              		.loc 1 173 19 is_stmt 0 view .LVU341
+ 1695 0032 B7EE008A 		vmov.f32	s16, #1.0e+0
+ 1696              		.loc 1 173 9 view .LVU342
+ 1697 0036 14E0     		b	.L75
+ 1698              	.LVL192:
+ 1699              	.L76:
+ 174:Core/Src/OledDelayBars.c ****             ssd1306_Line(98+1,50-y,108-1,50-y,Black);
+ 1700              		.loc 1 174 13 is_stmt 1 discriminator 3 view .LVU343
+ 1701              		.loc 1 174 33 is_stmt 0 discriminator 3 view .LVU344
+ 1702 0038 DFED467A 		vldr.32	s15, .L83+8
+ 1703 003c 77EEC87A 		vsub.f32	s15, s15, s16
+ 1704              		.loc 1 174 13 discriminator 3 view .LVU345
+ 1705 0040 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1706 0044 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 1707 0048 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 1708 004c 0023     		movs	r3, #0
+ 1709 004e 0093     		str	r3, [sp]
+ 1710 0050 0B46     		mov	r3, r1
+ 1711 0052 6B22     		movs	r2, #107
+ 1712 0054 6320     		movs	r0, #99
+ 1713 0056 FFF7FEFF 		bl	ssd1306_Line
+ 1714              	.LVL193:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 36
+
+
+ 173:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1715              		.loc 1 173 35 is_stmt 1 discriminator 3 view .LVU346
+ 1716 005a F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1717 005e 38EE278A 		vadd.f32	s16, s16, s15
+ 1718              	.LVL194:
+ 1719              	.L75:
+ 173:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1720              		.loc 1 173 29 discriminator 1 view .LVU347
+ 1721 0062 DFED3D7A 		vldr.32	s15, .L83+12
+ 1722 0066 B4EEE78A 		vcmpe.f32	s16, s15
+ 1723 006a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1724 006e E3D4     		bmi	.L76
+ 1725              	.LBE33:
+ 175:Core/Src/OledDelayBars.c ****         }
+ 176:Core/Src/OledDelayBars.c ****         float fpercent = percent;
+ 1726              		.loc 1 176 9 view .LVU348
+ 1727              		.loc 1 176 15 is_stmt 0 view .LVU349
+ 1728 0070 DDED037A 		vldr.32	s15, [sp, #12]	@ int
+ 1729 0074 B8EE679A 		vcvt.f32.u32	s18, s15
+ 1730              	.LVL195:
+ 177:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 1731              		.loc 1 177 9 is_stmt 1 view .LVU350
+ 178:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 1732              		.loc 1 178 9 view .LVU351
+ 1733              	.LBB34:
+ 1734              		.loc 1 178 13 view .LVU352
+ 1735              		.loc 1 178 19 is_stmt 0 view .LVU353
+ 1736 0078 F7EE008A 		vmov.f32	s17, #1.0e+0
+ 1737              	.LBE34:
+ 177:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 1738              		.loc 1 177 15 view .LVU354
+ 1739 007c B0EE048A 		vmov.f32	s16, #2.5e+0
+ 1740              	.LVL196:
+ 1741              	.LBB35:
+ 1742              		.loc 1 178 9 view .LVU355
+ 1743 0080 24E0     		b	.L77
+ 1744              	.LVL197:
+ 1745              	.L78:
+ 179:Core/Src/OledDelayBars.c ****             calc = ((y/40.0)*100.0);
+ 1746              		.loc 1 179 13 is_stmt 1 discriminator 3 view .LVU356
+ 1747              		.loc 1 179 23 is_stmt 0 discriminator 3 view .LVU357
+ 1748 0082 18EE900A 		vmov	r0, s17
+ 1749 0086 FFF7FEFF 		bl	__aeabi_f2d
+ 1750              	.LVL198:
+ 1751 008a 0022     		movs	r2, #0
+ 1752 008c 334B     		ldr	r3, .L83+16
+ 1753 008e FFF7FEFF 		bl	__aeabi_ddiv
+ 1754              	.LVL199:
+ 1755              		.loc 1 179 29 discriminator 3 view .LVU358
+ 1756 0092 0022     		movs	r2, #0
+ 1757 0094 324B     		ldr	r3, .L83+20
+ 1758 0096 FFF7FEFF 		bl	__aeabi_dmul
+ 1759              	.LVL200:
+ 1760              		.loc 1 179 18 discriminator 3 view .LVU359
+ 1761 009a FFF7FEFF 		bl	__aeabi_d2f
+ 1762              	.LVL201:
+ 1763 009e 08EE100A 		vmov	s16, r0
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 37
+
+
+ 1764              	.LVL202:
+ 180:Core/Src/OledDelayBars.c ****             ssd1306_Line(98+1,50-y,108-1,50-y,White);
+ 1765              		.loc 1 180 13 is_stmt 1 discriminator 3 view .LVU360
+ 1766              		.loc 1 180 33 is_stmt 0 discriminator 3 view .LVU361
+ 1767 00a2 DFED2C7A 		vldr.32	s15, .L83+8
+ 1768 00a6 77EEE87A 		vsub.f32	s15, s15, s17
+ 1769              		.loc 1 180 13 discriminator 3 view .LVU362
+ 1770 00aa FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1771 00ae CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 1772 00b2 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 1773 00b6 0123     		movs	r3, #1
+ 1774 00b8 0093     		str	r3, [sp]
+ 1775 00ba 0B46     		mov	r3, r1
+ 1776 00bc 6B22     		movs	r2, #107
+ 1777 00be 6320     		movs	r0, #99
+ 1778              	.LVL203:
+ 1779              		.loc 1 180 13 discriminator 3 view .LVU363
+ 1780 00c0 FFF7FEFF 		bl	ssd1306_Line
+ 1781              	.LVL204:
+ 178:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 1782              		.loc 1 178 46 is_stmt 1 discriminator 3 view .LVU364
+ 1783 00c4 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1784 00c8 78EEA78A 		vadd.f32	s17, s17, s15
+ 1785              	.LVL205:
+ 1786              	.L77:
+ 178:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 1787              		.loc 1 178 33 discriminator 1 view .LVU365
+ 1788 00cc B4EEC98A 		vcmpe.f32	s16, s18
+ 1789 00d0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1790 00d4 D5D4     		bmi	.L78
+ 1791              	.LBE35:
+ 181:Core/Src/OledDelayBars.c ****         }
+ 182:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 1792              		.loc 1 182 9 view .LVU366
+ 1793 00d6 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 1794              	.LVL206:
+ 1795              	.L73:
+ 1796              		.loc 1 182 9 is_stmt 0 view .LVU367
+ 1797              	.LBE32:
+ 183:Core/Src/OledDelayBars.c ****     }else{
+ 184:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(98,10,108,50,Black);
+ 185:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(98,53);
+ 186:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("G2", Font_7x10, Black);
+ 187:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 188:Core/Src/OledDelayBars.c ****             ssd1306_Line(98+1,50-y,108-1,50-y,Black);
+ 189:Core/Src/OledDelayBars.c ****         }
+ 190:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 191:Core/Src/OledDelayBars.c ****     }
+ 192:Core/Src/OledDelayBars.c **** }
+ 1798              		.loc 1 192 1 view .LVU368
+ 1799 00da 04B0     		add	sp, sp, #16
+ 1800              	.LCFI39:
+ 1801              		.cfi_remember_state
+ 1802              		.cfi_def_cfa_offset 24
+ 1803              		@ sp needed
+ 1804 00dc BDEC048B 		vldm	sp!, {d8-d9}
+ 1805              	.LCFI40:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 38
+
+
+ 1806              		.cfi_restore 82
+ 1807              		.cfi_restore 83
+ 1808              		.cfi_restore 80
+ 1809              		.cfi_restore 81
+ 1810              		.cfi_def_cfa_offset 8
+ 1811 00e0 10BD     		pop	{r4, pc}
+ 1812              	.LVL207:
+ 1813              	.L74:
+ 1814              	.LCFI41:
+ 1815              		.cfi_restore_state
+ 184:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(98,53);
+ 1816              		.loc 1 184 9 is_stmt 1 view .LVU369
+ 1817 00e2 0024     		movs	r4, #0
+ 1818 00e4 0094     		str	r4, [sp]
+ 1819 00e6 3223     		movs	r3, #50
+ 1820 00e8 6C22     		movs	r2, #108
+ 1821 00ea 0A21     		movs	r1, #10
+ 1822              	.LVL208:
+ 184:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(98,53);
+ 1823              		.loc 1 184 9 is_stmt 0 view .LVU370
+ 1824 00ec 6220     		movs	r0, #98
+ 1825              	.LVL209:
+ 184:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(98,53);
+ 1826              		.loc 1 184 9 view .LVU371
+ 1827 00ee FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 1828              	.LVL210:
+ 185:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("G2", Font_7x10, Black);
+ 1829              		.loc 1 185 9 is_stmt 1 view .LVU372
+ 1830 00f2 3521     		movs	r1, #53
+ 1831 00f4 6220     		movs	r0, #98
+ 1832 00f6 FFF7FEFF 		bl	ssd1306_SetCursor
+ 1833              	.LVL211:
+ 186:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1834              		.loc 1 186 9 view .LVU373
+ 1835 00fa 144A     		ldr	r2, .L83
+ 1836 00fc 2346     		mov	r3, r4
+ 1837 00fe 06CA     		ldm	r2, {r1, r2}
+ 1838 0100 1348     		ldr	r0, .L83+4
+ 1839 0102 FFF7FEFF 		bl	ssd1306_WriteString
+ 1840              	.LVL212:
+ 187:Core/Src/OledDelayBars.c ****             ssd1306_Line(98+1,50-y,108-1,50-y,Black);
+ 1841              		.loc 1 187 9 view .LVU374
+ 1842              	.LBB36:
+ 187:Core/Src/OledDelayBars.c ****             ssd1306_Line(98+1,50-y,108-1,50-y,Black);
+ 1843              		.loc 1 187 13 view .LVU375
+ 187:Core/Src/OledDelayBars.c ****             ssd1306_Line(98+1,50-y,108-1,50-y,Black);
+ 1844              		.loc 1 187 19 is_stmt 0 view .LVU376
+ 1845 0106 B7EE008A 		vmov.f32	s16, #1.0e+0
+ 187:Core/Src/OledDelayBars.c ****             ssd1306_Line(98+1,50-y,108-1,50-y,Black);
+ 1846              		.loc 1 187 9 view .LVU377
+ 1847 010a 14E0     		b	.L80
+ 1848              	.LVL213:
+ 1849              	.L81:
+ 188:Core/Src/OledDelayBars.c ****         }
+ 1850              		.loc 1 188 13 is_stmt 1 discriminator 3 view .LVU378
+ 188:Core/Src/OledDelayBars.c ****         }
+ 1851              		.loc 1 188 33 is_stmt 0 discriminator 3 view .LVU379
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 39
+
+
+ 1852 010c DFED117A 		vldr.32	s15, .L83+8
+ 1853 0110 77EEC87A 		vsub.f32	s15, s15, s16
+ 188:Core/Src/OledDelayBars.c ****         }
+ 1854              		.loc 1 188 13 discriminator 3 view .LVU380
+ 1855 0114 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1856 0118 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 1857 011c 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 1858 0120 0023     		movs	r3, #0
+ 1859 0122 0093     		str	r3, [sp]
+ 1860 0124 0B46     		mov	r3, r1
+ 1861 0126 6B22     		movs	r2, #107
+ 1862 0128 6320     		movs	r0, #99
+ 1863 012a FFF7FEFF 		bl	ssd1306_Line
+ 1864              	.LVL214:
+ 187:Core/Src/OledDelayBars.c ****             ssd1306_Line(98+1,50-y,108-1,50-y,Black);
+ 1865              		.loc 1 187 35 is_stmt 1 discriminator 3 view .LVU381
+ 1866 012e F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1867 0132 38EE278A 		vadd.f32	s16, s16, s15
+ 1868              	.LVL215:
+ 1869              	.L80:
+ 187:Core/Src/OledDelayBars.c ****             ssd1306_Line(98+1,50-y,108-1,50-y,Black);
+ 1870              		.loc 1 187 29 discriminator 1 view .LVU382
+ 1871 0136 DFED087A 		vldr.32	s15, .L83+12
+ 1872 013a B4EEE78A 		vcmpe.f32	s16, s15
+ 1873 013e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1874 0142 E3D4     		bmi	.L81
+ 1875              	.LBE36:
+ 190:Core/Src/OledDelayBars.c ****     }
+ 1876              		.loc 1 190 9 view .LVU383
+ 1877 0144 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 1878              	.LVL216:
+ 1879              		.loc 1 192 1 is_stmt 0 view .LVU384
+ 1880 0148 C7E7     		b	.L73
+ 1881              	.L84:
+ 1882 014a 00BF     		.align	2
+ 1883              	.L83:
+ 1884 014c 00000000 		.word	Font_7x10
+ 1885 0150 00000000 		.word	.LC6
+ 1886 0154 00004842 		.word	1112014848
+ 1887 0158 00002042 		.word	1109393408
+ 1888 015c 00004440 		.word	1078198272
+ 1889 0160 00005940 		.word	1079574528
+ 1890              		.cfi_endproc
+ 1891              	.LFE326:
+ 1893              		.section	.rodata.Show_R2Bar.str1.4,"aMS",%progbits,1
+ 1894              		.align	2
+ 1895              	.LC7:
+ 1896 0000 523200   		.ascii	"R2\000"
+ 1897              		.section	.text.Show_R2Bar,"ax",%progbits
+ 1898              		.align	1
+ 1899              		.global	Show_R2Bar
+ 1900              		.syntax unified
+ 1901              		.thumb
+ 1902              		.thumb_func
+ 1904              	Show_R2Bar:
+ 1905              	.LVL217:
+ 1906              	.LFB327:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 40
+
+
+ 193:Core/Src/OledDelayBars.c **** 
+ 194:Core/Src/OledDelayBars.c **** void Show_R2Bar(bool state, uint8_t percent){
+ 1907              		.loc 1 194 45 is_stmt 1 view -0
+ 1908              		.cfi_startproc
+ 1909              		@ args = 0, pretend = 0, frame = 8
+ 1910              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1911              		.loc 1 194 45 is_stmt 0 view .LVU386
+ 1912 0000 10B5     		push	{r4, lr}
+ 1913              	.LCFI42:
+ 1914              		.cfi_def_cfa_offset 8
+ 1915              		.cfi_offset 4, -8
+ 1916              		.cfi_offset 14, -4
+ 1917 0002 2DED048B 		vpush.64	{d8, d9}
+ 1918              	.LCFI43:
+ 1919              		.cfi_def_cfa_offset 24
+ 1920              		.cfi_offset 80, -24
+ 1921              		.cfi_offset 81, -20
+ 1922              		.cfi_offset 82, -16
+ 1923              		.cfi_offset 83, -12
+ 1924 0006 84B0     		sub	sp, sp, #16
+ 1925              	.LCFI44:
+ 1926              		.cfi_def_cfa_offset 40
+ 1927 0008 0391     		str	r1, [sp, #12]
+ 195:Core/Src/OledDelayBars.c ****     if(state){
+ 1928              		.loc 1 195 5 is_stmt 1 view .LVU387
+ 1929              		.loc 1 195 7 is_stmt 0 view .LVU388
+ 1930 000a 0028     		cmp	r0, #0
+ 1931 000c 69D0     		beq	.L86
+ 1932              	.LBB37:
+ 196:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(114,10,124,50,White);
+ 1933              		.loc 1 196 9 is_stmt 1 view .LVU389
+ 1934 000e 0124     		movs	r4, #1
+ 1935 0010 0094     		str	r4, [sp]
+ 1936 0012 3223     		movs	r3, #50
+ 1937 0014 7C22     		movs	r2, #124
+ 1938 0016 0A21     		movs	r1, #10
+ 1939              	.LVL218:
+ 1940              		.loc 1 196 9 is_stmt 0 view .LVU390
+ 1941 0018 7220     		movs	r0, #114
+ 1942              	.LVL219:
+ 1943              		.loc 1 196 9 view .LVU391
+ 1944 001a FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 1945              	.LVL220:
+ 197:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(114,53);
+ 1946              		.loc 1 197 9 is_stmt 1 view .LVU392
+ 1947 001e 3521     		movs	r1, #53
+ 1948 0020 7220     		movs	r0, #114
+ 1949 0022 FFF7FEFF 		bl	ssd1306_SetCursor
+ 1950              	.LVL221:
+ 198:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("R2", Font_7x10, White);
+ 1951              		.loc 1 198 9 view .LVU393
+ 1952 0026 494A     		ldr	r2, .L95
+ 1953 0028 2346     		mov	r3, r4
+ 1954 002a 06CA     		ldm	r2, {r1, r2}
+ 1955 002c 4848     		ldr	r0, .L95+4
+ 1956 002e FFF7FEFF 		bl	ssd1306_WriteString
+ 1957              	.LVL222:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 41
+
+
+ 199:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1958              		.loc 1 199 9 view .LVU394
+ 1959              	.LBB38:
+ 1960              		.loc 1 199 13 view .LVU395
+ 1961              		.loc 1 199 19 is_stmt 0 view .LVU396
+ 1962 0032 B7EE008A 		vmov.f32	s16, #1.0e+0
+ 1963              		.loc 1 199 9 view .LVU397
+ 1964 0036 14E0     		b	.L87
+ 1965              	.LVL223:
+ 1966              	.L88:
+ 200:Core/Src/OledDelayBars.c ****             ssd1306_Line(114+1,50-y,124-1,50-y,Black);
+ 1967              		.loc 1 200 13 is_stmt 1 discriminator 3 view .LVU398
+ 1968              		.loc 1 200 34 is_stmt 0 discriminator 3 view .LVU399
+ 1969 0038 DFED467A 		vldr.32	s15, .L95+8
+ 1970 003c 77EEC87A 		vsub.f32	s15, s15, s16
+ 1971              		.loc 1 200 13 discriminator 3 view .LVU400
+ 1972 0040 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1973 0044 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 1974 0048 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 1975 004c 0023     		movs	r3, #0
+ 1976 004e 0093     		str	r3, [sp]
+ 1977 0050 0B46     		mov	r3, r1
+ 1978 0052 7B22     		movs	r2, #123
+ 1979 0054 7320     		movs	r0, #115
+ 1980 0056 FFF7FEFF 		bl	ssd1306_Line
+ 1981              	.LVL224:
+ 199:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1982              		.loc 1 199 35 is_stmt 1 discriminator 3 view .LVU401
+ 1983 005a F7EE007A 		vmov.f32	s15, #1.0e+0
+ 1984 005e 38EE278A 		vadd.f32	s16, s16, s15
+ 1985              	.LVL225:
+ 1986              	.L87:
+ 199:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 1987              		.loc 1 199 29 discriminator 1 view .LVU402
+ 1988 0062 DFED3D7A 		vldr.32	s15, .L95+12
+ 1989 0066 B4EEE78A 		vcmpe.f32	s16, s15
+ 1990 006a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1991 006e E3D4     		bmi	.L88
+ 1992              	.LBE38:
+ 201:Core/Src/OledDelayBars.c ****         }
+ 202:Core/Src/OledDelayBars.c ****         float fpercent = percent;
+ 1993              		.loc 1 202 9 view .LVU403
+ 1994              		.loc 1 202 15 is_stmt 0 view .LVU404
+ 1995 0070 DDED037A 		vldr.32	s15, [sp, #12]	@ int
+ 1996 0074 B8EE679A 		vcvt.f32.u32	s18, s15
+ 1997              	.LVL226:
+ 203:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 1998              		.loc 1 203 9 is_stmt 1 view .LVU405
+ 204:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 1999              		.loc 1 204 9 view .LVU406
+ 2000              	.LBB39:
+ 2001              		.loc 1 204 13 view .LVU407
+ 2002              		.loc 1 204 19 is_stmt 0 view .LVU408
+ 2003 0078 F7EE008A 		vmov.f32	s17, #1.0e+0
+ 2004              	.LBE39:
+ 203:Core/Src/OledDelayBars.c ****         float calc = ((1.0/40.0)*100.0);
+ 2005              		.loc 1 203 15 view .LVU409
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 42
+
+
+ 2006 007c B0EE048A 		vmov.f32	s16, #2.5e+0
+ 2007              	.LVL227:
+ 2008              	.LBB40:
+ 2009              		.loc 1 204 9 view .LVU410
+ 2010 0080 24E0     		b	.L89
+ 2011              	.LVL228:
+ 2012              	.L90:
+ 205:Core/Src/OledDelayBars.c ****             calc = ((y/40.0)*100.0);
+ 2013              		.loc 1 205 13 is_stmt 1 discriminator 3 view .LVU411
+ 2014              		.loc 1 205 23 is_stmt 0 discriminator 3 view .LVU412
+ 2015 0082 18EE900A 		vmov	r0, s17
+ 2016 0086 FFF7FEFF 		bl	__aeabi_f2d
+ 2017              	.LVL229:
+ 2018 008a 0022     		movs	r2, #0
+ 2019 008c 334B     		ldr	r3, .L95+16
+ 2020 008e FFF7FEFF 		bl	__aeabi_ddiv
+ 2021              	.LVL230:
+ 2022              		.loc 1 205 29 discriminator 3 view .LVU413
+ 2023 0092 0022     		movs	r2, #0
+ 2024 0094 324B     		ldr	r3, .L95+20
+ 2025 0096 FFF7FEFF 		bl	__aeabi_dmul
+ 2026              	.LVL231:
+ 2027              		.loc 1 205 18 discriminator 3 view .LVU414
+ 2028 009a FFF7FEFF 		bl	__aeabi_d2f
+ 2029              	.LVL232:
+ 2030 009e 08EE100A 		vmov	s16, r0
+ 2031              	.LVL233:
+ 206:Core/Src/OledDelayBars.c ****             ssd1306_Line(114+1,50-y,124-1,50-y,White);
+ 2032              		.loc 1 206 13 is_stmt 1 discriminator 3 view .LVU415
+ 2033              		.loc 1 206 34 is_stmt 0 discriminator 3 view .LVU416
+ 2034 00a2 DFED2C7A 		vldr.32	s15, .L95+8
+ 2035 00a6 77EEE87A 		vsub.f32	s15, s15, s17
+ 2036              		.loc 1 206 13 discriminator 3 view .LVU417
+ 2037 00aa FCEEE77A 		vcvt.u32.f32	s15, s15
+ 2038 00ae CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 2039 00b2 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 2040 00b6 0123     		movs	r3, #1
+ 2041 00b8 0093     		str	r3, [sp]
+ 2042 00ba 0B46     		mov	r3, r1
+ 2043 00bc 7B22     		movs	r2, #123
+ 2044 00be 7320     		movs	r0, #115
+ 2045              	.LVL234:
+ 2046              		.loc 1 206 13 discriminator 3 view .LVU418
+ 2047 00c0 FFF7FEFF 		bl	ssd1306_Line
+ 2048              	.LVL235:
+ 204:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 2049              		.loc 1 204 46 is_stmt 1 discriminator 3 view .LVU419
+ 2050 00c4 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 2051 00c8 78EEA78A 		vadd.f32	s17, s17, s15
+ 2052              	.LVL236:
+ 2053              	.L89:
+ 204:Core/Src/OledDelayBars.c ****         for(float y = 1.0;(calc < fpercent);y++){
+ 2054              		.loc 1 204 33 discriminator 1 view .LVU420
+ 2055 00cc B4EEC98A 		vcmpe.f32	s16, s18
+ 2056 00d0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 2057 00d4 D5D4     		bmi	.L90
+ 2058              	.LBE40:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 43
+
+
+ 207:Core/Src/OledDelayBars.c ****         }
+ 208:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 2059              		.loc 1 208 9 view .LVU421
+ 2060 00d6 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 2061              	.LVL237:
+ 2062              	.L85:
+ 2063              		.loc 1 208 9 is_stmt 0 view .LVU422
+ 2064              	.LBE37:
+ 209:Core/Src/OledDelayBars.c ****     }else{
+ 210:Core/Src/OledDelayBars.c ****         ssd1306_DrawRectangle(114,10,124,50,Black);
+ 211:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(114,53);
+ 212:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("R2", Font_7x10, Black);
+ 213:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 214:Core/Src/OledDelayBars.c ****             ssd1306_Line(114+1,50-y,124-1,50-y,Black);
+ 215:Core/Src/OledDelayBars.c ****         }
+ 216:Core/Src/OledDelayBars.c ****         ssd1306_UpdateScreen();
+ 217:Core/Src/OledDelayBars.c ****     }
+ 218:Core/Src/OledDelayBars.c **** }
+ 2065              		.loc 1 218 1 view .LVU423
+ 2066 00da 04B0     		add	sp, sp, #16
+ 2067              	.LCFI45:
+ 2068              		.cfi_remember_state
+ 2069              		.cfi_def_cfa_offset 24
+ 2070              		@ sp needed
+ 2071 00dc BDEC048B 		vldm	sp!, {d8-d9}
+ 2072              	.LCFI46:
+ 2073              		.cfi_restore 82
+ 2074              		.cfi_restore 83
+ 2075              		.cfi_restore 80
+ 2076              		.cfi_restore 81
+ 2077              		.cfi_def_cfa_offset 8
+ 2078 00e0 10BD     		pop	{r4, pc}
+ 2079              	.LVL238:
+ 2080              	.L86:
+ 2081              	.LCFI47:
+ 2082              		.cfi_restore_state
+ 210:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(114,53);
+ 2083              		.loc 1 210 9 is_stmt 1 view .LVU424
+ 2084 00e2 0024     		movs	r4, #0
+ 2085 00e4 0094     		str	r4, [sp]
+ 2086 00e6 3223     		movs	r3, #50
+ 2087 00e8 7C22     		movs	r2, #124
+ 2088 00ea 0A21     		movs	r1, #10
+ 2089              	.LVL239:
+ 210:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(114,53);
+ 2090              		.loc 1 210 9 is_stmt 0 view .LVU425
+ 2091 00ec 7220     		movs	r0, #114
+ 2092              	.LVL240:
+ 210:Core/Src/OledDelayBars.c ****         ssd1306_SetCursor(114,53);
+ 2093              		.loc 1 210 9 view .LVU426
+ 2094 00ee FFF7FEFF 		bl	ssd1306_DrawRectangle
+ 2095              	.LVL241:
+ 211:Core/Src/OledDelayBars.c ****         ssd1306_WriteString("R2", Font_7x10, Black);
+ 2096              		.loc 1 211 9 is_stmt 1 view .LVU427
+ 2097 00f2 3521     		movs	r1, #53
+ 2098 00f4 7220     		movs	r0, #114
+ 2099 00f6 FFF7FEFF 		bl	ssd1306_SetCursor
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 44
+
+
+ 2100              	.LVL242:
+ 212:Core/Src/OledDelayBars.c ****         for(float y = 1.0;y < 40;y++){
+ 2101              		.loc 1 212 9 view .LVU428
+ 2102 00fa 144A     		ldr	r2, .L95
+ 2103 00fc 2346     		mov	r3, r4
+ 2104 00fe 06CA     		ldm	r2, {r1, r2}
+ 2105 0100 1348     		ldr	r0, .L95+4
+ 2106 0102 FFF7FEFF 		bl	ssd1306_WriteString
+ 2107              	.LVL243:
+ 213:Core/Src/OledDelayBars.c ****             ssd1306_Line(114+1,50-y,124-1,50-y,Black);
+ 2108              		.loc 1 213 9 view .LVU429
+ 2109              	.LBB41:
+ 213:Core/Src/OledDelayBars.c ****             ssd1306_Line(114+1,50-y,124-1,50-y,Black);
+ 2110              		.loc 1 213 13 view .LVU430
+ 213:Core/Src/OledDelayBars.c ****             ssd1306_Line(114+1,50-y,124-1,50-y,Black);
+ 2111              		.loc 1 213 19 is_stmt 0 view .LVU431
+ 2112 0106 B7EE008A 		vmov.f32	s16, #1.0e+0
+ 213:Core/Src/OledDelayBars.c ****             ssd1306_Line(114+1,50-y,124-1,50-y,Black);
+ 2113              		.loc 1 213 9 view .LVU432
+ 2114 010a 14E0     		b	.L92
+ 2115              	.LVL244:
+ 2116              	.L93:
+ 214:Core/Src/OledDelayBars.c ****         }
+ 2117              		.loc 1 214 13 is_stmt 1 discriminator 3 view .LVU433
+ 214:Core/Src/OledDelayBars.c ****         }
+ 2118              		.loc 1 214 34 is_stmt 0 discriminator 3 view .LVU434
+ 2119 010c DFED117A 		vldr.32	s15, .L95+8
+ 2120 0110 77EEC87A 		vsub.f32	s15, s15, s16
+ 214:Core/Src/OledDelayBars.c ****         }
+ 2121              		.loc 1 214 13 discriminator 3 view .LVU435
+ 2122 0114 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 2123 0118 CDED027A 		vstr.32	s15, [sp, #8]	@ int
+ 2124 011c 9DF80810 		ldrb	r1, [sp, #8]	@ zero_extendqisi2
+ 2125 0120 0023     		movs	r3, #0
+ 2126 0122 0093     		str	r3, [sp]
+ 2127 0124 0B46     		mov	r3, r1
+ 2128 0126 7B22     		movs	r2, #123
+ 2129 0128 7320     		movs	r0, #115
+ 2130 012a FFF7FEFF 		bl	ssd1306_Line
+ 2131              	.LVL245:
+ 213:Core/Src/OledDelayBars.c ****             ssd1306_Line(114+1,50-y,124-1,50-y,Black);
+ 2132              		.loc 1 213 35 is_stmt 1 discriminator 3 view .LVU436
+ 2133 012e F7EE007A 		vmov.f32	s15, #1.0e+0
+ 2134 0132 38EE278A 		vadd.f32	s16, s16, s15
+ 2135              	.LVL246:
+ 2136              	.L92:
+ 213:Core/Src/OledDelayBars.c ****             ssd1306_Line(114+1,50-y,124-1,50-y,Black);
+ 2137              		.loc 1 213 29 discriminator 1 view .LVU437
+ 2138 0136 DFED087A 		vldr.32	s15, .L95+12
+ 2139 013a B4EEE78A 		vcmpe.f32	s16, s15
+ 2140 013e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 2141 0142 E3D4     		bmi	.L93
+ 2142              	.LBE41:
+ 216:Core/Src/OledDelayBars.c ****     }
+ 2143              		.loc 1 216 9 view .LVU438
+ 2144 0144 FFF7FEFF 		bl	ssd1306_UpdateScreen
+ 2145              	.LVL247:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 45
+
+
+ 2146              		.loc 1 218 1 is_stmt 0 view .LVU439
+ 2147 0148 C7E7     		b	.L85
+ 2148              	.L96:
+ 2149 014a 00BF     		.align	2
+ 2150              	.L95:
+ 2151 014c 00000000 		.word	Font_7x10
+ 2152 0150 00000000 		.word	.LC7
+ 2153 0154 00004842 		.word	1112014848
+ 2154 0158 00002042 		.word	1109393408
+ 2155 015c 00004440 		.word	1078198272
+ 2156 0160 00005940 		.word	1079574528
+ 2157              		.cfi_endproc
+ 2158              	.LFE327:
+ 2160              		.section	.text.Show_All_DelayBars,"ax",%progbits
+ 2161              		.align	1
+ 2162              		.global	Show_All_DelayBars
+ 2163              		.syntax unified
+ 2164              		.thumb
+ 2165              		.thumb_func
+ 2167              	Show_All_DelayBars:
+ 2168              	.LVL248:
+ 2169              	.LFB328:
+ 219:Core/Src/OledDelayBars.c **** 
+ 220:Core/Src/OledDelayBars.c **** void Show_All_DelayBars(bool state, uint8_t percent){
+ 2170              		.loc 1 220 53 is_stmt 1 view -0
+ 2171              		.cfi_startproc
+ 2172              		@ args = 0, pretend = 0, frame = 0
+ 2173              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2174              		.loc 1 220 53 is_stmt 0 view .LVU441
+ 2175 0000 10B5     		push	{r4, lr}
+ 2176              	.LCFI48:
+ 2177              		.cfi_def_cfa_offset 8
+ 2178              		.cfi_offset 4, -8
+ 2179              		.cfi_offset 14, -4
+ 221:Core/Src/OledDelayBars.c ****     if(state){
+ 2180              		.loc 1 221 5 is_stmt 1 view .LVU442
+ 2181              		.loc 1 221 7 is_stmt 0 view .LVU443
+ 2182 0002 00B3     		cbz	r0, .L98
+ 2183 0004 0C46     		mov	r4, r1
+ 222:Core/Src/OledDelayBars.c ****         Show_G1Bar(true, percent);
+ 2184              		.loc 1 222 9 is_stmt 1 view .LVU444
+ 2185 0006 0120     		movs	r0, #1
+ 2186              	.LVL249:
+ 2187              		.loc 1 222 9 is_stmt 0 view .LVU445
+ 2188 0008 FFF7FEFF 		bl	Show_G1Bar
+ 2189              	.LVL250:
+ 223:Core/Src/OledDelayBars.c ****         Show_G2Bar(true, percent);
+ 2190              		.loc 1 223 9 is_stmt 1 view .LVU446
+ 2191 000c 2146     		mov	r1, r4
+ 2192 000e 0120     		movs	r0, #1
+ 2193 0010 FFF7FEFF 		bl	Show_G2Bar
+ 2194              	.LVL251:
+ 224:Core/Src/OledDelayBars.c ****         Show_P1Bar(true, percent);
+ 2195              		.loc 1 224 9 view .LVU447
+ 2196 0014 2146     		mov	r1, r4
+ 2197 0016 0120     		movs	r0, #1
+ 2198 0018 FFF7FEFF 		bl	Show_P1Bar
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 46
+
+
+ 2199              	.LVL252:
+ 225:Core/Src/OledDelayBars.c ****         Show_P2Bar(true, percent);
+ 2200              		.loc 1 225 9 view .LVU448
+ 2201 001c 2146     		mov	r1, r4
+ 2202 001e 0120     		movs	r0, #1
+ 2203 0020 FFF7FEFF 		bl	Show_P2Bar
+ 2204              	.LVL253:
+ 226:Core/Src/OledDelayBars.c ****         Show_R1Bar(true, percent);
+ 2205              		.loc 1 226 9 view .LVU449
+ 2206 0024 2146     		mov	r1, r4
+ 2207 0026 0120     		movs	r0, #1
+ 2208 0028 FFF7FEFF 		bl	Show_R1Bar
+ 2209              	.LVL254:
+ 227:Core/Src/OledDelayBars.c ****         Show_R2Bar(true, percent);
+ 2210              		.loc 1 227 9 view .LVU450
+ 2211 002c 2146     		mov	r1, r4
+ 2212 002e 0120     		movs	r0, #1
+ 2213 0030 FFF7FEFF 		bl	Show_R2Bar
+ 2214              	.LVL255:
+ 228:Core/Src/OledDelayBars.c ****         Show_W1Bar(true, percent);
+ 2215              		.loc 1 228 9 view .LVU451
+ 2216 0034 2146     		mov	r1, r4
+ 2217 0036 0120     		movs	r0, #1
+ 2218 0038 FFF7FEFF 		bl	Show_W1Bar
+ 2219              	.LVL256:
+ 229:Core/Src/OledDelayBars.c ****         Show_W2Bar(true, percent);
+ 2220              		.loc 1 229 9 view .LVU452
+ 2221 003c 2146     		mov	r1, r4
+ 2222 003e 0120     		movs	r0, #1
+ 2223 0040 FFF7FEFF 		bl	Show_W2Bar
+ 2224              	.LVL257:
+ 2225              	.L97:
+ 230:Core/Src/OledDelayBars.c ****     }else{
+ 231:Core/Src/OledDelayBars.c ****         Show_G1Bar(false, 0);
+ 232:Core/Src/OledDelayBars.c ****         Show_G2Bar(false, 0);
+ 233:Core/Src/OledDelayBars.c ****         Show_P1Bar(false, 0);
+ 234:Core/Src/OledDelayBars.c ****         Show_P2Bar(false, 0);
+ 235:Core/Src/OledDelayBars.c ****         Show_R1Bar(false, 0);
+ 236:Core/Src/OledDelayBars.c ****         Show_R2Bar(false, 0);
+ 237:Core/Src/OledDelayBars.c ****         Show_W1Bar(false, 0);
+ 238:Core/Src/OledDelayBars.c ****         Show_W2Bar(false, 0);
+ 239:Core/Src/OledDelayBars.c ****     }
+ 240:Core/Src/OledDelayBars.c **** }...
+ 2226              		.loc 1 240 1 is_stmt 0 view .LVU453
+ 2227 0044 10BD     		pop	{r4, pc}
+ 2228              	.LVL258:
+ 2229              	.L98:
+ 231:Core/Src/OledDelayBars.c ****         Show_G1Bar(false, 0);
+ 2230              		.loc 1 231 9 is_stmt 1 view .LVU454
+ 2231 0046 0021     		movs	r1, #0
+ 2232              	.LVL259:
+ 231:Core/Src/OledDelayBars.c ****         Show_G1Bar(false, 0);
+ 2233              		.loc 1 231 9 is_stmt 0 view .LVU455
+ 2234 0048 0846     		mov	r0, r1
+ 2235              	.LVL260:
+ 231:Core/Src/OledDelayBars.c ****         Show_G1Bar(false, 0);
+ 2236              		.loc 1 231 9 view .LVU456
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 47
+
+
+ 2237 004a FFF7FEFF 		bl	Show_G1Bar
+ 2238              	.LVL261:
+ 232:Core/Src/OledDelayBars.c ****         Show_G2Bar(false, 0);
+ 2239              		.loc 1 232 9 is_stmt 1 view .LVU457
+ 2240 004e 0021     		movs	r1, #0
+ 2241 0050 0846     		mov	r0, r1
+ 2242 0052 FFF7FEFF 		bl	Show_G2Bar
+ 2243              	.LVL262:
+ 233:Core/Src/OledDelayBars.c ****         Show_P1Bar(false, 0);
+ 2244              		.loc 1 233 9 view .LVU458
+ 2245 0056 0021     		movs	r1, #0
+ 2246 0058 0846     		mov	r0, r1
+ 2247 005a FFF7FEFF 		bl	Show_P1Bar
+ 2248              	.LVL263:
+ 234:Core/Src/OledDelayBars.c ****         Show_P2Bar(false, 0);
+ 2249              		.loc 1 234 9 view .LVU459
+ 2250 005e 0021     		movs	r1, #0
+ 2251 0060 0846     		mov	r0, r1
+ 2252 0062 FFF7FEFF 		bl	Show_P2Bar
+ 2253              	.LVL264:
+ 235:Core/Src/OledDelayBars.c ****         Show_R1Bar(false, 0);
+ 2254              		.loc 1 235 9 view .LVU460
+ 2255 0066 0021     		movs	r1, #0
+ 2256 0068 0846     		mov	r0, r1
+ 2257 006a FFF7FEFF 		bl	Show_R1Bar
+ 2258              	.LVL265:
+ 236:Core/Src/OledDelayBars.c ****         Show_R2Bar(false, 0);
+ 2259              		.loc 1 236 9 view .LVU461
+ 2260 006e 0021     		movs	r1, #0
+ 2261 0070 0846     		mov	r0, r1
+ 2262 0072 FFF7FEFF 		bl	Show_R2Bar
+ 2263              	.LVL266:
+ 237:Core/Src/OledDelayBars.c ****         Show_W1Bar(false, 0);
+ 2264              		.loc 1 237 9 view .LVU462
+ 2265 0076 0021     		movs	r1, #0
+ 2266 0078 0846     		mov	r0, r1
+ 2267 007a FFF7FEFF 		bl	Show_W1Bar
+ 2268              	.LVL267:
+ 238:Core/Src/OledDelayBars.c ****         Show_W2Bar(false, 0);
+ 2269              		.loc 1 238 9 view .LVU463
+ 2270 007e 0021     		movs	r1, #0
+ 2271 0080 0846     		mov	r0, r1
+ 2272 0082 FFF7FEFF 		bl	Show_W2Bar
+ 2273              	.LVL268:
+ 2274              		.loc 1 240 1 is_stmt 0 view .LVU464
+ 2275 0086 DDE7     		b	.L97
+ 2276              		.cfi_endproc
+ 2277              	.LFE328:
+ 2279              		.text
+ 2280              	.Letext0:
+ 2281              		.file 2 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
+ 2282              		.file 3 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
+ 2283              		.file 4 "Core/Inc/ssd1306_fonts.h"
+ 2284              		.file 5 "Core/Inc/ssd1306.h"
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s 			page 48
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 OledDelayBars.c
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:21     .rodata.Show_P1Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:29     .text.Show_P1Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:35     .text.Show_P1Bar:00000000 Show_P1Bar
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:282    .text.Show_P1Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:292    .rodata.Show_W1Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:296    .text.Show_W1Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:302    .text.Show_W1Bar:00000000 Show_W1Bar
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:549    .text.Show_W1Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:559    .rodata.Show_P2Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:563    .text.Show_P2Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:569    .text.Show_P2Bar:00000000 Show_P2Bar
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:816    .text.Show_P2Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:826    .rodata.Show_W2Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:830    .text.Show_W2Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:836    .text.Show_W2Bar:00000000 Show_W2Bar
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1083   .text.Show_W2Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1093   .rodata.Show_G1Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1097   .text.Show_G1Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1103   .text.Show_G1Bar:00000000 Show_G1Bar
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1350   .text.Show_G1Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1360   .rodata.Show_R1Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1364   .text.Show_R1Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1370   .text.Show_R1Bar:00000000 Show_R1Bar
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1617   .text.Show_R1Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1627   .rodata.Show_G2Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1631   .text.Show_G2Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1637   .text.Show_G2Bar:00000000 Show_G2Bar
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1884   .text.Show_G2Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1894   .rodata.Show_R2Bar.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1898   .text.Show_R2Bar:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:1904   .text.Show_R2Bar:00000000 Show_R2Bar
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:2151   .text.Show_R2Bar:0000014c $d
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:2161   .text.Show_All_DelayBars:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cceiw8zl.s:2167   .text.Show_All_DelayBars:00000000 Show_All_DelayBars
+
+UNDEFINED SYMBOLS
+__aeabi_f2d
+__aeabi_ddiv
+__aeabi_dmul
+__aeabi_d2f
+ssd1306_DrawRectangle
+ssd1306_SetCursor
+ssd1306_WriteString
+ssd1306_Line
+ssd1306_UpdateScreen
+Font_7x10

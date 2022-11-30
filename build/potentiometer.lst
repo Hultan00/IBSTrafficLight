@@ -1,0 +1,231 @@
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5mE04y.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"potentiometer.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/potentiometer.c"
+  20              		.global	__aeabi_i2d
+  21              		.global	__aeabi_dmul
+  22              		.global	__aeabi_d2f
+  23              		.section	.text.getPotiPercent,"ax",%progbits
+  24              		.align	1
+  25              		.global	getPotiPercent
+  26              		.syntax unified
+  27              		.thumb
+  28              		.thumb_func
+  30              	getPotiPercent:
+  31              	.LFB320:
+   1:Core/Src/potentiometer.c **** #include <stdio.h>
+   2:Core/Src/potentiometer.c **** #include <stdlib.h>
+   3:Core/Src/potentiometer.c **** #include <stdbool.h>
+   4:Core/Src/potentiometer.c **** 
+   5:Core/Src/potentiometer.c **** #include "main.h"
+   6:Core/Src/potentiometer.c **** #include "stm32l4xx_it.h"
+   7:Core/Src/potentiometer.c **** #include "stm32l4xx_hal_conf.h"
+   8:Core/Src/potentiometer.c **** #include "adc.h"
+   9:Core/Src/potentiometer.c **** #include "potentiometer.h"
+  10:Core/Src/potentiometer.c **** 
+  11:Core/Src/potentiometer.c **** uint8_t getPotiPercent(){
+  32              		.loc 1 11 25 view -0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 8
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36 0000 30B5     		push	{r4, r5, lr}
+  37              	.LCFI0:
+  38              		.cfi_def_cfa_offset 12
+  39              		.cfi_offset 4, -12
+  40              		.cfi_offset 5, -8
+  41              		.cfi_offset 14, -4
+  42 0002 83B0     		sub	sp, sp, #12
+  43              	.LCFI1:
+  44              		.cfi_def_cfa_offset 24
+  12:Core/Src/potentiometer.c ****     HAL_ADC_Start(&hadc1);
+  45              		.loc 1 12 5 view .LVU1
+  46 0004 134C     		ldr	r4, .L3
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5mE04y.s 			page 2
+
+
+  47 0006 2046     		mov	r0, r4
+  48 0008 FFF7FEFF 		bl	HAL_ADC_Start
+  49              	.LVL0:
+  13:Core/Src/potentiometer.c ****     HAL_ADC_PollForConversion(&hadc1, 1000);
+  50              		.loc 1 13 5 view .LVU2
+  51 000c 4FF47A71 		mov	r1, #1000
+  52 0010 2046     		mov	r0, r4
+  53 0012 FFF7FEFF 		bl	HAL_ADC_PollForConversion
+  54              	.LVL1:
+  14:Core/Src/potentiometer.c ****     uint16_t readValue = HAL_ADC_GetValue(&hadc1);
+  55              		.loc 1 14 5 view .LVU3
+  56              		.loc 1 14 26 is_stmt 0 view .LVU4
+  57 0016 2046     		mov	r0, r4
+  58 0018 FFF7FEFF 		bl	HAL_ADC_GetValue
+  59              	.LVL2:
+  60 001c 0546     		mov	r5, r0
+  61              	.LVL3:
+  15:Core/Src/potentiometer.c ****     HAL_ADC_Stop(&hadc1);
+  62              		.loc 1 15 5 is_stmt 1 view .LVU5
+  63 001e 2046     		mov	r0, r4
+  64 0020 FFF7FEFF 		bl	HAL_ADC_Stop
+  65              	.LVL4:
+  16:Core/Src/potentiometer.c ****     float calc = (readValue/4096.0)*101.0;
+  66              		.loc 1 16 5 view .LVU6
+  67              		.loc 1 16 28 is_stmt 0 view .LVU7
+  68 0024 A8B2     		uxth	r0, r5
+  69 0026 FFF7FEFF 		bl	__aeabi_i2d
+  70              	.LVL5:
+  71 002a 0022     		movs	r2, #0
+  72 002c 0A4B     		ldr	r3, .L3+4
+  73 002e FFF7FEFF 		bl	__aeabi_dmul
+  74              	.LVL6:
+  75              		.loc 1 16 36 view .LVU8
+  76 0032 0022     		movs	r2, #0
+  77 0034 094B     		ldr	r3, .L3+8
+  78 0036 FFF7FEFF 		bl	__aeabi_dmul
+  79              	.LVL7:
+  80              		.loc 1 16 11 view .LVU9
+  81 003a FFF7FEFF 		bl	__aeabi_d2f
+  82              	.LVL8:
+  83 003e 07EE900A 		vmov	s15, r0
+  84              	.LVL9:
+  17:Core/Src/potentiometer.c ****     uint8_t i = calc;
+  85              		.loc 1 17 5 is_stmt 1 view .LVU10
+  86              		.loc 1 17 13 is_stmt 0 view .LVU11
+  87 0042 FCEEE77A 		vcvt.u32.f32	s15, s15
+  88 0046 CDED017A 		vstr.32	s15, [sp, #4]	@ int
+  89              	.LVL10:
+  18:Core/Src/potentiometer.c ****     return i;
+  90              		.loc 1 18 5 is_stmt 1 view .LVU12
+  19:Core/Src/potentiometer.c **** }
+  91              		.loc 1 19 1 is_stmt 0 view .LVU13
+  92 004a 9DF80400 		ldrb	r0, [sp, #4]	@ zero_extendqisi2
+  93              	.LVL11:
+  94              		.loc 1 19 1 view .LVU14
+  95 004e 03B0     		add	sp, sp, #12
+  96              	.LCFI2:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5mE04y.s 			page 3
+
+
+  97              		.cfi_def_cfa_offset 12
+  98              		@ sp needed
+  99 0050 30BD     		pop	{r4, r5, pc}
+ 100              	.LVL12:
+ 101              	.L4:
+ 102              		.loc 1 19 1 view .LVU15
+ 103 0052 00BF     		.align	2
+ 104              	.L3:
+ 105 0054 00000000 		.word	hadc1
+ 106 0058 0000303F 		.word	1060110336
+ 107 005c 00405940 		.word	1079590912
+ 108              		.cfi_endproc
+ 109              	.LFE320:
+ 111              		.section	.text.getPotiValue,"ax",%progbits
+ 112              		.align	1
+ 113              		.global	getPotiValue
+ 114              		.syntax unified
+ 115              		.thumb
+ 116              		.thumb_func
+ 118              	getPotiValue:
+ 119              	.LFB321:
+  20:Core/Src/potentiometer.c **** 
+  21:Core/Src/potentiometer.c **** uint16_t getPotiValue(){
+ 120              		.loc 1 21 24 is_stmt 1 view -0
+ 121              		.cfi_startproc
+ 122              		@ args = 0, pretend = 0, frame = 0
+ 123              		@ frame_needed = 0, uses_anonymous_args = 0
+ 124 0000 38B5     		push	{r3, r4, r5, lr}
+ 125              	.LCFI3:
+ 126              		.cfi_def_cfa_offset 16
+ 127              		.cfi_offset 3, -16
+ 128              		.cfi_offset 4, -12
+ 129              		.cfi_offset 5, -8
+ 130              		.cfi_offset 14, -4
+  22:Core/Src/potentiometer.c ****     HAL_ADC_Start(&hadc1);
+ 131              		.loc 1 22 5 view .LVU17
+ 132 0002 094C     		ldr	r4, .L7
+ 133 0004 2046     		mov	r0, r4
+ 134 0006 FFF7FEFF 		bl	HAL_ADC_Start
+ 135              	.LVL13:
+  23:Core/Src/potentiometer.c ****     HAL_ADC_PollForConversion(&hadc1, 1000);
+ 136              		.loc 1 23 5 view .LVU18
+ 137 000a 4FF47A71 		mov	r1, #1000
+ 138 000e 2046     		mov	r0, r4
+ 139 0010 FFF7FEFF 		bl	HAL_ADC_PollForConversion
+ 140              	.LVL14:
+  24:Core/Src/potentiometer.c ****     uint16_t readValue = HAL_ADC_GetValue(&hadc1);
+ 141              		.loc 1 24 5 view .LVU19
+ 142              		.loc 1 24 26 is_stmt 0 view .LVU20
+ 143 0014 2046     		mov	r0, r4
+ 144 0016 FFF7FEFF 		bl	HAL_ADC_GetValue
+ 145              	.LVL15:
+ 146              		.loc 1 24 14 view .LVU21
+ 147 001a 85B2     		uxth	r5, r0
+ 148              	.LVL16:
+  25:Core/Src/potentiometer.c ****     HAL_ADC_Stop(&hadc1);
+ 149              		.loc 1 25 5 is_stmt 1 view .LVU22
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5mE04y.s 			page 4
+
+
+ 150 001c 2046     		mov	r0, r4
+ 151 001e FFF7FEFF 		bl	HAL_ADC_Stop
+ 152              	.LVL17:
+  26:Core/Src/potentiometer.c ****     return readValue;
+ 153              		.loc 1 26 5 view .LVU23
+  27:Core/Src/potentiometer.c **** }...
+ 154              		.loc 1 27 1 is_stmt 0 view .LVU24
+ 155 0022 2846     		mov	r0, r5
+ 156 0024 38BD     		pop	{r3, r4, r5, pc}
+ 157              	.LVL18:
+ 158              	.L8:
+ 159              		.loc 1 27 1 view .LVU25
+ 160 0026 00BF     		.align	2
+ 161              	.L7:
+ 162 0028 00000000 		.word	hadc1
+ 163              		.cfi_endproc
+ 164              	.LFE321:
+ 166              		.text
+ 167              	.Letext0:
+ 168              		.file 2 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
+ 169              		.file 3 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
+ 170              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h"
+ 171              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h"
+ 172              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 173              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 174              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_adc.h"
+ 175              		.file 9 "Core/Inc/adc.h"
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5mE04y.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 potentiometer.c
+C:\Users\ehgre\AppData\Local\Temp\cc5mE04y.s:24     .text.getPotiPercent:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc5mE04y.s:30     .text.getPotiPercent:00000000 getPotiPercent
+C:\Users\ehgre\AppData\Local\Temp\cc5mE04y.s:105    .text.getPotiPercent:00000054 $d
+C:\Users\ehgre\AppData\Local\Temp\cc5mE04y.s:112    .text.getPotiValue:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc5mE04y.s:118    .text.getPotiValue:00000000 getPotiValue
+C:\Users\ehgre\AppData\Local\Temp\cc5mE04y.s:162    .text.getPotiValue:00000028 $d
+
+UNDEFINED SYMBOLS
+__aeabi_i2d
+__aeabi_dmul
+__aeabi_d2f
+HAL_ADC_Start
+HAL_ADC_PollForConversion
+HAL_ADC_GetValue
+HAL_ADC_Stop
+hadc1

@@ -1,0 +1,603 @@
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"shift_register.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "Core/Src/shift_register.c"
+  20              		.section	.text.STCP_ON,"ax",%progbits
+  21              		.align	1
+  22              		.global	STCP_ON
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	STCP_ON:
+  28              	.LFB320:
+   1:Core/Src/shift_register.c **** #include <stdio.h>
+   2:Core/Src/shift_register.c **** #include <stdlib.h>
+   3:Core/Src/shift_register.c **** #include <stdbool.h>
+   4:Core/Src/shift_register.c **** 
+   5:Core/Src/shift_register.c **** #include "main.h"
+   6:Core/Src/shift_register.c **** #include "stm32l4xx_it.h"
+   7:Core/Src/shift_register.c **** #include "stm32l4xx_hal_conf.h"
+   8:Core/Src/shift_register.c **** #include "spi.h"
+   9:Core/Src/shift_register.c **** #include "shift_register.h"
+  10:Core/Src/shift_register.c **** 
+  11:Core/Src/shift_register.c **** 
+  12:Core/Src/shift_register.c **** void STCP_ON(){
+  29              		.loc 1 12 15 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 3, -8
+  37              		.cfi_offset 14, -4
+  13:Core/Src/shift_register.c ****     HAL_Delay(1);
+  38              		.loc 1 13 5 view .LVU1
+  39 0002 0120     		movs	r0, #1
+  40 0004 FFF7FEFF 		bl	HAL_Delay
+  41              	.LVL0:
+  14:Core/Src/shift_register.c ****     HAL_GPIO_WritePin(STCP_595_GPIO_Port, STCP_595_Pin, GPIO_PIN_SET);
+  42              		.loc 1 14 5 view .LVU2
+  43 0008 0122     		movs	r2, #1
+  44 000a 4FF48051 		mov	r1, #4096
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s 			page 2
+
+
+  45 000e 0248     		ldr	r0, .L3
+  46 0010 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  47              	.LVL1:
+  15:Core/Src/shift_register.c **** }
+  48              		.loc 1 15 1 is_stmt 0 view .LVU3
+  49 0014 08BD     		pop	{r3, pc}
+  50              	.L4:
+  51 0016 00BF     		.align	2
+  52              	.L3:
+  53 0018 00040048 		.word	1207960576
+  54              		.cfi_endproc
+  55              	.LFE320:
+  57              		.section	.text.STCP_OFF,"ax",%progbits
+  58              		.align	1
+  59              		.global	STCP_OFF
+  60              		.syntax unified
+  61              		.thumb
+  62              		.thumb_func
+  64              	STCP_OFF:
+  65              	.LFB321:
+  16:Core/Src/shift_register.c **** 
+  17:Core/Src/shift_register.c **** void STCP_OFF(){
+  66              		.loc 1 17 16 is_stmt 1 view -0
+  67              		.cfi_startproc
+  68              		@ args = 0, pretend = 0, frame = 0
+  69              		@ frame_needed = 0, uses_anonymous_args = 0
+  70 0000 08B5     		push	{r3, lr}
+  71              	.LCFI1:
+  72              		.cfi_def_cfa_offset 8
+  73              		.cfi_offset 3, -8
+  74              		.cfi_offset 14, -4
+  18:Core/Src/shift_register.c ****     HAL_Delay(1);
+  75              		.loc 1 18 5 view .LVU5
+  76 0002 0120     		movs	r0, #1
+  77 0004 FFF7FEFF 		bl	HAL_Delay
+  78              	.LVL2:
+  19:Core/Src/shift_register.c ****     HAL_GPIO_WritePin(STCP_595_GPIO_Port, STCP_595_Pin, GPIO_PIN_RESET);
+  79              		.loc 1 19 5 view .LVU6
+  80 0008 0022     		movs	r2, #0
+  81 000a 4FF48051 		mov	r1, #4096
+  82 000e 0248     		ldr	r0, .L7
+  83 0010 FFF7FEFF 		bl	HAL_GPIO_WritePin
+  84              	.LVL3:
+  20:Core/Src/shift_register.c **** }
+  85              		.loc 1 20 1 is_stmt 0 view .LVU7
+  86 0014 08BD     		pop	{r3, pc}
+  87              	.L8:
+  88 0016 00BF     		.align	2
+  89              	.L7:
+  90 0018 00040048 		.word	1207960576
+  91              		.cfi_endproc
+  92              	.LFE321:
+  94              		.section	.text.STCP_Clock,"ax",%progbits
+  95              		.align	1
+  96              		.global	STCP_Clock
+  97              		.syntax unified
+  98              		.thumb
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s 			page 3
+
+
+  99              		.thumb_func
+ 101              	STCP_Clock:
+ 102              	.LFB322:
+  21:Core/Src/shift_register.c **** 
+  22:Core/Src/shift_register.c **** void STCP_Clock(){
+ 103              		.loc 1 22 18 is_stmt 1 view -0
+ 104              		.cfi_startproc
+ 105              		@ args = 0, pretend = 0, frame = 0
+ 106              		@ frame_needed = 0, uses_anonymous_args = 0
+ 107 0000 08B5     		push	{r3, lr}
+ 108              	.LCFI2:
+ 109              		.cfi_def_cfa_offset 8
+ 110              		.cfi_offset 3, -8
+ 111              		.cfi_offset 14, -4
+  23:Core/Src/shift_register.c ****     STCP_ON();
+ 112              		.loc 1 23 5 view .LVU9
+ 113 0002 FFF7FEFF 		bl	STCP_ON
+ 114              	.LVL4:
+  24:Core/Src/shift_register.c ****     STCP_OFF();
+ 115              		.loc 1 24 5 view .LVU10
+ 116 0006 FFF7FEFF 		bl	STCP_OFF
+ 117              	.LVL5:
+  25:Core/Src/shift_register.c **** }
+ 118              		.loc 1 25 1 is_stmt 0 view .LVU11
+ 119 000a 08BD     		pop	{r3, pc}
+ 120              		.cfi_endproc
+ 121              	.LFE322:
+ 123              		.section	.text.MR_OFF,"ax",%progbits
+ 124              		.align	1
+ 125              		.global	MR_OFF
+ 126              		.syntax unified
+ 127              		.thumb
+ 128              		.thumb_func
+ 130              	MR_OFF:
+ 131              	.LFB323:
+  26:Core/Src/shift_register.c **** 
+  27:Core/Src/shift_register.c **** void MR_OFF(){
+ 132              		.loc 1 27 14 is_stmt 1 view -0
+ 133              		.cfi_startproc
+ 134              		@ args = 0, pretend = 0, frame = 0
+ 135              		@ frame_needed = 0, uses_anonymous_args = 0
+ 136 0000 08B5     		push	{r3, lr}
+ 137              	.LCFI3:
+ 138              		.cfi_def_cfa_offset 8
+ 139              		.cfi_offset 3, -8
+ 140              		.cfi_offset 14, -4
+  28:Core/Src/shift_register.c ****     HAL_Delay(1);
+ 141              		.loc 1 28 5 view .LVU13
+ 142 0002 0120     		movs	r0, #1
+ 143 0004 FFF7FEFF 		bl	HAL_Delay
+ 144              	.LVL6:
+  29:Core/Src/shift_register.c ****     HAL_GPIO_WritePin(Reset_595_GPIO_Port, STCP_595_Pin, GPIO_PIN_SET);
+ 145              		.loc 1 29 5 view .LVU14
+ 146 0008 0122     		movs	r2, #1
+ 147 000a 4FF48051 		mov	r1, #4096
+ 148 000e 4FF09040 		mov	r0, #1207959552
+ 149 0012 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s 			page 4
+
+
+ 150              	.LVL7:
+  30:Core/Src/shift_register.c **** }
+ 151              		.loc 1 30 1 is_stmt 0 view .LVU15
+ 152 0016 08BD     		pop	{r3, pc}
+ 153              		.cfi_endproc
+ 154              	.LFE323:
+ 156              		.section	.text.MR_ON,"ax",%progbits
+ 157              		.align	1
+ 158              		.global	MR_ON
+ 159              		.syntax unified
+ 160              		.thumb
+ 161              		.thumb_func
+ 163              	MR_ON:
+ 164              	.LFB324:
+  31:Core/Src/shift_register.c **** 
+  32:Core/Src/shift_register.c **** void MR_ON(){
+ 165              		.loc 1 32 13 is_stmt 1 view -0
+ 166              		.cfi_startproc
+ 167              		@ args = 0, pretend = 0, frame = 0
+ 168              		@ frame_needed = 0, uses_anonymous_args = 0
+ 169 0000 08B5     		push	{r3, lr}
+ 170              	.LCFI4:
+ 171              		.cfi_def_cfa_offset 8
+ 172              		.cfi_offset 3, -8
+ 173              		.cfi_offset 14, -4
+  33:Core/Src/shift_register.c ****     HAL_Delay(1);
+ 174              		.loc 1 33 5 view .LVU17
+ 175 0002 0120     		movs	r0, #1
+ 176 0004 FFF7FEFF 		bl	HAL_Delay
+ 177              	.LVL8:
+  34:Core/Src/shift_register.c ****     HAL_GPIO_WritePin(Reset_595_GPIO_Port, STCP_595_Pin, GPIO_PIN_RESET);
+ 178              		.loc 1 34 5 view .LVU18
+ 179 0008 0022     		movs	r2, #0
+ 180 000a 4FF48051 		mov	r1, #4096
+ 181 000e 4FF09040 		mov	r0, #1207959552
+ 182 0012 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 183              	.LVL9:
+  35:Core/Src/shift_register.c **** }
+ 184              		.loc 1 35 1 is_stmt 0 view .LVU19
+ 185 0016 08BD     		pop	{r3, pc}
+ 186              		.cfi_endproc
+ 187              	.LFE324:
+ 189              		.section	.text.EN_OFF,"ax",%progbits
+ 190              		.align	1
+ 191              		.global	EN_OFF
+ 192              		.syntax unified
+ 193              		.thumb
+ 194              		.thumb_func
+ 196              	EN_OFF:
+ 197              	.LFB325:
+  36:Core/Src/shift_register.c **** 
+  37:Core/Src/shift_register.c **** 
+  38:Core/Src/shift_register.c **** void EN_OFF(){
+ 198              		.loc 1 38 14 is_stmt 1 view -0
+ 199              		.cfi_startproc
+ 200              		@ args = 0, pretend = 0, frame = 0
+ 201              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s 			page 5
+
+
+ 202 0000 08B5     		push	{r3, lr}
+ 203              	.LCFI5:
+ 204              		.cfi_def_cfa_offset 8
+ 205              		.cfi_offset 3, -8
+ 206              		.cfi_offset 14, -4
+  39:Core/Src/shift_register.c ****     HAL_Delay(1);
+ 207              		.loc 1 39 5 view .LVU21
+ 208 0002 0120     		movs	r0, #1
+ 209 0004 FFF7FEFF 		bl	HAL_Delay
+ 210              	.LVL10:
+  40:Core/Src/shift_register.c ****     HAL_GPIO_WritePin(Enable_595_GPIO_Port, Enable_595_Pin, GPIO_PIN_SET);
+ 211              		.loc 1 40 5 view .LVU22
+ 212 0008 0122     		movs	r2, #1
+ 213 000a 8021     		movs	r1, #128
+ 214 000c 0148     		ldr	r0, .L17
+ 215 000e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 216              	.LVL11:
+  41:Core/Src/shift_register.c **** }
+ 217              		.loc 1 41 1 is_stmt 0 view .LVU23
+ 218 0012 08BD     		pop	{r3, pc}
+ 219              	.L18:
+ 220              		.align	2
+ 221              	.L17:
+ 222 0014 00080048 		.word	1207961600
+ 223              		.cfi_endproc
+ 224              	.LFE325:
+ 226              		.section	.text.EN_ON,"ax",%progbits
+ 227              		.align	1
+ 228              		.global	EN_ON
+ 229              		.syntax unified
+ 230              		.thumb
+ 231              		.thumb_func
+ 233              	EN_ON:
+ 234              	.LFB326:
+  42:Core/Src/shift_register.c **** 
+  43:Core/Src/shift_register.c **** void EN_ON(){
+ 235              		.loc 1 43 13 is_stmt 1 view -0
+ 236              		.cfi_startproc
+ 237              		@ args = 0, pretend = 0, frame = 0
+ 238              		@ frame_needed = 0, uses_anonymous_args = 0
+ 239 0000 08B5     		push	{r3, lr}
+ 240              	.LCFI6:
+ 241              		.cfi_def_cfa_offset 8
+ 242              		.cfi_offset 3, -8
+ 243              		.cfi_offset 14, -4
+  44:Core/Src/shift_register.c ****     HAL_Delay(1);
+ 244              		.loc 1 44 5 view .LVU25
+ 245 0002 0120     		movs	r0, #1
+ 246 0004 FFF7FEFF 		bl	HAL_Delay
+ 247              	.LVL12:
+  45:Core/Src/shift_register.c ****     HAL_GPIO_WritePin(Enable_595_GPIO_Port, Enable_595_Pin, GPIO_PIN_RESET);
+ 248              		.loc 1 45 5 view .LVU26
+ 249 0008 0022     		movs	r2, #0
+ 250 000a 8021     		movs	r1, #128
+ 251 000c 0148     		ldr	r0, .L21
+ 252 000e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 253              	.LVL13:
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s 			page 6
+
+
+  46:Core/Src/shift_register.c **** }
+ 254              		.loc 1 46 1 is_stmt 0 view .LVU27
+ 255 0012 08BD     		pop	{r3, pc}
+ 256              	.L22:
+ 257              		.align	2
+ 258              	.L21:
+ 259 0014 00080048 		.word	1207961600
+ 260              		.cfi_endproc
+ 261              	.LFE326:
+ 263              		.section	.text.EN_Toggle,"ax",%progbits
+ 264              		.align	1
+ 265              		.global	EN_Toggle
+ 266              		.syntax unified
+ 267              		.thumb
+ 268              		.thumb_func
+ 270              	EN_Toggle:
+ 271              	.LFB327:
+  47:Core/Src/shift_register.c **** 
+  48:Core/Src/shift_register.c **** void EN_Toggle(){
+ 272              		.loc 1 48 17 is_stmt 1 view -0
+ 273              		.cfi_startproc
+ 274              		@ args = 0, pretend = 0, frame = 0
+ 275              		@ frame_needed = 0, uses_anonymous_args = 0
+ 276 0000 08B5     		push	{r3, lr}
+ 277              	.LCFI7:
+ 278              		.cfi_def_cfa_offset 8
+ 279              		.cfi_offset 3, -8
+ 280              		.cfi_offset 14, -4
+  49:Core/Src/shift_register.c ****     HAL_GPIO_TogglePin(Enable_595_GPIO_Port, Enable_595_Pin);
+ 281              		.loc 1 49 5 view .LVU29
+ 282 0002 8021     		movs	r1, #128
+ 283 0004 0148     		ldr	r0, .L25
+ 284 0006 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 285              	.LVL14:
+  50:Core/Src/shift_register.c **** }
+ 286              		.loc 1 50 1 is_stmt 0 view .LVU30
+ 287 000a 08BD     		pop	{r3, pc}
+ 288              	.L26:
+ 289              		.align	2
+ 290              	.L25:
+ 291 000c 00080048 		.word	1207961600
+ 292              		.cfi_endproc
+ 293              	.LFE327:
+ 295              		.section	.text.SR_bitset,"ax",%progbits
+ 296              		.align	1
+ 297              		.global	SR_bitset
+ 298              		.syntax unified
+ 299              		.thumb
+ 300              		.thumb_func
+ 302              	SR_bitset:
+ 303              	.LVL15:
+ 304              	.LFB328:
+  51:Core/Src/shift_register.c **** 
+  52:Core/Src/shift_register.c **** 
+  53:Core/Src/shift_register.c **** uint32_t SR_bitset(uint32_t bits){
+ 305              		.loc 1 53 34 is_stmt 1 view -0
+ 306              		.cfi_startproc
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s 			page 7
+
+
+ 307              		@ args = 0, pretend = 0, frame = 8
+ 308              		@ frame_needed = 0, uses_anonymous_args = 0
+ 309              		.loc 1 53 34 is_stmt 0 view .LVU32
+ 310 0000 00B5     		push	{lr}
+ 311              	.LCFI8:
+ 312              		.cfi_def_cfa_offset 4
+ 313              		.cfi_offset 14, -4
+ 314 0002 83B0     		sub	sp, sp, #12
+ 315              	.LCFI9:
+ 316              		.cfi_def_cfa_offset 16
+ 317 0004 0190     		str	r0, [sp, #4]
+  54:Core/Src/shift_register.c ****     bits = bits<<8;
+ 318              		.loc 1 54 5 is_stmt 1 view .LVU33
+ 319              		.loc 1 54 16 is_stmt 0 view .LVU34
+ 320 0006 0002     		lsls	r0, r0, #8
+ 321              	.LVL16:
+ 322              		.loc 1 54 10 view .LVU35
+ 323 0008 0190     		str	r0, [sp, #4]
+ 324              	.LVL17:
+  55:Core/Src/shift_register.c **** 
+  56:Core/Src/shift_register.c ****     STCP_OFF();
+ 325              		.loc 1 56 5 is_stmt 1 view .LVU36
+ 326 000a FFF7FEFF 		bl	STCP_OFF
+ 327              	.LVL18:
+  57:Core/Src/shift_register.c **** 
+  58:Core/Src/shift_register.c ****     HAL_SPI_Transmit(&hspi3, &bits, 4, 10);
+ 328              		.loc 1 58 5 view .LVU37
+ 329 000e 0A23     		movs	r3, #10
+ 330 0010 0422     		movs	r2, #4
+ 331 0012 0DEB0201 		add	r1, sp, r2
+ 332 0016 0548     		ldr	r0, .L29
+ 333 0018 FFF7FEFF 		bl	HAL_SPI_Transmit
+ 334              	.LVL19:
+  59:Core/Src/shift_register.c **** 
+  60:Core/Src/shift_register.c ****     STCP_Clock();
+ 335              		.loc 1 60 5 view .LVU38
+ 336 001c FFF7FEFF 		bl	STCP_Clock
+ 337              	.LVL20:
+  61:Core/Src/shift_register.c **** 
+  62:Core/Src/shift_register.c ****     return bits>>8;
+ 338              		.loc 1 62 5 view .LVU39
+  63:Core/Src/shift_register.c **** }
+ 339              		.loc 1 63 1 is_stmt 0 view .LVU40
+ 340 0020 0198     		ldr	r0, [sp, #4]
+ 341 0022 000A     		lsrs	r0, r0, #8
+ 342 0024 03B0     		add	sp, sp, #12
+ 343              	.LCFI10:
+ 344              		.cfi_def_cfa_offset 4
+ 345              		@ sp needed
+ 346 0026 5DF804FB 		ldr	pc, [sp], #4
+ 347              	.L30:
+ 348 002a 00BF     		.align	2
+ 349              	.L29:
+ 350 002c 00000000 		.word	hspi3
+ 351              		.cfi_endproc
+ 352              	.LFE328:
+ 354              		.section	.text.SR_bitadj,"ax",%progbits
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s 			page 8
+
+
+ 355              		.align	1
+ 356              		.global	SR_bitadj
+ 357              		.syntax unified
+ 358              		.thumb
+ 359              		.thumb_func
+ 361              	SR_bitadj:
+ 362              	.LVL21:
+ 363              	.LFB329:
+  64:Core/Src/shift_register.c **** 
+  65:Core/Src/shift_register.c **** uint32_t SR_bitadj(uint32_t bits, uint32_t newbits, uint32_t bitmask){
+ 364              		.loc 1 65 70 is_stmt 1 view -0
+ 365              		.cfi_startproc
+ 366              		@ args = 0, pretend = 0, frame = 8
+ 367              		@ frame_needed = 0, uses_anonymous_args = 0
+ 368              		.loc 1 65 70 is_stmt 0 view .LVU42
+ 369 0000 00B5     		push	{lr}
+ 370              	.LCFI11:
+ 371              		.cfi_def_cfa_offset 4
+ 372              		.cfi_offset 14, -4
+ 373 0002 83B0     		sub	sp, sp, #12
+ 374              	.LCFI12:
+ 375              		.cfi_def_cfa_offset 16
+ 376 0004 0190     		str	r0, [sp, #4]
+  66:Core/Src/shift_register.c ****     bits = bits<<8;
+ 377              		.loc 1 66 5 is_stmt 1 view .LVU43
+ 378              		.loc 1 66 16 is_stmt 0 view .LVU44
+ 379 0006 0002     		lsls	r0, r0, #8
+ 380              	.LVL22:
+ 381              		.loc 1 66 10 view .LVU45
+ 382 0008 0190     		str	r0, [sp, #4]
+ 383              	.LVL23:
+  67:Core/Src/shift_register.c ****     uint32_t cpyBits = bits;
+ 384              		.loc 1 67 5 is_stmt 1 view .LVU46
+  68:Core/Src/shift_register.c ****     newbits = newbits<<8;
+ 385              		.loc 1 68 5 view .LVU47
+ 386              		.loc 1 68 13 is_stmt 0 view .LVU48
+ 387 000a 0902     		lsls	r1, r1, #8
+ 388              	.LVL24:
+  69:Core/Src/shift_register.c ****     bitmask = bitmask<<8;
+ 389              		.loc 1 69 5 is_stmt 1 view .LVU49
+  70:Core/Src/shift_register.c ****     bitmask = ~bitmask;
+ 390              		.loc 1 70 5 view .LVU50
+  71:Core/Src/shift_register.c **** 
+  72:Core/Src/shift_register.c ****     bits = (bits & bitmask);
+ 391              		.loc 1 72 5 view .LVU51
+ 392              		.loc 1 72 18 is_stmt 0 view .LVU52
+ 393 000c 20EA0223 		bic	r3, r0, r2, lsl #8
+ 394              		.loc 1 72 10 view .LVU53
+ 395 0010 0193     		str	r3, [sp, #4]
+  73:Core/Src/shift_register.c **** 
+  74:Core/Src/shift_register.c ****     bitmask = ~bitmask;
+ 396              		.loc 1 74 5 is_stmt 1 view .LVU54
+ 397              	.LVL25:
+  75:Core/Src/shift_register.c **** 
+  76:Core/Src/shift_register.c ****     bits = bits + (newbits & bitmask);
+ 398              		.loc 1 76 5 view .LVU55
+ 399              		.loc 1 76 28 is_stmt 0 view .LVU56
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s 			page 9
+
+
+ 400 0012 01EA0221 		and	r1, r1, r2, lsl #8
+ 401              	.LVL26:
+ 402              		.loc 1 76 17 view .LVU57
+ 403 0016 0B44     		add	r3, r3, r1
+ 404              		.loc 1 76 10 view .LVU58
+ 405 0018 0193     		str	r3, [sp, #4]
+  77:Core/Src/shift_register.c **** 
+  78:Core/Src/shift_register.c ****     if(bits == cpyBits){
+ 406              		.loc 1 78 5 is_stmt 1 view .LVU59
+ 407              		.loc 1 78 7 is_stmt 0 view .LVU60
+ 408 001a 9842     		cmp	r0, r3
+ 409 001c 0FD0     		beq	.L35
+  79:Core/Src/shift_register.c ****         return bits>>8;
+  80:Core/Src/shift_register.c ****     }
+  81:Core/Src/shift_register.c **** 
+  82:Core/Src/shift_register.c ****     STCP_OFF();
+ 410              		.loc 1 82 5 is_stmt 1 view .LVU61
+ 411 001e FFF7FEFF 		bl	STCP_OFF
+ 412              	.LVL27:
+  83:Core/Src/shift_register.c **** 
+  84:Core/Src/shift_register.c ****     HAL_SPI_Transmit(&hspi3, &bits, 4, 1);
+ 413              		.loc 1 84 5 view .LVU62
+ 414 0022 0123     		movs	r3, #1
+ 415 0024 0422     		movs	r2, #4
+ 416 0026 0DEB0201 		add	r1, sp, r2
+ 417 002a 0648     		ldr	r0, .L36
+ 418 002c FFF7FEFF 		bl	HAL_SPI_Transmit
+ 419              	.LVL28:
+  85:Core/Src/shift_register.c **** 
+  86:Core/Src/shift_register.c ****     STCP_Clock();
+ 420              		.loc 1 86 5 view .LVU63
+ 421 0030 FFF7FEFF 		bl	STCP_Clock
+ 422              	.LVL29:
+  87:Core/Src/shift_register.c **** 
+  88:Core/Src/shift_register.c ****     return bits>>8;
+ 423              		.loc 1 88 5 view .LVU64
+ 424              		.loc 1 88 16 is_stmt 0 view .LVU65
+ 425 0034 0198     		ldr	r0, [sp, #4]
+ 426 0036 000A     		lsrs	r0, r0, #8
+ 427              	.L31:
+  89:Core/Src/shift_register.c **** }...
+ 428              		.loc 1 89 1 view .LVU66
+ 429 0038 03B0     		add	sp, sp, #12
+ 430              	.LCFI13:
+ 431              		.cfi_remember_state
+ 432              		.cfi_def_cfa_offset 4
+ 433              		@ sp needed
+ 434 003a 5DF804FB 		ldr	pc, [sp], #4
+ 435              	.LVL30:
+ 436              	.L35:
+ 437              	.LCFI14:
+ 438              		.cfi_restore_state
+  79:Core/Src/shift_register.c ****         return bits>>8;
+ 439              		.loc 1 79 9 is_stmt 1 view .LVU67
+  79:Core/Src/shift_register.c ****         return bits>>8;
+ 440              		.loc 1 79 20 is_stmt 0 view .LVU68
+ 441 003e 180A     		lsrs	r0, r3, #8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s 			page 10
+
+
+ 442              	.LVL31:
+  79:Core/Src/shift_register.c ****         return bits>>8;
+ 443              		.loc 1 79 20 view .LVU69
+ 444 0040 FAE7     		b	.L31
+ 445              	.L37:
+ 446 0042 00BF     		.align	2
+ 447              	.L36:
+ 448 0044 00000000 		.word	hspi3
+ 449              		.cfi_endproc
+ 450              	.LFE329:
+ 452              		.text
+ 453              	.Letext0:
+ 454              		.file 2 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
+ 455              		.file 3 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
+ 456              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h"
+ 457              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 458              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 459              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 460              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h"
+ 461              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ 462              		.file 10 "Core/Inc/spi.h"
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 shift_register.c
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:21     .text.STCP_ON:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:27     .text.STCP_ON:00000000 STCP_ON
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:53     .text.STCP_ON:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:58     .text.STCP_OFF:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:64     .text.STCP_OFF:00000000 STCP_OFF
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:90     .text.STCP_OFF:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:95     .text.STCP_Clock:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:101    .text.STCP_Clock:00000000 STCP_Clock
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:124    .text.MR_OFF:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:130    .text.MR_OFF:00000000 MR_OFF
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:157    .text.MR_ON:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:163    .text.MR_ON:00000000 MR_ON
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:190    .text.EN_OFF:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:196    .text.EN_OFF:00000000 EN_OFF
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:222    .text.EN_OFF:00000014 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:227    .text.EN_ON:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:233    .text.EN_ON:00000000 EN_ON
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:259    .text.EN_ON:00000014 $d
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:264    .text.EN_Toggle:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:270    .text.EN_Toggle:00000000 EN_Toggle
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:291    .text.EN_Toggle:0000000c $d
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:296    .text.SR_bitset:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:302    .text.SR_bitset:00000000 SR_bitset
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:350    .text.SR_bitset:0000002c $d
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:355    .text.SR_bitadj:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:361    .text.SR_bitadj:00000000 SR_bitadj
+C:\Users\ehgre\AppData\Local\Temp\ccBNKW1y.s:448    .text.SR_bitadj:00000044 $d
+
+UNDEFINED SYMBOLS
+HAL_Delay
+HAL_GPIO_WritePin
+HAL_GPIO_TogglePin
+HAL_SPI_Transmit
+hspi3
