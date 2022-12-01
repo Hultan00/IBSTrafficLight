@@ -28,12 +28,16 @@ uint32_t PL1_Red(uint32_t bits, bool activated);
 
 uint32_t PL1_Blue(uint32_t bits, bool activated);
 
+uint32_t PL1_Blue_Toggle(uint32_t bits);
+
 
 uint32_t PL2_Green(uint32_t bits, bool activated);
 
 uint32_t PL2_Red(uint32_t bits, bool activated);
 
 uint32_t PL2_Blue(uint32_t bits, bool activated);
+
+uint32_t PL2_Blue_Toggle(uint32_t bits);
 
 
 uint32_t TL1_Red(uint32_t bits, bool activated);
@@ -64,26 +68,25 @@ uint32_t TL4_Yellow(uint32_t bits, bool activated);
 uint32_t TL4_Green(uint32_t bits, bool activated);
 
 
-uint32_t TL1_R2G(uint32_t bits);
+bool TL1_isGreen(uint32_t bits);
 
-uint32_t TL2_R2G(uint32_t bits);
+bool TL1_isRed(uint32_t bits);
 
+bool TL2_isGreen(uint32_t bits);
 
-uint32_t TL3_R2G(uint32_t bits);
+bool TL2_isRed(uint32_t bits);
 
-uint32_t TL4_R2G(uint32_t bits);
+bool TL3_isGreen(uint32_t bits);
 
+bool TL3_isRed(uint32_t bits);
 
-uint32_t TL1_G2R(uint32_t bits);
+bool TL4_isGreen(uint32_t bits);
 
-uint32_t TL2_G2R(uint32_t bits);
-
-
-uint32_t TL3_G2R(uint32_t bits);
-
-uint32_t TL4_G2R(uint32_t bits);
+bool TL4_isRed(uint32_t bits);
 
 
 uint32_t Init_Task1(uint32_t bits);
+
+uint32_t Init_Task2(uint32_t bits);
 
 #endif //LIGHTLOGIC_H_

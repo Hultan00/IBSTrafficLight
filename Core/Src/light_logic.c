@@ -189,156 +189,60 @@ uint32_t TL3_Green(uint32_t bits, bool activated){
     return bits;
 }
 
-uint32_t TL1_R2G(uint32_t bits){
-    bits = TL1_Green(bits, false);
-    bits = TL1_Red(bits, true);
-    bits = TL1_Yellow(bits, false);
-
-    HAL_Delay(1000);
-
-    bits = TL1_Green(bits, false);
-    bits = TL1_Red(bits, true);
-    bits = TL1_Yellow(bits, true);
-
-    HAL_Delay(1000);
-
-    bits = TL1_Green(bits, true);
-    bits = TL1_Red(bits, false);
-    bits = TL1_Yellow(bits, false);
-    return bits;
+bool TL1_isGreen(uint32_t bits){
+    if((bits&LED3) > 0){
+        return true;
+    }
+    return false;
 }
 
-uint32_t TL1_G2R(uint32_t bits){
-    bits = TL1_Green(bits, true);
-    bits = TL1_Red(bits, false);
-    bits = TL1_Yellow(bits, false);
-
-    HAL_Delay(1000);
-
-    bits = TL1_Green(bits, false);
-    bits = TL1_Red(bits, false);
-    bits = TL1_Yellow(bits, true);
-
-    HAL_Delay(1000);
-
-    bits = TL1_Green(bits, false);
-    bits = TL1_Red(bits, true);
-    bits = TL1_Yellow(bits, false);
-    return bits;
+bool TL1_isRed(uint32_t bits){
+    if((bits&LED1) > 0){
+        return true;
+    }
+    return false;
 }
 
-uint32_t TL4_R2G(uint32_t bits){
-    bits = TL2_Green(bits, false);
-    bits = TL2_Red(bits, true);
-    bits = TL2_Yellow(bits, false);
-
-    HAL_Delay(1000);
-
-    bits = TL2_Green(bits, false);
-    bits = TL2_Red(bits, true);
-    bits = TL2_Yellow(bits, true);
-
-    HAL_Delay(1000);
-
-    bits = TL2_Green(bits, true);
-    bits = TL2_Red(bits, false);
-    bits = TL2_Yellow(bits, false);
-    return bits;
+bool TL2_isGreen(uint32_t bits){
+    if((bits&LED4) > 0){
+        return true;
+    }
+    return false;
 }
 
-uint32_t TL4_G2R(uint32_t bits){
-    bits = TL2_Green(bits, true);
-    bits = TL2_Red(bits, false);
-    bits = TL2_Yellow(bits, false);
-
-    HAL_Delay(1000);
-
-    bits = TL2_Green(bits, false);
-    bits = TL2_Red(bits, false);
-    bits = TL2_Yellow(bits, true);
-
-    HAL_Delay(1000);
-
-    bits = TL2_Green(bits, false);
-    bits = TL2_Red(bits, true);
-    bits = TL2_Yellow(bits, false);
-    return bits;
+bool TL2_isRed(uint32_t bits){
+    if((bits&LED6) > 0){
+        return true;
+    }
+    return false;
 }
 
-uint32_t TL2_R2G(uint32_t bits){
-    bits = TL3_Green(bits, false);
-    bits = TL3_Red(bits, true);
-    bits = TL3_Yellow(bits, false);
-
-    HAL_Delay(1000);
-
-    bits = TL3_Green(bits, false);
-    bits = TL3_Red(bits, true);
-    bits = TL3_Yellow(bits, true);
-
-    HAL_Delay(1000);
-
-    bits = TL3_Green(bits, true);
-    bits = TL3_Red(bits, false);
-    bits = TL3_Yellow(bits, false);
-    return bits;
+bool TL3_isGreen(uint32_t bits){
+    if((bits&LED9) > 0){
+        return true;
+    }
+    return false;
 }
 
-uint32_t TL2_G2R(uint32_t bits){
-    bits = TL3_Green(bits, true);
-    bits = TL3_Red(bits, false);
-    bits = TL3_Yellow(bits, false);
-
-    HAL_Delay(1000);
-
-    bits = TL3_Green(bits, false);
-    bits = TL3_Red(bits, false);
-    bits = TL3_Yellow(bits, true);
-
-    HAL_Delay(1000);
-
-    bits = TL3_Green(bits, false);
-    bits = TL3_Red(bits, true);
-    bits = TL3_Yellow(bits, false);
-    return bits;
+bool TL3_isRed(uint32_t bits){
+    if((bits&LED7) > 0){
+        return true;
+    }
+    return false;
 }
 
-uint32_t TL3_R2G(uint32_t bits){
-    bits = TL4_Green(bits, false);
-    bits = TL4_Red(bits, true);
-    bits = TL4_Yellow(bits, false);
-
-    HAL_Delay(1000);
-
-    bits = TL4_Green(bits, false);
-    bits = TL4_Red(bits, true);
-    bits = TL4_Yellow(bits, true);
-
-    HAL_Delay(1000);
-
-    bits = TL4_Green(bits, true);
-    bits = TL4_Red(bits, false);
-    bits = TL4_Yellow(bits, false);
-    return bits;
+bool TL4_isGreen(uint32_t bits){
+    if((bits&LED12) > 0){
+        return true;
+    }
+    return false;
 }
 
-uint32_t TL3_G2R(uint32_t bits){
-    bits = TL4_Green(bits, true);
-    bits = TL4_Red(bits, false);
-    bits = TL4_Yellow(bits, false);
-
-    HAL_Delay(1000);
-
-    bits = TL4_Green(bits, false);
-    bits = TL4_Red(bits, false);
-    bits = TL4_Yellow(bits, true);
-
-    HAL_Delay(1000);
-
-    bits = TL4_Green(bits, false);
-    bits = TL4_Red(bits, true);
-    bits = TL4_Yellow(bits, false);
-    return bits;
+bool TL4_isRed(uint32_t bits){
+    if((bits&LED10) > 0){
+        return true;
+    }
+    return false;
 }
 
 uint32_t Init_Task1(uint32_t bits){
@@ -349,6 +253,24 @@ uint32_t Init_Task1(uint32_t bits){
     bits = TL4_Green(bits, true);
 
     bits = PL2_Red(bits, true);
+
+    return bits;
+}
+
+uint32_t Init_Task2(uint32_t bits){
+    bits = SR_bitset(0);
+
+    bits = TL1_Red(bits, true);
+
+    bits = TL2_Green(bits, true);
+
+    bits = TL3_Red(bits, true);
+
+    bits = TL4_Green(bits, true);
+
+    bits = PL2_Red(bits, true);
+
+    bits = PL1_Red(bits, true);
 
     return bits;
 }

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
   28:Core/Src/main.c **** /* USER CODE BEGIN Includes */
   29:Core/Src/main.c **** #include "interactions.h"
   30:Core/Src/main.c **** #include "light_logic.h"
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 2
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 2
 
 
   31:Core/Src/main.c **** #include "shift_register.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
   43              	.LVL0:
   71:Core/Src/main.c **** }
   44              		.loc 1 71 1 is_stmt 0 view .LVU2
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 3
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 3
 
 
   45 000c 08BD     		pop	{r3, pc}
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
   91:Core/Src/main.c **** 		HAL_GPIO_WritePin(USR_LED1_GPIO_Port, USR_LED1_Pin, GPIO_PIN_RESET);
   92:Core/Src/main.c ****     }
   93:Core/Src/main.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 4
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 4
 
 
   94:Core/Src/main.c **** 	// Blink an LED
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
  127 0048 2622     		movs	r2, #38
  128 004a 0221     		movs	r1, #2
  129 004c 1846     		mov	r0, r3
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 5
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 5
 
 
  130 004e FFF7FEFF 		bl	ssd1306_DrawRectangle
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
  178 00a2 FFF7FEFF 		bl	ssd1306_DrawRectangle
  179              	.LVL14:
   89:Core/Src/main.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 6
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 6
 
 
  180              		.loc 1 89 5 view .LVU21
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
  127:Core/Src/main.c ****   /* Initialize all configured peripherals */
  128:Core/Src/main.c ****   MX_GPIO_Init();
  129:Core/Src/main.c ****   MX_SPI2_Init();
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 7
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 7
 
 
  130:Core/Src/main.c ****   MX_UART5_Init();
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
  184:Core/Src/main.c ****   /** Initializes the CPU, AHB and APB buses clocks
  185:Core/Src/main.c ****   */
  186:Core/Src/main.c ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 8
 
 
  187:Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
   20:Drivers/CMSIS/Include/cmsis_gcc.h ****  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   21:Drivers/CMSIS/Include/cmsis_gcc.h ****  * See the License for the specific language governing permissions and
   22:Drivers/CMSIS/Include/cmsis_gcc.h ****  * limitations under the License.
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 9
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 9
 
 
   23:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
   77:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   78:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT16_WRITE
   79:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic push
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 10
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 10
 
 
   80:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic ignored "-Wpacked"
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
  134:Drivers/CMSIS/Include/cmsis_gcc.h ****   
  135:Drivers/CMSIS/Include/cmsis_gcc.h ****   typedef struct {
  136:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t const* src;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 11
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 11
 
 
  137:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t* dest;
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
  191:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  192:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Enable IRQ Interrupts
  193:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 12
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 12
 
 
  194:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
  250              		.cfi_def_cfa_offset 4
  251              		.cfi_offset 14, -4
  252 0002 97B0     		sub	sp, sp, #92
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 13
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 13
 
 
  253              	.LCFI6:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
  173:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = 1;
  292              		.loc 1 173 3 is_stmt 1 view .LVU46
  173:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLM = 1;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 14
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 14
 
 
  293              		.loc 1 173 35 is_stmt 0 view .LVU47
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
  189:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
  329              		.loc 1 189 35 is_stmt 0 view .LVU66
  330 0056 0023     		movs	r3, #0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 15
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 15
 
 
  331 0058 0293     		str	r3, [sp, #8]
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
  375              		.thumb_func
  377              	main:
  378              	.LFB319:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 16
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 16
 
 
  106:Core/Src/main.c ****   /* USER CODE BEGIN 1 */
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
  144:Core/Src/main.c ****     /* USER CODE BEGIN 3 */
  421              		.loc 1 144 5 discriminator 1 view .LVU90
  422 002a FFF7FEFF 		bl	traffic_lights
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 17
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 17
 
 
  423              	.LVL34:
@@ -987,23 +987,23 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 1
  446              		.file 18 "Core/Inc/interactions.h"
  447              		.file 19 "Core/Inc/Traffic_Light.h"
  448              		.file 20 "<built-in>"
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s 			page 18
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s 			page 18
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s:21     .text.init:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s:27     .text.init:00000000 init
-C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s:49     .text.init:00000010 $d
-C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s:54     .text.loop:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s:60     .text.loop:00000000 loop
-C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s:193    .text.loop:000000b8 $d
-C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s:198    .text.Error_Handler:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s:204    .text.Error_Handler:00000000 Error_Handler
-C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s:236    .text.SystemClock_Config:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s:242    .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s:371    .text.main:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccSvugLf.s:377    .text.main:00000000 main
+C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s:21     .text.init:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s:27     .text.init:00000000 init
+C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s:49     .text.init:00000010 $d
+C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s:54     .text.loop:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s:60     .text.loop:00000000 loop
+C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s:193    .text.loop:000000b8 $d
+C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s:198    .text.Error_Handler:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s:204    .text.Error_Handler:00000000 Error_Handler
+C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s:236    .text.SystemClock_Config:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s:242    .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s:371    .text.main:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc2f0BVD.s:377    .text.main:00000000 main
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin
