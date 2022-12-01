@@ -19,9 +19,10 @@
 #define toggleFreq 200 //Pedestrian blue light toggle frequency
 
 //In Seconds
-#define pedestrianDelay 5 //Pedestrian on blue blink wait delay
-#define walkingDelay 10 //Pedestrian on green walk delay
-#define orangeDelay 1 // In Orange/Yellow state delay
+#define pedestrianDelay 5 //Pedestrian wait after press duration
+#define walkingDelay 10 //Pedestrian green duration
+#define orangeDelay 1 // TrafficLight Orange/Yellow state duration
+#define greenDelay 5 // trafficlight direction change when no active cars duration
 
 typedef enum{   
     PLRed,
@@ -34,9 +35,16 @@ typedef enum{
     TLGreen
 } crossing;
 
+typedef enum{   
+    G1,
+    G2
+} crossingSwitch;
+
 static crossing C1, C2, C3, C4;
 
 static crosswalk CW1, CW2;
+
+static crossingSwitch NLWaitingState;
 
 uint8_t brightness = 0;
 
@@ -46,15 +54,15 @@ uint8_t PLGreenDelay = 0;
 
 uint8_t TLYellowDelay = 0;
 
-bool toggleBrightness = false;
-
-bool toggleBlue = false;
+uint8_t NLWaitingDelay = 0;
 
 uint16_t msTick = 1;
 
 uint8_t Tick = 1;
 
 uint32_t bits = 0;
+
+bool noLaneWaiting = true;
 
 void Init_States(){
     C1 = TLRed;
@@ -63,6 +71,7 @@ void Init_States(){
     C4 = TLGreen;
     CW1 = PLRed;
     CW2 = PLRed;
+    NLWaitingState = G1;
 }
 
 void traffic_lights(){
@@ -77,6 +86,8 @@ void traffic_lights(){
 
         brightness = getPotiPercent();
 
+        noLaneWaiting = true;
+
         /* // Brightness OLED
         char strBri[20] = "Brightness ";
         char strBrValue[3] = "";
@@ -87,6 +98,38 @@ void traffic_lights(){
         ssd1306_WriteString(strBri, Font_7x10, White);
         ssd1306_UpdateScreen();
         */
+
+       if(is_car1()){
+            noLaneWaiting = false;
+       }
+
+       if(is_car2()){
+            noLaneWaiting = false;
+       }
+
+       if(is_car3()){
+            noLaneWaiting = false;
+       }
+
+       if(is_car4()){
+            noLaneWaiting = false;
+       }
+
+       if(noLaneWaiting){
+            if(NLWaitingDelay == 0){
+                NLWaitingDelay = greenDelay;
+                if(NLWaitingState == G1){
+                    Show_G1Bar(true, 0);
+                    NLWaitingState = G2;
+                }else{
+                    Show_G2Bar(true, 0);
+                    NLWaitingState = G1;
+                }
+            }
+            HAL_GPIO_WritePin(USR_LED2_GPIO_Port, USR_LED2_Pin, GPIO_PIN_SET);
+       }else{
+            HAL_GPIO_WritePin(USR_LED2_GPIO_Port, USR_LED2_Pin, GPIO_PIN_RESET);
+       }
 
        if(is_pl1() && (CW2 == PLRed)){
             CW1 = PLBlue;
@@ -294,6 +337,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
             if(TLYellowDelay > 0){
                 TLYellowDelay--;
+            }
+
+            if(NLWaitingDelay > 0){
+                NLWaitingDelay--;
+                if(NLWaitingState == G1){
+                    Show_G1Bar(true, (100 - ((NLWaitingDelay*100)/greenDelay)));
+                }else{
+                    Show_G2Bar(true, (100 - ((NLWaitingDelay*100)/greenDelay)));
+                }
             }
 
             if(PLBlueDelay > 0){
