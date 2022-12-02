@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
   14:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED1516, LED1516);
   43              		.loc 1 14 9 is_stmt 1 view .LVU4
   44              		.loc 1 14 16 is_stmt 0 view .LVU5
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 2
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 2
 
 
   45 0004 4FF48012 		mov	r2, #1048576
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
   89              		.cfi_offset 14, -4
   22:Core/Src/light_logic.c ****     if(activated){
   90              		.loc 1 22 5 is_stmt 1 view .LVU15
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 3
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 3
 
 
   91              		.loc 1 22 7 is_stmt 0 view .LVU16
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  134              		.loc 1 30 49 is_stmt 0 view .LVU27
  135 0000 08B5     		push	{r3, lr}
  136              	.LCFI2:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 4
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 4
 
 
  137              		.cfi_def_cfa_offset 8
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
   39:Core/Src/light_logic.c **** uint32_t PL1_Blue_Toggle(uint32_t bits){
  180              		.loc 1 39 40 is_stmt 1 view -0
  181              		.cfi_startproc
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 5
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 5
 
 
  182              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
   48:Core/Src/light_logic.c **** uint32_t PL2_Green(uint32_t bits, bool activated){ 
  226              		.loc 1 48 50 is_stmt 1 view -0
  227              		.cfi_startproc
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 6
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 6
 
 
  228              		@ args = 0, pretend = 0, frame = 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  271              		.thumb_func
  273              	PL2_Red:
  274              	.LVL27:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 7
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 7
 
 
  275              	.LFB325:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  316              		.section	.text.PL2_Blue,"ax",%progbits
  317              		.align	1
  318              		.global	PL2_Blue
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 8
 
 
  319              		.syntax unified
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
   72:Core/Src/light_logic.c **** }
  361              		.loc 1 72 12 is_stmt 0 view .LVU88
  362 001a F8E7     		b	.L25
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 9
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 9
 
 
  363              		.cfi_endproc
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
   81:Core/Src/light_logic.c **** }
  407              		.loc 1 81 12 is_stmt 0 view .LVU99
  408 001e F8E7     		b	.L29
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 10
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 10
 
 
  409              		.cfi_endproc
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  453              		.loc 1 88 16 view .LVU110
  454 0016 FFF7FEFF 		bl	SR_bitadj
  455              	.LVL47:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 11
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 11
 
 
   90:Core/Src/light_logic.c **** }
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  499              		.loc 1 97 16 is_stmt 0 view .LVU122
  500 0010 4FF40032 		mov	r2, #131072
  501 0014 0021     		movs	r1, #0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 12
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 12
 
 
  502              	.LVL52:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  546              	.LVL57:
  547              	.L42:
  106:Core/Src/light_logic.c ****     }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 13
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 13
 
 
  548              		.loc 1 106 9 is_stmt 1 view .LVU134
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  116:Core/Src/light_logic.c ****     }
  117:Core/Src/light_logic.c ****     return bits;
  118:Core/Src/light_logic.c **** }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 14
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 14
 
 
  594              		.loc 1 118 1 view .LVU146
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  641 0008 FFF7FEFF 		bl	SR_bitadj
  642              	.LVL68:
  643              	.L49:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 15
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 15
 
 
  123:Core/Src/light_logic.c ****     }else{
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  686              		.loc 1 131 16 is_stmt 0 view .LVU170
  687 0004 2022     		movs	r2, #32
  688 0006 1146     		mov	r1, r2
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 16
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 16
 
 
  689              	.LVL73:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  732              		.loc 1 139 5 is_stmt 1 view .LVU180
  733              		.loc 1 139 7 is_stmt 0 view .LVU181
  734 0002 29B1     		cbz	r1, .L58
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 17
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 17
 
 
  140:Core/Src/light_logic.c ****         bits = SR_bitadj(bits, LED4, LED4);
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  778              	.LCFI15:
  779              		.cfi_def_cfa_offset 8
  780              		.cfi_offset 3, -8
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 18
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 18
 
 
  781              		.cfi_offset 14, -4
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  823              		.cfi_startproc
  824              		@ args = 0, pretend = 0, frame = 0
  825              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 19
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 19
 
 
  826              		.loc 1 156 50 is_stmt 0 view .LVU205
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  870              	.LVL96:
  871              	.LFB337:
  164:Core/Src/light_logic.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 20
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 20
 
 
  165:Core/Src/light_logic.c **** uint32_t TL3_Red(uint32_t bits, bool activated){ 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  914              		.global	TL3_Yellow
  915              		.syntax unified
  916              		.thumb
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 21
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 21
 
 
  917              		.thumb_func
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  958 0016 F9E7     		b	.L73
  959              		.cfi_endproc
  960              	.LFE338:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 22
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 22
 
 
  962              		.section	.text.TL3_Green,"ax",%progbits
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  1005              	.LVL113:
  189:Core/Src/light_logic.c **** }
  1006              		.loc 1 189 5 is_stmt 1 view .LVU254
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 23
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 23
 
 
  189:Core/Src/light_logic.c **** }
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  198:Core/Src/light_logic.c **** 
  199:Core/Src/light_logic.c **** bool TL1_isRed(uint32_t bits){
  1056              		.loc 1 199 30 is_stmt 1 view -0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 24
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 24
 
 
  1057              		.cfi_startproc
@@ -1425,10 +1425,10 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  1092              		@ args = 0, pretend = 0, frame = 0
  1093              		@ frame_needed = 0, uses_anonymous_args = 0
  1094              		@ link register save eliminated.
- 207:Core/Src/light_logic.c ****     if((bits&LED4) > 0){
+ 207:Core/Src/light_logic.c ****     if((bits&LED6) > 0){
  1095              		.loc 1 207 5 view .LVU271
  1096              		.loc 1 207 7 is_stmt 0 view .LVU272
- 1097 0000 10F4807F 		tst	r0, #256
+ 1097 0000 10F4806F 		tst	r0, #1024
  1098 0004 01D1     		bne	.L89
  208:Core/Src/light_logic.c ****         return true;
  209:Core/Src/light_logic.c ****     }
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  1101              	.LVL123:
  1102              		.loc 1 210 12 view .LVU274
  1103 0008 7047     		bx	lr
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 25
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 25
 
 
  1104              	.LVL124:
@@ -1468,10 +1468,10 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  1126              		@ args = 0, pretend = 0, frame = 0
  1127              		@ frame_needed = 0, uses_anonymous_args = 0
  1128              		@ link register save eliminated.
- 214:Core/Src/light_logic.c ****     if((bits&LED6) > 0){
+ 214:Core/Src/light_logic.c ****     if((bits&LED4) > 0){
  1129              		.loc 1 214 5 view .LVU278
  1130              		.loc 1 214 7 is_stmt 0 view .LVU279
- 1131 0000 10F4806F 		tst	r0, #1024
+ 1131 0000 10F4807F 		tst	r0, #256
  1132 0004 01D1     		bne	.L92
  215:Core/Src/light_logic.c ****         return true;
  216:Core/Src/light_logic.c ****     }
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  1151              		.syntax unified
  1152              		.thumb
  1153              		.thumb_func
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 26
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 26
 
 
  1155              	TL3_isGreen:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  1200 0004 01D1     		bne	.L98
  229:Core/Src/light_logic.c ****         return true;
  230:Core/Src/light_logic.c ****     }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 27
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 27
 
 
  231:Core/Src/light_logic.c ****     return false;
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  1246 000c 7047     		bx	lr
  1247              		.cfi_endproc
  1248              	.LFE346:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 28
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 28
 
 
  1250              		.section	.text.TL4_isRed,"ax",%progbits
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  1297              		@ frame_needed = 0, uses_anonymous_args = 0
  1298              		.loc 1 248 35 is_stmt 0 view .LVU313
  1299 0000 08B5     		push	{r3, lr}
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 29
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 29
 
 
  1300              	.LCFI20:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  1344              		@ args = 0, pretend = 0, frame = 0
  1345              		@ frame_needed = 0, uses_anonymous_args = 0
  1346              		.loc 1 260 35 is_stmt 0 view .LVU326
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 30
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 30
 
 
  1347 0000 08B5     		push	{r3, lr}
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  1388              	.LVL160:
  274:Core/Src/light_logic.c **** 
  275:Core/Src/light_logic.c ****     return bits;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 31
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 31
 
 
  1389              		.loc 1 275 5 is_stmt 1 view .LVU342
@@ -1813,74 +1813,74 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 1
  1398              		.file 3 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
  1399              		.file 4 "Core/Inc/light_logic.h"
  1400              		.file 5 "Core/Inc/shift_register.h"
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 32
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 light_logic.c
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:21     .text.PL1_Green:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:27     .text.PL1_Green:00000000 PL1_Green
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:71     .text.PL1_Red:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:77     .text.PL1_Red:00000000 PL1_Red
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:121    .text.PL1_Blue:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:127    .text.PL1_Blue:00000000 PL1_Blue
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:171    .text.PL1_Blue_Toggle:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:177    .text.PL1_Blue_Toggle:00000000 PL1_Blue_Toggle
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:217    .text.PL2_Green:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:223    .text.PL2_Green:00000000 PL2_Green
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:267    .text.PL2_Red:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:273    .text.PL2_Red:00000000 PL2_Red
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:317    .text.PL2_Blue:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:323    .text.PL2_Blue:00000000 PL2_Blue
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:367    .text.PL2_Blue_Toggle:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:373    .text.PL2_Blue_Toggle:00000000 PL2_Blue_Toggle
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:413    .text.TL1_Red:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:419    .text.TL1_Red:00000000 TL1_Red
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:463    .text.TL1_Yellow:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:469    .text.TL1_Yellow:00000000 TL1_Yellow
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:513    .text.TL1_Green:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:519    .text.TL1_Green:00000000 TL1_Green
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:563    .text.TL4_Red:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:569    .text.TL4_Red:00000000 TL4_Red
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:613    .text.TL4_Yellow:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:619    .text.TL4_Yellow:00000000 TL4_Yellow
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:663    .text.TL4_Green:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:669    .text.TL4_Green:00000000 TL4_Green
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:713    .text.TL2_Red:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:719    .text.TL2_Red:00000000 TL2_Red
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:763    .text.TL2_Yellow:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:769    .text.TL2_Yellow:00000000 TL2_Yellow
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:813    .text.TL2_Green:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:819    .text.TL2_Green:00000000 TL2_Green
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:863    .text.TL3_Red:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:869    .text.TL3_Red:00000000 TL3_Red
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:913    .text.TL3_Yellow:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:919    .text.TL3_Yellow:00000000 TL3_Yellow
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:963    .text.TL3_Green:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:969    .text.TL3_Green:00000000 TL3_Green
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1013   .text.TL1_isGreen:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1019   .text.TL1_isGreen:00000000 TL1_isGreen
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1047   .text.TL1_isRed:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1053   .text.TL1_isRed:00000000 TL1_isRed
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1081   .text.TL2_isGreen:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1087   .text.TL2_isGreen:00000000 TL2_isGreen
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1115   .text.TL2_isRed:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1121   .text.TL2_isRed:00000000 TL2_isRed
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1149   .text.TL3_isGreen:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1155   .text.TL3_isGreen:00000000 TL3_isGreen
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1183   .text.TL3_isRed:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1189   .text.TL3_isRed:00000000 TL3_isRed
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1217   .text.TL4_isGreen:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1223   .text.TL4_isGreen:00000000 TL4_isGreen
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1251   .text.TL4_isRed:00000000 $t
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s 			page 33
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:21     .text.PL1_Green:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:27     .text.PL1_Green:00000000 PL1_Green
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:71     .text.PL1_Red:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:77     .text.PL1_Red:00000000 PL1_Red
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:121    .text.PL1_Blue:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:127    .text.PL1_Blue:00000000 PL1_Blue
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:171    .text.PL1_Blue_Toggle:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:177    .text.PL1_Blue_Toggle:00000000 PL1_Blue_Toggle
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:217    .text.PL2_Green:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:223    .text.PL2_Green:00000000 PL2_Green
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:267    .text.PL2_Red:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:273    .text.PL2_Red:00000000 PL2_Red
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:317    .text.PL2_Blue:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:323    .text.PL2_Blue:00000000 PL2_Blue
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:367    .text.PL2_Blue_Toggle:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:373    .text.PL2_Blue_Toggle:00000000 PL2_Blue_Toggle
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:413    .text.TL1_Red:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:419    .text.TL1_Red:00000000 TL1_Red
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:463    .text.TL1_Yellow:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:469    .text.TL1_Yellow:00000000 TL1_Yellow
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:513    .text.TL1_Green:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:519    .text.TL1_Green:00000000 TL1_Green
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:563    .text.TL4_Red:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:569    .text.TL4_Red:00000000 TL4_Red
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:613    .text.TL4_Yellow:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:619    .text.TL4_Yellow:00000000 TL4_Yellow
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:663    .text.TL4_Green:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:669    .text.TL4_Green:00000000 TL4_Green
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:713    .text.TL2_Red:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:719    .text.TL2_Red:00000000 TL2_Red
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:763    .text.TL2_Yellow:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:769    .text.TL2_Yellow:00000000 TL2_Yellow
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:813    .text.TL2_Green:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:819    .text.TL2_Green:00000000 TL2_Green
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:863    .text.TL3_Red:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:869    .text.TL3_Red:00000000 TL3_Red
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:913    .text.TL3_Yellow:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:919    .text.TL3_Yellow:00000000 TL3_Yellow
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:963    .text.TL3_Green:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:969    .text.TL3_Green:00000000 TL3_Green
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1013   .text.TL1_isGreen:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1019   .text.TL1_isGreen:00000000 TL1_isGreen
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1047   .text.TL1_isRed:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1053   .text.TL1_isRed:00000000 TL1_isRed
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1081   .text.TL2_isGreen:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1087   .text.TL2_isGreen:00000000 TL2_isGreen
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1115   .text.TL2_isRed:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1121   .text.TL2_isRed:00000000 TL2_isRed
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1149   .text.TL3_isGreen:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1155   .text.TL3_isGreen:00000000 TL3_isGreen
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1183   .text.TL3_isRed:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1189   .text.TL3_isRed:00000000 TL3_isRed
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1217   .text.TL4_isGreen:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1223   .text.TL4_isGreen:00000000 TL4_isGreen
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1251   .text.TL4_isRed:00000000 $t
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s 			page 33
 
 
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1257   .text.TL4_isRed:00000000 TL4_isRed
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1285   .text.Init_Task1:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1291   .text.Init_Task1:00000000 Init_Task1
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1333   .text.Init_Task2:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccGq3XiH.s:1339   .text.Init_Task2:00000000 Init_Task2
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1257   .text.TL4_isRed:00000000 TL4_isRed
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1285   .text.Init_Task1:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1291   .text.Init_Task1:00000000 Init_Task1
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1333   .text.Init_Task2:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccndpgon.s:1339   .text.Init_Task2:00000000 Init_Task2
 
 UNDEFINED SYMBOLS
 SR_bitadj

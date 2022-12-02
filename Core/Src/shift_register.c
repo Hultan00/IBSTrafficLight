@@ -10,13 +10,13 @@
 
 
 void STCP_ON(){
-    HAL_Delay(1);
     HAL_GPIO_WritePin(STCP_595_GPIO_Port, STCP_595_Pin, GPIO_PIN_SET);
+    HAL_Delay(1);
 }
 
 void STCP_OFF(){
-    HAL_Delay(1);
     HAL_GPIO_WritePin(STCP_595_GPIO_Port, STCP_595_Pin, GPIO_PIN_RESET);
+    HAL_Delay(1);
 }
 
 void STCP_Clock(){
@@ -25,24 +25,24 @@ void STCP_Clock(){
 }
 
 void MR_OFF(){
-    HAL_Delay(1);
     HAL_GPIO_WritePin(Reset_595_GPIO_Port, STCP_595_Pin, GPIO_PIN_SET);
+    HAL_Delay(1);
 }
 
 void MR_ON(){
-    HAL_Delay(1);
     HAL_GPIO_WritePin(Reset_595_GPIO_Port, STCP_595_Pin, GPIO_PIN_RESET);
+    HAL_Delay(1);
 }
 
 
 void EN_OFF(){
-    HAL_Delay(1);
     HAL_GPIO_WritePin(Enable_595_GPIO_Port, Enable_595_Pin, GPIO_PIN_SET);
+    HAL_Delay(1);
 }
 
 void EN_ON(){
-    HAL_Delay(1);
     HAL_GPIO_WritePin(Enable_595_GPIO_Port, Enable_595_Pin, GPIO_PIN_RESET);
+    HAL_Delay(1);
 }
 
 void EN_Toggle(){
@@ -55,7 +55,7 @@ uint32_t SR_bitset(uint32_t bits){
 
     STCP_OFF();
 
-    HAL_SPI_Transmit(&hspi3, &bits, 4, 10);
+    HAL_SPI_Transmit(&hspi3, &bits, 4, 1);
 
     STCP_Clock();
 

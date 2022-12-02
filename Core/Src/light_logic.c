@@ -204,14 +204,14 @@ bool TL1_isRed(uint32_t bits){
 }
 
 bool TL2_isGreen(uint32_t bits){
-    if((bits&LED4) > 0){
+    if((bits&LED6) > 0){
         return true;
     }
     return false;
 }
 
 bool TL2_isRed(uint32_t bits){
-    if((bits&LED6) > 0){
+    if((bits&LED4) > 0){
         return true;
     }
     return false;

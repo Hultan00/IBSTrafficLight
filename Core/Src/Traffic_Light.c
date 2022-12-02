@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 
 #include "main.h"
 #include "stm32l4xx_it.h"
@@ -22,7 +23,8 @@
 #define pedestrianDelay 5 //Pedestrian wait after press duration
 #define walkingDelay 10 //Pedestrian green duration
 #define orangeDelay 1 // TrafficLight Orange/Yellow state duration
-#define greenDelay 5 // trafficlight direction change when no active cars duration
+#define greenDelay 7 // trafficlight direction change when no active cars duration
+#define redDelayMax 7 // trafficlight direction change when atleast 1 car from both directions are active duation
 
 typedef enum{   
     PLRed,
@@ -33,18 +35,24 @@ typedef enum{
 typedef enum{   
     TLRed,
     TLGreen
-} crossing;
+} TLcrossing;
 
 typedef enum{   
     G1,
     G2
 } crossingSwitch;
 
-static crossing C1, C2, C3, C4;
+struct crossing
+{
+    char crossingName[4];
+    TLcrossing light;
+};
+
+struct crossing C1, C2, C3, C4;
 
 static crosswalk CW1, CW2;
 
-static crossingSwitch NLWaitingState;
+static crossingSwitch NCWaitingState;
 
 uint8_t brightness = 0;
 
@@ -54,24 +62,99 @@ uint8_t PLGreenDelay = 0;
 
 uint8_t TLYellowDelay = 0;
 
-uint8_t NLWaitingDelay = 0;
+uint8_t NCWaitingDelay = 0;
 
 uint16_t msTick = 1;
+
+uint16_t TickFlash = 1;
 
 uint8_t Tick = 1;
 
 uint32_t bits = 0;
 
-bool noLaneWaiting = true;
+bool NoCarsWaiting = true;
+
+bool BlueOn = false;
 
 void Init_States(){
-    C1 = TLRed;
-    C2 = TLGreen;
-    C3 = TLRed;
-    C4 = TLGreen;
+    C1.light = TLRed;
+    C2.light = TLGreen;
+    C3.light = TLRed;
+    C4.light = TLGreen;
+    strcpy(C1.crossingName, "TL1");
+    strcpy(C2.crossingName, "TL2");
+    strcpy(C3.crossingName, "TL3");
+    strcpy(C4.crossingName, "TL4");
     CW1 = PLRed;
     CW2 = PLRed;
-    NLWaitingState = G1;
+    NCWaitingState = G1;
+}
+
+TLcrossing IsIllegalGreenState(struct crossing state){
+    if(strcmp(state.crossingName, "TL1") == 0){
+        if((C2.light == TLRed) && (C4.light == TLRed) && (CW1 != PLGreen) && (NCWaitingState == G1)){
+            if(state.light == TLRed){
+                TLYellowDelay = orangeDelay;
+                msTick = 1;
+            }
+            return TLGreen;
+        }else{
+            if(state.light == TLGreen){
+                TLYellowDelay = orangeDelay;
+                msTick = 1;
+            }
+            return TLRed;
+        }
+    }else if(strcmp(state.crossingName, "TL3") == 0){
+        if((C2.light == TLRed) && (C4.light == TLRed) && (CW2 != PLGreen) && (CW1 != PLGreen) && (NCWaitingState == G1)){
+            if(state.light == TLRed){
+                TLYellowDelay = orangeDelay;
+                msTick = 1;
+            }
+            return TLGreen;
+        }else{
+            if(state.light == TLGreen){
+                TLYellowDelay = orangeDelay;
+                msTick = 1;
+            }
+            return TLRed;
+        }
+    }else if(strcmp(state.crossingName, "TL2") == 0){
+        if((C1.light == TLRed) && (C3.light == TLRed) && (CW2 != PLGreen) && (NCWaitingState == G2)){
+            if(state.light == TLRed){
+                TLYellowDelay = orangeDelay;
+                msTick = 1;
+            }
+            return TLGreen;
+        }else{
+            if(state.light == TLGreen){
+                TLYellowDelay = orangeDelay;
+                msTick = 1;
+            }
+            return TLRed;
+        }
+    }else if(strcmp(state.crossingName, "TL4") == 0){
+        if((C1.light == TLRed) && (C3.light == TLRed) && (CW1 != PLGreen) && (CW2 != PLGreen) && (NCWaitingState == G2)){
+            if(state.light == TLRed){
+                TLYellowDelay = orangeDelay;
+                msTick = 1;
+            }
+            return TLGreen;
+        }else{
+            if(state.light == TLGreen){
+                TLYellowDelay = orangeDelay;
+                msTick = 1;
+            }
+            return TLRed;
+        }
+    }
+}
+
+void checkAndChangeTL(){
+    C3.light = IsIllegalGreenState(C3);
+    C1.light = IsIllegalGreenState(C1);
+    C2.light = IsIllegalGreenState(C2);
+    C4.light = IsIllegalGreenState(C4);
 }
 
 void traffic_lights(){
@@ -86,49 +169,51 @@ void traffic_lights(){
 
         brightness = getPotiPercent();
 
-        noLaneWaiting = true;
+        NoCarsWaiting = true;
 
         /* // Brightness OLED
         char strBri[20] = "Brightness ";
         char strBrValue[3] = "";
         itoa(brightness, strBrValue, 10);
-        strcat(strBri, strBrValue);
+        strcat(strBri, strBrValue);w
         strcat(strBri, " ");
         ssd1306_SetCursor(2,0);
         ssd1306_WriteString(strBri, Font_7x10, White);
         ssd1306_UpdateScreen();
         */
 
-       if(is_car1()){
-            noLaneWaiting = false;
+       if(is_car3() || is_car1()){
+            NoCarsWaiting = false;
+            if(!(is_car4() || is_car2())){
+                NCWaitingState = G1;
+                checkAndChangeTL();
+            }
        }
 
-       if(is_car2()){
-            noLaneWaiting = false;
+       if(is_car4() || is_car2()){
+            NoCarsWaiting = false;
+            if(!(is_car1() || is_car3())){
+                NCWaitingState = G2;
+                checkAndChangeTL();
+            }
        }
 
-       if(is_car3()){
-            noLaneWaiting = false;
-       }
-
-       if(is_car4()){
-            noLaneWaiting = false;
-       }
-
-       if(noLaneWaiting){
-            if(NLWaitingDelay == 0){
-                NLWaitingDelay = greenDelay;
-                if(NLWaitingState == G1){
-                    Show_G1Bar(true, 0);
-                    NLWaitingState = G2;
+       if(NoCarsWaiting){
+            checkAndChangeTL();
+            if(NCWaitingDelay == 0){
+                NCWaitingDelay = greenDelay;
+                if(NCWaitingState == G1){
+                    NCWaitingState = G2;
                 }else{
-                    Show_G2Bar(true, 0);
-                    NLWaitingState = G1;
+                    NCWaitingState = G1;
                 }
             }
             HAL_GPIO_WritePin(USR_LED2_GPIO_Port, USR_LED2_Pin, GPIO_PIN_SET);
        }else{
             HAL_GPIO_WritePin(USR_LED2_GPIO_Port, USR_LED2_Pin, GPIO_PIN_RESET);
+            NCWaitingDelay = 0;
+            Show_G1Bar(true, 0);
+            Show_G2Bar(true, 0);
        }
 
        if(is_pl1() && (CW2 == PLRed)){
@@ -141,20 +226,20 @@ void traffic_lights(){
             PLBlueDelay = pedestrianDelay;
         }
 
-        switch (C1){
+        switch (C1.light){
             case TLGreen:
                 if((TLYellowDelay > 0) && (!TL1_isGreen(bits))){
                     bits = TL1_Green(bits, false);
-                    bits = TL1_Red(bits, false);
+                    bits = TL1_Red(bits, true);
                     bits = TL1_Yellow(bits, true);
                 }else{
-                    bits = TL1_Green(bits, false);
-                    bits = TL1_Red(bits, true);
+                    bits = TL1_Green(bits, true);
+                    bits = TL1_Red(bits, false);
                     bits = TL1_Yellow(bits, false);
                 }
                 break;
             case TLRed:
-                if((TLYellowDelay > 0)  && (!TL1_isRed(bits))){
+                if((TLYellowDelay > 0) && (!TL1_isRed(bits))){
                     bits = TL1_Green(bits, false);
                     bits = TL1_Red(bits, false);
                     bits = TL1_Yellow(bits, true);
@@ -168,11 +253,11 @@ void traffic_lights(){
                 break;
         }
 
-        switch (C2){
+        switch (C2.light){
             case TLGreen:
-                if((TLYellowDelay > 0)  && (!TL2_isGreen(bits))){
+                if((TLYellowDelay > 0) && (!TL2_isGreen(bits))){
                     bits = TL2_Green(bits, false);
-                    bits = TL2_Red(bits, false);
+                    bits = TL2_Red(bits, true);
                     bits = TL2_Yellow(bits, true);
                 }else{
                     bits = TL2_Green(bits, true);
@@ -181,7 +266,7 @@ void traffic_lights(){
                 }
                 break;
             case TLRed:
-                if((TLYellowDelay > 0)  && (!TL2_isRed(bits))){
+                if((TLYellowDelay > 0) && (!TL2_isRed(bits))){
                     bits = TL2_Green(bits, false);
                     bits = TL2_Red(bits, false);
                     bits = TL2_Yellow(bits, true);
@@ -195,11 +280,11 @@ void traffic_lights(){
                 break;
         }
 
-        switch (C3){
+        switch (C3.light){
             case TLGreen:
-                if((TLYellowDelay > 0)  && (!TL3_isGreen(bits))){
+                if((TLYellowDelay > 0) && (!TL3_isGreen(bits))){
                     bits = TL3_Green(bits, false);
-                    bits = TL3_Red(bits, false);
+                    bits = TL3_Red(bits, true);
                     bits = TL3_Yellow(bits, true);
                 }else{
                     bits = TL3_Green(bits, true);
@@ -222,11 +307,11 @@ void traffic_lights(){
                 break;
         }
 
-        switch (C4){
+        switch (C4.light){
             case TLGreen:
                 if((TLYellowDelay > 0) && (!TL4_isGreen(bits))){
                     bits = TL4_Green(bits, false);
-                    bits = TL4_Red(bits, false);
+                    bits = TL4_Red(bits, true);
                     bits = TL4_Yellow(bits, true);
                 }else{
                     bits = TL4_Green(bits, true);
@@ -251,11 +336,9 @@ void traffic_lights(){
 
         switch (CW1){
             case PLGreen:
-                if((C1 != TLRed) || (C3 != TLRed) || (C4 != TLRed)){
-                    C1 = TLRed;
-                    C3 = TLRed;
-                    C4 = TLRed;
-                    TLYellowDelay = orangeDelay+1;
+                if((C1.light != TLRed) || (C3.light != TLRed) || (C4.light != TLRed)){
+                    checkAndChangeTL();
+                    TLYellowDelay = orangeDelay;
                 }else{
                     if(TLYellowDelay == 0){
                         if(PLGreenDelay > 0){
@@ -271,8 +354,10 @@ void traffic_lights(){
                 break;
             case PLBlue:
                 if(PLBlueDelay > 0){
-                    if((msTick % (uint16_t)(toggleFreq*10)) == 0){
-                        bits = PL1_Blue_Toggle(bits);
+                    if(BlueOn){
+                        bits = PL1_Blue(bits, true);
+                    }else{
+                        bits = PL1_Blue(bits, false);
                     }
                 }else{
                     CW1 = PLGreen;
@@ -290,11 +375,9 @@ void traffic_lights(){
 
         switch (CW2){
             case PLGreen:
-                if((C4 != TLRed) || (C2 != TLRed) || (C3 != TLRed)){
-                    C2 = TLRed;
-                    C3 = TLRed;
-                    C4 = TLRed;
-                    TLYellowDelay = orangeDelay+1;
+                if((C4.light != TLRed) || (C2.light != TLRed) || (C3.light != TLRed)){
+                    checkAndChangeTL();
+                    TLYellowDelay = orangeDelay;
                 }else{
                     if(TLYellowDelay == 0){
                         if(PLGreenDelay > 0){
@@ -310,8 +393,10 @@ void traffic_lights(){
                 break;
             case PLBlue:
                 if(PLBlueDelay > 0){
-                    if((msTick % (uint16_t)(toggleFreq*10)) == 0){
-                        bits = PL2_Blue_Toggle(bits);
+                    if(BlueOn){
+                        bits = PL2_Blue(bits, true);
+                    }else{
+                        bits = PL2_Blue(bits, false);
                     }
                 }else{
                     CW2 = PLGreen;
@@ -339,12 +424,16 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
                 TLYellowDelay--;
             }
 
-            if(NLWaitingDelay > 0){
-                NLWaitingDelay--;
-                if(NLWaitingState == G1){
-                    Show_G1Bar(true, (100 - ((NLWaitingDelay*100)/greenDelay)));
+            if(NCWaitingDelay > 0){
+                if(TLYellowDelay == 0){
+                    NCWaitingDelay--;
+                }
+                if(NCWaitingState == G1){
+                    Show_G1Bar(true, (100 - ((NCWaitingDelay*100)/greenDelay)));
+                    Show_G2Bar(true, 0);
                 }else{
-                    Show_G2Bar(true, (100 - ((NLWaitingDelay*100)/greenDelay)));
+                    Show_G2Bar(true, (100 - ((NCWaitingDelay*100)/greenDelay)));
+                    Show_G1Bar(true, 0);
                 }
             }
 
@@ -376,6 +465,17 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
             msTick = 1;
         }else{
             msTick++;
+        }
+
+        if(TickFlash >= (toggleFreq*10)){ //10 ms
+            if(BlueOn){
+                BlueOn = false;
+            }else{
+                BlueOn = true;
+            }
+            TickFlash = 1;
+        }else{
+            TickFlash++;
         }
 
         if(Tick >= 100){ //10 ms
