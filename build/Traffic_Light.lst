@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
   28:Core/Src/Traffic_Light.c **** 
   29:Core/Src/Traffic_Light.c **** typedef enum{   
   30:Core/Src/Traffic_Light.c ****     PLRed,
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 2
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 2
 
 
   31:Core/Src/Traffic_Light.c ****     PLGreen,
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
   34 0000 30B4     		push	{r4, r5}
   35              	.LCFI0:
   36              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 3
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 3
 
 
   37              		.cfi_offset 4, -8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
   80 0036 1370     		strb	r3, [r2]
   91:Core/Src/Traffic_Light.c **** }
   81              		.loc 1 91 1 view .LVU19
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 4
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 4
 
 
   82 0038 30BC     		pop	{r4, r5}
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  136              	.LCFI3:
  137              		.cfi_def_cfa_offset 16
  138 0004 6B46     		mov	r3, sp
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 5
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 5
 
 
  139 0006 83E80300 		stm	r3, {r0, r1}
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  186              		.loc 1 100 20 is_stmt 0 view .LVU41
  187 003e 0120     		movs	r0, #1
  188 0040 04E0     		b	.L5
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 6
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 6
 
 
  189              	.L7:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  143:Core/Src/Traffic_Light.c ****         }else{
  144:Core/Src/Traffic_Light.c ****             if(state.light == TLGreen){
  145:Core/Src/Traffic_Light.c ****                 TLYellowDelay = orangeDelay;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 7
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 7
 
 
  146:Core/Src/Traffic_Light.c ****                 msTick = 1;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  109:Core/Src/Traffic_Light.c ****             if(state.light == TLRed){
  238              		.loc 1 109 32 discriminator 1 view .LVU59
  239 0070 A3B9     		cbnz	r3, .L12
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 8
 
 
  109:Core/Src/Traffic_Light.c ****             if(state.light == TLRed){
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  116:Core/Src/Traffic_Light.c ****                 TLYellowDelay = orangeDelay;
  278              		.loc 1 116 21 is_stmt 0 view .LVU76
  279 009c 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 9
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 9
 
 
  116:Core/Src/Traffic_Light.c ****                 TLYellowDelay = orangeDelay;
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  318              		.loc 1 123 63 discriminator 2 view .LVU92
  319 00c8 2C4B     		ldr	r3, .L30+32
  320 00ca 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 10
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 10
 
 
  123:Core/Src/Traffic_Light.c ****             if(state.light == TLRed){
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  128:Core/Src/Traffic_Light.c ****         }else{
  359              		.loc 1 128 20 is_stmt 0 view .LVU109
  360 00f6 A9E7     		b	.L5
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 11
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 11
 
 
  361              	.L27:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  400 0124 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  137:Core/Src/Traffic_Light.c ****             if(state.light == TLRed){
  401              		.loc 1 137 75 discriminator 3 view .LVU125
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 12
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 12
 
 
  402 0126 012B     		cmp	r3, #1
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  440 0150 7CE7     		b	.L5
  441              	.L29:
  145:Core/Src/Traffic_Light.c ****                 msTick = 1;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 13
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 13
 
 
  442              		.loc 1 145 17 is_stmt 1 view .LVU142
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  492 0008 FFF7FEFF 		bl	IsIllegalGreenState
  493              	.LVL4:
  494              		.loc 1 154 14 view .LVU149
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 14
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 14
 
 
  495 000c 2071     		strb	r0, [r4, #4]
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  545              		@ frame_needed = 0, uses_anonymous_args = 0
  546 0000 08B5     		push	{r3, lr}
  547              	.LCFI7:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 15
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 15
 
 
  548              		.cfi_def_cfa_offset 8
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  575              	.LVL12:
  576              		.loc 1 187 16 discriminator 1 view .LVU168
  577 0024 0028     		cmp	r0, #0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 16
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 16
 
 
  578 0026 40F0E080 		bne	.L39
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  611              	.L42:
  209:Core/Src/Traffic_Light.c ****                 }
  210:Core/Src/Traffic_Light.c ****             }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 17
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 17
 
 
  211:Core/Src/Traffic_Light.c ****             HAL_GPIO_WritePin(USR_LED2_GPIO_Port, USR_LED2_Pin, GPIO_PIN_SET);
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  233:Core/Src/Traffic_Light.c ****                     bits = TL1_Red(bits, true);
  644              		.loc 1 233 21 is_stmt 1 view .LVU187
  645              		.loc 1 233 28 is_stmt 0 view .LVU188
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 18
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 18
 
 
  646 0084 0121     		movs	r1, #1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  685 00b2 0121     		movs	r1, #1
  686 00b4 FFF7FEFF 		bl	TL1_Red
  687              	.LVL24:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 19
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 19
 
 
  688              		.loc 1 248 26 view .LVU203
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  732              	.L54:
  250:Core/Src/Traffic_Light.c ****                 }
  251:Core/Src/Traffic_Light.c ****                 break;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 20
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 20
 
 
  252:Core/Src/Traffic_Light.c ****             default:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  282:Core/Src/Traffic_Light.c **** 
  283:Core/Src/Traffic_Light.c ****         switch (C3.light){
  757              		.loc 1 283 9 is_stmt 1 view .LVU225
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 21
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 21
 
 
  758              		.loc 1 283 19 is_stmt 0 view .LVU226
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  803 0154 2060     		str	r0, [r4]
  804              	.L57:
  293:Core/Src/Traffic_Light.c ****                 }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 22
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 22
 
 
  294:Core/Src/Traffic_Light.c ****                 break;
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  835              	.LVL37:
  836              		.loc 1 317 26 view .LVU252
  837 0182 2060     		str	r0, [r4]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 23
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 23
 
 
  318:Core/Src/Traffic_Light.c ****                     bits = TL4_Red(bits, false);
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  347:Core/Src/Traffic_Light.c ****                         }else{
  348:Core/Src/Traffic_Light.c ****                             CW1 = PLRed;
  349:Core/Src/Traffic_Light.c ****                             bits = PL1_Green(bits, false);
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 24
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 24
 
 
  350:Core/Src/Traffic_Light.c ****                             bits = PL1_Red(bits, true);
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  884 01ca 0122     		movs	r2, #1
  885 01cc 1A70     		strb	r2, [r3]
  185:Core/Src/Traffic_Light.c ****             NoCarsWaiting = false;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 25
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 25
 
 
  886              		.loc 1 185 8 is_stmt 1 view .LVU267
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  924              		.loc 1 194 27 is_stmt 0 view .LVU283
  925 01f6 6A4B     		ldr	r3, .L96+28
  926 01f8 0022     		movs	r2, #0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 26
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 26
 
 
  927 01fa 1A70     		strb	r2, [r3]
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  206:Core/Src/Traffic_Light.c ****                 }else{
  965              		.loc 1 206 36 is_stmt 0 view .LVU300
  966 022a 5F4B     		ldr	r3, .L96+36
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 27
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 27
 
 
  967 022c 0122     		movs	r2, #1
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1007 025c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  224:Core/Src/Traffic_Light.c ****             CW2 = PLBlue;
  1008              		.loc 1 224 21 discriminator 1 view .LVU315
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 28
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 28
 
 
  1009 025e 2BB9     		cbnz	r3, .L47
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1049 0292 2068     		ldr	r0, [r4]
  1050 0294 FFF7FEFF 		bl	TL1_Green
  1051              	.LVL52:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 29
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 29
 
 
  236:Core/Src/Traffic_Light.c ****                     bits = TL1_Red(bits, false);
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1091 02ca 7FF417AF 		bne	.L54
  259:Core/Src/Traffic_Light.c ****                     bits = TL2_Red(bits, true);
  1092              		.loc 1 259 21 is_stmt 1 view .LVU345
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 30
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 30
 
 
  259:Core/Src/Traffic_Light.c ****                     bits = TL2_Red(bits, true);
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1132              		.loc 1 274 28 is_stmt 0 view .LVU360
  1133 02fc 214C     		ldr	r4, .L96
  1134 02fe 0021     		movs	r1, #0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 31
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 31
 
 
  1135 0300 2068     		ldr	r0, [r4]
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1174 032e 0121     		movs	r1, #1
  1175 0330 FFF7FEFF 		bl	TL2_Yellow
  1176              	.LVL65:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 32
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 32
 
 
  272:Core/Src/Traffic_Light.c ****                 }else{
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  296:Core/Src/Traffic_Light.c ****                     bits = TL3_Green(bits, false);
  1217              		.loc 1 296 40 discriminator 1 view .LVU390
  1218 0364 50B3     		cbz	r0, .L92
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 33
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 33
 
 
  1219              	.L59:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  297:Core/Src/Traffic_Light.c ****                     bits = TL3_Red(bits, false);
  1263              		.loc 1 297 28 is_stmt 0 view .LVU401
  1264 03bc 7C4C     		ldr	r4, .L98
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 34
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 34
 
 
  1265 03be 0021     		movs	r1, #0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1304              		.loc 1 315 28 is_stmt 0 view .LVU416
  1305 03ee 0121     		movs	r1, #1
  1306 03f0 FFF7FEFF 		bl	TL4_Yellow
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 35
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 35
 
 
  1307              	.LVL78:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  330:Core/Src/Traffic_Light.c ****                 }
  1347              		.loc 1 330 26 view .LVU431
  1348 0422 2060     		str	r0, [r4]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 36
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 36
 
 
  1349 0424 B6E6     		b	.L61
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1388 0450 5B4B     		ldr	r3, .L98+16
  1389 0452 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
  339:Core/Src/Traffic_Light.c ****                     checkAndChangeTL();
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 37
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 37
 
 
  1390              		.loc 1 339 63 discriminator 2 view .LVU447
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  346:Core/Src/Traffic_Light.c ****                         }else{
  1430              		.loc 1 346 34 view .LVU462
  1431 0484 2060     		str	r0, [r4]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 38
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 38
 
 
  1432 0486 90E6     		b	.L67
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1470 04ae 404C     		ldr	r4, .L98
  1471 04b0 0121     		movs	r1, #1
  1472 04b2 2068     		ldr	r0, [r4]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 39
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 39
 
 
  1473 04b4 FFF7FEFF 		bl	PL1_Blue
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1514 04e6 0121     		movs	r1, #1
  1515 04e8 2068     		ldr	r0, [r4]
  1516 04ea FFF7FEFF 		bl	PL1_Red
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 40
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 40
 
 
  1517              	.LVL94:
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1560 051a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  1561              		.loc 1 382 23 view .LVU509
  1562 051c 002B     		cmp	r3, #0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 41
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 41
 
 
  1563 051e 7FF44FAE 		bne	.L37
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  390:Core/Src/Traffic_Light.c ****                         }
  391:Core/Src/Traffic_Light.c ****                     }
  392:Core/Src/Traffic_Light.c ****                 }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 42
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 42
 
 
  393:Core/Src/Traffic_Light.c ****                 break;
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1653 058a 1A70     		strb	r2, [r3]
  404:Core/Src/Traffic_Light.c ****                     bits = PL2_Blue(bits, false);
  1654              		.loc 1 404 21 is_stmt 1 view .LVU543
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 43
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 43
 
 
  1655              		.loc 1 404 28 is_stmt 0 view .LVU544
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1704              		.thumb
  1705              		.thumb_func
  1707              	HAL_TIM_PeriodElapsedCallback:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 44
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 44
 
 
  1708              	.LVL106:
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  446:Core/Src/Traffic_Light.c ****                     Show_P2Bar(true, (100 - ((PLBlueDelay*100)/pedestrianDelay)));
  447:Core/Src/Traffic_Light.c ****                 }
  448:Core/Src/Traffic_Light.c ****             }else{
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 45
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 45
 
 
  449:Core/Src/Traffic_Light.c ****                 if(PLGreenDelay > 0){
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1733 000a 754B     		ldr	r3, .L127+4
  1734 000c 1B88     		ldrh	r3, [r3]
  419:Core/Src/Traffic_Light.c ****         if(msTick >= 10000){ //1 second
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 46
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 46
 
 
  1735              		.loc 1 419 11 view .LVU560
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1775 0040 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  481:Core/Src/Traffic_Light.c ****         if(Tick >= 100){ //10 ms
  1776              		.loc 1 481 11 view .LVU575
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 47
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 47
 
 
  1777 0042 632B     		cmp	r3, #99
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1818 0076 013B     		subs	r3, r3, #1
  1819 0078 604A     		ldr	r2, .L127+32
  1820 007a 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 48
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 48
 
 
  1821              	.L103:
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1860 00ae C9B2     		uxtb	r1, r1
  1861 00b0 0120     		movs	r0, #1
  1862 00b2 FFF7FEFF 		bl	Show_G1Bar
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 49
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 49
 
 
  1863              	.LVL114:
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1904 00ec 6431     		adds	r1, r1, #100
  1905 00ee 01F0FC01 		and	r1, r1, #252
  1906 00f2 0120     		movs	r0, #1
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 50
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 50
 
 
  1907 00f4 FFF7FEFF 		bl	Show_P2Bar
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  450:Core/Src/Traffic_Light.c ****                     PLGreenDelay--;
  1952              		.loc 1 450 21 is_stmt 1 view .LVU626
  450:Core/Src/Traffic_Light.c ****                     PLGreenDelay--;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 51
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 51
 
 
  1953              		.loc 1 450 33 is_stmt 0 view .LVU627
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  1996 017c 6431     		adds	r1, r1, #100
  1997 017e 01F0FE01 		and	r1, r1, #254
  1998 0182 0120     		movs	r0, #1
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 52
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 52
 
 
  1999 0184 FFF7FEFF 		bl	Show_W1Bar
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  2044 01c8 0133     		adds	r3, r3, #1
  2045 01ca 084A     		ldr	r2, .L127+16
  2046 01cc 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 53
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 53
 
 
  2047 01ce 3EE7     		b	.L119
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  2111              		.global	msTick
  2112              		.section	.data.msTick,"aw"
  2113              		.align	1
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 54
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 54
 
 
  2116              	msTick:
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  2190      00
  2191              		.text
  2192              	.Letext0:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 55
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 55
 
 
  2193              		.file 2 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
@@ -3254,67 +3254,67 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 1
  2203              		.file 12 "Core/Inc/interactions.h"
  2204              		.file 13 "Core/Inc/potentiometer.h"
  2205              		.file 14 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 56
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 56
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Traffic_Light.c
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:21     .text.Init_States:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:27     .text.Init_States:00000000 Init_States
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:91     .text.Init_States:0000003c $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2189   .bss.C1:00000000 C1
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2182   .bss.C2:00000000 C2
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2175   .bss.C3:00000000 C3
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2168   .bss.C4:00000000 C4
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2161   .bss.CW1:00000000 CW1
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2156   .bss.CW2:00000000 CW2
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2151   .bss.NCWaitingState:00000000 NCWaitingState
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:106    .rodata.IsIllegalGreenState.str1.4:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:119    .text.IsIllegalGreenState:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:125    .text.IsIllegalGreenState:00000000 IsIllegalGreenState
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:454    .text.IsIllegalGreenState:0000015c $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2128   .bss.TLYellowDelay:00000000 TLYellowDelay
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2116   .data.msTick:00000000 msTick
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:471    .text.checkAndChangeTL:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:477    .text.checkAndChangeTL:00000000 checkAndChangeTL
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:525    .text.checkAndChangeTL:00000034 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:533    .text.traffic_lights:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:539    .text.traffic_lights:00000000 traffic_lights
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:726    .text.traffic_lights:000000e4 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2096   .bss.bits:00000000 bits
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2122   .bss.NCWaitingDelay:00000000 NCWaitingDelay
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:735    .text.traffic_lights:000000fc $t
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:1247   .text.traffic_lights:00000384 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2146   .bss.brightness:00000000 brightness
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2089   .data.NoCarsWaiting:00000000 NoCarsWaiting
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2140   .bss.PLBlueDelay:00000000 PLBlueDelay
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:1264   .text.traffic_lights:000003bc $t
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:1686   .text.traffic_lights:000005b0 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2134   .bss.PLGreenDelay:00000000 PLGreenDelay
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2083   .bss.BlueOn:00000000 BlueOn
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:1701   .text.HAL_TIM_PeriodElapsedCallback:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:1707   .text.HAL_TIM_PeriodElapsedCallback:00000000 HAL_TIM_PeriodElapsedCallback
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2060   .text.HAL_TIM_PeriodElapsedCallback:000001dc $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2109   .data.TickFlash:00000000 TickFlash
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2102   .data.Tick:00000000 Tick
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2084   .bss.BlueOn:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2093   .bss.bits:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2106   .data.TickFlash:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2113   .data.msTick:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2123   .bss.NCWaitingDelay:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2129   .bss.TLYellowDelay:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2135   .bss.PLGreenDelay:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2141   .bss.PLBlueDelay:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2147   .bss.brightness:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2152   .bss.NCWaitingState:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2157   .bss.CW2:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2162   .bss.CW1:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2165   .bss.C4:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2172   .bss.C3:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2179   .bss.C2:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s:2186   .bss.C1:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:21     .text.Init_States:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:27     .text.Init_States:00000000 Init_States
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:91     .text.Init_States:0000003c $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2189   .bss.C1:00000000 C1
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2182   .bss.C2:00000000 C2
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2175   .bss.C3:00000000 C3
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2168   .bss.C4:00000000 C4
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2161   .bss.CW1:00000000 CW1
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2156   .bss.CW2:00000000 CW2
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2151   .bss.NCWaitingState:00000000 NCWaitingState
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:106    .rodata.IsIllegalGreenState.str1.4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:119    .text.IsIllegalGreenState:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:125    .text.IsIllegalGreenState:00000000 IsIllegalGreenState
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:454    .text.IsIllegalGreenState:0000015c $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2128   .bss.TLYellowDelay:00000000 TLYellowDelay
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2116   .data.msTick:00000000 msTick
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:471    .text.checkAndChangeTL:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:477    .text.checkAndChangeTL:00000000 checkAndChangeTL
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:525    .text.checkAndChangeTL:00000034 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:533    .text.traffic_lights:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:539    .text.traffic_lights:00000000 traffic_lights
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:726    .text.traffic_lights:000000e4 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2096   .bss.bits:00000000 bits
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2122   .bss.NCWaitingDelay:00000000 NCWaitingDelay
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:735    .text.traffic_lights:000000fc $t
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:1247   .text.traffic_lights:00000384 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2146   .bss.brightness:00000000 brightness
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2089   .data.NoCarsWaiting:00000000 NoCarsWaiting
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2140   .bss.PLBlueDelay:00000000 PLBlueDelay
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:1264   .text.traffic_lights:000003bc $t
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:1686   .text.traffic_lights:000005b0 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2134   .bss.PLGreenDelay:00000000 PLGreenDelay
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2083   .bss.BlueOn:00000000 BlueOn
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:1701   .text.HAL_TIM_PeriodElapsedCallback:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:1707   .text.HAL_TIM_PeriodElapsedCallback:00000000 HAL_TIM_PeriodElapsedCallback
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2060   .text.HAL_TIM_PeriodElapsedCallback:000001dc $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2109   .data.TickFlash:00000000 TickFlash
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2102   .data.Tick:00000000 Tick
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2084   .bss.BlueOn:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2093   .bss.bits:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2106   .data.TickFlash:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2113   .data.msTick:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2123   .bss.NCWaitingDelay:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2129   .bss.TLYellowDelay:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2135   .bss.PLGreenDelay:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2141   .bss.PLBlueDelay:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2147   .bss.brightness:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2152   .bss.NCWaitingState:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2157   .bss.CW2:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2162   .bss.CW1:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2165   .bss.C4:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2172   .bss.C3:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2179   .bss.C2:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s:2186   .bss.C1:00000000 $d
 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccg2fYkE.s 			page 57
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccxEhyxx.s 			page 57
 
 
 UNDEFINED SYMBOLS
