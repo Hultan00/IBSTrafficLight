@@ -25,6 +25,7 @@
 #define orangeDelay 1 // TrafficLight Orange/Yellow state duration
 #define greenDelay 7 // trafficlight direction change when no active cars duration
 #define redDelayMax 7 // trafficlight direction change when atleast 1 car from both directions are active duation
+#define RedToGreenDelay 1 // delay switching from red to green on traffic lights
 
 typedef enum{   
     PLRed,
@@ -66,6 +67,8 @@ uint8_t TLRedWaitTime = 0;
 
 uint8_t NCWaitingDelay = 0;
 
+uint8_t R2GDelay = 0;
+
 uint16_t msTick = 1;
 
 uint16_t TickFlash = 1;
@@ -89,27 +92,27 @@ void Init_States(){
     strcpy(C4.crossingName, "TL4");
     CW1 = PLRed;
     CW2 = PLRed;
-    NCWaitingState = G1;
+    NCWaitingState = G2;
 }
 
 TLcrossing IsIllegalGreenState(struct crossing state){
     if(strcmp(state.crossingName, "TL1") == 0){
-        if((C2.light == TLRed) && (C4.light == TLRed) && (CW1 != PLGreen) && (NCWaitingState == G1)){
+        if((C2.light == TLRed) && (C4.light == TLRed) && (CW1 != PLGreen) && (NCWaitingState == G1) && (R2GDelay == 0)){
             if(state.light == TLRed){
                 TLYellowDelay = orangeDelay;
                 msTick = 1;
-                HAL_Delay
             }
             return TLGreen;
         }else{
             if(state.light == TLGreen){
                 TLYellowDelay = orangeDelay;
+                R2GDelay = RedToGreenDelay + 1;
                 msTick = 1;
             }
             return TLRed;
         }
     }else if(strcmp(state.crossingName, "TL3") == 0){
-        if((C2.light == TLRed) && (C4.light == TLRed) && (CW2 != PLGreen) && (CW1 != PLGreen) && (NCWaitingState == G1)){
+        if((C2.light == TLRed) && (C4.light == TLRed) && (CW2 != PLGreen) && (CW1 != PLGreen) && (NCWaitingState == G1) && (R2GDelay == 0)){
             if(state.light == TLRed){
                 TLYellowDelay = orangeDelay;
                 msTick = 1;
@@ -118,12 +121,13 @@ TLcrossing IsIllegalGreenState(struct crossing state){
         }else{
             if(state.light == TLGreen){
                 TLYellowDelay = orangeDelay;
+                R2GDelay = RedToGreenDelay + 1;
                 msTick = 1;
             }
             return TLRed;
         }
     }else if(strcmp(state.crossingName, "TL2") == 0){
-        if((C1.light == TLRed) && (C3.light == TLRed) && (CW2 != PLGreen) && (NCWaitingState == G2)){
+        if((C1.light == TLRed) && (C3.light == TLRed) && (CW2 != PLGreen) && (NCWaitingState == G2) && (R2GDelay == 0)){
             if(state.light == TLRed){
                 TLYellowDelay = orangeDelay;
                 msTick = 1;
@@ -132,12 +136,13 @@ TLcrossing IsIllegalGreenState(struct crossing state){
         }else{
             if(state.light == TLGreen){
                 TLYellowDelay = orangeDelay;
+                R2GDelay = RedToGreenDelay + 1;
                 msTick = 1;
             }
             return TLRed;
         }
     }else if(strcmp(state.crossingName, "TL4") == 0){
-        if((C1.light == TLRed) && (C3.light == TLRed) && (CW1 != PLGreen) && (CW2 != PLGreen) && (NCWaitingState == G2)){
+        if((C1.light == TLRed) && (C3.light == TLRed) && (CW1 != PLGreen) && (CW2 != PLGreen) && (NCWaitingState == G2) && (R2GDelay == 0)){
             if(state.light == TLRed){
                 TLYellowDelay = orangeDelay;
                 msTick = 1;
@@ -146,6 +151,7 @@ TLcrossing IsIllegalGreenState(struct crossing state){
         }else{
             if(state.light == TLGreen){
                 TLYellowDelay = orangeDelay;
+                R2GDelay = RedToGreenDelay + 1;
                 msTick = 1;
             }
             return TLRed;
@@ -195,7 +201,7 @@ void traffic_lights(){
 
        if((is_car4() || is_car2()) && (is_car1() || is_car3())){
             checkAndChangeTL();
-            if(TLRedWaitTime == 0){
+            if((TLRedWaitTime == 0) && (R2GDelay == 0)){
                 TLRedWaitTime = redDelayMax;
             }
        }
@@ -212,7 +218,7 @@ void traffic_lights(){
 
        if(NoCarsWaiting){
             checkAndChangeTL();
-            if(NCWaitingDelay == 0){
+            if((NCWaitingDelay == 0) && (R2GDelay == 0)){
                 NCWaitingDelay = greenDelay;
             }
             HAL_GPIO_WritePin(USR_LED2_GPIO_Port, USR_LED2_Pin, GPIO_PIN_SET);
@@ -419,6 +425,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
             if(TLYellowDelay > 0){
                 TLYellowDelay--;
+            }
+
+            if(R2GDelay > 0){
+                R2GDelay--;
             }
 
             if(NCWaitingDelay > 0){

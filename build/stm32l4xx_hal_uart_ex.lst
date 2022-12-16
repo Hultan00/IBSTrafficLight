@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     (#) Declare a UART_HandleTypeDef handle structure.
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     (#) For the UART RS485 Driver Enable mode, initialize the UART registers
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 2
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****         by calling the HAL_RS485Ex_Init() API.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   */
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** /* Exported functions --------------------------------------------------------*/
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 3
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 3
 
 
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  142:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     |---------|---------|-----------|---------------------------------------|
  143:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     |    1    |    0    |    0      |    | SB |    7 bit data   | STB |     |
  144:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     |---------|---------|-----------|---------------------------------------|
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 4
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 4
 
 
  145:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     |    1    |    0    |    1      |    | SB | 6 bit data | PB | STB |     |
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  199:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
  200:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     if (huart->MspInitCallback == NULL)
  201:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     {
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 5
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 5
 
 
  202:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****       huart->MspInitCallback = HAL_UART_MspInit;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  256:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****                       ##### IO operation functions #####
  257:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****  ===============================================================================
  258:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     This subsection provides a set of Wakeup and FIFO mode related callback functions.
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 6
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 6
 
 
  259:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  313:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****             the HAL_UARTEx_TxFifoEmptyCallback can be implemented in the user file.
  314:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****    */
  315:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 7
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 7
 
 
  316:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** #endif /* USART_CR1_FIFOEN */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  370:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****         (+) HAL_UARTEx_ReceiveToIdle()
  371:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
  372:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     (#) Non-Blocking mode API with Interrupt:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 8
 
 
  373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****         (+) HAL_UARTEx_ReceiveToIdle_IT()
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  427:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   * @brief By default in multiprocessor mode, when the wake up method is set
  428:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   *        to address mark, the UART handles only 4-bit long addresses detection;
  429:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   *        this API allows to enable longer addresses detection (6-, 7- or 8-bit
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 9
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 9
 
 
  430:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   *        long).
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  484:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   /* check the wake-up selection parameter */
  485:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   assert_param(IS_UART_WAKEUP_SELECTION(WakeUpSelection.WakeUpEvent));
  486:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 10
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 10
 
 
  487:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   /* Process Locked */
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  541:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   __HAL_UNLOCK(huart);
  542:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
  543:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   return HAL_OK;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 11
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 11
 
 
  544:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** }
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  598:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
  599:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   huart->gState = HAL_UART_STATE_READY;
  600:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 12
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 12
 
 
  601:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   /* Process Unlocked */
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  655:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   *            @arg @ref UART_TXFIFO_THRESHOLD_8_8
  656:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   * @retval HAL status
  657:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   */
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 13
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 13
 
 
  658:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** HAL_StatusTypeDef HAL_UARTEx_SetTxFifoThreshold(UART_HandleTypeDef *huart, uint32_t Threshold)
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  712:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   assert_param(IS_UART_FIFO_INSTANCE(huart->Instance));
  713:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   assert_param(IS_UART_RXFIFO_THRESHOLD(Threshold));
  714:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 14
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 14
 
 
  715:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   /* Process Locked */
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  769:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   uint16_t *pdata16bits;
  770:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   uint16_t uhMask;
  771:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   uint32_t tickstart;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 15
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 15
 
 
  772:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  826:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****         {
  827:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****           huart->RxState = HAL_UART_STATE_READY;
  828:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 16
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 16
 
 
  829:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****           return HAL_OK;
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  883:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   *        the received data is handled as a set of uint16_t. In this case, Size must indicate the 
  884:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   *        of uint16_t available through pData.
  885:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   * @param huart UART handle.
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 17
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 17
 
 
  886:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   * @param pData Pointer to data buffer (uint8_t or uint16_t data elements).
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  940:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   *        calling registered callbacks at half/end of reception. UART IDLE events are also used to
  941:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   *        reception phase as ended. In all cases, callback execution will indicate number of recei
  942:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   * @note  When the UART parity is enabled (PCE = 1), the received data contain
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 18
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 18
 
 
  943:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   *        the parity bit (MSB position).
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  997:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** /**
  998:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   * @}
  999:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   */
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 19
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 19
 
 
 1000:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
   58              		.cfi_def_cfa_offset 0
   59              		@ sp needed
   60 002c 7047     		bx	lr
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 20
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 20
 
 
   61              		.cfi_endproc
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  105              		.loc 1 192 6 view .LVU17
  106 0010 63B3     		cbz	r3, .L12
  107              	.LVL3:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 21
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 21
 
 
  108              	.L5:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  148              	.LVL6:
  237:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   MODIFY_REG(huart->Instance->CR1, (USART_CR1_DEDT | USART_CR1_DEAT), temp);
  149              		.loc 1 237 8 view .LVU32
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 22
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 22
 
 
  150 0046 45EA4652 		orr	r2, r5, r6, lsl #21
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  193              		.cfi_def_cfa_offset 0
  194              		.cfi_restore 3
  195              		.cfi_restore 4
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 23
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 23
 
 
  196              		.cfi_restore 5
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  246 0000 90F87430 		ldrb	r3, [r0, #116]	@ zero_extendqisi2
  247 0004 012B     		cmp	r3, #1
  248 0006 13D0     		beq	.L18
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 24
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 24
 
 
  395:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
   34:Drivers/CMSIS/Include/cmsis_gcc.h **** /* Fallback for __has_builtin */
   35:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __has_builtin
   36:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __has_builtin(x) (0)
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 25
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 25
 
 
   37:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
   91:Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
   92:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT16_READ(addr)          (((const struct T_UINT16_READ *)(const void *)(add
   93:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 26
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 26
 
 
   94:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __UNALIGNED_UINT32_WRITE
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  148:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_start__;
  149:Drivers/CMSIS/Include/cmsis_gcc.h ****   extern const __zero_table_t __zero_table_end__;
  150:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 27
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 27
 
 
  151:Drivers/CMSIS/Include/cmsis_gcc.h ****   for (__copy_table_t const* pTable = &__copy_table_start__; pTable < &__copy_table_end__; ++pTable
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  205:Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
  206:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  207:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __disable_irq(void)
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 28
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 28
 
 
  208:Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  262:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR control_ns, %0" : : "r" (control) : "memory");
  263:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  264:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 29
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 29
 
 
  265:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  319:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  320:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  321:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 30
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 30
 
 
  322:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  376:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  377:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (defined (__ARM_FEATURE_CMSE ) && (__ARM_FEATURE_CMSE == 3))
  378:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 31
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 31
 
 
  379:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Main Stack Pointer (non-secure)
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  433:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Stack Pointer (non-secure)
  434:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Stack Pointer (SP) when in secure state.
  435:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfStack  Stack Pointer value to set
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 32
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 32
 
 
  436:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  490:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  491:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_PRIMASK_NS(uint32_t priMask)
  492:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 33
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 33
 
 
  493:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR primask_ns, %0" : : "r" (priMask) : "memory");
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  547:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, basepri_ns" : "=r" (result) );
  548:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  549:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 34
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 34
 
 
  550:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  604:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  605:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Fault Mask (non-secure)
  606:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the non-secure Fault Mask register when in secure state.
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 35
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 35
 
 
  607:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Fault Mask register value
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  661:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (!(defined (__ARM_ARCH_8M_MAIN__ ) && (__ARM_ARCH_8M_MAIN__ == 1)) && \
  662:Drivers/CMSIS/Include/cmsis_gcc.h ****     (!defined (__ARM_FEATURE_CMSE) || (__ARM_FEATURE_CMSE < 3)))
  663:Drivers/CMSIS/Include/cmsis_gcc.h ****     // without main extensions, the non-secure PSPLIM is RAZ/WI
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 36
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 36
 
 
  664:Drivers/CMSIS/Include/cmsis_gcc.h ****   return 0U;
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  718:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer (non-secure)
  719:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
  720:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence the write is silently ignored.
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 37
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 37
 
 
  721:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  775:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  776:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msplim_ns" : "=r" (result) );
  777:Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 38
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 38
 
 
  778:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  832:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  833:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __get_FPSCR(void)
  834:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 39
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 39
 
 
  835:Drivers/CMSIS/Include/cmsis_gcc.h **** #if ((defined (__FPU_PRESENT) && (__FPU_PRESENT == 1U)) && \
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  889:Drivers/CMSIS/Include/cmsis_gcc.h **** #if defined (__thumb__) && !defined (__thumb2__)
  890:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_OUT_REG(r) "=l" (r)
  891:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_RW_REG(r) "+l" (r)
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 40
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 40
 
 
  892:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "l" (r)
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  946:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("dsb 0xF":::"memory");
  947:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  948:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 41
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 41
 
 
  949:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
 1003:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 8)
 1004:Drivers/CMSIS/Include/cmsis_gcc.h ****   return (int16_t)__builtin_bswap16(value);
 1005:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 42
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 42
 
 
 1006:Drivers/CMSIS/Include/cmsis_gcc.h ****   int16_t result;
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
 1060:Drivers/CMSIS/Include/cmsis_gcc.h ****   for (value >>= 1U; value != 0U; value >>= 1U)
 1061:Drivers/CMSIS/Include/cmsis_gcc.h ****   {
 1062:Drivers/CMSIS/Include/cmsis_gcc.h ****     result <<= 1U;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 43
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 43
 
 
 1063:Drivers/CMSIS/Include/cmsis_gcc.h ****     result |= value & 1U;
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
 1117:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("ldrexb %0, [%1]" : "=r" (result) : "r" (addr) : "memory" );
 1118:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
 1119:Drivers/CMSIS/Include/cmsis_gcc.h ****    return ((uint8_t) result);    /* Add explicit type cast here */
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 44
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 44
 
 
 1120:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  281              	.LBE33:
  398:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
  282              		.loc 1 398 3 discriminator 1 view .LVU64
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 45
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 45
 
 
  283 0018 43F40003 		orr	r3, r3, #8388608
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
 1203:Drivers/CMSIS/Include/cmsis_gcc.h **** {
 1204:Drivers/CMSIS/Include/cmsis_gcc.h ****    uint32_t result;
  290              		.loc 2 1204 4 discriminator 1 view .LVU67
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 46
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 46
 
 
 1205:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  331              		.cfi_endproc
  332              	.LFE319:
  334              		.section	.text.HAL_UARTEx_DisableClockStopMode,"ax",%progbits
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 47
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 47
 
 
  335              		.align	1
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  377 0014 53E8003F 		ldrex r3, [r3]
  378              	@ 0 "" 2
  379              	.LVL30:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 48
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 48
 
 
 1156:Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  420:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
  421              		.loc 1 420 3 is_stmt 1 discriminator 2 view .LVU111
  422:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 49
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 49
 
 
  422              		.loc 1 422 3 discriminator 2 view .LVU112
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  453:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
  467              		.loc 1 453 3 is_stmt 1 view .LVU124
  468 000a 0068     		ldr	r0, [r0]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 50
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 50
 
 
  469              	.LVL39:
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  516              	.LVL44:
  517              	.LFB322:
  478:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 51
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 51
 
 
  518              		.loc 1 478 1 is_stmt 1 view -0
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  559 002a 8B68     		ldr	r3, [r1, #8]
  560 002c 23F44013 		bic	r3, r3, #3145728
  561 0030 029A     		ldr	r2, [sp, #8]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 52
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 52
 
 
  562 0032 1343     		orrs	r3, r3, r2
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  604              	.LVL52:
  500:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****   }
  605              		.loc 1 500 5 is_stmt 0 view .LVU160
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 53
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 53
 
 
  606 006c E4E7     		b	.L32
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  653              		@ frame_needed = 0, uses_anonymous_args = 0
  654              		@ link register save eliminated.
  535:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 54
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 54
 
 
  655              		.loc 1 535 3 view .LVU170
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
 1202:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  695              		.loc 2 1202 31 discriminator 1 view .LVU185
  696              	.LBB46:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 55
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 55
 
 
 1204:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  739              		.align	1
  740              		.global	HAL_UARTEx_DisableStopMode
  741              		.syntax unified
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 56
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 56
 
 
  742              		.thumb
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  783              		.thumb
  784              		.syntax unified
  785              	.LBE49:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 57
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 57
 
 
  786              	.LBE48:
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  826              	.LVL74:
  827              	.L45:
  554:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 58
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 58
 
 
  828              		.loc 1 554 3 view .LVU231
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  874 000c 40F0A580 		bne	.L64
  875 0010 0446     		mov	r4, r0
  876 0012 0F46     		mov	r7, r1
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 59
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 59
 
 
  877 0014 9146     		mov	r9, r2
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  790:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     huart->RxXferCount = Size;
  914              		.loc 1 790 5 is_stmt 1 discriminator 2 view .LVU259
  790:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     huart->RxXferCount = Size;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 60
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 60
 
 
  915              		.loc 1 790 24 is_stmt 0 discriminator 2 view .LVU260
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  956              		.loc 1 794 5 discriminator 10 view .LVU273
  957 0086 0022     		movs	r2, #0
  958 0088 A4F85C20 		strh	r2, [r4, #92]	@ movhi
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 61
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 61
 
 
  959              	.L50:
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  997 00b6 E9E7     		b	.L50
  998              	.LVL84:
  999              	.L73:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 62
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 62
 
 
  798:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     {
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  847:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****         huart->RxXferCount--;
  1038              		.loc 1 847 16 is_stmt 0 view .LVU306
  1039 00dc 0133     		adds	r3, r3, #1
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 63
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 63
 
 
  1040 00de 2B80     		strh	r3, [r5]	@ movhi
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  1078              		.loc 1 834 7 is_stmt 1 view .LVU322
  834:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****       {
  1079              		.loc 1 834 11 is_stmt 0 view .LVU323
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 64
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 64
 
 
  1080 0110 2368     		ldr	r3, [r4]
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  1117              		.loc 1 856 26 is_stmt 0 view .LVU340
  1118 013c 2023     		movs	r3, #32
  1119 013e E367     		str	r3, [r4, #124]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 65
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 65
 
 
  858:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****         }
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  1159              	.L66:
  778:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     }
  1160              		.loc 1 778 15 view .LVU356
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 66
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 66
 
 
  1161 0164 0120     		movs	r0, #1
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  897:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****     {
  1206              		.loc 1 897 25 discriminator 1 view .LVU368
  1207 000c 02B3     		cbz	r2, .L84
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 67
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 67
 
 
  902:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  1245              	.L81:
  915:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****       }
  1246              		.loc 1 915 9 discriminator 1 view .LVU386
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 68
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 68
 
 
  1247              	.LBB52:
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  1288              		.syntax unified
  1289              	.LBE56:
  1290              	.LBE55:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 69
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 69
 
 
  915:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c ****       }
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  1335              	.LFE326:
  1337              		.section	.text.HAL_UARTEx_ReceiveToIdle_DMA,"ax",%progbits
  1338              		.align	1
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 70
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 70
 
 
  1339              		.global	HAL_UARTEx_ReceiveToIdle_DMA
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  967:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
  1380              		.loc 1 967 26 is_stmt 0 discriminator 2 view .LVU426
  1381 001c 0366     		str	r3, [r0, #96]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 71
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 71
 
 
  969:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  1419              		.loc 2 1153 5 discriminator 1 view .LVU443
 1155:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
  1420              		.loc 2 1155 4 discriminator 1 view .LVU444
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 72
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 72
 
 
  1421              		.syntax unified
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  1465              		.loc 1 993 12 view .LVU456
  1466 0048 0220     		movs	r0, #2
  1467              	.LVL123:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 73
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 73
 
 
  995:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c **** 
@@ -4369,35 +4369,35 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 1
  1507              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
  1508              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h"
  1509              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s 			page 74
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s 			page 74
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_uart_ex.c
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:21     .text.UARTEx_Wakeup_AddressConfig:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:26     .text.UARTEx_Wakeup_AddressConfig:00000000 UARTEx_Wakeup_AddressConfig
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:65     .text.HAL_RS485Ex_Init:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:71     .text.HAL_RS485Ex_Init:00000000 HAL_RS485Ex_Init
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:209    .text.HAL_UARTEx_WakeupCallback:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:215    .text.HAL_UARTEx_WakeupCallback:00000000 HAL_UARTEx_WakeupCallback
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:230    .text.HAL_UARTEx_EnableClockStopMode:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:236    .text.HAL_UARTEx_EnableClockStopMode:00000000 HAL_UARTEx_EnableClockStopMode
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:335    .text.HAL_UARTEx_DisableClockStopMode:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:341    .text.HAL_UARTEx_DisableClockStopMode:00000000 HAL_UARTEx_DisableClockStopMode
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:439    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:445    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 HAL_MultiProcessorEx_AddressLength_Set
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:509    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:515    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 HAL_UARTEx_StopModeWakeUpSourceConfig
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:641    .text.HAL_UARTEx_EnableStopMode:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:647    .text.HAL_UARTEx_EnableStopMode:00000000 HAL_UARTEx_EnableStopMode
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:739    .text.HAL_UARTEx_DisableStopMode:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:745    .text.HAL_UARTEx_DisableStopMode:00000000 HAL_UARTEx_DisableStopMode
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:837    .text.HAL_UARTEx_ReceiveToIdle:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:843    .text.HAL_UARTEx_ReceiveToIdle:00000000 HAL_UARTEx_ReceiveToIdle
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:1176   .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:1182   .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 HAL_UARTEx_ReceiveToIdle_IT
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:1338   .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccKdtUse.s:1344   .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 HAL_UARTEx_ReceiveToIdle_DMA
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:21     .text.UARTEx_Wakeup_AddressConfig:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:26     .text.UARTEx_Wakeup_AddressConfig:00000000 UARTEx_Wakeup_AddressConfig
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:65     .text.HAL_RS485Ex_Init:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:71     .text.HAL_RS485Ex_Init:00000000 HAL_RS485Ex_Init
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:209    .text.HAL_UARTEx_WakeupCallback:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:215    .text.HAL_UARTEx_WakeupCallback:00000000 HAL_UARTEx_WakeupCallback
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:230    .text.HAL_UARTEx_EnableClockStopMode:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:236    .text.HAL_UARTEx_EnableClockStopMode:00000000 HAL_UARTEx_EnableClockStopMode
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:335    .text.HAL_UARTEx_DisableClockStopMode:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:341    .text.HAL_UARTEx_DisableClockStopMode:00000000 HAL_UARTEx_DisableClockStopMode
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:439    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:445    .text.HAL_MultiProcessorEx_AddressLength_Set:00000000 HAL_MultiProcessorEx_AddressLength_Set
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:509    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:515    .text.HAL_UARTEx_StopModeWakeUpSourceConfig:00000000 HAL_UARTEx_StopModeWakeUpSourceConfig
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:641    .text.HAL_UARTEx_EnableStopMode:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:647    .text.HAL_UARTEx_EnableStopMode:00000000 HAL_UARTEx_EnableStopMode
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:739    .text.HAL_UARTEx_DisableStopMode:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:745    .text.HAL_UARTEx_DisableStopMode:00000000 HAL_UARTEx_DisableStopMode
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:837    .text.HAL_UARTEx_ReceiveToIdle:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:843    .text.HAL_UARTEx_ReceiveToIdle:00000000 HAL_UARTEx_ReceiveToIdle
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:1176   .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:1182   .text.HAL_UARTEx_ReceiveToIdle_IT:00000000 HAL_UARTEx_ReceiveToIdle_IT
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:1338   .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccCQfMHT.s:1344   .text.HAL_UARTEx_ReceiveToIdle_DMA:00000000 HAL_UARTEx_ReceiveToIdle_DMA
 
 UNDEFINED SYMBOLS
 UART_SetConfig

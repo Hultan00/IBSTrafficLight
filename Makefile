@@ -76,7 +76,7 @@ Core/Src/ssd1306_fonts.c \
 Core/Src/ssd1306_tests.c \
 Core/Src/ssd1306.c \
 Core/Src/OledDelayBars.c \
-Core/Src/potentiometer.c
+Core/Src/potentiometer.c 
 
 # ASM sources
 ASM_SOURCES =  \

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 1
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 1
   43              	.LVL0:
   14:Core/Src/shift_register.c ****     HAL_Delay(1);
   44              		.loc 1 14 5 view .LVU2
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 2
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s 			page 2
 
 
   45 000e 0120     		movs	r0, #1
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 1
   96              		.global	STCP_Clock
   97              		.syntax unified
   98              		.thumb
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 3
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s 			page 3
 
 
   99              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 1
  147              		.loc 1 29 5 view .LVU14
  148 0010 0120     		movs	r0, #1
  149 0012 FFF7FEFF 		bl	HAL_Delay
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 4
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s 			page 4
 
 
  150              	.LVL7:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 1
  199              		.cfi_startproc
  200              		@ args = 0, pretend = 0, frame = 0
  201              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 5
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s 			page 5
 
 
  202 0000 08B5     		push	{r3, lr}
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 1
  251 000c 0120     		movs	r0, #1
  252 000e FFF7FEFF 		bl	HAL_Delay
  253              	.LVL13:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 6
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s 			page 6
 
 
   46:Core/Src/shift_register.c **** }
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 1
   53:Core/Src/shift_register.c **** uint32_t SR_bitset(uint32_t bits){
  305              		.loc 1 53 34 is_stmt 1 view -0
  306              		.cfi_startproc
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 7
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s 			page 7
 
 
  307              		@ args = 0, pretend = 0, frame = 8
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 1
  351              		.cfi_endproc
  352              	.LFE328:
  354              		.section	.text.SR_bitadj,"ax",%progbits
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s 			page 8
 
 
  355              		.align	1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 1
   76:Core/Src/shift_register.c ****     bits = bits + (newbits & bitmask);
  398              		.loc 1 76 5 view .LVU55
  399              		.loc 1 76 28 is_stmt 0 view .LVU56
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 9
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s 			page 9
 
 
  400 0012 01EA0221 		and	r1, r1, r2, lsl #8
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 1
   79:Core/Src/shift_register.c ****         return bits>>8;
  440              		.loc 1 79 20 is_stmt 0 view .LVU68
  441 003e 180A     		lsrs	r0, r3, #8
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 10
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s 			page 10
 
 
  442              	.LVL31:
@@ -562,38 +562,38 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 1
  460              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h"
  461              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
  462              		.file 10 "Core/Inc/spi.h"
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s 			page 11
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 shift_register.c
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:21     .text.STCP_ON:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:27     .text.STCP_ON:00000000 STCP_ON
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:53     .text.STCP_ON:00000018 $d
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:58     .text.STCP_OFF:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:64     .text.STCP_OFF:00000000 STCP_OFF
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:90     .text.STCP_OFF:00000018 $d
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:95     .text.STCP_Clock:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:101    .text.STCP_Clock:00000000 STCP_Clock
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:124    .text.MR_OFF:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:130    .text.MR_OFF:00000000 MR_OFF
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:157    .text.MR_ON:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:163    .text.MR_ON:00000000 MR_ON
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:190    .text.EN_OFF:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:196    .text.EN_OFF:00000000 EN_OFF
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:222    .text.EN_OFF:00000014 $d
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:227    .text.EN_ON:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:233    .text.EN_ON:00000000 EN_ON
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:259    .text.EN_ON:00000014 $d
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:264    .text.EN_Toggle:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:270    .text.EN_Toggle:00000000 EN_Toggle
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:291    .text.EN_Toggle:0000000c $d
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:296    .text.SR_bitset:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:302    .text.SR_bitset:00000000 SR_bitset
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:350    .text.SR_bitset:0000002c $d
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:355    .text.SR_bitadj:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:361    .text.SR_bitadj:00000000 SR_bitadj
-C:\Users\ehgre\AppData\Local\Temp\ccdwCCmr.s:448    .text.SR_bitadj:00000044 $d
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:21     .text.STCP_ON:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:27     .text.STCP_ON:00000000 STCP_ON
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:53     .text.STCP_ON:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:58     .text.STCP_OFF:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:64     .text.STCP_OFF:00000000 STCP_OFF
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:90     .text.STCP_OFF:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:95     .text.STCP_Clock:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:101    .text.STCP_Clock:00000000 STCP_Clock
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:124    .text.MR_OFF:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:130    .text.MR_OFF:00000000 MR_OFF
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:157    .text.MR_ON:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:163    .text.MR_ON:00000000 MR_ON
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:190    .text.EN_OFF:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:196    .text.EN_OFF:00000000 EN_OFF
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:222    .text.EN_OFF:00000014 $d
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:227    .text.EN_ON:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:233    .text.EN_ON:00000000 EN_ON
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:259    .text.EN_ON:00000014 $d
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:264    .text.EN_Toggle:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:270    .text.EN_Toggle:00000000 EN_Toggle
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:291    .text.EN_Toggle:0000000c $d
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:296    .text.SR_bitset:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:302    .text.SR_bitset:00000000 SR_bitset
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:350    .text.SR_bitset:0000002c $d
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:355    .text.SR_bitadj:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:361    .text.SR_bitadj:00000000 SR_bitadj
+C:\Users\ehgre\AppData\Local\Temp\ccWqI1Pj.s:448    .text.SR_bitadj:00000044 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin
