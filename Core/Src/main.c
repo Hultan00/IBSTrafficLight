@@ -66,36 +66,6 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-void init() {
-	HAL_GPIO_WritePin(USR_LED1_GPIO_Port, USR_LED1_Pin, GPIO_PIN_SET);
-}
-
-void loop() {
-	// Blue button pressed - repeast the test
-    if(is_jcenter()) {
-		// Indicate that test is running
-		HAL_GPIO_WritePin(USR_LED1_GPIO_Port, USR_LED1_Pin, GPIO_PIN_SET);
-
-		ssd1306_Init();
-    ssd1306_Fill(Black);
-    ssd1306_DrawRectangle(32,2,64,8,White);
-    ssd1306_DrawRectangle(32,2,38,32,White);
-    ssd1306_DrawRectangle(32,32,64,38,White);
-    ssd1306_DrawRectangle(58,32,64,62,White);
-    ssd1306_DrawRectangle(32,32,38,62,White);
-    ssd1306_DrawRectangle(8,56,38,62,White);
-    ssd1306_DrawRectangle(8,32,38,38,White);
-    ssd1306_DrawRectangle(8,2,14,32,White);
-    ssd1306_UpdateScreen();
-
-		HAL_GPIO_WritePin(USR_LED1_GPIO_Port, USR_LED1_Pin, GPIO_PIN_RESET);
-    }
-
-	// Blink an LED
-	HAL_GPIO_TogglePin(USR_LED2_GPIO_Port, USR_LED2_Pin);
-	HAL_Delay(150);
-}
-
 /* USER CODE END 0 */
 
 /**
