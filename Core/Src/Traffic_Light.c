@@ -98,6 +98,7 @@ TLcrossing IsIllegalGreenState(struct crossing state){
             if(state.light == TLRed){
                 TLYellowDelay = orangeDelay;
                 msTick = 1;
+                HAL_Delay
             }
             return TLGreen;
         }else{
@@ -167,22 +168,12 @@ void traffic_lights(){
     Show_All_DelayBars(true, 0);
 
     bits = Init_Task2(bits);
+    
     while(1){
 
         brightness = getPotiPercent();
 
         NoCarsWaiting = true;
-
-        /* // Brightness OLED
-        char strBri[20] = "Brightness ";
-        char strBrValue[3] = "";
-        itoa(brightness, strBrValue, 10);
-        strcat(strBri, strBrValue);w
-        strcat(strBri, " ");
-        ssd1306_SetCursor(2,0);
-        ssd1306_WriteString(strBri, Font_7x10, White);
-        ssd1306_UpdateScreen();
-        */
 
        if(is_car3() || is_car1()){
             NoCarsWaiting = false;
@@ -209,6 +200,16 @@ void traffic_lights(){
             }
        }
 
+       if(is_pl1() && (CW2 == PLRed)){
+            CW1 = PLBlue;
+            PLBlueDelay = pedestrianDelay;
+        }
+
+        if(is_pl2() && (CW1 == PLRed)){
+            CW2 = PLBlue;
+            PLBlueDelay = pedestrianDelay;
+        }
+
        if(NoCarsWaiting){
             checkAndChangeTL();
             if(NCWaitingDelay == 0){
@@ -221,16 +222,6 @@ void traffic_lights(){
             Show_G1Bar(true, 0);
             Show_G2Bar(true, 0);
        }
-
-       if(is_pl1() && (CW2 == PLRed)){
-            CW1 = PLBlue;
-            PLBlueDelay = pedestrianDelay;
-        }
-
-        if(is_pl2() && (CW1 == PLRed)){
-            CW2 = PLBlue;
-            PLBlueDelay = pedestrianDelay;
-        }
 
         switch (C1.light){
             case TLGreen:
