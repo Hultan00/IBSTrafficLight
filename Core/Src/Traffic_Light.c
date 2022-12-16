@@ -62,6 +62,8 @@ uint8_t PLGreenDelay = 0;
 
 uint8_t TLYellowDelay = 0;
 
+uint8_t TLRedWaitTime = 0;
+
 uint8_t NCWaitingDelay = 0;
 
 uint16_t msTick = 1;
@@ -187,6 +189,7 @@ void traffic_lights(){
             if(!(is_car4() || is_car2())){
                 NCWaitingState = G1;
                 checkAndChangeTL();
+                TLRedWaitTime = 0;
             }
        }
 
@@ -195,6 +198,14 @@ void traffic_lights(){
             if(!(is_car1() || is_car3())){
                 NCWaitingState = G2;
                 checkAndChangeTL();
+                TLRedWaitTime = 0;
+            }
+       }
+
+       if((is_car4() || is_car2()) && (is_car1() || is_car3())){
+            checkAndChangeTL();
+            if(TLRedWaitTime == 0){
+                TLRedWaitTime = redDelayMax;
             }
        }
 
@@ -202,11 +213,6 @@ void traffic_lights(){
             checkAndChangeTL();
             if(NCWaitingDelay == 0){
                 NCWaitingDelay = greenDelay;
-                if(NCWaitingState == G1){
-                    NCWaitingState = G2;
-                }else{
-                    NCWaitingState = G1;
-                }
             }
             HAL_GPIO_WritePin(USR_LED2_GPIO_Port, USR_LED2_Pin, GPIO_PIN_SET);
        }else{
@@ -435,6 +441,36 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
                     Show_G2Bar(true, (100 - ((NCWaitingDelay*100)/greenDelay)));
                     Show_G1Bar(true, 0);
                 }
+                if(NCWaitingDelay == 0){
+                    if(NCWaitingState == G1){
+                        NCWaitingState = G2;
+                    }else{
+                        NCWaitingState = G1;
+                    }
+                }
+            }
+
+            if(TLRedWaitTime > 0){
+                if(TLYellowDelay == 0){
+                    TLRedWaitTime--;
+                }
+                if(NCWaitingState == G1){
+                    Show_R2Bar(true, (100 - ((TLRedWaitTime*100)/redDelayMax)));
+                    Show_R1Bar(true, 0);
+                }else{
+                    Show_R1Bar(true, (100 - ((TLRedWaitTime*100)/redDelayMax)));
+                    Show_R2Bar(true, 0);
+                }
+                if(TLRedWaitTime == 0){
+                    if(NCWaitingState == G1){
+                        NCWaitingState = G2;
+                    }else{
+                        NCWaitingState = G1;
+                    }
+                }
+            }else{
+                Show_R1Bar(true, 0);
+                Show_R2Bar(true, 0);
             }
 
             if(PLBlueDelay > 0){
