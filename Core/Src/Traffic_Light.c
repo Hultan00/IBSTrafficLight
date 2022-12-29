@@ -98,7 +98,6 @@ TLcrossing IsIllegalGreenState(struct crossing state){
             if(state.light == TLRed){
                 TLYellowDelay = orangeDelay;
                 msTick = 1;
-                HAL_Delay
             }
             return TLGreen;
         }else{
