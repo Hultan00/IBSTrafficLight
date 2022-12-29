@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
   28:Core/Src/spi.c **** SPI_HandleTypeDef hspi3;
   29:Core/Src/spi.c **** 
   30:Core/Src/spi.c **** /* SPI2 init function */
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 2
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 2
 
 
   31:Core/Src/spi.c **** void MX_SPI2_Init(void)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
   65              		.loc 1 48 3 is_stmt 1 view .LVU15
   66              		.loc 1 48 32 is_stmt 0 view .LVU16
   67 0022 C361     		str	r3, [r0, #28]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 3
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 3
 
 
   49:Core/Src/spi.c ****   hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  106 0044 00000000 		.word	hspi2
  107 0048 00380040 		.word	1073756160
  108              		.cfi_endproc
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 4
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 4
 
 
  109              	.LFE317:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
   80:Core/Src/spi.c ****   hspi3.Init.CLKPhase = SPI_PHASE_1EDGE;
  149              		.loc 1 80 3 is_stmt 1 view .LVU46
  150              		.loc 1 80 23 is_stmt 0 view .LVU47
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 5
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 5
 
 
  151 001a 4361     		str	r3, [r0, #20]
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  188 003c 08BD     		pop	{r3, pc}
  189              	.L10:
   91:Core/Src/spi.c ****   }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 6
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 6
 
 
  190              		.loc 1 91 5 is_stmt 1 view .LVU68
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  240 0012 394A     		ldr	r2, .L19
  241 0014 9342     		cmp	r3, r2
  242 0016 04D0     		beq	.L17
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 7
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 7
 
 
  104:Core/Src/spi.c ****   {
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  151:Core/Src/spi.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
  152:Core/Src/spi.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
  153:Core/Src/spi.c ****     GPIO_InitStruct.Alternate = GPIO_AF6_SPI3;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 8
 
 
  154:Core/Src/spi.c ****     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  281 0036 DA6C     		ldr	r2, [r3, #76]
  282 0038 42F00402 		orr	r2, r2, #4
  283 003c DA64     		str	r2, [r3, #76]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 9
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 9
 
 
  111:Core/Src/spi.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  121:Core/Src/spi.c ****     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
  321              		.loc 1 121 31 is_stmt 0 view .LVU106
  322 0066 0524     		movs	r4, #5
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 10
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 10
 
 
  323 0068 0B94     		str	r4, [sp, #44]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  361 008e 9A6D     		ldr	r2, [r3, #88]
  362 0090 42F40042 		orr	r2, r2, #32768
  363 0094 9A65     		str	r2, [r3, #88]
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 11
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 11
 
 
  141:Core/Src/spi.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  402              		.loc 1 149 5 view .LVU138
  149:Core/Src/spi.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
  403              		.loc 1 149 25 is_stmt 0 view .LVU139
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 12
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 12
 
 
  404 00c4 4FF48063 		mov	r3, #1024
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  440              		.loc 1 160 5 is_stmt 1 view .LVU157
  160:Core/Src/spi.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
  441              		.loc 1 160 31 is_stmt 0 view .LVU158
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 13
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 13
 
 
  442 00ea 0B94     		str	r4, [sp, #44]
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  177:Core/Src/spi.c ****     /* Peripheral clock disable */
  178:Core/Src/spi.c ****     __HAL_RCC_SPI2_CLK_DISABLE();
  179:Core/Src/spi.c **** 
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 14
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 14
 
 
  180:Core/Src/spi.c ****     /**SPI2 GPIO Configuration
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  507              	.LVL17:
  184:Core/Src/spi.c **** 
  508              		.loc 1 184 5 is_stmt 0 view .LVU171
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 15
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 15
 
 
  509 0022 FFF7FEFF 		bl	HAL_GPIO_DeInit
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  557              		.align	2
  560              	hspi2:
  561 0000 00000000 		.space	100
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 16
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 16
 
 
  561      00000000 
@@ -916,27 +916,27 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 1
  570              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h"
  571              		.file 9 "Core/Inc/spi.h"
  572              		.file 10 "Core/Inc/main.h"
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s 			page 17
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 spi.c
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:21     .text.MX_SPI2_Init:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:27     .text.MX_SPI2_Init:00000000 MX_SPI2_Init
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:106    .text.MX_SPI2_Init:00000044 $d
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:560    .bss.hspi2:00000000 hspi2
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:112    .text.MX_SPI3_Init:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:118    .text.MX_SPI3_Init:00000000 MX_SPI3_Init
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:198    .text.MX_SPI3_Init:00000044 $d
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:553    .bss.hspi3:00000000 hspi3
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:204    .text.HAL_SPI_MspInit:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:210    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:453    .text.HAL_SPI_MspInit:000000f8 $d
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:462    .text.HAL_SPI_MspDeInit:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:468    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:541    .text.HAL_SPI_MspDeInit:00000054 $d
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:550    .bss.hspi3:00000000 $d
-C:\Users\ehgre\AppData\Local\Temp\cc5Tz7KA.s:557    .bss.hspi2:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:21     .text.MX_SPI2_Init:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:27     .text.MX_SPI2_Init:00000000 MX_SPI2_Init
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:106    .text.MX_SPI2_Init:00000044 $d
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:560    .bss.hspi2:00000000 hspi2
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:112    .text.MX_SPI3_Init:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:118    .text.MX_SPI3_Init:00000000 MX_SPI3_Init
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:198    .text.MX_SPI3_Init:00000044 $d
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:553    .bss.hspi3:00000000 hspi3
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:204    .text.HAL_SPI_MspInit:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:210    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:453    .text.HAL_SPI_MspInit:000000f8 $d
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:462    .text.HAL_SPI_MspDeInit:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:468    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:541    .text.HAL_SPI_MspDeInit:00000054 $d
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:550    .bss.hspi3:00000000 $d
+C:\Users\ehgre\AppData\Local\Temp\cciKpxs2.s:557    .bss.hspi2:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_Init

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 1
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 1
   45 000a 08B1     		cbz	r0, .L3
   12:Core/Src/interactions.c ****         return true;
   13:Core/Src/interactions.c ****     }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 2
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s 			page 2
 
 
   14:Core/Src/interactions.c ****     return false;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 1
   92 0010 08BD     		pop	{r3, pc}
   93              	.L9:
   19:Core/Src/interactions.c ****         return true;
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 3
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s 			page 3
 
 
   94              		.loc 1 19 16 view .LVU13
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 1
  142 0018 00040048 		.word	1207960576
  143              		.cfi_endproc
  144              	.LFE322:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 4
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s 			page 4
 
 
  146              		.section	.text.is_car4,"ax",%progbits
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 1
  193              		.loc 1 38 14 is_stmt 1 view -0
  194              		.cfi_startproc
  195              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 5
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s 			page 5
 
 
  196              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 1
  243 0004 0348     		ldr	r0, .L31
  244 0006 FFF7FEFF 		bl	HAL_GPIO_ReadPin
  245              	.LVL5:
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 6
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s 			page 6
 
 
  246              		.loc 1 46 7 view .LVU38
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 1
  291 000e 0020     		movs	r0, #0
  292              	.L34:
   57:Core/Src/interactions.c **** }
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 7
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s 			page 7
 
 
  293              		.loc 1 57 1 view .LVU47
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 1
  340 0014 FCE7     		b	.L40
  341              	.L44:
  342 0016 00BF     		.align	2
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 8
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s 			page 8
 
 
  343              	.L43:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 1
  392              		.global	is_jup
  393              		.syntax unified
  394              		.thumb
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 9
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s 			page 9
 
 
  395              		.thumb_func
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 1
  442              		.cfi_startproc
  443              		@ args = 0, pretend = 0, frame = 0
  444              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 10
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s 			page 10
 
 
  445 0000 08B5     		push	{r3, lr}
@@ -581,42 +581,42 @@ ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 1
  477              		.file 3 "c:\\users\\ehgre\\desktop\\plugg\\inbyggda system\\tools\\arm-gnu-toolchain-12.2.mpacbti-
  478              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h"
  479              		.file 5 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
-ARM GAS  C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s 			page 11
+ARM GAS  C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 interactions.c
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:21     .text.is_car1:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:27     .text.is_car1:00000000 is_car1
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:58     .text.is_car1:00000014 $d
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:63     .text.is_car2:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:69     .text.is_car2:00000000 is_car2
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:100    .text.is_car2:00000018 $d
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:105    .text.is_car3:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:111    .text.is_car3:00000000 is_car3
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:142    .text.is_car3:00000018 $d
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:147    .text.is_car4:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:153    .text.is_car4:00000000 is_car4
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:185    .text.is_pl1:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:191    .text.is_pl1:00000000 is_pl1
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:223    .text.is_pl2:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:229    .text.is_pl2:00000000 is_pl2
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:260    .text.is_pl2:00000014 $d
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:265    .text.is_jcenter:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:271    .text.is_jcenter:00000000 is_jcenter
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:302    .text.is_jcenter:00000018 $d
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:307    .text.is_jright:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:313    .text.is_jright:00000000 is_jright
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:344    .text.is_jright:00000018 $d
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:349    .text.is_jdown:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:355    .text.is_jdown:00000000 is_jdown
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:386    .text.is_jdown:00000014 $d
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:391    .text.is_jup:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:397    .text.is_jup:00000000 is_jup
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:428    .text.is_jup:00000014 $d
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:433    .text.is_jleft:00000000 $t
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:439    .text.is_jleft:00000000 is_jleft
-C:\Users\ehgre\AppData\Local\Temp\ccZqAOGV.s:470    .text.is_jleft:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:21     .text.is_car1:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:27     .text.is_car1:00000000 is_car1
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:58     .text.is_car1:00000014 $d
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:63     .text.is_car2:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:69     .text.is_car2:00000000 is_car2
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:100    .text.is_car2:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:105    .text.is_car3:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:111    .text.is_car3:00000000 is_car3
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:142    .text.is_car3:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:147    .text.is_car4:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:153    .text.is_car4:00000000 is_car4
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:185    .text.is_pl1:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:191    .text.is_pl1:00000000 is_pl1
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:223    .text.is_pl2:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:229    .text.is_pl2:00000000 is_pl2
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:260    .text.is_pl2:00000014 $d
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:265    .text.is_jcenter:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:271    .text.is_jcenter:00000000 is_jcenter
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:302    .text.is_jcenter:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:307    .text.is_jright:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:313    .text.is_jright:00000000 is_jright
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:344    .text.is_jright:00000018 $d
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:349    .text.is_jdown:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:355    .text.is_jdown:00000000 is_jdown
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:386    .text.is_jdown:00000014 $d
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:391    .text.is_jup:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:397    .text.is_jup:00000000 is_jup
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:428    .text.is_jup:00000014 $d
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:433    .text.is_jleft:00000000 $t
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:439    .text.is_jleft:00000000 is_jleft
+C:\Users\ehgre\AppData\Local\Temp\cc9i6Zzv.s:470    .text.is_jleft:00000018 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_ReadPin
